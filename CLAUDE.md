@@ -25,50 +25,42 @@ Er zijn geen geautomatiseerde tests in dit project.
 
 ## Architectuur
 
-### Directorystructuur (gepland)
+### Directorystructuur
 
 ```
 app/
-  layout.tsx                  # Root layout — fonts, metadata, lang="nl"
+  layout.tsx                  # Root layout — fonts, metadata, Navigation, Footer, lang="nl"
   page.tsx                    # Homepage (hero + bewijslast-index)
   globals.css                 # CSS custom properties (design tokens), Tailwind import
   [route]/page.mdx            # Per rubric-criterium: nieuwsgierigheid, onderzoek,
                               #   concept, methoden, validatie, reflectie, bronnen
 components/
   layout/
-    Navigation.tsx            # Sticky nav met 5 rubric-links + hamburger
+    Navigation.tsx            # Sticky nav, hamburger, Meer-dropdown, skip-to-content (client)
     Footer.tsx
-  home/
-    Hero.tsx
-    EvidenceIndex.tsx         # 5-koloms bewijslast-overzicht
-  [naam].tsx                  # Overige componenten (zie hieronder)
+  RubricBadge.tsx             # Pill-badge met rubric-criterium
+  SourceLink.tsx              # Inline citatie → /bronnen#id
+  ReflectionCallout.tsx       # Amber callout-blok
+  EvidenceCard.tsx            # Bewijsblok: actie / bevinding / betekenis
+  QuoteBlock.tsx              # Interview-citaat met attributie
+  MethodCard.tsx              # Model/methode beschrijving
+  Timeline.tsx                # Prototype-iteraties (client — Framer Motion)
+  PainGainMap.tsx             # Drieluik: pains / jobs / gains
+  CriteriaTable.tsx           # Testcriteria vs resultaat (responsive table/cards)
+  ValuePerspective.tsx        # Waardeperspectief-kaart
+  OriginStory.tsx             # Hero + anekdote + perspectief-verschuiving
+  TriangulationDiagram.tsx    # Triangulatie visueel (client)
+  ValuePerspectiveGrid.tsx    # SVG radar chart + ValuePerspective grid (client)
 content/
   bronnen.ts                  # Bronnenlijst als TypeScript data (APA-stijl, unieke ids)
 lib/
-  types.ts                    # Gedeelde TypeScript interfaces
-mdx-components.tsx            # MDX component-registratie (vereist door Next.js App Router)
+  types.ts                    # Gedeelde TypeScript interfaces voor alle componenten
+mdx-components.tsx            # MDX component-registratie — alle componenten globaal beschikbaar
 ```
 
-### MDX-setup (Stap 1 in PLAN.md — nog niet geconfigureerd)
+### MDX-setup
 
-Vereist: `@next/mdx`, `@mdx-js/loader`, `@mdx-js/react`, `@types/mdx` installeren en `next.config.ts` updaten met MDX plugin + `pageExtensions`. Zie `PLAN.md` voor details.
-
-### Componenten en hun afhankelijkheden
-
-Bouw in deze volgorde (afhankelijkheden eerst):
-
-1. `RubricBadge` — geen deps; gebruikt door alle andere componenten
-2. `SourceLink` — linkt naar `/bronnen#{id}`; gebruikt door EvidenceCard
-3. `ReflectionCallout` — standalone
-4. `EvidenceCard` — gebruikt RubricBadge + SourceLink
-5. `QuoteBlock`, `MethodCard` — standalone
-6. `Timeline` — **client component** (Framer Motion stagger)
-7. `PainGainMap`, `CriteriaTable`, `ValuePerspective` — standalone
-8. `OriginStory` — voor `/nieuwsgierigheid`
-9. `TriangulationDiagram` — **client component** (SVG-positionering)
-10. `ValuePerspectiveGrid` — **client component** (radar-chart); wrapt `ValuePerspective`
-
-Alle componenten zijn React Server Components tenzij anders aangegeven. Volledige prop-interfaces staan in `docs/components.md`.
+MDX is geconfigureerd via `@next/mdx` in `next.config.ts` met `pageExtensions`. Componenten geregistreerd in `mdx-components.tsx` zijn beschikbaar in alle `.mdx`-pagina's zonder import. Voeg nieuwe componenten altijd toe aan `mdx-components.tsx`.
 
 ### Rubric → Route mapping
 
@@ -95,6 +87,9 @@ Alle kleuren via `globals.css` — **nooit** Tailwind kleur-utilities zoals `tex
 | `--border` | `#E5DED0` | `#2A2722` | Borders, scheidingslijnen |
 | `--reflection-bg` | `#FFF8E7` | `#1F1A08` | ReflectionCallout achtergrond |
 | `--reflection-border` | `#D4A72C` | `#B8860B` | ReflectionCallout rand |
+| `--success` | `#2D7A4F` | `#4CAF78` | Positieve status (CriteriaTable, PainGainMap gains) |
+| `--success-light` | `#EBF7EF` | `#0F2A1E` | Achtergrond bij positieve status |
+| `--improvement` | `#C2610F` | `#F59E4A` | Verbeterpunten, niet-voldaan status |
 
 Gebruik via: `text-[--text-primary]`, `bg-[--surface]`, `border-[--border]`, etc.
 
@@ -112,12 +107,21 @@ Extra pagina's: `/reflectie`, `/bronnen`
 
 ## Tech stack
 
-- Next.js 16 (App Router) + TypeScript (strict)
+- Next.js 16 (App Router, Turbopack) + TypeScript (strict)
 - Tailwind CSS v4 (via PostCSS plugin — geen `tailwind.config`)
 - MDX via `@next/mdx` voor content-pagina's
-- Framer Motion voor subtiele animaties
-- Lucide React voor icons
+- Framer Motion v12 voor subtiele animaties
+- Lucide React v1 voor icons
 - Deploy: Vercel
+
+## Lucide React v1 — dynamic icon lookups
+
+Lucide v1 heeft een strengere `IconComponentProps` (met verplicht `iconNode`). Bij dynamic lookups op naam de cast via `unknown`:
+
+```ts
+type IconComponent = React.ComponentType<{ size?: number; className?: string }>
+const Icon = (LucideIcons as unknown as Record<string, IconComponent>)[iconName]
+```
 
 ## Conventies
 
