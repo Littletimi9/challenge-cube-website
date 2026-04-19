@@ -11,6 +11,9 @@
   --border:             #E5DED0;
   --reflection-bg:      #FFF8E7;
   --reflection-border:  #D4A72C;
+  --success:            #2D7A4F;
+  --success-light:      #EBF7EF;
+  --improvement:        #C2610F;
 }
 
 /* ─── Dark mode ───────────────────────────────────────────────────────── */
@@ -25,6 +28,9 @@
     --border:             #2A2722;
     --reflection-bg:      #1F1A08;
     --reflection-border:  #B8860B;
+    --success:            #4CAF78;
+    --success-light:      #0F2A1E;
+    --improvement:        #F59E4A;
   }
 }
 
