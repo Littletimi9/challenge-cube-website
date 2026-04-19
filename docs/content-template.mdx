@@ -1,0 +1,77 @@
+{/*
+  MDX Template voor een rubric-pagina.
+  Kopieer dit bestand naar app/[route]/page.mdx en vul de placeholders in.
+
+  Frontmatter wordt verwerkt via export const metadata.
+*/}
+
+export const metadata = {
+  title: '[INVULLEN: Paginatitel] — Portfolio Thijs',
+  description: '[INVULLEN: Korte beschrijving voor SEO]',
+}
+
+{/* Pagina-metadata als JS object (wordt gelezen door componenten) */}
+export const rubric = {
+  nummer: 0,           // 1-5
+  titel: '[INVULLEN]',
+  status: 'draft',     // 'draft' | 'review' | 'final'
+  samenvatting: '[INVULLEN: Eén zin die deze pagina samenvat]',
+}
+
+<RubricBadge criterium={rubric.nummer} />
+
+# {rubric.titel}
+
+[INVULLEN: Introductieparagraaf — waarom is dit onderdeel belangrijk? Wat gaat de lezer hier vinden? Schrijf persoonlijk maar professioneel. 3-5 zinnen.]
+
+---
+
+## Bewijslast
+
+### [INVULLEN: Titel van bewijsstuk 1]
+
+<EvidenceCard
+  title="[INVULLEN: Titel]"
+  summary="[INVULLEN: Korte samenvatting]"
+  action="[INVULLEN: Wat ik deed]"
+  finding="[INVULLEN: Wat ik vond]"
+  meaning="[INVULLEN: Wat het betekent voor de Challenge Cube]"
+  sourceId="[INVULLEN: bron-id]"
+  rubric={rubric.nummer}
+/>
+
+### [INVULLEN: Titel van bewijsstuk 2]
+
+<EvidenceCard
+  title="[INVULLEN: Titel]"
+  summary="[INVULLEN: Korte samenvatting]"
+  action="[INVULLEN: Wat ik deed]"
+  finding="[INVULLEN: Wat ik vond]"
+  meaning="[INVULLEN: Wat het betekent voor de Challenge Cube]"
+  sourceId="[INVULLEN: bron-id]"
+  rubric={rubric.nummer}
+/>
+
+{/* Voeg meer EvidenceCards toe naar behoefte */}
+
+---
+
+## Reflectie
+
+<ReflectionCallout type="positive" title="Wat ging goed">
+
+[INVULLEN: Wat ging goed bij dit onderdeel? Wat heb ik geleerd? Wat zou ik opnieuw zo doen? Wees specifiek en eerlijk.]
+
+</ReflectionCallout>
+
+<ReflectionCallout type="improvement" title="Wat kan beter">
+
+[INVULLEN: Wat zou ik anders aanpakken? Welke inzichten kwamen te laat? Wat mis ik nog? Wees kritisch maar constructief.]
+
+</ReflectionCallout>
+
+---
+
+## Vooruitblik
+
+[INVULLEN: Hoe bouwt dit onderdeel voort op het volgende? Welke vragen blijven open? Wat is de volgende stap? 2-3 zinnen die de link leggen naar het volgende rubric-onderdeel.]
