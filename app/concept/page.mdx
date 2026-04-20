@@ -1,0 +1,87 @@
+export const metadata = {
+  title: 'Concept — Challenge Cube',
+}
+
+<PageHead
+  number="03"
+  label="Rubric · Concept"
+  title="Van schets naar werkend prototype."
+  lead="[INVULLEN: hoe het concept stap voor stap werd aangescherpt — en welke feedback elke keer de koers veranderde.]"
+  meta={[
+    { key: 'Iteraties', value: '4 versies' },
+    { key: 'Test-sessies', value: '[INVULLEN: X sessies]' },
+    { key: 'Periode', value: '[INVULLEN: nov 2025 – feb 2026]' },
+  ]}
+/>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading
+    eyebrow="Iteraties"
+    heading="Vier versies, vier keer bijsturen."
+  />
+  <Timeline
+    items={[
+      {
+        version: 'v0.1',
+        date: '[INVULLEN: datum]',
+        title: '[INVULLEN: papieren schets]',
+        feedback: '[INVULLEN: feedback die tot v0.2 leidde]',
+        change: '[INVULLEN: wat er concreet veranderde]',
+      },
+      {
+        version: 'v0.2',
+        date: '[INVULLEN: datum]',
+        title: '[INVULLEN: low-fi kartonnen cube]',
+        feedback: '[INVULLEN: feedback]',
+        change: '[INVULLEN: aanpassing]',
+      },
+      {
+        version: 'v0.3',
+        date: '[INVULLEN: datum]',
+        title: '[INVULLEN: QR-flow werkend]',
+        feedback: '[INVULLEN: feedback]',
+        change: '[INVULLEN: aanpassing]',
+      },
+      {
+        version: 'v1.0',
+        date: '[INVULLEN: datum]',
+        title: '[INVULLEN: werkend prototype]',
+        feedback: '[INVULLEN: feedback]',
+        change: '[INVULLEN: laatste polish]',
+      },
+    ]}
+  />
+</section>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading eyebrow="Bewijslast" heading="Beslissingen die het concept vormden." />
+  <EvidenceGrid>
+    <EvidenceCard
+      rubric={{ number: '03', label: 'Concept' }}
+      title="[INVULLEN: beslissing 1 — bv. geen app, alleen QR]"
+      action="[INVULLEN: hoe ik hierop kwam]"
+      finding="[INVULLEN: wat het opleverde]"
+      meaning="[INVULLEN: wat dit zegt over het concept]"
+    />
+    <EvidenceCard
+      rubric={{ number: '03', label: 'Concept' }}
+      title="[INVULLEN: beslissing 2 — bv. 6 categorieën i.p.v. 4]"
+      action="[INVULLEN: aanleiding]"
+      finding="[INVULLEN: resultaat]"
+      meaning="[INVULLEN: implicatie]"
+    />
+  </EvidenceGrid>
+</section>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading eyebrow="Reflectie" heading="Wat het itereren me leerde." />
+  <ReflectionGrid
+    good="[INVULLEN: bv. ik durfde v0.2 los te laten toen data erom vroeg.]"
+    better="[INVULLEN: bv. v0.1 te lang vastgehouden voordat ik hem liet testen.]"
+  />
+</section>
+
+<PageNav
+  prev={{ number: '02', name: 'Onderzoek', href: '/onderzoek' }}
+  next={{ number: '04', name: 'Methoden', href: '/methoden' }}
+/>

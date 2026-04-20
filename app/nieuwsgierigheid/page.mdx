@@ -1,0 +1,53 @@
+export const metadata = {
+  title: 'Nieuwsgierigheid — Challenge Cube',
+}
+
+<PageHead
+  number="01"
+  label="Rubric · Nieuwsgierigheid"
+  title="De vraag die de Cube mogelijk maakte."
+  lead="[INVULLEN: korte aanleiding — de observatie die me triggerde en waarom ik er niet meer vanaf kon.]"
+  meta={[
+    { key: 'Periode', value: '[INVULLEN: sep 2025 – nov 2025]' },
+    { key: 'Methoden', value: '[INVULLEN: anekdote · desk research]' },
+    { key: 'Output', value: '3 bewijsstukken' },
+  ]}
+/>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading
+    eyebrow="Bewijslast"
+    heading="Drie momenten waarop mijn blik verschoof."
+  />
+
+  <EvidenceGrid>
+    <EvidenceCard
+      rubric={{ number: '01', label: 'Nieuwsgierigheid' }}
+      title="[INVULLEN: moment 1]"
+      action="[INVULLEN: wat ik deed — observeren, navragen, lezen]"
+      finding="[INVULLEN: wat ik ontdekte]"
+      meaning="[INVULLEN: waarom dit mijn denken veranderde]"
+      sourceId="placeholder-1"
+      sourceLabel="Bekijk bron"
+    />
+    <EvidenceCard
+      rubric={{ number: '01', label: 'Nieuwsgierigheid' }}
+      title="[INVULLEN: moment 2]"
+      action="[INVULLEN: wat ik deed]"
+      finding="[INVULLEN: wat ik ontdekte]"
+      meaning="[INVULLEN: waarom relevant]"
+    />
+  </EvidenceGrid>
+</section>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading eyebrow="Reflectie" heading="Wat dit hoofdstuk me leerde." />
+  <ReflectionGrid
+    good="[INVULLEN: waar ik trots op ben — bv. dat ik doorvroeg i.p.v. direct naar oplossingen sprong.]"
+    better="[INVULLEN: wat ik anders zou doen — bv. eerder aannames hardop toetsen.]"
+  />
+</section>
+
+<PageNav
+  next={{ number: '02', name: 'Onderzoek', href: '/onderzoek' }}
+/>

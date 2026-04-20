@@ -1,0 +1,85 @@
+export const metadata = {
+  title: 'Onderzoek — Challenge Cube',
+}
+
+<PageHead
+  number="02"
+  label="Rubric · Onderzoek"
+  title="Triangulatie: interviews, observaties, desk."
+  lead="[INVULLEN: wat ik deed om te achterhalen wat studenten écht missen in hun pauze — en waarom ik niet op één methode vertrouwde.]"
+  meta={[
+    { key: 'Methoden', value: '3 (kwalitatief)' },
+    { key: 'Respondenten', value: '21 interviews · 13 observaties' },
+    { key: 'Periode', value: '[INVULLEN: okt 2025]' },
+  ]}
+/>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading
+    eyebrow="Triangulatie"
+    heading="Drie bronnen, één convergerend beeld."
+  />
+  <Triangulation
+    methods={[
+      {
+        type: 'Interviews',
+        name: 'Semigestructureerde gesprekken',
+        count: '21 respondenten · 18–22 jaar',
+        finding: '[INVULLEN: kernbevinding uit interviews]',
+      },
+      {
+        type: 'Observaties',
+        name: 'Pauzegedrag op locatie',
+        count: '13 pauzes geobserveerd',
+        finding: '[INVULLEN: kernbevinding uit observaties]',
+      },
+      {
+        type: 'Deskresearch',
+        name: 'Literatuur en statistieken',
+        count: '[INVULLEN: X artikelen · Y rapporten]',
+        finding: '[INVULLEN: kernbevinding uit literatuur]',
+      },
+    ]}
+    convergence="[INVULLEN: de gedeelde rode draad — wat alle drie de methoden onafhankelijk bevestigden.]"
+  />
+</section>
+
+<QuoteBlock
+  quote="[INVULLEN: krachtigste citaat uit een interview — iets dat de pijn concreet maakt.]"
+  author="Respondent 07"
+  source="Interview · [INVULLEN: datum]"
+/>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading eyebrow="Bewijslast" heading="Pijnen, wensen en wat dat betekent." />
+  <EvidenceGrid>
+    <EvidenceCard
+      rubric={{ number: '02', label: 'Onderzoek' }}
+      title="[INVULLEN: pijn 1]"
+      action="[INVULLEN: waar dit uit blijkt]"
+      finding="[INVULLEN: welk patroon]"
+      meaning="[INVULLEN: wat dit voor het concept betekent]"
+      sourceId="placeholder-1"
+    />
+    <EvidenceCard
+      rubric={{ number: '02', label: 'Onderzoek' }}
+      title="[INVULLEN: wens 1]"
+      action="[INVULLEN: hoe gemeten]"
+      finding="[INVULLEN: wat mensen noemden]"
+      meaning="[INVULLEN: ontwerpimplicatie]"
+    />
+  </EvidenceGrid>
+</section>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading eyebrow="Reflectie" heading="Wat goed ging en wat scherper kan." />
+  <ReflectionGrid
+    good="[INVULLEN: bv. triangulatie voorkwam dat ik één anekdote overgewaardeerde.]"
+    better="[INVULLEN: bv. observaties waren te kort om gedragspatronen volledig te vangen.]"
+  />
+</section>
+
+<PageNav
+  prev={{ number: '01', name: 'Nieuwsgierigheid', href: '/nieuwsgierigheid' }}
+  next={{ number: '03', name: 'Concept', href: '/concept' }}
+/>

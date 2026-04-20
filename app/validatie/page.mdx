@@ -1,0 +1,111 @@
+export const metadata = {
+  title: 'Validatie — Challenge Cube',
+}
+
+<PageHead
+  number="05"
+  label="Rubric · Validatie"
+  title="Het bewijs dat het concept werkt."
+  lead="[INVULLEN: hoe ik toetste of de Cube doet wat hij belooft — vanuit meerdere waardeperspectieven en tegen meetbare criteria.]"
+  meta={[
+    { key: 'Criteria', value: '6 meetbaar' },
+    { key: 'Perspectieven', value: '4 waardeperspectieven' },
+    { key: 'Periode', value: '[INVULLEN: mrt 2026]' },
+  ]}
+/>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading
+    eyebrow="Criteria"
+    heading="Zes toetsbare testcriteria."
+  />
+  <CriteriaTable
+    criteria={[
+      {
+        criterion: '[INVULLEN: criterium 1 — bv. scantijd < 10s]',
+        target: '[INVULLEN: doel]',
+        result: '[INVULLEN: gemeten resultaat]',
+        met: true,
+        evidence: '[INVULLEN: bewijslocatie of bron]',
+      },
+      {
+        criterion: '[INVULLEN: criterium 2]',
+        target: '[INVULLEN: doel]',
+        result: '[INVULLEN: resultaat]',
+        met: true,
+      },
+      {
+        criterion: '[INVULLEN: criterium 3]',
+        target: '[INVULLEN: doel]',
+        result: '[INVULLEN: resultaat]',
+        met: false,
+        evidence: '[INVULLEN: wat nog niet werkt en waarom]',
+      },
+    ]}
+  />
+</section>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading
+    eyebrow="Waardeperspectieven"
+    heading="Vier kaders — één concept getoetst."
+  />
+  <ValuePerspectives
+    perspectives={[
+      {
+        label: 'Student',
+        value: '[INVULLEN: kernwaarde voor student]',
+        evidence: '[INVULLEN: waaruit blijkt dat]',
+      },
+      {
+        label: 'Docent',
+        value: '[INVULLEN: kernwaarde voor docent]',
+        evidence: '[INVULLEN: onderbouwing]',
+      },
+      {
+        label: 'Instelling',
+        value: '[INVULLEN: kernwaarde voor school]',
+        evidence: '[INVULLEN: onderbouwing]',
+      },
+      {
+        label: 'Maatschappij',
+        value: '[INVULLEN: bredere waarde]',
+        evidence: '[INVULLEN: onderbouwing]',
+      },
+    ]}
+  />
+</section>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading eyebrow="Bewijslast" heading="Waar het concept overeind bleef." />
+  <EvidenceGrid>
+    <EvidenceCard
+      rubric={{ number: '05', label: 'Validatie' }}
+      title="[INVULLEN: bewijsstuk 1]"
+      action="[INVULLEN: test-setup]"
+      finding="[INVULLEN: uitkomst]"
+      meaning="[INVULLEN: wat dit zegt]"
+      sourceId="placeholder-1"
+    />
+    <EvidenceCard
+      rubric={{ number: '05', label: 'Validatie' }}
+      title="[INVULLEN: bewijsstuk 2]"
+      action="[INVULLEN: test-setup]"
+      finding="[INVULLEN: uitkomst]"
+      meaning="[INVULLEN: wat dit zegt]"
+    />
+  </EvidenceGrid>
+</section>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading eyebrow="Reflectie" heading="Wat validatie (nog) niet vertelt." />
+  <ReflectionGrid
+    good="[INVULLEN: bv. meervoudige perspectieven maakten blinde vlekken zichtbaar.]"
+    better="[INVULLEN: bv. langetermijn-effect is nog niet gemeten.]"
+  />
+</section>
+
+<PageNav
+  prev={{ number: '04', name: 'Methoden', href: '/methoden' }}
+  next={{ number: '06', name: 'Reflectie', href: '/reflectie' }}
+/>

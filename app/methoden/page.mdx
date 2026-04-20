@@ -1,0 +1,64 @@
+export const metadata = {
+  title: 'Methoden — Challenge Cube',
+}
+
+<PageHead
+  number="04"
+  label="Rubric · Methoden"
+  title="Drie modellen, bewust gekozen."
+  lead="[INVULLEN: waarom juist Double Diamond, Value Proposition Canvas en 5 Why's — en niet anderen.]"
+  meta={[
+    { key: 'Modellen', value: '3 (strategisch)' },
+    { key: 'Bron', value: '[INVULLEN: literatuur / docentadvies]' },
+    { key: 'Periode', value: '[INVULLEN: okt 2025 – feb 2026]' },
+  ]}
+/>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading
+    eyebrow="Methoden"
+    heading="Waarom deze modellen, en wat ze opleverden."
+  />
+  <div
+    className="grid grid-cols-1 md:grid-cols-3 gap-4"
+  >
+    <MethodCard
+      name="Double Diamond"
+      icon="Diamond"
+      description="[INVULLEN: wat dit model doet — divergeren, convergeren, twee keer.]"
+      rationale="[INVULLEN: waarom juist dit model in dit project.]"
+      application="[INVULLEN: hoe ik het toegepast heb — welke fasen waar zaten.]"
+      reliability="[INVULLEN: wat de betrouwbaarheid was en welke beperkingen.]"
+      sourceId="placeholder-1"
+    />
+    <MethodCard
+      name="Value Proposition Canvas"
+      icon="Target"
+      description="[INVULLEN: wat dit model doet — pains/gains matchen aan oplossing.]"
+      rationale="[INVULLEN: waarom dit model hier zin had.]"
+      application="[INVULLEN: hoe ingevuld en wat eruit kwam.]"
+      reliability="[INVULLEN: welke zwaktes, hoe gedekt.]"
+    />
+    <MethodCard
+      name="5 Why's"
+      icon="HelpCircle"
+      description="[INVULLEN: wat dit model doet — doorvragen naar onderliggende oorzaak.]"
+      rationale="[INVULLEN: waarom hier.]"
+      application="[INVULLEN: concreet voorbeeld uit het project.]"
+      reliability="[INVULLEN: beperkingen en hoe gedekt.]"
+    />
+  </div>
+</section>
+
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading eyebrow="Reflectie" heading="Methoden zijn gereedschap, geen ritueel." />
+  <ReflectionGrid
+    good="[INVULLEN: bv. ik koos methoden op basis van vraag, niet op basis van mode.]"
+    better="[INVULLEN: bv. 5 Why's kan te lineair worden — soms is zijwaarts doorvragen beter.]"
+  />
+</section>
+
+<PageNav
+  prev={{ number: '03', name: 'Concept', href: '/concept' }}
+  next={{ number: '05', name: 'Validatie', href: '/validatie' }}
+/>
