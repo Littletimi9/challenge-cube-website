@@ -1,37 +1,36 @@
-type CollageProps = {
-  mainLabel?: string
-}
-
-export default function HeroCollage({ mainLabel = 'VIDEO VAN CUBE' }: CollageProps) {
+export default function HeroCollage() {
   return (
     <div
       className="grid gap-3 h-[360px] md:h-[440px]"
       style={{ gridTemplateColumns: '1.4fr 1fr' }}
     >
       <div
-        className="relative flex items-end p-5"
-        style={{
-          background:
-            'linear-gradient(135deg, #E8B84F 0%, #D95A3C 55%, #8B2E4C 100%)',
-          borderRadius: '4px',
-        }}
+        className="relative overflow-hidden"
+        style={{ borderRadius: '4px' }}
       >
-        <span
-          className="text-[10px] uppercase tracking-[0.2em]"
-          style={{ color: 'rgba(22,22,19,0.7)' }}
-        >
-          {mainLabel}
-        </span>
+        <video
+          src="/Video-challenge-table.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          aria-label="Challenge Cube in gebruik aan de challenge-tafel"
+          className="w-full h-full object-cover"
+        />
       </div>
 
       <div className="grid grid-rows-2 gap-3">
         <div
-          style={{
-            background: 'linear-gradient(135deg, #5EE3D3 0%, #1B4B47 100%)',
-            borderRadius: '4px',
-          }}
-          aria-hidden="true"
-        />
+          className="relative overflow-hidden"
+          style={{ borderRadius: '4px' }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/Afbeelding-challenge-tafel-v1.png"
+            alt="Eerste versie van de challenge-tafel met Challenge Cube"
+            className="w-full h-full object-cover"
+          />
+        </div>
         <div
           style={{
             background: 'linear-gradient(135deg, #8BA8DB 0%, #1E2A44 100%)',
