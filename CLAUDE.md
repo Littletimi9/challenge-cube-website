@@ -12,6 +12,12 @@ Visuele portfolio-website ter vervanging van het beoordelingsdocument "Hoofdport
 
 **Design blueprint** staat in `docs/design-blueprint.md` — single source of truth voor alle visuele beslissingen. Lees hem volledig door voordat je iets aan styling of componenten verandert; wijk er niet van af zonder expliciete update van dat document.
 
+**Secundaire docs** in `docs/`:
+- `information-architecture.md` — pagina-routing en content-structuur per rubric
+- `components.md` — contracts en props van alle rubric-componenten
+- `design-decisions.md` — rationale achter keuzes (waarom geen lightmode, waarom geen carrousel, etc.)
+- `wireframes.md` — schetsen per pagina
+
 ## Commando's
 
 ```bash
@@ -57,6 +63,7 @@ Elke rubric-pagina begint met `<PageHead>` (groot mint-nummer + titel + meta) en
 
 - `content/rubrics.ts` — array voor homepage RubricIndex, getypt via `RubricRowData`
 - `content/bronnen.ts` — typed `Source[]` met APA-stijl, `SourceType`-union en `typeLabels`. Elke bron heeft uniek `id` — `SourceLink` deep-linkt via `/bronnen#<id>`.
+- `content/extracted/` — JSON-output van de `evidence-extractor` agent (gestructureerde bewijslast, input voor `evidence-writer`). Niet handmatig bewerken.
 
 ### Layout
 
@@ -100,6 +107,16 @@ MethodCard gebruikt deze pattern.
 **Animaties**: gebruik `<FadeIn>` uit `components/motion/` of volg het pattern uit `Timeline.tsx` — altijd `useReducedMotion()` checken en statisch teruggeven bij `reduce`, `once: true` op viewport, max 500ms duration. Blueprint verbiedt parallax, scroll-jacking en autoplay-video met sound.
 
 **Focus-ring** is globaal gedefinieerd via `*:focus-visible` in `globals.css` (mint outline + 2px offset). Voeg géén per-component focus classes toe — dat dubbelt de ring.
+
+## Agent-workflow
+
+Drie agents in `.claude/agents/` (gitignored, lokaal per machine) werken sequentieel:
+
+1. **evidence-extractor** — leest ruw materiaal (interviews, notities, artikelen), schrijft gestructureerde JSON naar `content/extracted/`
+2. **evidence-writer** — leest die JSON, plaatst bewijslast in MDX-pagina's en vult `content/bronnen.ts` aan
+3. **rubric-reviewer** — beoordeelt ingevulde pagina's tegen "Uitmuntend" (9-10) per rubric-criterium
+
+Volgorde is strikt: extractor → writer → reviewer. Niet parallelliseren, niet overslaan. Volledige uitleg staat in `.claude/agents/README.md`.
 
 ## Conventies
 
