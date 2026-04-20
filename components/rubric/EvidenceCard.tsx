@@ -1,5 +1,6 @@
 import RubricBadge from './RubricBadge'
 import SourceLink from './SourceLink'
+import FadeIn from '@/components/motion/FadeIn'
 
 type Props = {
   rubric: { number: string; label: string }
@@ -21,9 +22,9 @@ export default function EvidenceCard({
   sourceLabel = 'Bron bekijken',
 }: Props) {
   return (
-    <article
-      className="p-8 md:p-10 flex flex-col gap-6"
-      style={{ backgroundColor: 'var(--canvas)' }}
+    <FadeIn
+      as="article"
+      className="p-8 md:p-10 flex flex-col gap-6 bg-[var(--canvas)]"
     >
       <RubricBadge number={rubric.number} label={rubric.label} />
 
@@ -53,7 +54,7 @@ export default function EvidenceCard({
           <SourceLink id={sourceId} label={sourceLabel} />
         </div>
       )}
-    </article>
+    </FadeIn>
   )
 }
 

@@ -1,8 +1,10 @@
+import FadeIn from '@/components/motion/FadeIn'
+
 type Props = { eyebrow: string; heading: string }
 
 export default function SectionHeading({ eyebrow, heading }: Props) {
   return (
-    <header className="mb-10 md:mb-14">
+    <FadeIn as="div" className="mb-10 md:mb-14">
       <p
         className="flex items-center gap-3 text-[11px] uppercase mb-5"
         style={{
@@ -28,6 +30,6 @@ export default function SectionHeading({ eyebrow, heading }: Props) {
       >
         {heading}
       </h2>
-    </header>
+    </FadeIn>
   )
 }
