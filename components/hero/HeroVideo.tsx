@@ -30,7 +30,6 @@ export default function HeroVideo() {
         ref={ref}
         autoPlay
         muted
-        loop
         playsInline
         preload="metadata"
         poster="/Afbeelding-challenge-tafel-v1.png"
