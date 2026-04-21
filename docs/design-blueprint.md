@@ -150,23 +150,33 @@ Sticky top. `backdrop-filter: blur(12px)`, `background: rgba(22,22,19,0.88)`. Bo
 
 ### Hero (alleen homepage)
 
-Grid `1.3fr 1fr`, `gap-12`. Links typografie, rechts beeld-collage.
+Full-bleed cinematic hero met ambient video-achtergrond. Geen collage, geen grid-split meer. Tekst-kolom links-onder, video achter alles. Min-height `clamp(620px, 88vh, 880px)`.
 
-**Links:**
-- Eyebrow (11px uppercase)
-- Mega display title met mint-highlight op één woord
-- Lead (18px, max-width 520px)
-- Twee buttons: primary (wit bg, donker text) + ghost (border only)
+**Stack (van achter naar voor):**
+1. `<HeroVideo>` — `/hero-ambient.mp4`, `autoplay muted loop playsinline preload="metadata"`, `poster="/hero-poster.jpg"`, `object-cover`, `playbackRate = 0.75`. Bij `prefers-reduced-motion: reduce` alleen de poster tonen, geen video.
+2. `<HeroOverlays>` — drie gestapelde gradients (warme amber-bloom rechtsboven, donkere ellipse linksonder voor tekstanker, linear fade-to-canvas onderaan voor legibility) + inline SVG `feTurbulence` grain (`opacity 0.035`, `mix-blend-mode: overlay`). Alle overlays `pointer-events-none`.
+3. `<HeroContent>` — `z-10`, bottom-aligned in de sectie, `max-width 820px`:
+   - Eyebrow (11px uppercase, `--text-muted`)
+   - Mega display title (`clamp(56px, 8vw, 96px)`, Instrument Serif 400, letter-spacing -0.03em, line-height 1.02) met één woord in `<span class="hero-hl">`
+   - Lead (17–19px, `max-width 560px`)
+   - Twee buttons: **primary solid mint** (`--accent-mint` bg, `--canvas` text, border-radius 2px) + ghost secondary (transparent bg, `--border-strong`, border-radius 2px). Géén `backdrop-filter` — de blueprint verbiedt glassmorphism.
 
-**Rechts: beeld-collage (440px hoog)**
-- Grid `1.4fr 1fr`, gap 12px
-- Groot hoofdbeeld (links): aspect portrait, ruimte voor video van Cube
-- Twee kleine beelden gestapeld (rechts): gap 12px
+**Highlight (`.hero-hl`):**
+- Background `rgba(94, 227, 211, 0.18)`, tekst in `--accent-mint`, padding `0.05em 0.3em`, border-radius `0.15em`
+- Subtiele box-shadow pulse (keyframe `hero-mint-pulse`, 4s ease-in-out infinite). Geen opacity-pulse (conflict met entry-animation). Bij reduced motion uit.
 
-**Placeholder-fallback (tot beeld er is):**
-- Hoofdbeeld: gradient `linear-gradient(135deg, #E8B84F 0%, #D95A3C 55%, #8B2E4C 100%)` met label "VIDEO VAN CUBE"
-- Small A: gradient mint → donker-mint
-- Small B: gradient marine → diep-marine
+**Scroll-gedrag:**
+- Video-wrapper fadt van `opacity 1 → 0.3` via CSS `animation-timeline: view()` met `animation-range: exit 0% exit 90%`. Pure CSS, geen JS scroll-listeners, geen parallax. Browsers zonder scroll-driven animations houden de video statisch — acceptabele degradatie.
+
+**Hero-scope tokens (in `:root`):**
+- `--hero-overlay-dark: rgba(22,22,19,0.95)`
+- `--hero-overlay-dark-soft: rgba(22,22,19,0.6)`
+- `--hero-bloom-amber: rgba(232,184,79,0.12)`
+- `--hero-mint-glow: rgba(94,227,211,0.28)`
+
+Deze tokens scope je enkel aan de hero — `--canvas`, `--accent-mint` en `--accent-amber` blijven ongewijzigd zodat de rest van de site hetzelfde blijft.
+
+**Asset-specs (zie README in `public/`):** video 1080p of 1440p, 10–20s seamless loop, H.264 MP4, 2–4 Mbps, geluidloos. Poster = single frame als JPG, ~200 KB.
 
 ### Stats-strip
 
@@ -271,10 +281,18 @@ Subtiel en spaarzaam. De site is primair typografisch — animatie is ondersteun
 | `colorShift` | 200ms | ease | Link hovers, text-color changes |
 | `translateX` | 300ms | ease-out | Rubric-row pijlen bij hover |
 
+### Hero entry-animatie (homepage)
+
+Bij mount op de landing:
+- Heading stagger per-woord: `filter: blur(10px) → blur(0)`, `y: 20 → 0`, `opacity: 0 → 1`, duration 800ms, ease `[0.22, 1, 0.36, 1]`, start-delay 300ms, per-word 60ms stagger.
+- Eyebrow: fade-in, delay 200ms.
+- Lead: fade + 10px up, delay 600ms.
+- CTA's: fade + scale 0.96 → 1, delay 900–1000ms, stagger 100ms.
+
 Regels:
-- `@media (prefers-reduced-motion: reduce)` → alle animaties disabled
+- `@media (prefers-reduced-motion: reduce)` → alle animaties disabled, hero rendert statisch zonder motion-wrappers
 - `viewport: { once: true, margin: "-50px" }` → elementen animeren één keer
-- Geen parallax. Geen autoplay video met sound. Geen scroll-jacking.
+- Geen parallax. Geen autoplay video met sound. Geen scroll-jacking. Geen `backdrop-filter: blur()` op UI-elementen (navbar houdt z'n bestaande blur, maar CTA's, cards en overlays niet).
 
 ---
 

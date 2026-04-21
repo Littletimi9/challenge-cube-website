@@ -31,6 +31,12 @@
   --cat-tiktok:         #5EE3D3;
   --cat-quiz:           #8BA8DB;
   --cat-random:         #C8C8BE;
+
+  /* Hero-scope overlays (alleen binnen de landing-hero gebruikt) */
+  --hero-overlay-dark:      rgba(22, 22, 19, 0.95);
+  --hero-overlay-dark-soft: rgba(22, 22, 19, 0.6);
+  --hero-bloom-amber:       rgba(232, 184, 79, 0.12);
+  --hero-mint-glow:         rgba(94, 227, 211, 0.28);
 }
 
 /* ─── Tailwind theme integration ──────────────────────────────────────── */
@@ -67,13 +73,38 @@ body {
   border-radius: 2px;
 }
 
-/* ─── Mint highlight pill (hero <span class="hl">) ────────────────────── */
-.hl {
-  display: inline-block;
-  padding: 0 0.15em;
-  background: var(--accent-mint-soft);
+/* ─── Hero: highlight word met pulserende mint-glow ───────────────────── */
+.hero-hl {
+  padding: 0.05em 0.3em;
+  background: rgba(94, 227, 211, 0.18);
   color: var(--accent-mint);
-  border-radius: 4px;
+  border-radius: 0.15em;
+  animation: hero-mint-pulse 4s ease-in-out infinite;
+}
+@keyframes hero-mint-pulse {
+  0%, 100% { box-shadow: 0 0 20px 0 rgba(94, 227, 211, 0.12); }
+  50%      { box-shadow: 0 0 40px 4px var(--hero-mint-glow); }
+}
+
+/* ─── Hero: video-wrapper fade-out op scroll (CSS scroll-driven) ──────── */
+.hero-video-wrap {
+  animation: hero-video-fade linear both;
+  animation-timeline: view();
+  animation-range: exit 0% exit 90%;
+}
+@keyframes hero-video-fade {
+  from { opacity: 1; }
+  to   { opacity: 0.3; }
+}
+
+/* ─── Hero: CTA hovers (solid primary + ghost secondary, geen blur) ───── */
+.hero-cta-primary:hover {
+  box-shadow: 0 8px 32px -8px var(--hero-mint-glow);
+  transform: translateY(-1px);
+}
+.hero-cta-secondary:hover {
+  border-color: var(--accent-mint-border);
+  color: var(--text-primary);
 }
 
 /* ─── Reduced motion ──────────────────────────────────────────────────── */
@@ -86,4 +117,6 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  .hero-hl         { animation: none; box-shadow: none; }
+  .hero-video-wrap { animation: none; }
 }
