@@ -76,8 +76,8 @@ export default function Timeline({ items }: Props) {
             {item.title}
           </h3>
           <div className="grid md:grid-cols-2 gap-4 md:gap-6">
-            <Line label="Feedback" text={item.feedback} />
-            <Line label="Verandering" text={item.change} />
+            <Line label="Wat veranderde" text={item.feedback} />
+            <Line label="Koppeling" text={item.change} />
           </div>
         </motion.li>
       ))}

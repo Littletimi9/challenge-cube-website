@@ -5,80 +5,538 @@ export const metadata = {
 <PageHead
   number="03"
   label="Rubric · Concept"
-  title="Van schets naar werkend prototype."
-  lead="[INVULLEN: hoe het concept stap voor stap werd aangescherpt — en welke feedback elke keer de koers veranderde.]"
+  title="Van inzicht naar werkend concept."
+  lead="[TEKST: Korte introtekst die de lezer meeneemt in hoe onderzoeksinzichten, iteraties en feedback samen het concept hebben gevormd.]"
   meta={[
-    { key: 'Iteraties', value: '4 versies' },
-    { key: 'Test-sessies', value: '[INVULLEN: X sessies]' },
+    { key: 'Iteraties', value: '[INVULLEN: 3 versies]' },
+    { key: 'Bewijs', value: 'Onderzoek · Feedback · Prototype' },
     { key: 'Periode', value: '[INVULLEN: nov 2025 – feb 2026]' },
   ]}
 />
 
+{/* SECTIE 1 — Inzichten uit onderzoek */}
 <section className="px-6 md:px-10 py-20">
   <SectionHeading
-    eyebrow="Iteraties"
-    heading="Vier versies, vier keer bijsturen."
+    eyebrow="01 · Inzichten uit onderzoek"
+    heading="De input achter het concept."
   />
+
+  <div
+    className="p-8 md:p-10 max-w-[860px] mb-10 md:mb-14"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="text-[17px] md:text-[18px]"
+      style={{
+        lineHeight: 1.7,
+        color: 'var(--text-muted)',
+        fontStyle: 'italic',
+      }}
+    >
+      {'[TEKST: Leg in twee tot drie zinnen uit welke primaire data (bijvoorbeeld interviews, enquête of observaties) en secundaire data (bijvoorbeeld concurrentieanalyse, deskresearch en prijsonderzoek) zijn verzameld. Beschrijf waarom deze bronnen nodig waren om aannames te toetsen en het concept scherper te maken.]'}
+    </p>
+  </div>
+
+  <div
+    className="grid grid-cols-1 md:grid-cols-2"
+    style={{
+      gap: '0.5px',
+      backgroundColor: 'var(--border)',
+      border: '0.5px solid var(--border)',
+    }}
+  >
+    {[
+      {
+        tag: 'Primair',
+        title: '[INVULLEN: inzicht 1 — belangrijkste gebruikerspijn]',
+        summary:
+          '[INVULLEN: korte samenvatting van het inzicht, inclusief wat respondenten aangaven en waarom dit relevant is voor de Challenge Cube.]',
+        assignment: 'Opdracht 19: Value Proposition Canvas',
+      },
+      {
+        tag: 'Secundair',
+        title: '[INVULLEN: inzicht 2 — positionering in de markt]',
+        summary:
+          '[INVULLEN: korte samenvatting van wat concurrenten, alternatieven of bestaande oplossingen laten zien over onderscheid en kansen.]',
+        assignment: 'Opdracht 9: Concurrentenanalyse',
+      },
+      {
+        tag: 'Primair',
+        title: '[INVULLEN: inzicht 3 — passend doelgroepsegment]',
+        summary:
+          '[INVULLEN: korte samenvatting van welk segment het meest kansrijk bleek en welke behoefte, context of motivatie dit onderbouwt.]',
+        assignment: 'Opdracht 22: Doelmarkt & segmentatie',
+      },
+      {
+        tag: 'Secundair',
+        title: '[INVULLEN: inzicht 4 — prijs en waardeperceptie]',
+        summary:
+          '[INVULLEN: korte samenvatting van wat prijsonderzoek, benchmarks of rekenmodellen zeggen over prijsbereidheid en waarde.]',
+        assignment: 'Opdracht 11/13: Prijsonderzoek',
+      },
+    ].map((insight, index) => (
+      <article
+        key={insight.assignment}
+        className="p-7 md:p-10 flex flex-col gap-6"
+        style={{ backgroundColor: 'var(--canvas)' }}
+      >
+        <div className="flex items-center justify-between gap-4">
+          <span
+            className="inline-flex items-center self-start px-2.5 py-1 text-[10px] uppercase"
+            style={{
+              letterSpacing: '0.2em',
+              color: insight.tag === 'Primair' ? 'var(--accent-mint)' : 'var(--accent-amber)',
+              backgroundColor:
+                insight.tag === 'Primair' ? 'var(--accent-mint-soft)' : 'var(--accent-amber-soft)',
+              border:
+                insight.tag === 'Primair'
+                  ? '1px solid var(--accent-mint-border)'
+                  : '1px solid rgba(232, 184, 79, 0.3)',
+              borderRadius: '3px',
+            }}
+          >
+            {insight.tag}
+          </span>
+          <span
+            className="font-serif"
+            aria-hidden="true"
+            style={{ fontSize: '34px', lineHeight: 1, color: 'var(--text-dim)' }}
+          >
+            0{index + 1}
+          </span>
+        </div>
+
+        <h3
+          className="font-serif"
+          style={{
+            fontSize: 'clamp(22px, 2.2vw, 30px)',
+            lineHeight: 1.12,
+            color: 'var(--text-primary)',
+          }}
+        >
+          {insight.title}
+        </h3>
+
+        <p
+          className="text-[14px] md:text-[15px]"
+          style={{ lineHeight: 1.65, color: 'var(--text-secondary)' }}
+        >
+          {insight.summary}
+        </p>
+
+        <div
+          className="pt-5 mt-auto"
+          style={{ borderTop: '0.5px solid var(--border)' }}
+        >
+          <span
+            className="inline-flex items-center gap-2 text-[12px]"
+            style={{
+              letterSpacing: '0.05em',
+              color: 'var(--accent-mint)',
+            }}
+          >
+            → {insight.assignment}
+          </span>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+{/* SECTIE 2 — Tijdlijn van het ontwikkelproces */}
+<section
+  className="px-6 md:px-10 py-20"
+  style={{ borderTop: '0.5px solid var(--border)' }}
+>
+  <SectionHeading
+    eyebrow="02 · Tijdlijn"
+    heading="Keuzes in chronologische volgorde."
+  />
+
+  <div
+    className="p-8 md:p-10 max-w-[860px] mb-12"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="text-[17px]"
+      style={{
+        lineHeight: 1.7,
+        color: 'var(--text-muted)',
+        fontStyle: 'italic',
+      }}
+    >
+      {'[TEKST: Beschrijf kort hoe het ontwikkelproces verliep. Benoem dat elke stap voortbouwt op een eerder inzicht, een gemaakte keuze of feedback uit onderzoek en dat de tijdlijn laat zien hoe aannames zijn aangescherpt.]'}
+    </p>
+  </div>
+
   <Timeline
     items={[
       {
-        version: 'v0.1',
-        date: '[INVULLEN: datum]',
-        title: '[INVULLEN: papieren schets]',
-        feedback: '[INVULLEN: feedback die tot v0.2 leidde]',
-        change: '[INVULLEN: wat er concreet veranderde]',
+        version: 'Fase 01',
+        date: '[INVULLEN: datum/fase]',
+        title: '[INVULLEN: eerste conceptrichting gekozen]',
+        feedback:
+          '[INVULLEN: beschrijf wat er veranderde en waarom, bijvoorbeeld hoe de eerste SBMC aannames zichtbaar maakte over doelgroep, waardepropositie en inkomsten.]',
+        change: 'Opdracht 14: Concept SBMC',
       },
       {
-        version: 'v0.2',
-        date: '[INVULLEN: datum]',
-        title: '[INVULLEN: low-fi kartonnen cube]',
-        feedback: '[INVULLEN: feedback]',
-        change: '[INVULLEN: aanpassing]',
+        version: 'Fase 02',
+        date: '[INVULLEN: datum/fase]',
+        title: '[INVULLEN: concept aangescherpt na onderzoek]',
+        feedback:
+          '[INVULLEN: beschrijf welke onderzoeksinzichten leidden tot aanpassing van segment, belofte of kernactiviteit.]',
+        change: 'Opdracht 18: Herzien SBMC',
       },
       {
-        version: 'v0.3',
-        date: '[INVULLEN: datum]',
-        title: '[INVULLEN: QR-flow werkend]',
-        feedback: '[INVULLEN: feedback]',
-        change: '[INVULLEN: aanpassing]',
+        version: 'Fase 03',
+        date: '[INVULLEN: datum/fase]',
+        title: '[INVULLEN: doelgroepkeuze onderbouwd]',
+        feedback:
+          '[INVULLEN: beschrijf hoe de doelgroep scherper werd gekozen en welke data of observaties daarbij bepalend waren.]',
+        change: 'Opdracht 4: Doelmarktbepaling',
       },
       {
-        version: 'v1.0',
-        date: '[INVULLEN: datum]',
-        title: '[INVULLEN: werkend prototype]',
-        feedback: '[INVULLEN: feedback]',
-        change: '[INVULLEN: laatste polish]',
+        version: 'Fase 04',
+        date: '[INVULLEN: datum/fase]',
+        title: '[INVULLEN: huidige journey onderzocht]',
+        feedback:
+          '[INVULLEN: beschrijf welke fricties in de bestaande situatie zichtbaar werden en waarom die belangrijk waren voor het ontwerp.]',
+        change: 'Opdracht 20: Customer Journey IST',
+      },
+      {
+        version: 'Fase 05',
+        date: '[INVULLEN: datum/fase]',
+        title: '[INVULLEN: gewenste ervaring uitgewerkt]',
+        feedback:
+          '[INVULLEN: beschrijf hoe de gewenste situatie werd vertaald naar interactie, flow en moment van gebruik.]',
+        change: 'Opdracht 21: Customer Journey SOLL',
       },
     ]}
   />
 </section>
 
-<section className="px-6 md:px-10 py-20">
-  <SectionHeading eyebrow="Bewijslast" heading="Beslissingen die het concept vormden." />
-  <EvidenceGrid>
-    <EvidenceCard
-      rubric={{ number: '03', label: 'Concept' }}
-      title="[INVULLEN: beslissing 1 — bv. geen app, alleen QR]"
-      action="[INVULLEN: hoe ik hierop kwam]"
-      finding="[INVULLEN: wat het opleverde]"
-      meaning="[INVULLEN: wat dit zegt over het concept]"
-    />
-    <EvidenceCard
-      rubric={{ number: '03', label: 'Concept' }}
-      title="[INVULLEN: beslissing 2 — bv. 6 categorieën i.p.v. 4]"
-      action="[INVULLEN: aanleiding]"
-      finding="[INVULLEN: resultaat]"
-      meaning="[INVULLEN: implicatie]"
-    />
-  </EvidenceGrid>
+{/* SECTIE 3 — Evolutie en iteraties */}
+<section
+  className="px-6 md:px-10 py-20"
+  style={{ borderTop: '0.5px solid var(--border)' }}
+>
+  <SectionHeading
+    eyebrow="03 · Evolutie en iteraties"
+    heading="Van eerste richting naar aangescherpt prototype."
+  />
+
+  <div
+    className="p-8 md:p-10 max-w-[860px] mb-12"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="text-[17px]"
+      style={{
+        lineHeight: 1.7,
+        color: 'var(--text-muted)',
+        fontStyle: 'italic',
+      }}
+    >
+      {'[TEKST: Licht kort toe hoe het concept stap voor stap veranderde. Beschrijf dat elke iteratie een aanleiding had, bijvoorbeeld feedback uit onderzoek, een testmoment of een visuele keuze die niet goed werkte.]'}
+    </p>
+  </div>
+
+  <div className="flex flex-col lg:flex-row items-stretch gap-6 lg:gap-0">
+    {[
+      {
+        version: 'V1',
+        title: '[INVULLEN: eerste versie — ruwe conceptrichting]',
+        image: '[AFBEELDING V1: schets, SBMC of eerste prototype — ca. 400×300px]',
+        feedback:
+          '[INVULLEN: Feedback/inzicht — wat was de aanleiding voor deze versie en welke aanname werd hier getest?]',
+        change:
+          '[INVULLEN: Wijziging — wat werd concreet vastgelegd of aangepast in deze stap?]',
+        assignment: 'Opdracht 14 → 18: SBMC-ontwikkeling',
+      },
+      {
+        version: 'V2',
+        title: '[INVULLEN: tweede versie — visuele en functionele aanscherping]',
+        image: '[AFBEELDING V2: low-fi prototype, cube-layout of testvariant — ca. 400×300px]',
+        feedback:
+          '[INVULLEN: Feedback/inzicht — welke reactie uit doelgroep, docent of test maakte duidelijk dat aanpassing nodig was?]',
+        change:
+          '[INVULLEN: Wijziging — wat veranderde in vorm, categorieën, QR-flow, boodschap of gebruiksmoment?]',
+        assignment: 'Opdracht 28: Marketinguitingen & A/B-test',
+      },
+      {
+        version: 'V3',
+        title: '[INVULLEN: derde versie — aangescherpt prototype]',
+        image: '[AFBEELDING V3: werkend prototype of eindvariant — ca. 400×300px]',
+        feedback:
+          '[INVULLEN: Feedback/inzicht — welke laatste inzichten bepaalden de prioriteit voor eenvoud, snelheid of aantrekkelijkheid?]',
+        change:
+          '[INVULLEN: Wijziging — beschrijf de concrete doorontwikkeling ten opzichte van V2.]',
+        assignment: 'Opdracht 6: Prototypeontwikkeling',
+      },
+    ].map((iteration, index, allIterations) => (
+      <div key={iteration.version} className="flex flex-col lg:flex-row flex-1">
+        <article
+          className="flex-1 flex flex-col"
+          style={{
+            backgroundColor: 'var(--canvas-elevated)',
+            border: '0.5px solid var(--border)',
+            borderRadius: '3px',
+          }}
+        >
+          <div className="px-7 md:px-8 pt-7 md:pt-8 flex items-start justify-between gap-4">
+            <div className="flex items-baseline gap-3">
+              <span
+                className="font-serif"
+                style={{
+                  fontSize: '42px',
+                  lineHeight: 1,
+                  color: 'var(--accent-mint)',
+                }}
+              >
+                {iteration.version}
+              </span>
+              <span
+                className="text-[11px] uppercase"
+                style={{
+                  letterSpacing: '0.2em',
+                  color: 'var(--text-muted)',
+                }}
+              >
+                Iteratie
+              </span>
+            </div>
+            <span
+              className="text-[11px]"
+              style={{ letterSpacing: '0.08em', color: 'var(--text-dim)' }}
+            >
+              Stap {index + 1}/3
+            </span>
+          </div>
+
+          <div
+            className="mx-7 md:mx-8 mt-6 flex items-center justify-center text-center px-5 py-10"
+            style={{
+              minHeight: '220px',
+              backgroundColor: 'var(--canvas)',
+              border: '1px dashed var(--border-strong)',
+              borderRadius: '3px',
+              color: 'var(--text-muted)',
+            }}
+          >
+            <span
+              className="text-[12px] max-w-[260px] block"
+              style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
+            >
+              {iteration.image}
+            </span>
+          </div>
+
+          <div className="p-7 md:p-8 flex flex-col gap-6 flex-1">
+            <h3
+              className="font-serif"
+              style={{
+                fontSize: 'clamp(22px, 2vw, 26px)',
+                lineHeight: 1.15,
+                color: 'var(--text-primary)',
+              }}
+            >
+              {iteration.title}
+            </h3>
+
+            <div
+              className="grid gap-4"
+              style={{ borderTop: '0.5px solid var(--border)', paddingTop: '20px' }}
+            >
+              <div className="flex flex-col gap-2">
+                <span
+                  className="text-[10px] uppercase"
+                  style={{ letterSpacing: '0.2em', color: 'var(--accent-amber)' }}
+                >
+                  Feedback/inzicht
+                </span>
+                <p
+                  className="text-[14px]"
+                  style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
+                >
+                  {iteration.feedback}
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <span
+                  className="text-[10px] uppercase"
+                  style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}
+                >
+                  Wijziging
+                </span>
+                <p
+                  className="text-[14px]"
+                  style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
+                >
+                  {iteration.change}
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="pt-5 mt-auto"
+              style={{ borderTop: '0.5px solid var(--border)' }}
+            >
+              <span
+                className="inline-flex items-center gap-2 text-[12px]"
+                style={{
+                  letterSpacing: '0.05em',
+                  color: 'var(--accent-mint)',
+                }}
+              >
+                → {iteration.assignment}
+              </span>
+            </div>
+          </div>
+        </article>
+
+        {index < allIterations.length - 1 && (
+          <div
+            aria-hidden="true"
+            className="flex lg:flex-col items-center justify-center shrink-0"
+            style={{
+              minWidth: '58px',
+              minHeight: '48px',
+              color: 'var(--accent-mint)',
+            }}
+          >
+            <span
+              className="hidden lg:block"
+              style={{
+                width: '38px',
+                height: '0.5px',
+                backgroundColor: 'var(--accent-mint-border)',
+              }}
+            />
+            <span
+              className="font-serif"
+              style={{ fontSize: '30px', lineHeight: 1 }}
+            >
+              →
+            </span>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
 </section>
 
-<section className="px-6 md:px-10 py-20">
-  <SectionHeading eyebrow="Reflectie" heading="Wat het itereren me leerde." />
-  <ReflectionGrid
-    good="[INVULLEN: bv. ik durfde v0.2 los te laten toen data erom vroeg.]"
-    better="[INVULLEN: bv. v0.1 te lang vastgehouden voordat ik hem liet testen.]"
+{/* SECTIE 4 — Kritische reflectie */}
+<section
+  className="px-6 md:px-10 py-20 md:py-24"
+  style={{
+    backgroundColor: 'var(--canvas-elevated)',
+    borderTop: '0.5px solid var(--border)',
+    borderBottom: '0.5px solid var(--border)',
+  }}
+>
+  <SectionHeading
+    eyebrow="04 · Kritische reflectie"
+    heading="Terugkijken op keuzes, rol en perspectieven."
   />
+
+  <div
+    className="p-8 md:p-10 max-w-[900px] mb-10"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="text-[17px] md:text-[18px]"
+      style={{
+        lineHeight: 1.75,
+        color: 'var(--text-muted)',
+        fontStyle: 'italic',
+      }}
+    >
+      {'[TEKST: Schrijf hier een langere doorlopende reflectie waarin je uitlegt wat het conceptproces je heeft geleerd. Benoem de spanning tussen onderzoek, haalbaarheid en creativiteit, en maak duidelijk welke keuzes achteraf sterk waren en waar je kritischer had kunnen zijn.]'}
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 lg:grid-cols-3" style={{ gap: '0.5px', backgroundColor: 'var(--border)', border: '0.5px solid var(--border)' }}>
+    {[
+      {
+        title: 'Reflectie op keuzes',
+        body: '[TEKST: Placeholder voor reflectie op gemaakte keuzes en overwegingen. Beschrijf welke alternatieven je hebt overwogen, waarom je voor deze richting koos en wat je met de kennis van nu anders zou aanpakken.]',
+        assignment: 'Opdracht 29/30',
+      },
+      {
+        title: 'Mijn rol in het proces',
+        body: '[TEKST: Placeholder voor reflectie op je eigen rol en bijdrage. Benoem waar je initiatief nam, welke verantwoordelijkheid je droeg en hoe je bijdrage zichtbaar werd in het eindconcept.]',
+        assignment: 'Opdracht 1',
+      },
+      {
+        title: 'Meerdere perspectieven',
+        body: '[TEKST: Placeholder voor feedback vanuit verschillende stakeholders. Beschrijf hoe input van doelgroep, medestudenten, docent of experts elkaar aanvulde of tegensprak en hoe je die perspectieven hebt afgewogen.]',
+        assignment: 'Opdracht 2',
+      },
+    ].map((reflection) => (
+      <article
+        key={reflection.title}
+        className="p-8 md:p-10 flex flex-col gap-6"
+        style={{
+          backgroundColor: 'var(--surface)',
+          borderLeft: '2px solid var(--accent-mint)',
+        }}
+      >
+        <h3
+          className="font-serif"
+          style={{
+            fontSize: 'clamp(24px, 2.4vw, 30px)',
+            lineHeight: 1.15,
+            color: 'var(--text-primary)',
+          }}
+        >
+          {reflection.title}
+        </h3>
+
+        <p
+          className="text-[15px] md:text-[16px]"
+          style={{
+            lineHeight: 1.75,
+            color: 'var(--text-secondary)',
+            fontStyle: 'italic',
+          }}
+        >
+          {reflection.body}
+        </p>
+
+        <div
+          className="pt-5 mt-auto"
+          style={{ borderTop: '0.5px solid var(--border)' }}
+        >
+          <span
+            className="inline-flex items-center gap-2 text-[12px]"
+            style={{
+              letterSpacing: '0.05em',
+              color: 'var(--text-muted)',
+            }}
+          >
+            → {reflection.assignment}
+          </span>
+        </div>
+      </article>
+    ))}
+  </div>
 </section>
 
 <PageNav
