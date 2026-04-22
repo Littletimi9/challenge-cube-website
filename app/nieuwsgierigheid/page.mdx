@@ -5,47 +5,339 @@ export const metadata = {
 <PageHead
   number="01"
   label="Rubric · Nieuwsgierigheid"
-  title="De vraag die de Cube mogelijk maakte."
-  lead="[INVULLEN: korte aanleiding — de observatie die me triggerde en waarom ik er niet meer vanaf kon.]"
+  title="Nieuwsgierigheid"
+  lead="[TEKST: Korte introtekst die de lezer meeneemt in jouw nieuwsgierigheidsreis rond dit onderwerp.]"
   meta={[
-    { key: 'Periode', value: '[INVULLEN: sep 2025 – nov 2025]' },
-    { key: 'Methoden', value: '[INVULLEN: anekdote · desk research]' },
-    { key: 'Output', value: '3 bewijsstukken' },
+    { key: 'Periode', value: '[INVULLEN: bijv. sep 2025 – nov 2025]' },
+    { key: 'Opleiding', value: 'Commerciële Economie' },
+    { key: 'Onderdeel', value: 'Hoofdportfolio Waardecreatie' },
   ]}
 />
 
+{/* SECTIE 1 — Opening: De pakkende anekdote */}
 <section className="px-6 md:px-10 py-20">
   <SectionHeading
-    eyebrow="Bewijslast"
-    heading="Drie momenten waarop mijn blik verschoof."
+    eyebrow="01 · Opening"
+    heading="De pakkende anekdote."
   />
 
-  <EvidenceGrid>
-    <EvidenceCard
-      rubric={{ number: '01', label: 'Nieuwsgierigheid' }}
-      title="[INVULLEN: moment 1]"
-      action="[INVULLEN: wat ik deed — observeren, navragen, lezen]"
-      finding="[INVULLEN: wat ik ontdekte]"
-      meaning="[INVULLEN: waarom dit mijn denken veranderde]"
-      sourceId="placeholder-1"
-      sourceLabel="Bekijk bron"
-    />
-    <EvidenceCard
-      rubric={{ number: '01', label: 'Nieuwsgierigheid' }}
-      title="[INVULLEN: moment 2]"
-      action="[INVULLEN: wat ik deed]"
-      finding="[INVULLEN: wat ik ontdekte]"
-      meaning="[INVULLEN: waarom relevant]"
-    />
-  </EvidenceGrid>
+  <div
+    className="w-full flex items-center justify-center text-center px-8 py-20 mb-10"
+    style={{
+      minHeight: '460px',
+      backgroundColor: 'var(--canvas-elevated)',
+      border: '1px dashed var(--border-strong)',
+      borderRadius: '3px',
+      color: 'var(--text-muted)',
+    }}
+  >
+    <span
+      className="text-[13px] max-w-[520px] block"
+      style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
+    >
+      [AFBEELDING: Voeg hier een foto of beeld in dat jouw eerste kennismaking met het onderwerp verbeeldt — minimaal 600×400px]
+    </span>
+  </div>
+
+  <div
+    className="p-8 md:p-10 max-w-[820px]"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="text-[17px] md:text-[18px]"
+      style={{
+        lineHeight: 1.7,
+        color: 'var(--text-muted)',
+        fontStyle: 'italic',
+      }}
+    >
+      [TEKST: Beschrijf hier een concreet, persoonlijk moment — iets wat je zag, hoorde of meemaakte — dat jouw eerste vonk van interesse laat zien. Geen cijfers, geen trends, maar jouw verhaal.]
+    </p>
+  </div>
 </section>
 
-<section className="px-6 md:px-10 py-20">
-  <SectionHeading eyebrow="Reflectie" heading="Wat dit hoofdstuk me leerde." />
-  <ReflectionGrid
-    good="[INVULLEN: waar ik trots op ben — bv. dat ik doorvroeg i.p.v. direct naar oplossingen sprong.]"
-    better="[INVULLEN: wat ik anders zou doen — bv. eerder aannames hardop toetsen.]"
+{/* SECTIE 2 — Eerste blik: Mijn startpositie */}
+<section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="02 · Eerste blik"
+    heading="Mijn startpositie."
   />
+
+  <div
+    className="grid gap-8 md:gap-10"
+    style={{ gridTemplateColumns: 'minmax(0, 1.3fr) minmax(0, 1fr)' }}
+  >
+    <div
+      className="p-8 md:p-10"
+      style={{
+        backgroundColor: 'var(--surface)',
+        border: '0.5px solid var(--border)',
+        borderRadius: '3px',
+      }}
+    >
+      <p
+        className="text-[17px]"
+        style={{
+          lineHeight: 1.7,
+          color: 'var(--text-muted)',
+          fontStyle: 'italic',
+        }}
+      >
+        [TEKST: Beschrijf eerlijk hoe je er in het begin tegenaan keek. Wat wist je? Wat niet? Wat waren je aannames of vooroordelen?]
+      </p>
+    </div>
+
+    <div
+      className="w-full flex items-center justify-center text-center px-6 py-12"
+      style={{
+        minHeight: '300px',
+        backgroundColor: 'var(--canvas-elevated)',
+        border: '1px dashed var(--border-strong)',
+        borderRadius: '3px',
+        color: 'var(--text-muted)',
+      }}
+    >
+      <span
+        className="text-[13px] block"
+        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
+      >
+        [AFBEELDING: Optioneel — voeg een beeld toe dat jouw beginpositie illustreert, ca. 400×300px]
+      </span>
+    </div>
+  </div>
+
+  <div className="mt-10">
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 1 – Ambitieniveau duurzaamheid (individueel)
+    </span>
+  </div>
+</section>
+
+{/* SECTIE 3 — Verdieping: Het onderwerp leren begrijpen */}
+<section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="03 · Verdieping"
+    heading="Het onderwerp leren begrijpen."
+  />
+
+  <div
+    className="p-8 md:p-10 max-w-[820px] mb-10"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="text-[17px]"
+      style={{
+        lineHeight: 1.7,
+        color: 'var(--text-muted)',
+        fontStyle: 'italic',
+      }}
+    >
+      [TEKST: Beschrijf hoe je door eigen onderzoek het onderwerp bent gaan doorgronden. Welke stappen heb je gezet? Wat heb je gelezen, onderzocht, bezocht?]
+    </p>
+  </div>
+
+  <div className="grid gap-6 md:gap-8 md:grid-cols-2 mb-10">
+    <div
+      className="w-full flex items-center justify-center text-center px-6 py-12"
+      style={{
+        minHeight: '320px',
+        backgroundColor: 'var(--canvas-elevated)',
+        border: '1px dashed var(--border-strong)',
+        borderRadius: '3px',
+        color: 'var(--text-muted)',
+      }}
+    >
+      <span
+        className="text-[13px] block max-w-[340px]"
+        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
+      >
+        [AFBEELDING 1: Bewijs van onderzoek, bijv. screenshot, foto van fieldwork — ca. 400×300px]
+      </span>
+    </div>
+
+    <div
+      className="w-full flex items-center justify-center text-center px-6 py-12"
+      style={{
+        minHeight: '320px',
+        backgroundColor: 'var(--canvas-elevated)',
+        border: '1px dashed var(--border-strong)',
+        borderRadius: '3px',
+        color: 'var(--text-muted)',
+      }}
+    >
+      <span
+        className="text-[13px] block max-w-[340px]"
+        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
+      >
+        [AFBEELDING 2: Aanvullend beeldmateriaal — ca. 400×300px]
+      </span>
+    </div>
+  </div>
+
+  <div className="flex flex-wrap gap-3">
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 4 – Impactbepaling
+    </span>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 5 – B-Corp Analyse
+    </span>
+  </div>
+</section>
+
+{/* SECTIE 4 — Kantelpunt: Wat veranderde mijn blik? */}
+<section
+  className="px-6 md:px-10 py-24"
+  style={{
+    backgroundColor: 'var(--canvas-elevated)',
+    borderTop: '0.5px solid var(--border)',
+    borderBottom: '0.5px solid var(--border)',
+  }}
+>
+  <SectionHeading
+    eyebrow="04 · Kantelpunt"
+    heading="Wat veranderde mijn blik?"
+  />
+
+  <div
+    className="p-10 md:p-14 max-w-[900px] mb-10"
+    style={{
+      backgroundColor: 'var(--surface)',
+      borderLeft: '2px solid var(--accent-mint)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="font-serif"
+      style={{
+        fontSize: 'clamp(22px, 2.8vw, 28px)',
+        lineHeight: 1.45,
+        letterSpacing: '-0.01em',
+        color: 'var(--text-secondary)',
+        fontStyle: 'italic',
+      }}
+    >
+      [TEKST: Beschrijf welk inzicht, moment of ontdekking ervoor zorgde dat je anders naar het onderwerp ging kijken. Wat verraste je? Wat schuurde? Waar werd je nieuwsgieriger van?]
+    </p>
+  </div>
+
+  <div
+    className="w-full flex items-center justify-center text-center px-8 py-20 mb-10"
+    style={{
+      minHeight: '440px',
+      backgroundColor: 'var(--canvas)',
+      border: '1px dashed var(--border-strong)',
+      borderRadius: '3px',
+      color: 'var(--text-muted)',
+    }}
+  >
+    <span
+      className="text-[13px] max-w-[520px] block"
+      style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
+    >
+      [AFBEELDING: Een beeld dat dit kantelpunt ondersteunt — ca. 600×400px]
+    </span>
+  </div>
+
+  <div>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 29/30 – Moreel Kompas
+    </span>
+  </div>
+</section>
+
+{/* SECTIE 5 — Afsluiting: Waar sta ik nu? */}
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading
+    eyebrow="05 · Afsluiting"
+    heading="Waar sta ik nu?"
+  />
+
+  <div
+    className="grid gap-8 md:gap-10"
+    style={{ gridTemplateColumns: 'minmax(0, 1.3fr) minmax(0, 1fr)' }}
+  >
+    <div
+      className="p-8 md:p-10"
+      style={{
+        backgroundColor: 'var(--surface)',
+        border: '0.5px solid var(--border)',
+        borderRadius: '3px',
+      }}
+    >
+      <p
+        className="text-[17px]"
+        style={{
+          lineHeight: 1.7,
+          color: 'var(--text-muted)',
+          fontStyle: 'italic',
+        }}
+      >
+        [TEKST: Beschrijf kort en krachtig wat het onderwerp nu voor je betekent. Geen samenvatting van resultaten, maar jouw persoonlijke positie.]
+      </p>
+    </div>
+
+    <div
+      className="w-full flex items-center justify-center text-center px-6 py-12"
+      style={{
+        minHeight: '300px',
+        backgroundColor: 'var(--canvas-elevated)',
+        border: '1px dashed var(--border-strong)',
+        borderRadius: '3px',
+        color: 'var(--text-muted)',
+      }}
+    >
+      <span
+        className="text-[13px] block"
+        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
+      >
+        [AFBEELDING: Optioneel slotbeeld]
+      </span>
+    </div>
+  </div>
 </section>
 
 <PageNav
