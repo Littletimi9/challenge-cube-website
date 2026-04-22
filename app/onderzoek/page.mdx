@@ -4,79 +4,555 @@ export const metadata = {
 
 <PageHead
   number="02"
-  label="Rubric · Onderzoek"
-  title="Triangulatie: interviews, observaties, desk."
-  lead="[INVULLEN: wat ik deed om te achterhalen wat studenten écht missen in hun pauze — en waarom ik niet op één methode vertrouwde.]"
+  label="Rubric · Gebruikersgericht Onderzoek"
+  title="Gebruikersgericht onderzoek."
+  lead="[TEKST: Korte introtekst die de lezer meeneemt in hoe ik onderzoek heb gedaan naar de pains, gains en jobs to be done van de eindgebruiker.]"
   meta={[
-    { key: 'Methoden', value: '3 (kwalitatief)' },
-    { key: 'Respondenten', value: '21 interviews · 13 observaties' },
-    { key: 'Periode', value: '[INVULLEN: okt 2025]' },
+    { key: 'Periode', value: '[INVULLEN: bijv. okt 2025 – dec 2025]' },
+    { key: 'Opleiding', value: 'Commerciële Economie' },
+    { key: 'Onderdeel', value: 'Hoofdportfolio Waardecreatie' },
   ]}
 />
 
+{/* SECTIE 1 — Inleiding */}
 <section className="px-6 md:px-10 py-20">
   <SectionHeading
-    eyebrow="Triangulatie"
-    heading="Drie bronnen, één convergerend beeld."
+    eyebrow="01 · Inleiding"
+    heading="Wat deze pagina laat zien."
   />
+
+  <div
+    className="p-8 md:p-10 max-w-[820px]"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="text-[17px] md:text-[18px]"
+      style={{
+        lineHeight: 1.7,
+        color: 'var(--text-muted)',
+        fontStyle: 'italic',
+      }}
+    >
+      [TEKST: Leg kort uit wat Leeruitkomst 2 inhoudt en hoe deze pagina is opgebouwd. Beschrijf in twee of drie zinnen wat de lezer aantreft — van onderzoeksontwerp tot reflectie — en welke rode draad de secties met elkaar verbindt.]
+    </p>
+  </div>
+</section>
+
+{/* SECTIE 2 — Onderzoeksontwerp */}
+<section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="02 · Onderzoeksontwerp"
+    heading="Hoofdvraag, aanpak en fasering."
+  />
+
+  <div
+    className="grid gap-8 md:gap-10 mb-10"
+    style={{ gridTemplateColumns: 'minmax(0, 1.3fr) minmax(0, 1fr)' }}
+  >
+    <div
+      className="p-8 md:p-10"
+      style={{
+        backgroundColor: 'var(--surface)',
+        border: '0.5px solid var(--border)',
+        borderRadius: '3px',
+      }}
+    >
+      <p
+        className="text-[17px]"
+        style={{
+          lineHeight: 1.7,
+          color: 'var(--text-muted)',
+          fontStyle: 'italic',
+        }}
+      >
+        [TEKST: Formuleer de onderzoeksvraag, beschrijf de gekozen aanpak (kwalitatief/kwantitatief, primair/secundair), benoem de fasering en leg uit waarom deze logica past bij de eindgebruiker en het ontwerpvraagstuk.]
+      </p>
+    </div>
+
+    <div
+      className="w-full flex items-center justify-center text-center px-6 py-12"
+      style={{
+        minHeight: '300px',
+        backgroundColor: 'var(--canvas-elevated)',
+        border: '1px dashed var(--border-strong)',
+        borderRadius: '3px',
+        color: 'var(--text-muted)',
+      }}
+    >
+      <span
+        className="text-[13px] block max-w-[340px]"
+        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
+      >
+        [AFBEELDING: Visueel schema van het onderzoeksproces — bijv. fasering of methodenmatrix, ca. 500×400px]
+      </span>
+    </div>
+  </div>
+
+  <div className="flex flex-wrap gap-3">
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Onderzoeksplan (intern document)
+    </span>
+  </div>
+</section>
+
+{/* SECTIE 3 — Dataverzamelingsmethoden (Triangulatie) */}
+<section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="03 · Triangulatie"
+    heading="Meerdere methoden, één navolgbaar beeld."
+  />
+
+  <div
+    className="p-8 md:p-10 max-w-[820px] mb-10"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="text-[17px]"
+      style={{
+        lineHeight: 1.7,
+        color: 'var(--text-muted)',
+        fontStyle: 'italic',
+      }}
+    >
+      [TEKST: Licht per methode toe waarom je deze hebt gekozen, welke opbrengst je verwachtte en hoe de methoden elkaar aanvullen. Benoem expliciet welke primair en welke secundair zijn.]
+    </p>
+  </div>
+
   <Triangulation
     methods={[
       {
         type: 'Interviews',
-        name: 'Semigestructureerde gesprekken',
-        count: '21 respondenten · 18–22 jaar',
-        finding: '[INVULLEN: kernbevinding uit interviews]',
+        name: 'Semigestructureerde gesprekken (primair)',
+        count: '[INVULLEN: aantal respondenten · doelgroep]',
+        finding: '[INVULLEN: kernbevinding uit interviews — gekoppeld aan pains/gains/jobs]',
       },
       {
-        type: 'Observaties',
-        name: 'Pauzegedrag op locatie',
-        count: '13 pauzes geobserveerd',
-        finding: '[INVULLEN: kernbevinding uit observaties]',
+        type: 'Enquête',
+        name: 'Online vragenlijst (primair)',
+        count: '[INVULLEN: aantal respondenten · respons%]',
+        finding: '[INVULLEN: kernbevinding uit enquête — onderbouwd met cijfers]',
       },
       {
         type: 'Deskresearch',
-        name: 'Literatuur en statistieken',
-        count: '[INVULLEN: X artikelen · Y rapporten]',
-        finding: '[INVULLEN: kernbevinding uit literatuur]',
+        name: 'Literatuur, rapporten, concurrenten (secundair)',
+        count: '[INVULLEN: X bronnen · Y rapporten]',
+        finding: '[INVULLEN: kernbevinding uit secundaire data]',
       },
     ]}
-    convergence="[INVULLEN: de gedeelde rode draad — wat alle drie de methoden onafhankelijk bevestigden.]"
+    convergence="[INVULLEN: de rode draad — wat primair én secundair onafhankelijk bevestigden over de pains, gains en jobs van de eindgebruiker.]"
   />
+
+  <div className="flex flex-wrap gap-3 mt-10">
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 19 — Value Proposition Canvas
+    </span>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 11/13 — Prijsonderzoek
+    </span>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 20 — Customer Journey IST
+    </span>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 9 — Concurrentenanalyse
+    </span>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 28 — Marketinguitingen & A/B-test
+    </span>
+  </div>
 </section>
 
 <QuoteBlock
-  quote="[INVULLEN: krachtigste citaat uit een interview — iets dat de pijn concreet maakt.]"
-  author="Respondent 07"
+  quote="[INVULLEN: krachtigste citaat uit een interview — iets dat de pijn of behoefte concreet maakt.]"
+  author="Respondent [NN]"
   source="Interview · [INVULLEN: datum]"
 />
 
-<section className="px-6 md:px-10 py-20">
-  <SectionHeading eyebrow="Bewijslast" heading="Pijnen, wensen en wat dat betekent." />
+{/* SECTIE 4 — Data-analyse & Inzichten */}
+<section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="04 · Inzichten"
+    heading="Pains, gains en jobs to be done."
+  />
+
+  <div className="grid gap-6 md:gap-8 md:grid-cols-2 mb-10">
+    <div
+      className="w-full flex items-center justify-center text-center px-6 py-12"
+      style={{
+        minHeight: '320px',
+        backgroundColor: 'var(--canvas-elevated)',
+        border: '1px dashed var(--border-strong)',
+        borderRadius: '3px',
+        color: 'var(--text-muted)',
+      }}
+    >
+      <span
+        className="text-[13px] block max-w-[340px]"
+        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
+      >
+        [AFBEELDING 1: Persona of empathy map — ca. 500×400px]
+      </span>
+    </div>
+
+    <div
+      className="w-full flex items-center justify-center text-center px-6 py-12"
+      style={{
+        minHeight: '320px',
+        backgroundColor: 'var(--canvas-elevated)',
+        border: '1px dashed var(--border-strong)',
+        borderRadius: '3px',
+        color: 'var(--text-muted)',
+      }}
+    >
+      <span
+        className="text-[13px] block max-w-[340px]"
+        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
+      >
+        [AFBEELDING 2: Grafiek of diagram met kerncijfers — ca. 500×400px]
+      </span>
+    </div>
+  </div>
+
   <EvidenceGrid>
     <EvidenceCard
       rubric={{ number: '02', label: 'Onderzoek' }}
-      title="[INVULLEN: pijn 1]"
-      action="[INVULLEN: waar dit uit blijkt]"
-      finding="[INVULLEN: welk patroon]"
-      meaning="[INVULLEN: wat dit voor het concept betekent]"
-      sourceId="placeholder-1"
+      title="[INVULLEN: inzicht 1 — pijn]"
+      action="[INVULLEN: waar dit uit blijkt — methode + cijfers]"
+      finding="[INVULLEN: patroon in termen van pains]"
+      meaning="[INVULLEN: wat dit betekent voor het concept en de gebruiker]"
+      sourceId="placeholder-onderzoek-1"
     />
     <EvidenceCard
       rubric={{ number: '02', label: 'Onderzoek' }}
-      title="[INVULLEN: wens 1]"
-      action="[INVULLEN: hoe gemeten]"
-      finding="[INVULLEN: wat mensen noemden]"
+      title="[INVULLEN: inzicht 2 — gain]"
+      action="[INVULLEN: hoe gemeten — cijfers]"
+      finding="[INVULLEN: patroon in termen van gains]"
       meaning="[INVULLEN: ontwerpimplicatie]"
+      sourceId="placeholder-onderzoek-2"
+    />
+    <EvidenceCard
+      rubric={{ number: '02', label: 'Onderzoek' }}
+      title="[INVULLEN: inzicht 3 — job to be done]"
+      action="[INVULLEN: hoe gemeten — cijfers]"
+      finding="[INVULLEN: patroon in termen van jobs to be done]"
+      meaning="[INVULLEN: ontwerpimplicatie]"
+      sourceId="placeholder-onderzoek-3"
     />
   </EvidenceGrid>
+
+  <div className="flex flex-wrap gap-3 mt-10">
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 19 — Value Proposition Canvas
+    </span>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 25 — KPI Dashboard
+    </span>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 22 — Doelmarkt & segmentatie
+    </span>
+  </div>
 </section>
 
-<section className="px-6 md:px-10 py-20">
-  <SectionHeading eyebrow="Reflectie" heading="Wat goed ging en wat scherper kan." />
-  <ReflectionGrid
-    good="[INVULLEN: bv. triangulatie voorkwam dat ik één anekdote overgewaardeerde.]"
-    better="[INVULLEN: bv. observaties waren te kort om gedragspatronen volledig te vangen.]"
+{/* SECTIE 5 — Betekenis voor het Concept */}
+<section
+  className="px-6 md:px-10 py-24"
+  style={{
+    backgroundColor: 'var(--canvas-elevated)',
+    borderTop: '0.5px solid var(--border)',
+    borderBottom: '0.5px solid var(--border)',
+  }}
+>
+  <SectionHeading
+    eyebrow="05 · Betekenis"
+    heading="Van inzicht naar ontwerpbeslissing."
   />
+
+  <div
+    className="p-10 md:p-14 max-w-[900px] mb-10"
+    style={{
+      backgroundColor: 'var(--surface)',
+      borderLeft: '2px solid var(--accent-mint)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="font-serif"
+      style={{
+        fontSize: 'clamp(22px, 2.8vw, 28px)',
+        lineHeight: 1.45,
+        letterSpacing: '-0.01em',
+        color: 'var(--text-secondary)',
+        fontStyle: 'italic',
+      }}
+    >
+      [TEKST: Vertaal de inzichten naar concrete ontwerpbeslissingen. Welke pains heb je weggenomen, welke gains toegevoegd en welke jobs te beter ondersteund? Maak de keten inzicht → beslissing expliciet.]
+    </p>
+  </div>
+
+  <div
+    className="w-full flex items-center justify-center text-center px-8 py-20 mb-10"
+    style={{
+      minHeight: '440px',
+      backgroundColor: 'var(--canvas)',
+      border: '1px dashed var(--border-strong)',
+      borderRadius: '3px',
+      color: 'var(--text-muted)',
+    }}
+  >
+    <span
+      className="text-[13px] max-w-[520px] block"
+      style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
+    >
+      [AFBEELDING: Before/after of iteratieschema dat de connectie inzicht → beslissing toont — ca. 600×400px]
+    </span>
+  </div>
+
+  <div className="flex flex-wrap gap-3">
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 19 — Value Proposition Canvas
+    </span>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 21 — Customer Journey SOLL
+    </span>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 14 — Concept SBMC
+    </span>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 18 — Herzien SBMC
+    </span>
+  </div>
+</section>
+
+{/* SECTIE 6 — Bronverantwoording */}
+<section className="px-6 md:px-10 py-20">
+  <SectionHeading
+    eyebrow="06 · Bronverantwoording"
+    heading="Actualiteit, betrouwbaarheid, autoriteit."
+  />
+
+  <div
+    className="p-8 md:p-10 max-w-[820px] mb-10"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="text-[17px]"
+      style={{
+        lineHeight: 1.7,
+        color: 'var(--text-muted)',
+        fontStyle: 'italic',
+      }}
+    >
+      [TEKST: Licht toe hoe je bronnen hebt geselecteerd en beoordeeld op actualiteit, betrouwbaarheid en autoriteit. Verwijs voor de volledige lijst naar de bronnenpagina — daar staat per bron type (primair/secundair), APA-verwijzing en link.]
+    </p>
+  </div>
+
+  <div className="flex flex-wrap gap-3">
+    <a
+      href="/bronnen"
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Volledige bronnenlijst
+    </a>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 9 — Concurrentenanalyse
+    </span>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Zie ook: Opdracht 8 — Marktomvang
+    </span>
+  </div>
+</section>
+
+{/* SECTIE 7 — Reflectie */}
+<section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="07 · Reflectie"
+    heading="Wat goed ging en wat scherper kan."
+  />
+
+  <ReflectionGrid
+    good="[INVULLEN: wat ging goed in het onderzoeksproces — onderbouw specifiek met een onderzoeksresultaat, bv. triangulatie voorkwam dat één anekdote werd overgewaardeerd.]"
+    better="[INVULLEN: wat had beter gekund — onderbouw specifiek, bv. enquête had te lage respons onder een subsegment, waardoor een inzicht minder hard bleek.]"
+  />
+
+  <div className="flex flex-wrap gap-3 mt-10">
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Iteratiebewijs: Opdracht 14 vs. 18 (SBMC)
+    </span>
+    <span
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+      }}
+    >
+      → Iteratiebewijs: Opdracht 20 vs. 21 (Customer Journey IST → SOLL)
+    </span>
+  </div>
 </section>
 
 <PageNav
