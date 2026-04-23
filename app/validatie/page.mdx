@@ -6,103 +6,664 @@ export const metadata = {
   number="05"
   label="Rubric · Validatie"
   title="Het bewijs dat het concept werkt."
-  lead="[INVULLEN: hoe ik toetste of de Cube doet wat hij belooft — vanuit meerdere waardeperspectieven en tegen meetbare criteria.]"
+  lead="[TEKST: Korte introtekst die uitlegt hoe de Challenge Cube vooraf is afgebakend met meetbare criteria en daarna getoetst bij de eindgebruiker, vanuit meerdere samenhangende waardeperspectieven.]"
   meta={[
-    { key: 'Criteria', value: '6 meetbaar' },
+    { key: 'Criteria', value: '[INVULLEN: 5 vooraf vastgelegd]' },
     { key: 'Perspectieven', value: '4 waardeperspectieven' },
-    { key: 'Periode', value: '[INVULLEN: mrt 2026]' },
+    { key: 'Periode', value: '[INVULLEN: feb – apr 2026]' },
   ]}
 />
 
-<section className="px-6 md:px-10 py-20">
+{/* SECTIE 1 — Testcriteria vooraf geformuleerd */}
+<section className="validatie-section validatie-criteria px-6 md:px-10 py-20">
   <SectionHeading
-    eyebrow="Criteria"
-    heading="Zes toetsbare testcriteria."
+    eyebrow="01 · Testcriteria"
+    heading="Vooraf vastgelegd waar de Cube op moet slagen."
   />
-  <CriteriaTable
-    criteria={[
+
+  <div
+    className="validatie-intro p-8 md:p-10 max-w-[860px] mb-12 md:mb-16"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="text-[17px] md:text-[18px]"
+      style={{
+        lineHeight: 1.7,
+        color: 'var(--text-muted)',
+        fontStyle: 'italic',
+      }}
+    >
+      {'[TEKST: Leg in twee tot drie zinnen uit dat er vóór de validatie criteria zijn opgesteld om te toetsen of het ontwerp aansluit op het probleem en de behoefte van de eindgebruiker. Benoem dat elk criterium terug te voeren is op een pain, gain of frictie uit eerdere onderzoeksstappen.]'}
+    </p>
+  </div>
+
+  <ol
+    className="criteria-grid grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 list-none pl-0"
+    style={{
+      gap: '0.5px',
+      backgroundColor: 'var(--border)',
+      border: '0.5px solid var(--border)',
+    }}
+  >
+    {[
       {
-        criterion: '[INVULLEN: criterium 1 — bv. scantijd < 10s]',
-        target: '[INVULLEN: doel]',
-        result: '[INVULLEN: gemeten resultaat]',
-        met: true,
-        evidence: '[INVULLEN: bewijslocatie of bron]',
+        id: 'TC-01',
+        description:
+          '[INVULLEN: Het ontwerp lost de belangrijkste pain van de eindgebruiker op — bv. "pauzes voelen passief en ongestructureerd".]',
+        source: 'Afgeleid uit pains in Value Proposition Canvas',
+        method: 'Interview + enquête',
+        assignment: 'Opdracht 19: Value Proposition Canvas',
       },
       {
-        criterion: '[INVULLEN: criterium 2]',
-        target: '[INVULLEN: doel]',
-        result: '[INVULLEN: resultaat]',
-        met: true,
+        id: 'TC-02',
+        description:
+          '[INVULLEN: De Cube levert de beoogde gain — bv. "binnen 10 seconden een passende challenge gestart".]',
+        source: 'Afgeleid uit gains in Value Proposition Canvas',
+        method: 'Observatie + timing-meting',
+        assignment: 'Opdracht 19: Value Proposition Canvas',
       },
       {
-        criterion: '[INVULLEN: criterium 3]',
-        target: '[INVULLEN: doel]',
-        result: '[INVULLEN: resultaat]',
-        met: false,
-        evidence: '[INVULLEN: wat nog niet werkt en waarom]',
+        id: 'TC-03',
+        description:
+          '[INVULLEN: De scorecard-dimensies (bv. eenvoud, variatie, groepsgeschiktheid) halen de vooraf vastgestelde ondergrens.]',
+        source: 'Afgeleid uit Scorecard-criteria',
+        method: 'Gestructureerde beoordeling (5-punts)',
+        assignment: 'Opdracht 6: Scorecard',
       },
-    ]}
-  />
+      {
+        id: 'TC-04',
+        description:
+          '[INVULLEN: Fricties in de huidige situatie zijn zichtbaar opgelost in het gebruik van de Cube.]',
+        source: 'Afgeleid uit Customer Journey IST',
+        method: 'Journey-vergelijking IST vs. gebruik',
+        assignment: 'Opdracht 20: Customer Journey IST',
+      },
+      {
+        id: 'TC-05',
+        description:
+          '[INVULLEN: De gewenste ervaring uit de SOLL-journey (bv. flow, plezier, sociale interactie) wordt herkend door de doelgroep.]',
+        source: 'Afgeleid uit Customer Journey SOLL',
+        method: 'Enquête na gebruik',
+        assignment: 'Opdracht 21: Customer Journey SOLL',
+      },
+    ].map((criterion, index) => (
+      <li
+        key={criterion.id}
+        className="criterion-card p-7 md:p-8 flex flex-col gap-5"
+        style={{ backgroundColor: 'var(--canvas)' }}
+      >
+        <div className="flex items-center justify-between gap-3">
+          <span
+            className="inline-flex items-center self-start px-2.5 py-1 text-[11px] uppercase"
+            style={{
+              letterSpacing: '0.2em',
+              color: 'var(--accent-mint)',
+              backgroundColor: 'var(--accent-mint-soft)',
+              border: '1px solid var(--accent-mint-border)',
+              borderRadius: '3px',
+              fontFeatureSettings: '"tnum"',
+            }}
+          >
+            {criterion.id}
+          </span>
+          <span
+            aria-hidden="true"
+            className="font-serif"
+            style={{ fontSize: '34px', lineHeight: 1, color: 'var(--text-dim)' }}
+          >
+            0{index + 1}
+          </span>
+        </div>
+
+        <h3
+          className="criterion-title font-serif"
+          style={{
+            fontSize: 'clamp(20px, 2vw, 24px)',
+            lineHeight: 1.2,
+            color: 'var(--text-primary)',
+          }}
+        >
+          {criterion.description}
+        </h3>
+
+        <div className="flex flex-col gap-2">
+          <span
+            className="text-[10px] uppercase"
+            style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
+          >
+            Herkomst
+          </span>
+          <p
+            className="text-[14px]"
+            style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
+          >
+            {criterion.source}
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <span
+            className="text-[10px] uppercase"
+            style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
+          >
+            Meetmethode
+          </span>
+          <p
+            className="text-[14px]"
+            style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
+          >
+            {criterion.method}
+          </p>
+        </div>
+
+        <div
+          className="pt-5 mt-auto"
+          style={{ borderTop: '0.5px solid var(--border)' }}
+        >
+          <span
+            className="inline-flex items-center gap-2 text-[12px]"
+            style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)' }}
+          >
+            → {criterion.assignment}
+          </span>
+        </div>
+      </li>
+    ))}
+  </ol>
+
+  <div
+    className="criteria-coherence mt-12 md:mt-16 p-8 md:p-10 max-w-[900px]"
+    style={{
+      backgroundColor: 'var(--canvas-elevated)',
+      borderLeft: '2px solid var(--accent-mint)',
+    }}
+  >
+    <span
+      className="block text-[10px] uppercase mb-3"
+      style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}
+    >
+      Samenhang
+    </span>
+    <p
+      className="text-[15px] md:text-[16px]"
+      style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}
+    >
+      {'[TEKST: Leg in twee tot drie zinnen uit hoe de vijf criteria samen het probleem volledig afdekken. Benoem dat TC-01 en TC-02 de kern van de waardepropositie toetsen, TC-03 de ontwerpkwaliteit borgt en TC-04 en TC-05 de ervaring in context valideren.]'}
+    </p>
+  </div>
 </section>
 
-<section className="px-6 md:px-10 py-20">
+{/* SECTIE 2 — Bewijs en testresultaten */}
+<section
+  className="validatie-section validatie-results px-6 md:px-10 py-20"
+  style={{ borderTop: '0.5px solid var(--border)' }}
+>
   <SectionHeading
-    eyebrow="Waardeperspectieven"
-    heading="Vier kaders — één concept getoetst."
+    eyebrow="02 · Bewijs & resultaten"
+    heading="Wat de test bij de eindgebruiker opleverde."
   />
-  <ValuePerspectives
-    perspectives={[
+
+  <div
+    className="validatie-intro p-8 md:p-10 max-w-[860px] mb-12 md:mb-16"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="text-[17px]"
+      style={{
+        lineHeight: 1.7,
+        color: 'var(--text-muted)',
+        fontStyle: 'italic',
+      }}
+    >
+      {'[TEKST: Beschrijf kort hoe de testcriteria uit sectie 1 zijn gevalideerd bij de eindgebruiker. Benoem hoeveel respondenten zijn betrokken, in welke setting er getest is en hoe de resultaten zijn vastgelegd.]'}
+    </p>
+  </div>
+
+  <ul className="results-list flex flex-col list-none pl-0" style={{ gap: '0.5px', backgroundColor: 'var(--border)', border: '0.5px solid var(--border)' }}>
+    {[
       {
-        label: 'Student',
-        value: '[INVULLEN: kernwaarde voor student]',
-        evidence: '[INVULLEN: waaruit blijkt dat]',
+        id: 'TC-01',
+        method: '[INVULLEN: semi-gestructureerd interview, n=8]',
+        outcome:
+          '[INVULLEN: bv. 7 van de 8 respondenten gaven aan dat de Cube de pauze actiever en gestructureerder maakt.]',
+        verdict: 'voldoet',
+        conclusion:
+          '[INVULLEN: Toelichting — het ontwerp lost de hoofdpain aantoonbaar op voor de meerderheid van de doelgroep.]',
+        image: '[AFBEELDING: interviewtranscripten of codering-screenshot — ca. 480×300px]',
+        assignment: 'Opdracht 20: Customer Journey IST',
       },
       {
-        label: 'Docent',
-        value: '[INVULLEN: kernwaarde voor docent]',
-        evidence: '[INVULLEN: onderbouwing]',
+        id: 'TC-02',
+        method: '[INVULLEN: A/B-test met twee uitingen, n=60]',
+        outcome:
+          '[INVULLEN: bv. variant B werd gemiddeld in 8,2s gescand; variant A in 14,6s.]',
+        verdict: 'voldoet',
+        conclusion:
+          '[INVULLEN: Toelichting — de 10-seconden-drempel is gehaald, mits gekozen wordt voor het ontwerp van variant B.]',
+        image: '[GRAFIEK: staafdiagram scan-tijd per variant — ca. 480×300px]',
+        assignment: 'Opdracht 28: A/B-test',
       },
       {
-        label: 'Instelling',
-        value: '[INVULLEN: kernwaarde voor school]',
-        evidence: '[INVULLEN: onderbouwing]',
+        id: 'TC-03',
+        method: '[INVULLEN: scorecard-beoordeling, n=12 peers + docent]',
+        outcome:
+          '[INVULLEN: bv. gemiddelde score 4,1/5 op eenvoud, 3,8/5 op variatie, 4,4/5 op groepsgeschiktheid.]',
+        verdict: 'deels',
+        conclusion:
+          '[INVULLEN: Toelichting — variatie blijft het aandachtspunt; de andere dimensies halen ruim de ondergrens.]',
+        image: '[GRAFIEK: radar-chart scorecard-dimensies — ca. 480×300px]',
+        assignment: 'Opdracht 6: Scorecard',
       },
       {
-        label: 'Maatschappij',
-        value: '[INVULLEN: bredere waarde]',
-        evidence: '[INVULLEN: onderbouwing]',
+        id: 'TC-04',
+        method: '[INVULLEN: prijsonderzoek & journey-vergelijking, n=45]',
+        outcome:
+          '[INVULLEN: bv. 82% van de respondenten herkent de opgeloste fricties uit de IST-journey terug in het gebruik.]',
+        verdict: 'voldoet',
+        conclusion:
+          '[INVULLEN: Toelichting — de kernfricties worden weggenomen; restfricties blijven bij grote groepen (>8 personen).]',
+        image: '[AFBEELDING: IST vs. gebruik overlay — ca. 480×300px]',
+        assignment: 'Opdracht 11/13: Prijsonderzoek',
       },
-    ]}
-  />
+      {
+        id: 'TC-05',
+        method: '[INVULLEN: enquête na gebruik, n=38]',
+        outcome:
+          '[INVULLEN: bv. 74% herkent flow, 81% plezier, 69% sociale interactie in de SOLL-beschrijving.]',
+        verdict: 'voldoet',
+        conclusion:
+          '[INVULLEN: Toelichting — de beoogde ervaring wordt consistent herkend; sociale interactie verdient nog aanscherping.]',
+        image: '[GRAFIEK: Likert-verdeling SOLL-dimensies — ca. 480×300px]',
+        assignment: 'Opdracht 21: Customer Journey SOLL',
+      },
+    ].map((result) => {
+      const verdictStyle =
+        result.verdict === 'voldoet'
+          ? {
+              color: 'var(--accent-mint)',
+              backgroundColor: 'var(--accent-mint-soft)',
+              border: '1px solid var(--accent-mint-border)',
+            }
+          : result.verdict === 'deels'
+            ? {
+                color: 'var(--accent-amber)',
+                backgroundColor: 'var(--accent-amber-soft)',
+                border: '1px solid rgba(232, 184, 79, 0.3)',
+              }
+            : {
+                color: 'var(--text-muted)',
+                backgroundColor: 'var(--surface)',
+                border: '1px solid var(--border)',
+              }
+
+      return (
+        <li
+          key={result.id}
+          className="result-row grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] gap-0"
+          style={{ backgroundColor: 'var(--canvas)' }}
+        >
+          <div className="result-body p-7 md:p-9 flex flex-col gap-5">
+            <div className="flex flex-wrap items-center gap-3">
+              <span
+                className="inline-flex items-center px-2.5 py-1 text-[11px] uppercase"
+                style={{
+                  letterSpacing: '0.2em',
+                  color: 'var(--accent-mint)',
+                  backgroundColor: 'var(--accent-mint-soft)',
+                  border: '1px solid var(--accent-mint-border)',
+                  borderRadius: '3px',
+                }}
+              >
+                {result.id}
+              </span>
+              <span
+                className="inline-flex items-center px-2.5 py-1 text-[10px] uppercase"
+                style={{ letterSpacing: '0.2em', borderRadius: '3px', ...verdictStyle }}
+              >
+                {result.verdict}
+              </span>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <span
+                className="text-[10px] uppercase"
+                style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
+              >
+                Testmethode
+              </span>
+              <p
+                className="text-[14px]"
+                style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
+              >
+                {result.method}
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <span
+                className="text-[10px] uppercase"
+                style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
+              >
+                Uitkomst
+              </span>
+              <p
+                className="font-serif"
+                style={{
+                  fontSize: 'clamp(20px, 2vw, 24px)',
+                  lineHeight: 1.25,
+                  color: 'var(--text-primary)',
+                }}
+              >
+                {result.outcome}
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <span
+                className="text-[10px] uppercase"
+                style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}
+              >
+                Conclusie
+              </span>
+              <p
+                className="text-[14px]"
+                style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
+              >
+                {result.conclusion}
+              </p>
+            </div>
+
+            <div
+              className="pt-5 mt-auto"
+              style={{ borderTop: '0.5px solid var(--border)' }}
+            >
+              <span
+                className="inline-flex items-center gap-2 text-[12px]"
+                style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)' }}
+              >
+                → {result.assignment}
+              </span>
+            </div>
+          </div>
+
+          <div
+            className="result-visual flex items-center justify-center text-center p-8 md:p-10"
+            style={{
+              minHeight: '220px',
+              backgroundColor: 'var(--canvas-elevated)',
+              borderLeft: '0.5px solid var(--border)',
+              color: 'var(--text-muted)',
+            }}
+          >
+            <span
+              className="block max-w-[320px] text-[12px]"
+              style={{
+                letterSpacing: '0.05em',
+                lineHeight: 1.6,
+                border: '1px dashed var(--border-strong)',
+                borderRadius: '3px',
+                padding: '32px 24px',
+                width: '100%',
+              }}
+            >
+              {result.image}
+            </span>
+          </div>
+        </li>
+      )
+    })}
+  </ul>
+
+  <div
+    className="results-summary mt-12 md:mt-16 p-8 md:p-10 max-w-[900px]"
+    style={{
+      backgroundColor: 'var(--canvas-elevated)',
+      borderLeft: '2px solid var(--accent-mint)',
+    }}
+  >
+    <span
+      className="block text-[10px] uppercase mb-3"
+      style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}
+    >
+      Overkoepelende conclusie
+    </span>
+    <p
+      className="text-[15px] md:text-[16px]"
+      style={{ lineHeight: 1.75, color: 'var(--text-secondary)', fontStyle: 'italic' }}
+    >
+      {'[TEKST: Vat in twee tot vier zinnen samen in welke mate de Challenge Cube aansluit op het probleem en de behoefte van de eindgebruiker. Benoem expliciet welke criteria volledig zijn gehaald, welke deels en wat dat betekent voor de volgende ontwikkelstap.]'}
+    </p>
+  </div>
 </section>
 
-<section className="px-6 md:px-10 py-20">
-  <SectionHeading eyebrow="Bewijslast" heading="Waar het concept overeind bleef." />
-  <EvidenceGrid>
-    <EvidenceCard
-      rubric={{ number: '05', label: 'Validatie' }}
-      title="[INVULLEN: bewijsstuk 1]"
-      action="[INVULLEN: test-setup]"
-      finding="[INVULLEN: uitkomst]"
-      meaning="[INVULLEN: wat dit zegt]"
-      sourceId="placeholder-1"
-    />
-    <EvidenceCard
-      rubric={{ number: '05', label: 'Validatie' }}
-      title="[INVULLEN: bewijsstuk 2]"
-      action="[INVULLEN: test-setup]"
-      finding="[INVULLEN: uitkomst]"
-      meaning="[INVULLEN: wat dit zegt]"
-    />
-  </EvidenceGrid>
-</section>
-
-<section className="px-6 md:px-10 py-20">
-  <SectionHeading eyebrow="Reflectie" heading="Wat validatie (nog) niet vertelt." />
-  <ReflectionGrid
-    good="[INVULLEN: bv. meervoudige perspectieven maakten blinde vlekken zichtbaar.]"
-    better="[INVULLEN: bv. langetermijn-effect is nog niet gemeten.]"
+{/* SECTIE 3 — Meervoudige waardeperspectieven */}
+<section
+  className="validatie-section validatie-perspectives px-6 md:px-10 py-20 md:py-24"
+  style={{
+    backgroundColor: 'var(--canvas-elevated)',
+    borderTop: '0.5px solid var(--border)',
+    borderBottom: '0.5px solid var(--border)',
+  }}
+>
+  <SectionHeading
+    eyebrow="03 · Waardeperspectieven"
+    heading="Vier kaders, één samenhangende toets."
   />
+
+  <div
+    className="validatie-intro p-8 md:p-10 max-w-[900px] mb-12"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p
+      className="text-[17px] md:text-[18px]"
+      style={{
+        lineHeight: 1.75,
+        color: 'var(--text-muted)',
+        fontStyle: 'italic',
+      }}
+    >
+      {'[TEKST: Leg uit dat de aansluiting op de eindgebruiker niet alleen functioneel is beoordeeld, maar vanuit vier samenhangende waardeperspectieven. Benoem dat deze perspectieven elkaar aanvullen en dat een concept alleen overeind blijft als het vanuit meerdere kaders waarde oplevert.]'}
+    </p>
+  </div>
+
+  <div
+    className="perspectives-grid grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4"
+    style={{
+      gap: '0.5px',
+      backgroundColor: 'var(--border)',
+      border: '0.5px solid var(--border)',
+    }}
+  >
+    {[
+      {
+        label: 'Gebruikerswaarde',
+        description:
+          '[INVULLEN: beschrijf hoe de Cube concrete waarde levert voor de eindgebruiker — bv. meer plezier, structuur en sociale interactie tijdens de pauze.]',
+        evidence:
+          '[INVULLEN: onderbouw met concrete data uit de tests — bv. 81% herkent "plezier" uit TC-05 en 7/8 interviews uit TC-01.]',
+        assignment: 'Opdracht 4: Impactbepaling',
+      },
+      {
+        label: 'Economische waarde',
+        description:
+          '[INVULLEN: beschrijf hoe de Cube economisch haalbaar is voor school én eindgebruiker — prijsbereidheid, kostprijs en verdienmodel.]',
+        evidence:
+          '[INVULLEN: onderbouw met prijsonderzoek en SBMC — bv. prijsbereidheid mediaan €X, kostprijs €Y, marge ruim boven break-even.]',
+        assignment: 'Opdracht 14/18: SBMC',
+      },
+      {
+        label: 'Ecologische waarde',
+        description:
+          '[INVULLEN: beschrijf hoe het ontwerp rekening houdt met ecologische impact — materiaalkeuze, levensduur, circulariteit.]',
+        evidence:
+          '[INVULLEN: onderbouw met circulaire-economie-analyse — bv. materiaalscore, reparatie- en hergebruiksmogelijkheden.]',
+        assignment: 'Opdracht 17: Circulaire Economie',
+      },
+      {
+        label: 'Sociale waarde',
+        description:
+          '[INVULLEN: beschrijf hoe de Cube sociale waarde creëert — bv. inclusieve pauze, laagdrempelige interactie tussen klasgenoten.]',
+        evidence:
+          '[INVULLEN: onderbouw met B-Corp-analyse en observaties — bv. 69% scoort "sociale interactie" uit TC-05 en drempelverlagende observaties.]',
+        assignment: 'Opdracht 5: B-Corp Analyse',
+      },
+    ].map((p) => (
+      <article
+        key={p.label}
+        className="perspective-card p-8 md:p-10 flex flex-col gap-5"
+        style={{ backgroundColor: 'var(--canvas)' }}
+      >
+        <div className="flex items-start justify-between gap-4">
+          <span
+            className="text-[10px] uppercase"
+            style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}
+          >
+            {p.label}
+          </span>
+          <span
+            aria-hidden="true"
+            className="perspective-icon inline-flex items-center justify-center text-[11px]"
+            style={{
+              width: '44px',
+              height: '44px',
+              color: 'var(--text-muted)',
+              border: '1px dashed var(--border-strong)',
+              borderRadius: '999px',
+              letterSpacing: '0.05em',
+            }}
+          >
+            [icoon]
+          </span>
+        </div>
+
+        <h3
+          className="perspective-title font-serif"
+          style={{
+            fontSize: 'clamp(22px, 2.2vw, 26px)',
+            lineHeight: 1.2,
+            color: 'var(--text-primary)',
+          }}
+        >
+          {p.description}
+        </h3>
+
+        <div className="flex flex-col gap-2">
+          <span
+            className="text-[10px] uppercase"
+            style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
+          >
+            Onderbouwing
+          </span>
+          <p
+            className="text-[14px]"
+            style={{ lineHeight: 1.65, color: 'var(--text-secondary)' }}
+          >
+            {p.evidence}
+          </p>
+        </div>
+
+        <div
+          className="pt-5 mt-auto"
+          style={{ borderTop: '0.5px solid var(--border)' }}
+        >
+          <span
+            className="inline-flex items-center gap-2 text-[12px]"
+            style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)' }}
+          >
+            → {p.assignment}
+          </span>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <div
+    className="perspectives-connection mt-12 md:mt-16 p-8 md:p-10 max-w-[960px]"
+    style={{
+      backgroundColor: 'var(--surface)',
+      borderLeft: '2px solid var(--accent-mint)',
+    }}
+  >
+    <span
+      className="block text-[10px] uppercase mb-3"
+      style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}
+    >
+      Samenhang tussen perspectieven
+    </span>
+    <p
+      className="text-[15px] md:text-[16px] mb-6"
+      style={{ lineHeight: 1.75, color: 'var(--text-secondary)', fontStyle: 'italic' }}
+    >
+      {'[TEKST: Beschrijf in drie tot vijf zinnen hoe de vier perspectieven elkaar versterken. Benoem bijvoorbeeld dat gebruikerswaarde economische waarde mogelijk maakt, dat ecologische keuzes de sociale positie van de school ondersteunen, en dat alleen de combinatie een volledige aansluiting op de eindgebruiker oplevert.]'}
+    </p>
+
+    <ol
+      className="perspectives-chain grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 list-none pl-0"
+      aria-label="Versterkende relaties tussen perspectieven"
+    >
+      {[
+        {
+          from: 'Gebruikerswaarde',
+          to: 'Economische waarde',
+          link:
+            '[INVULLEN: bv. "hogere ervaren waarde → hogere prijsbereidheid".]',
+        },
+        {
+          from: 'Economische waarde',
+          to: 'Ecologische waarde',
+          link:
+            '[INVULLEN: bv. "marge laat ruimte voor circulaire materiaalkeuze".]',
+        },
+        {
+          from: 'Ecologische waarde',
+          to: 'Sociale waarde',
+          link:
+            '[INVULLEN: bv. "bewust materiaal versterkt positionering als verantwoorde school".]',
+        },
+        {
+          from: 'Sociale waarde',
+          to: 'Gebruikerswaarde',
+          link:
+            '[INVULLEN: bv. "meer sociale interactie in de pauze verhoogt direct het gebruiksplezier".]',
+        },
+      ].map((link) => (
+        <li
+          key={`${link.from}-${link.to}`}
+          className="p-5 flex flex-col gap-2"
+          style={{
+            backgroundColor: 'var(--canvas)',
+            border: '0.5px solid var(--border)',
+            borderRadius: '3px',
+          }}
+        >
+          <span
+            className="text-[11px]"
+            style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)' }}
+          >
+            {link.from} → {link.to}
+          </span>
+          <p
+            className="text-[13px]"
+            style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
+          >
+            {link.link}
+          </p>
+        </li>
+      ))}
+    </ol>
+  </div>
 </section>
 
 <PageNav
