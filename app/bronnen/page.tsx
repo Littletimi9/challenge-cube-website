@@ -1,4 +1,5 @@
 import { ExternalLink } from 'lucide-react'
+import Link from 'next/link'
 import PageHead from '@/components/rubric/PageHead'
 import SectionHeading from '@/components/rubric/SectionHeading'
 import { sources, typeLabels, type Source, type SourceType } from '@/content/bronnen'
@@ -26,6 +27,45 @@ export default function BronnenPage() {
           { key: 'Stijl', value: 'APA 7' },
         ]}
       />
+
+      <section className="px-6 md:px-10 py-16 md:py-20">
+        <SectionHeading eyebrow="Opdrachten" heading="Bronnen per opdracht." />
+        <div
+          className="max-w-[820px] p-6 md:p-8 flex items-center justify-between gap-6"
+          style={{
+            border: '0.5px solid var(--border)',
+            backgroundColor: 'var(--surface)',
+          }}
+        >
+          <div className="flex flex-col gap-2">
+            <p
+              className="text-[10px] uppercase"
+              style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
+            >
+              /bronnen/opdracht-1
+            </p>
+            <h3
+              className="font-serif text-[22px]"
+              style={{ lineHeight: 1.2, color: 'var(--text-primary)' }}
+            >
+              Opdracht 1 — Ambitieniveau duurzaamheid
+            </h3>
+            <p className="text-[14px]" style={{ color: 'var(--text-secondary)' }}>
+              APA-bronnenlijst met gekoppelde bronverwijzingen in de lopende tekst.
+            </p>
+          </div>
+          <Link
+            href="/bronnen/opdracht-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-[12px] uppercase shrink-0 hover:opacity-80"
+            style={{ letterSpacing: '0.15em', color: 'var(--accent-mint)' }}
+          >
+            Open
+            <ExternalLink size={12} strokeWidth={1.5} />
+          </Link>
+        </div>
+      </section>
 
       {grouped.map(({ type, items }) => (
         <section key={type} className="px-6 md:px-10 py-16 md:py-20">

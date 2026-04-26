@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Instrument_Serif } from 'next/font/google'
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
+import SourcePageLinkHandler from '@/components/layout/SourcePageLinkHandler'
 import './globals.css'
 
 const inter = Inter({
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="nl" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <body>
+        <SourcePageLinkHandler />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:px-4 focus:py-2 focus:bg-[var(--accent-mint)] focus:text-[var(--canvas)] focus:rounded"

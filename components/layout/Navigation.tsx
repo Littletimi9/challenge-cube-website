@@ -13,6 +13,7 @@ const links = [
   { href: '/methoden', label: 'Methoden' },
   { href: '/validatie', label: 'Validatie' },
   { href: '/reflectie', label: 'Reflectie' },
+  { href: '/bronnen', label: 'Bronnen' },
 ]
 
 export default function Navigation() {
