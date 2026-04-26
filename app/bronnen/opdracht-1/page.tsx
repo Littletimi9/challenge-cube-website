@@ -65,8 +65,19 @@ const bronnen: Bron[] = [
   },
   {
     id: 'bron-elkington-1997',
-    content:
-      'Elkington, J. (1997). Cannibals with forks: The triple bottom line of 21st century business. Capstone Publishing.',
+    content: (
+      <>
+        Elkington, J. (1997). <em>Cannibals with forks: The triple bottom line of 21st century business</em>. Capstone Publishing.{' '}
+        <a
+          href="https://www.proquest.com/openview/804cc9d98196ef6e26d88748e89f8db0/1?pq-origsite=gscholar&cbl=35934"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: 'var(--accent-mint)', textDecoration: 'underline' }}
+        >
+          Open bron
+        </a>
+      </>
+    ),
   },
   {
     id: 'bron-hekking-2025',
@@ -84,8 +95,19 @@ const bronnen: Bron[] = [
   },
   {
     id: 'bron-ser-2000',
-    content:
-      'Sociaal-Economische Raad. (2000). De winst van waarden: Advies over maatschappelijk verantwoord ondernemen. SER.',
+    content: (
+      <>
+        Sociaal-Economische Raad. (2000). <em>De winst van waarden: Advies over maatschappelijk verantwoord ondernemen</em>. SER.{' '}
+        <a
+          href="https://www.ser.nl/-/media/ser/downloads/adviezen/2000/maatschappelijk-ondernemen.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: 'var(--accent-mint)', textDecoration: 'underline' }}
+        >
+          Open pdf
+        </a>
+      </>
+    ),
   },
 ]
 
