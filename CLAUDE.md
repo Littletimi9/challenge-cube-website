@@ -21,9 +21,10 @@ Visuele portfolio-website ter vervanging van het beoordelingsdocument "Hoofdport
 ## Commando's
 
 ```bash
-npm run dev      # http://localhost:3000 (Turbopack)
+npm run dev      # http://localhost:3000
 npm run build    # Productie-build + typecheck
-npm run lint     # ESLint (eslint-config-next)
+npm run start    # Productie-server (na build)
+npm run lint     # ESLint (eslint-config-next, flat config in eslint.config.mjs)
 ```
 
 Geen geautomatiseerde tests. Verifieer frontend-wijzigingen met `npm run dev` + handmatig in browser.
@@ -34,16 +35,20 @@ Geen geautomatiseerde tests. Verifieer frontend-wijzigingen met `npm run dev` + 
 
 ### Component-folders
 
-- `components/layout/` — Navigation (sticky blur, 7 links, `aria-current`), Footer (status-bar)
-- `components/home/` — Hero, HeroCollage, StatsStrip, RubricIndex + RubricRow, Pitch, Categories
+- `components/layout/` — Navigation (sticky blur, `aria-current`), Footer (status-bar), SourcePageLinkHandler (smooth-scroll/highlight voor `/bronnen#<id>` deep-links)
+- `components/hero/` — HeroLanding (full-bleed homepage hero), HeroVideo, HeroContent, HeroOverlays
+- `components/home/` — StatsStrip, RubricIndex + RubricRow, Pitch, Categories. (`HeroCollage.legacy.tsx` is een afgedankte variant — niet gebruiken.)
 - `components/rubric/` — PageHead, SectionHeading, RubricBadge, SourceLink, EvidenceCard, EvidenceGrid, Triangulation, QuoteBlock, ReflectionGrid, MethodCard, Timeline, CriteriaTable, PageNav, ValuePerspectives
 - `components/motion/FadeIn.tsx` — client-wrapper die `useReducedMotion()` respecteert
 
-Types worden inline per component gedefinieerd en geëxporteerd waar nodig (bv. `RubricRowData` uit RubricRow). Géén centrale `lib/types.ts`.
+### Shared lib
+
+- `lib/types.ts` — gedeelde props-interfaces die door rubric-componenten worden geconsumeerd (RubricBadgeProps, EvidenceCardProps, TimelineProps, MethodCardProps, CriteriaTableProps, ValuePerspectiveProps, TriangulationDiagramProps, etc.). Voeg nieuwe gedeelde shapes hier toe; component-lokale types blijven inline.
+- `lib/motion.ts` — gedeelde motion-presets/easing-curves voor Framer Motion.
 
 ### Routing
 
-5 rubric-pagina's + `/reflectie` als `.mdx` bestanden in `app/<route>/page.mdx`. `/bronnen` is een `page.tsx` die typed data uit `content/bronnen.ts` rendert. Homepage (`app/page.tsx`) componeert Hero + StatsStrip + RubricIndex + Pitch.
+5 rubric-pagina's + `/reflectie` als `.mdx` bestanden in `app/<route>/page.mdx`. `/bronnen` is een `page.tsx` die typed data uit `content/bronnen.ts` rendert; daaronder hangen sub-routes voor opdracht-detailpagina's (`app/bronnen/opdracht-1/`, `opdracht-2/`, `opdracht-3/`) waar specifieke bronmaterialen verder worden uitgelicht. Homepage (`app/page.tsx`) componeert `HeroLanding` (uit `components/hero/`) + StatsStrip + RubricIndex + Pitch.
 
 MDX-componenten zijn globaal beschikbaar via `mdx-components.tsx` — géén import nodig in `.mdx` bestanden. **Bij elk nieuw MDX-component: toevoegen aan `components/rubric/` én registreren in `mdx-components.tsx`.**
 

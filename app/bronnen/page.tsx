@@ -30,6 +30,12 @@ const opdrachten: OpdrachtCard[] = [
     title: 'Opdracht 2 — Ambitieniveau duurzaamheid (groep)',
     description: 'Vijf individuele ambitieniveaus, groepskeuze en onderbouwing op basis van Sprint 1.',
   },
+  {
+    href: '/bronnen/opdracht-3',
+    slug: '/bronnen/opdracht-3',
+    title: 'Opdracht 3 — Ecolabels',
+    description: 'Analyse van Fairtrade en FSC bij Ben & Jerry\'s via het Triple Bottom Line-model.',
+  },
 ]
 
 export default function BronnenPage() {
@@ -40,7 +46,7 @@ export default function BronnenPage() {
   return (
     <>
       <PageHead
-        number="∞"
+        number="07"
         label="Portfolio · Bronnen"
         title="Alle bronnen, in één overzicht."
         lead="Gegroepeerd per type. Elke bron heeft een eigen anker dat vanuit de rubric-pagina's linkt."
