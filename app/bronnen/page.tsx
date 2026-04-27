@@ -10,6 +10,28 @@ export const metadata = {
 
 const order: SourceType[] = ['interview', 'observatie', 'artikel', 'boek', 'website']
 
+type OpdrachtCard = {
+  href: string
+  slug: string
+  title: string
+  description: string
+}
+
+const opdrachten: OpdrachtCard[] = [
+  {
+    href: '/bronnen/opdracht-1',
+    slug: '/bronnen/opdracht-1',
+    title: 'Opdracht 1 — Ambitieniveau duurzaamheid',
+    description: 'APA-bronnenlijst met gekoppelde bronverwijzingen in de lopende tekst.',
+  },
+  {
+    href: '/bronnen/opdracht-2',
+    slug: '/bronnen/opdracht-2',
+    title: 'Opdracht 2 — Ambitieniveau duurzaamheid (groep)',
+    description: 'Vijf individuele ambitieniveaus, groepskeuze en onderbouwing op basis van Sprint 1.',
+  },
+]
+
 export default function BronnenPage() {
   const grouped = order
     .map((type) => ({ type, items: sources.filter((s) => s.type === type) }))
@@ -30,40 +52,51 @@ export default function BronnenPage() {
 
       <section className="px-6 md:px-10 py-16 md:py-20">
         <SectionHeading eyebrow="Opdrachten" heading="Bronnen per opdracht." />
-        <div
-          className="max-w-[820px] p-6 md:p-8 flex items-center justify-between gap-6"
-          style={{
-            border: '0.5px solid var(--border)',
-            backgroundColor: 'var(--surface)',
-          }}
-        >
-          <div className="flex flex-col gap-2">
-            <p
-              className="text-[10px] uppercase"
-              style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-[1280px]">
+          {opdrachten.map((o) => (
+            <Link
+              key={o.href}
+              href={o.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opdracht-card group p-6 md:p-8 flex items-center justify-between gap-6 no-underline"
+              style={{
+                border: '0.5px solid var(--border)',
+                backgroundColor: 'var(--surface)',
+                transition:
+                  'transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background-color 220ms ease',
+              }}
             >
-              /bronnen/opdracht-1
-            </p>
-            <h3
-              className="font-serif text-[22px]"
-              style={{ lineHeight: 1.2, color: 'var(--text-primary)' }}
-            >
-              Opdracht 1 — Ambitieniveau duurzaamheid
-            </h3>
-            <p className="text-[14px]" style={{ color: 'var(--text-secondary)' }}>
-              APA-bronnenlijst met gekoppelde bronverwijzingen in de lopende tekst.
-            </p>
-          </div>
-          <Link
-            href="/bronnen/opdracht-1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-[12px] uppercase shrink-0 hover:opacity-80"
-            style={{ letterSpacing: '0.15em', color: 'var(--accent-mint)' }}
-          >
-            Open
-            <ExternalLink size={12} strokeWidth={1.5} />
-          </Link>
+              <div className="flex flex-col gap-2">
+                <p
+                  className="text-[10px] uppercase"
+                  style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
+                >
+                  {o.slug}
+                </p>
+                <h3
+                  className="font-serif text-[22px]"
+                  style={{ lineHeight: 1.2, color: 'var(--text-primary)' }}
+                >
+                  {o.title}
+                </h3>
+                <p className="text-[14px]" style={{ color: 'var(--text-secondary)' }}>
+                  {o.description}
+                </p>
+              </div>
+              <span
+                className="inline-flex items-center gap-1.5 text-[12px] uppercase shrink-0 opdracht-card__cta"
+                style={{
+                  letterSpacing: '0.15em',
+                  color: 'var(--accent-mint)',
+                  transition: 'transform 220ms ease',
+                }}
+              >
+                Open
+                <ExternalLink size={12} strokeWidth={1.5} />
+              </span>
+            </Link>
+          ))}
         </div>
       </section>
 

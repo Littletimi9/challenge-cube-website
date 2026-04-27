@@ -107,6 +107,26 @@ body {
   color: var(--text-primary);
 }
 
+/* ─── Opdracht-card hover (full-tile clickable) ───────────────────────── */
+.opdracht-card {
+  position: relative;
+  will-change: transform;
+}
+.opdracht-card:hover,
+.opdracht-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--accent-mint-border);
+  background-color: var(--canvas-elevated);
+  box-shadow:
+    0 18px 40px -18px rgba(0, 0, 0, 0.6),
+    0 0 0 0.5px var(--accent-mint-border),
+    0 8px 32px -16px var(--accent-mint-soft);
+}
+.opdracht-card:hover .opdracht-card__cta,
+.opdracht-card:focus-visible .opdracht-card__cta {
+  transform: translateX(2px);
+}
+
 /* ─── Reduced motion ──────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *,
