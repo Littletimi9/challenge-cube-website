@@ -36,6 +36,12 @@ const opdrachten: OpdrachtCard[] = [
     title: 'Opdracht 3 — Ecolabels',
     description: 'Analyse van Fairtrade en FSC bij Ben & Jerry\'s via het Triple Bottom Line-model.',
   },
+  {
+    href: '/bronnen/opdracht-4',
+    slug: '/bronnen/opdracht-4',
+    title: 'Opdracht 4 — Impactbepaling',
+    description: 'Duurzaamheidsimpact van de Challenge Table langs sociaal, ecologisch en financieel — stakeholdermap en impactmatrix.',
+  },
 ]
 
 export default function BronnenPage() {
