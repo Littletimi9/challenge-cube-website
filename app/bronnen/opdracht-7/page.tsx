@@ -8,8 +8,8 @@ export const metadata = {
 }
 
 const paragraphs: React.ReactNode[] = [
-  'In het kader van de pressure cooker-opdracht heb ik in een kort tijdsbestek een functioneel financieel dashboard ontwikkeld. De opdracht was gericht op het snel vertalen van een zakelijke vraag naar een werkend prototype, waarbij zowel technische uitvoering als presentatie centraal stonden.',
-  'De pressure cooker is succesvol afgerond en behaald. Verdere inhoudelijke onderbouwing is voor deze opdracht niet vereist.',
+  'In het kader van de pressure cooker-opdracht heb ik in een kort tijdsbestek een functioneel financieel dashboard ontwikkeld.',
+  'De pressure cooker is succesvol afgerond en behaald. Verdere inhoudelijke onderbouwing is voor deze opdracht niet nodig.',
 ]
 
 export default function Opdracht7Page() {
