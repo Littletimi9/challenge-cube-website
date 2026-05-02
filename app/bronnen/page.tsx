@@ -48,6 +48,18 @@ const opdrachten: OpdrachtCard[] = [
     title: 'Opdracht 5 — B Corp',
     description: 'Analyse van B Corp-certificering en drie gecertificeerde bedrijven (Pley School, LunchBox Solutions, Mepal) als inspiratiekader voor de Challenge Table.',
   },
+  {
+    href: '/bronnen/opdracht-6',
+    slug: '/bronnen/opdracht-6',
+    title: 'Opdracht 6 — Scorecard Challenge Table',
+    description: 'Ecologische en sociale scorecard voor de Challenge Table: relevante aspecten, concrete activiteiten en meervoudige waardecreatie onderbouwd met externe bronnen.',
+  },
+  {
+    href: '/bronnen/opdracht-7',
+    slug: '/bronnen/opdracht-7',
+    title: 'Opdracht 7 — Pressure cooker: financieel dashboard',
+    description: 'Tijdgebonden opdracht waarbij in kort bestek een financieel dashboard is ontworpen en opgeleverd.',
+  },
 ]
 
 export default function BronnenPage() {
