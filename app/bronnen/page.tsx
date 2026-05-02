@@ -8,18 +8,16 @@ export const metadata = {
   title: 'Bronnen — Challenge Cube',
 }
 
-const order: SourceType[] = ['interview', 'observatie', 'artikel', 'boek', 'website']
+const order: SourceType[] = ['interview', 'observatie', 'boek', 'website']
 
 type OpdrachtCard = {
   href: string
-  slug: string
   title: string
   description: string
 }
 
 type InterviewCard = {
   href: string
-  slug: string
   title: string
   description: string
   meta: string
@@ -28,7 +26,6 @@ type InterviewCard = {
 const interviews: InterviewCard[] = [
   {
     href: '/bronnen/Interview-1',
-    slug: '/bronnen/Interview-1',
     title: 'Interview 1 — Isa, 6 VWO',
     description: 'Kwalitatief interview over snackgedrag op school: sociale context, prijsgevoeligheid en zelfperceptie rondom ongezonde keuzes tijdens pauzes.',
     meta: 'Sprint 1 · Probleemverkenning',
@@ -38,43 +35,36 @@ const interviews: InterviewCard[] = [
 const opdrachten: OpdrachtCard[] = [
   {
     href: '/bronnen/opdracht-1',
-    slug: '/bronnen/opdracht-1',
     title: 'Opdracht 1 — Ambitieniveau duurzaamheid',
     description: 'APA-bronnenlijst met gekoppelde bronverwijzingen in de lopende tekst.',
   },
   {
     href: '/bronnen/opdracht-2',
-    slug: '/bronnen/opdracht-2',
     title: 'Opdracht 2 — Ambitieniveau duurzaamheid (groep)',
     description: 'Vijf individuele ambitieniveaus, groepskeuze en onderbouwing op basis van Sprint 1.',
   },
   {
     href: '/bronnen/opdracht-3',
-    slug: '/bronnen/opdracht-3',
     title: 'Opdracht 3 — Ecolabels',
     description: 'Analyse van Fairtrade en FSC bij Ben & Jerry\'s via het Triple Bottom Line-model.',
   },
   {
     href: '/bronnen/opdracht-4',
-    slug: '/bronnen/opdracht-4',
     title: 'Opdracht 4 — Impactbepaling',
     description: 'Duurzaamheidsimpact van de Challenge Table langs sociaal, ecologisch en financieel — stakeholdermap en impactmatrix.',
   },
   {
     href: '/bronnen/opdracht-5',
-    slug: '/bronnen/opdracht-5',
     title: 'Opdracht 5 — B Corp',
     description: 'Analyse van B Corp-certificering en drie gecertificeerde bedrijven (Pley School, LunchBox Solutions, Mepal) als inspiratiekader voor de Challenge Table.',
   },
   {
     href: '/bronnen/opdracht-6',
-    slug: '/bronnen/opdracht-6',
     title: 'Opdracht 6 — Scorecard Challenge Table',
     description: 'Ecologische en sociale scorecard voor de Challenge Table: relevante aspecten, concrete activiteiten en meervoudige waardecreatie onderbouwd met externe bronnen.',
   },
   {
     href: '/bronnen/opdracht-7',
-    slug: '/bronnen/opdracht-7',
     title: 'Opdracht 7 — Pressure cooker: financieel dashboard',
     description: 'Tijdgebonden opdracht waarbij in kort bestek een financieel dashboard is ontworpen en opgeleverd.',
   },
@@ -169,12 +159,6 @@ export default function BronnenPage() {
               }}
             >
               <div className="flex flex-col gap-2">
-                <p
-                  className="text-[10px] uppercase"
-                  style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
-                >
-                  {o.slug}
-                </p>
                 <h3
                   className="font-serif text-[22px]"
                   style={{ lineHeight: 1.2, color: 'var(--text-primary)' }}
