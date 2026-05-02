@@ -17,6 +17,24 @@ type OpdrachtCard = {
   description: string
 }
 
+type InterviewCard = {
+  href: string
+  slug: string
+  title: string
+  description: string
+  meta: string
+}
+
+const interviews: InterviewCard[] = [
+  {
+    href: '/bronnen/Interview-1',
+    slug: '/bronnen/Interview-1',
+    title: 'Interview 1 — Isa, 6 VWO',
+    description: 'Kwalitatief interview over snackgedrag op school: sociale context, prijsgevoeligheid en zelfperceptie rondom ongezonde keuzes tijdens pauzes.',
+    meta: 'Sprint 1 · Probleemverkenning',
+  },
+]
+
 const opdrachten: OpdrachtCard[] = [
   {
     href: '/bronnen/opdracht-1',
@@ -81,6 +99,59 @@ export default function BronnenPage() {
       />
 
       <section className="px-6 md:px-10 py-16 md:py-20">
+        <SectionHeading eyebrow="Interviews" heading="Interviews." />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-[1280px]">
+          {interviews.map((iv) => (
+            <Link
+              key={iv.href}
+              href={iv.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opdracht-card group p-6 md:p-8 flex items-center justify-between gap-6 no-underline"
+              style={{
+                border: '0.5px solid var(--border)',
+                backgroundColor: 'var(--surface)',
+                transition:
+                  'transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background-color 220ms ease',
+              }}
+            >
+              <div className="flex flex-col gap-2">
+                <p
+                  className="text-[10px] uppercase"
+                  style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
+                >
+                  {iv.meta}
+                </p>
+                <h3
+                  className="font-serif text-[22px]"
+                  style={{ lineHeight: 1.2, color: 'var(--text-primary)' }}
+                >
+                  {iv.title}
+                </h3>
+                <p className="text-[14px]" style={{ color: 'var(--text-secondary)' }}>
+                  {iv.description}
+                </p>
+              </div>
+              <span
+                className="inline-flex items-center gap-1.5 text-[12px] uppercase shrink-0 opdracht-card__cta"
+                style={{
+                  letterSpacing: '0.15em',
+                  color: 'var(--accent-mint)',
+                  transition: 'transform 220ms ease',
+                }}
+              >
+                Open
+                <ExternalLink size={12} strokeWidth={1.5} />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section
+        className="px-6 md:px-10 py-16 md:py-20"
+        style={{ borderTop: '0.5px solid var(--border)' }}
+      >
         <SectionHeading eyebrow="Opdrachten" heading="Bronnen per opdracht." />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-[1280px]">
           {opdrachten.map((o) => (
