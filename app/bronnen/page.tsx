@@ -14,6 +14,7 @@ type OpdrachtCard = {
   href: string
   title: string
   description: string
+  sourceCount: number
 }
 
 type InterviewCard = {
@@ -43,36 +44,43 @@ const opdrachten: OpdrachtCard[] = [
     href: '/bronnen/opdracht-1',
     title: 'Opdracht 1 — Ambitieniveau duurzaamheid',
     description: 'APA-bronnenlijst met gekoppelde bronverwijzingen in de lopende tekst.',
+    sourceCount: 4,
   },
   {
     href: '/bronnen/opdracht-2',
     title: 'Opdracht 2 — Ambitieniveau duurzaamheid (groep)',
     description: 'Vijf individuele ambitieniveaus, groepskeuze en onderbouwing op basis van Sprint 1.',
+    sourceCount: 9,
   },
   {
     href: '/bronnen/opdracht-3',
     title: 'Opdracht 3 — Ecolabels',
     description: 'Analyse van Fairtrade en FSC bij Ben & Jerry\'s via het Triple Bottom Line-model.',
+    sourceCount: 11,
   },
   {
     href: '/bronnen/opdracht-4',
     title: 'Opdracht 4 — Impactbepaling',
     description: 'Duurzaamheidsimpact van de Challenge Table langs sociaal, ecologisch en financieel — stakeholdermap en impactmatrix.',
+    sourceCount: 20,
   },
   {
     href: '/bronnen/opdracht-5',
     title: 'Opdracht 5 — B Corp',
     description: 'Analyse van B Corp-certificering en drie gecertificeerde bedrijven (Pley School, LunchBox Solutions, Mepal) als inspiratiekader voor de Challenge Table.',
+    sourceCount: 12,
   },
   {
     href: '/bronnen/opdracht-6',
     title: 'Opdracht 6 — Scorecard Challenge Table',
     description: 'Ecologische en sociale scorecard voor de Challenge Table: relevante aspecten, concrete activiteiten en meervoudige waardecreatie onderbouwd met externe bronnen.',
+    sourceCount: 12,
   },
   {
     href: '/bronnen/opdracht-7',
     title: 'Opdracht 7 — Pressure cooker: financieel dashboard',
     description: 'Tijdgebonden opdracht waarbij in kort bestek een financieel dashboard is ontworpen en opgeleverd.',
+    sourceCount: 0,
   },
 ]
 
@@ -80,6 +88,7 @@ export default function BronnenPage() {
   const grouped = order
     .map((type) => ({ type, items: sources.filter((s) => s.type === type) }))
     .filter((g) => g.items.length > 0)
+  const totalOpdrachtSources = opdrachten.reduce((total, opdracht) => total + opdracht.sourceCount, 0)
 
   return (
     <>
@@ -89,7 +98,7 @@ export default function BronnenPage() {
         title="Alle bronnen, in één overzicht."
         lead="Gegroepeerd per type. Elke bron heeft een eigen anker dat vanuit de rubric-pagina's linkt."
         meta={[
-          { key: 'Totaal', value: `${sources.length + interviews.length} bronnen` },
+          { key: 'Totaal', value: `${totalOpdrachtSources + interviews.length} bronnen` },
           { key: 'Stijl', value: 'APA 7' },
         ]}
       />
