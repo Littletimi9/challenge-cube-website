@@ -42,6 +42,12 @@ const opdrachten: OpdrachtCard[] = [
     title: 'Opdracht 4 — Impactbepaling',
     description: 'Duurzaamheidsimpact van de Challenge Table langs sociaal, ecologisch en financieel — stakeholdermap en impactmatrix.',
   },
+  {
+    href: '/bronnen/opdracht-5',
+    slug: '/bronnen/opdracht-5',
+    title: 'Opdracht 5 — B Corp',
+    description: 'Analyse van B Corp-certificering en drie gecertificeerde bedrijven (Pley School, LunchBox Solutions, Mepal) als inspiratiekader voor de Challenge Table.',
+  },
 ]
 
 export default function BronnenPage() {
