@@ -30,6 +30,12 @@ const interviews: InterviewCard[] = [
     description: 'Kwalitatief interview over snackgedrag op school: sociale context, prijsgevoeligheid en zelfperceptie rondom ongezonde keuzes tijdens pauzes.',
     meta: 'Sprint 1 · Probleemverkenning',
   },
+  {
+    href: '/bronnen/interview-2',
+    title: 'Interview 2 — Twee VMBO-leerlingen, jaar 3',
+    description: 'Kwalitatief groepsinterview over snackgedrag op school: impulsaankopen, prijsgrenzen, groepsgezelligheid en financieel bewustzijn bij VMBO-leerlingen.',
+    meta: 'Sprint 1 · Probleemverkenning',
+  },
 ]
 
 const opdrachten: OpdrachtCard[] = [

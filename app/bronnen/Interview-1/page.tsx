@@ -201,12 +201,15 @@ export default function Interview1Page() {
               color: 'var(--text-muted)',
             }}
           >
-            [INVULLEN: audio-opname embedden of als bestand toevoegen]
+            Isa, 6 VWO — volledige audio-opname
           </p>
-          <p className="text-[15px]" style={paragraphStyle}>
-            De volledige opname van het interview is beschikbaar als audiobestand.
-            Voeg hier de speler of link naar de opname in.
-          </p>
+          <audio
+            controls
+            style={{ width: '100%', accentColor: 'var(--accent-mint)' }}
+          >
+            <source src="/Isa vwo 6 leerling.m4a" type="audio/mp4" />
+            Je browser ondersteunt geen audio-element.
+          </audio>
         </div>
       </section>
 
