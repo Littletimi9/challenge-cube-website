@@ -8,7 +8,7 @@ export const metadata = {
   title: 'Bronnen — Challenge Cube',
 }
 
-const order: SourceType[] = ['interview', 'observatie', 'boek', 'website']
+const order: SourceType[] = ['observatie', 'boek', 'website']
 
 type OpdrachtCard = {
   href: string
@@ -89,7 +89,7 @@ export default function BronnenPage() {
         title="Alle bronnen, in één overzicht."
         lead="Gegroepeerd per type. Elke bron heeft een eigen anker dat vanuit de rubric-pagina's linkt."
         meta={[
-          { key: 'Totaal', value: `${sources.length} bronnen` },
+          { key: 'Totaal', value: `${sources.length + interviews.length} bronnen` },
           { key: 'Stijl', value: 'APA 7' },
         ]}
       />
