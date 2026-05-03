@@ -78,6 +78,11 @@ const opdrachten: OpdrachtCard[] = [
     title: 'Opdracht 7 — Pressure cooker: financieel dashboard',
     description: 'Tijdgebonden opdracht waarbij in kort bestek een financieel dashboard is ontworpen en opgeleverd.',
   },
+  {
+    href: '/bronnen/opdracht-9',
+    title: 'Opdracht 9 — Concurrentieanalyse',
+    description: 'Tweede iteratie: marktanalyse met trechtermodel, systematische analyse van twaalf concurrenten in drie lagen, en positioneringsmatrix op twee strategische assen.',
+  },
 ]
 
 const apaSources: ApaSource[] = [
@@ -549,6 +554,102 @@ const apaSources: ApaSource[] = [
     reference:
       'WHO Regional Office for Europe. (2006). Food and nutrition policy for schools: A tool for the development of school nutrition programmes in the WHO European Region. World Health Organization.',
     link: 'https://iris.who.int/handle/10665/107797',
+  },
+  {
+    id: 'opdracht-9-earthgames',
+    label: 'Opdracht 9',
+    reference: 'Earthgames. (z.d.). Energizerkaarten. Geraadpleegd op 2 mei 2026, van https://www.earthgames.nl',
+    link: 'https://www.earthgames.nl',
+  },
+  {
+    id: 'opdracht-9-educadora',
+    label: 'Opdracht 9',
+    reference:
+      'Educadora. (z.d.). Opdracht- en bewegingsdobbelstenen. Geraadpleegd op 2 mei 2026, van https://educadora-webshop.nl/product-tag/dobbelstenen/',
+    link: 'https://educadora-webshop.nl/product-tag/dobbelstenen/',
+  },
+  {
+    id: 'opdracht-9-gezondeschool',
+    label: 'Opdracht 9',
+    reference:
+      'Gezonde School. (z.d.). Vignet en themacertificaten Gezonde School. Geraadpleegd op 2 mei 2026, van https://www.gezondeschool.nl/vignet-en-themacertificaten-gezonde-school',
+    link: 'https://www.gezondeschool.nl/vignet-en-themacertificaten-gezonde-school',
+  },
+  {
+    id: 'opdracht-9-glos-2021',
+    label: 'Opdracht 9',
+    reference:
+      'GLOS. (2021). Aantal scholen met vignet Gezonde School gestegen. Gezonde Leefstijl op School. Geraadpleegd op 2 mei 2026, van https://www.gezondeleefstijlopschool.nl/algemeen/aantal-scholen-met-vignet-gezond-school-gestegen/',
+    link: 'https://www.gezondeleefstijlopschool.nl/algemeen/aantal-scholen-met-vignet-gezond-school-gestegen/',
+  },
+  {
+    id: 'opdracht-9-nijha-2026',
+    label: 'Opdracht 9',
+    reference: 'Nijha. (2026). Spelkarren en spelpakketten voor school. Geraadpleegd op 2 mei 2026, van https://www.nijha.nl',
+    link: 'https://www.nijha.nl',
+  },
+  {
+    id: 'opdracht-9-ocw-2026',
+    label: 'Opdracht 9',
+    reference:
+      'OCW in Cijfers. (2026, 8 april). Aantal vo-scholen. Ministerie van Onderwijs, Cultuur en Wetenschap. https://www.ocwincijfers.nl/sectoren/voortgezet-onderwijs/instellingen/aantal-vo-scholen',
+    link: 'https://www.ocwincijfers.nl/sectoren/voortgezet-onderwijs/instellingen/aantal-vo-scholen',
+  },
+  {
+    id: 'opdracht-9-onderwijsvanmorgen-2024',
+    label: 'Opdracht 9',
+    reference:
+      'Onderwijsvanmorgen. (2024, februari). Een maand na het smartphoneverbod: wat is het effect? https://www.onderwijsvanmorgen.nl/een-maand-na-het-smartphoneverbod-wat-is-het-effect/',
+    link: 'https://www.onderwijsvanmorgen.nl/een-maand-na-het-smartphoneverbod-wat-is-het-effect/',
+  },
+  {
+    id: 'opdracht-9-onderwijswereld-2020',
+    label: 'Opdracht 9',
+    reference:
+      'Onderwijswereld. (2020). Gespreks- en kennismakingsspellen voor school. Geraadpleegd op 2 mei 2026, van https://www.onderwijswereld.nl',
+    link: 'https://www.onderwijswereld.nl',
+  },
+  {
+    id: 'opdracht-9-picoo-2026',
+    label: 'Opdracht 9',
+    reference:
+      'Picoo. (2026). Picoo: interactief bewegingssysteem voor onderwijs. Geraadpleegd op 2 mei 2026, van https://www.picoo.nl',
+    link: 'https://www.picoo.nl',
+  },
+  {
+    id: 'opdracht-9-pointer-2022',
+    label: 'Opdracht 9',
+    reference:
+      'Pointer. (2022, 15 juni). Fastfood rondom scholen neemt sterk toe. KRO-NCRV Pointer. https://pointer.kro-ncrv.nl/fastfood-rondom-scholen-neemt-sterk-toe',
+    link: 'https://pointer.kro-ncrv.nl/fastfood-rondom-scholen-neemt-sterk-toe',
+  },
+  {
+    id: 'opdracht-9-rijksoverheid-2024a',
+    label: 'Opdracht 9',
+    reference:
+      'Rijksoverheid. (2024a). Nationaal Preventieakkoord: gezonde school. https://www.rijksoverheid.nl/onderwerpen/gezonde-school',
+    link: 'https://www.rijksoverheid.nl/onderwerpen/gezonde-school',
+  },
+  {
+    id: 'opdracht-9-rijksoverheid-2024b',
+    label: 'Opdracht 9',
+    reference:
+      'Rijksoverheid. (2024b, 12 juli). OCW-onderzoek: leerlingen socialer en geconcentreerder door mobieltjesafspraak. https://www.rijksoverheid.nl/actueel/nieuws/2024/07/12/ocw-onderzoek-leerlingen-socialer-en-geconcentreerder-door-mobieltjesafspraak',
+    link: 'https://www.rijksoverheid.nl/actueel/nieuws/2024/07/12/ocw-onderzoek-leerlingen-socialer-en-geconcentreerder-door-mobieltjesafspraak',
+  },
+  {
+    id: 'opdracht-9-rijksoverheid-2024c',
+    label: 'Opdracht 9',
+    reference:
+      'Rijksoverheid. (2024c). Gebruik van mobiele telefoons niet toegestaan in de klas. https://www.rijksoverheid.nl/onderwerpen/voortgezet-onderwijs/mobiele-apparaten-in-de-klas',
+    link: 'https://www.rijksoverheid.nl/onderwerpen/voortgezet-onderwijs/mobiele-apparaten-in-de-klas',
+  },
+  {
+    id: 'opdracht-9-voedingscentrum',
+    label: 'Opdracht 9',
+    reference:
+      'Voedingscentrum. (z.d.). De Gezonde Schoolkantine. Geraadpleegd op 2 mei 2026, van https://www.voedingscentrum.nl/professionals/gezonde-eetomgeving/de-gezonde-schoolkantine.aspx',
+    link: 'https://www.voedingscentrum.nl/professionals/gezonde-eetomgeving/de-gezonde-schoolkantine.aspx',
   },
 ]
 
