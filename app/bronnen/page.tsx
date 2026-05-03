@@ -83,6 +83,11 @@ const opdrachten: OpdrachtCard[] = [
     title: 'Opdracht 9 — Concurrentieanalyse',
     description: 'Tweede iteratie: marktanalyse met trechtermodel, systematische analyse van twaalf concurrenten in drie lagen, en positioneringsmatrix op twee strategische assen.',
   },
+  {
+    href: '/bronnen/opdracht-10',
+    title: 'Opdracht 10 — Prijsstrategie',
+    description: 'Waarde-gebaseerde prijsstrategie voor de Challenge Table: concurrentiepositie, penetratiestrategie, segmentdifferentiatie en vijf businesscase-scenario\'s.',
+  },
 ]
 
 const apaSources: ApaSource[] = [
@@ -650,6 +655,41 @@ const apaSources: ApaSource[] = [
     reference:
       'Voedingscentrum. (z.d.). De Gezonde Schoolkantine. Geraadpleegd op 2 mei 2026, van https://www.voedingscentrum.nl/professionals/gezonde-eetomgeving/de-gezonde-schoolkantine.aspx',
     link: 'https://www.voedingscentrum.nl/professionals/gezonde-eetomgeving/de-gezonde-schoolkantine.aspx',
+  },
+  {
+    id: 'opdracht-10-albrecht-2023',
+    label: 'Opdracht 10',
+    reference:
+      'Albrecht, C., Green, D., & Hoffman, V. (2023). Principles of marketing (2e druk). OpenStax. https://openstax.org/books/principles-marketing/pages/1-introduction',
+    link: 'https://openstax.org/books/principles-marketing/pages/1-introduction',
+  },
+  {
+    id: 'opdracht-10-benedettini-2025',
+    label: 'Opdracht 10',
+    reference:
+      'Benedettini, O. (2025). Product-as-a-Service business models: Strategic considerations for manufacturing firms. Journal of Service Management, 36(1), 14–39. https://doi.org/10.1108/JOSM-01-2024-0025',
+    link: 'https://doi.org/10.1108/JOSM-01-2024-0025',
+  },
+  {
+    id: 'opdracht-10-gitman-2018',
+    label: 'Opdracht 10',
+    reference:
+      'Gitman, L. J., McDaniel, C., Shah, A., Reece, M., Koffel, L., Talsma, B., & Hyatt, J. C. (2018). Introduction to business. OpenStax. https://openstax.org/books/introduction-business/pages/1-introduction',
+    link: 'https://openstax.org/books/introduction-business/pages/1-introduction',
+  },
+  {
+    id: 'opdracht-10-mesch-2025',
+    label: 'Opdracht 10',
+    reference:
+      'Mesch, J., de Boer, M., Ezendam, N., Renders, C., & Temminghoff, M. (2025). Eetgedrag van jongeren in Nederland: Trends, determinanten en interventies [Rapport]. Rijksinstituut voor Volksgezondheid en Milieu (RIVM). https://www.rivm.nl/',
+    link: 'https://www.rivm.nl/',
+  },
+  {
+    id: 'opdracht-10-wouters-2010',
+    label: 'Opdracht 10',
+    reference:
+      'Wouters, E. J. M., Larsen, J. K., Kremers, S. P. J., Dagnelie, P. C., & Geenen, R. (2010). Peer influence on snacking behavior in adolescence. Appetite, 55(1), 11–17. https://doi.org/10.1016/j.appet.2010.03.002',
+    link: 'https://doi.org/10.1016/j.appet.2010.03.002',
   },
 ]
 
