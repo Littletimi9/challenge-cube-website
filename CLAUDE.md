@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Visuele portfolio-website ter vervanging van het beoordelingsdocument "Hoofdportfolio Waardecreatie" (50% eindcijfer). Eindgebruiker is de docent/beoordelaar.
 
-**Concept**: De Challenge Cube — een dobbelsteen met QR-codes voor pauze-challenges. Zes categorieën: Speed games, 1v1, Group games, TikTok, Quizmaster, Random minigame.
+**Concept**: De Challenge Cube — een dobbelsteen met QR-codes voor pauze-challenges. Zes categorieën: Speed games, 1v1, Group games, TikTok, Quizmaster, Random minigame. Het bijbehorende fysieke product is de **Challenge Table**: een robuuste speeltafel voor middelbare scholen als sociaal alternatief voor het ongezonde pauzeritueel.
 
 **Design blueprint** staat in `docs/design-blueprint.md` — single source of truth voor alle visuele beslissingen. Lees hem volledig door voordat je iets aan styling of componenten verandert; wijk er niet van af zonder expliciete update van dat document.
 
@@ -48,7 +48,7 @@ Geen geautomatiseerde tests. Verifieer frontend-wijzigingen met `npm run dev` + 
 
 ### Routing
 
-5 rubric-pagina's + `/reflectie` als `.mdx` bestanden in `app/<route>/page.mdx`. `/bronnen` is een `page.tsx` die typed data uit `content/bronnen.ts` rendert; daaronder hangen sub-routes voor opdracht-detailpagina's (`app/bronnen/opdracht-1/`, `opdracht-2/`, `opdracht-3/`) waar specifieke bronmaterialen verder worden uitgelicht. Homepage (`app/page.tsx`) componeert `HeroLanding` (uit `components/hero/`) + StatsStrip + RubricIndex + Pitch.
+5 rubric-pagina's + `/reflectie` als `.mdx` bestanden in `app/<route>/page.mdx`. `/bronnen` is een `page.tsx` die alle data **inline** definieert (drie arrays: `interviews`, `opdrachten`, `apaSources`) — géén import uit `content/bronnen.ts`. Daaronder hangen opdracht-detailpagina's `app/bronnen/opdracht-1/` t/m `opdracht-11/`; opdracht-8 en opdracht-11 zijn nog stubs (`return null`). Homepage (`app/page.tsx`) componeert `HeroLanding` (uit `components/hero/`) + StatsStrip + RubricIndex + Pitch.
 
 MDX-componenten zijn globaal beschikbaar via `mdx-components.tsx` — géén import nodig in `.mdx` bestanden. **Bij elk nieuw MDX-component: toevoegen aan `components/rubric/` én registreren in `mdx-components.tsx`.**
 
@@ -67,8 +67,17 @@ Elke rubric-pagina begint met `<PageHead>` (groot mint-nummer + titel + meta) en
 ### Content & data
 
 - `content/rubrics.ts` — array voor homepage RubricIndex, getypt via `RubricRowData`
-- `content/bronnen.ts` — typed `Source[]` met APA-stijl, `SourceType`-union en `typeLabels`. Elke bron heeft uniek `id` — `SourceLink` deep-linkt via `/bronnen#<id>`.
+- `content/bronnen.ts` — legacy placeholder (`Source[]` interface + leeg array); **niet de live bronnendata**. De live APA-lijst staat in `app/bronnen/page.tsx` als `apaSources: ApaSource[]`.
 - `content/extracted/` — JSON-output van de `evidence-extractor` agent (gestructureerde bewijslast, input voor `evidence-writer`). Niet handmatig bewerken.
+
+### Opdracht-detailpagina's pattern
+
+Alle ingevulde opdracht-pages (`app/bronnen/opdracht-N/page.tsx`) volgen hetzelfde patroon:
+- **`Cite` component** (inline, geen import) — `<a>` met mint-stijl, accepteert `id` (naar lokale bron-anchor) of `href` (extern / kruispage)
+- **`Bron` type** — `{ id: string; content: React.ReactNode }` voor de bronnenlijst onderaan
+- **Tabel-helpers** — inline style-functies (`thStyle`, `tdStyle`) of typed row-arrays per tabel; volg het patroon van `opdracht-9` of `opdracht-10` voor nieuwe tabellen
+- Elke pagina eindigt met een bronnenlijst-section (`id={bron.id}` op elk `<li>`) en een terug-naar-bronnen link
+- Bij nieuwe opdracht: voeg ook een entry toe in `app/bronnen/page.tsx` (`opdrachten`-array + `apaSources`-array)
 
 ### Layout
 
