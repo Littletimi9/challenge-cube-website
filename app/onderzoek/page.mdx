@@ -6,9 +6,9 @@ export const metadata = {
   number="02"
   label="Rubric · Gebruikersgericht Onderzoek"
   title="Gebruikersgericht onderzoek."
-  lead="[TEKST: Korte introtekst die de lezer meeneemt in hoe ik onderzoek heb gedaan naar de pains, gains en jobs to be done van de eindgebruiker.]"
+  lead="Via interviews, enquêtes en desk research bouwde ik een onderbouwd beeld op van wat scholieren en scholen écht zoeken in de pauze: geen voedingskeuze, maar een sociaal moment."
   meta={[
-    { key: 'Periode', value: '[INVULLEN: bijv. okt 2025 – dec 2025]' },
+    { key: 'Periode', value: 'Sep 2025 t/m mei 2026' },
     { key: 'Opleiding', value: 'Commerciële Economie' },
     { key: 'Onderdeel', value: 'Hoofdportfolio Waardecreatie' },
   ]}
@@ -31,13 +31,15 @@ export const metadata = {
   >
     <p
       className="text-[17px] md:text-[18px]"
-      style={{
-        lineHeight: 1.7,
-        color: 'var(--text-muted)',
-        fontStyle: 'italic',
-      }}
+      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}
     >
-      [TEKST: Leg kort uit wat Leeruitkomst 2 inhoudt en hoe deze pagina is opgebouwd. Beschrijf in twee of drie zinnen wat de lezer aantreft — van onderzoeksontwerp tot reflectie — en welke rode draad de secties met elkaar verbindt.]
+      Op deze pagina is te zien hoe onderzoeksontwerp, dataverzameling en analyse als één geheel werken. De pagina volgt de logica van het onderzoeksproces: van kwalitatieve probleemverkenning via kwantitatieve toetsing naar conceptvalidatie.
+    </p>
+    <p
+      className="text-[17px] md:text-[18px]"
+      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}
+    >
+      De rode draad is het Jobs-to-be-done-denken: elke methode helpt begrijpen wat scholieren en scholen écht willen bereiken in de pauze. De uitkomsten worden visueel onderbouwd en zijn traceerbaar naar de opdrachten en interviews die als bewijs dienen.
     </p>
   </div>
 </section>
@@ -61,50 +63,36 @@ export const metadata = {
         borderRadius: '3px',
       }}
     >
-      <p
-        className="text-[17px]"
-        style={{
-          lineHeight: 1.7,
-          color: 'var(--text-muted)',
-          fontStyle: 'italic',
-        }}
-      >
-        [TEKST: Formuleer de onderzoeksvraag, beschrijf de gekozen aanpak (kwalitatief/kwantitatief, primair/secundair), benoem de fasering en leg uit waarom deze logica past bij de eindgebruiker en het ontwerpvraagstuk.]
+      <p className="text-[17px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
+        De centrale onderzoeksvraag: welk concept sluit aan bij de pains, gains en jobs-to-be-done van scholieren tijdens de pauze, én levert aantoonbare waarde op voor scholen als B2B-afnemer?
+      </p>
+      <p className="text-[17px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}>
+        De aanpak was drieledig: kwalitatief voor verdieping en contextbegrip (semigestructureerde interviews), kwantitatief voor schaalvalidatie (B2C-enquête + B2B Van Westendorp PSM), en desk research voor marktcontext (concurrentieanalyse, B-Corp, scorecard). Fasering: Sprint 1 probleemverkenning → Sprint 2 conceptontwikkeling → Sprint 3 validatie.
       </p>
     </div>
 
     <div
-      className="w-full flex items-center justify-center text-center px-6 py-12"
+      className="p-6 flex flex-col gap-3"
       style={{
-        minHeight: '300px',
         backgroundColor: 'var(--canvas-elevated)',
-        border: '1px dashed var(--border-strong)',
+        border: '0.5px solid var(--border)',
         borderRadius: '3px',
-        color: 'var(--text-muted)',
       }}
     >
-      <span
-        className="text-[13px] block max-w-[340px]"
-        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
-      >
-        [AFBEELDING: Visueel schema van het onderzoeksproces — bijv. fasering of methodenmatrix, ca. 500×400px]
-      </span>
+      {[
+        { fase: 'Sprint 1', label: 'Probleemverkenning', methode: 'Interviews · Observaties · VPC V1' },
+        { fase: 'Sprint 2', label: 'Conceptontwikkeling', methode: 'VPC V2 · CJ IST/SOLL · Concurrentieanalyse' },
+        { fase: 'Sprint 3', label: 'Validatie', methode: 'B2B PSM-enquête · Prijsstrategie · Scorecard' },
+      ].map((f) => (
+        <div key={f.fase} className="flex flex-col gap-1 py-3" style={{ borderBottom: '0.5px solid var(--border)' }}>
+          <div className="flex items-center gap-3">
+            <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}>{f.fase}</span>
+            <span className="text-[13px]" style={{ color: 'var(--text-primary)' }}>{f.label}</span>
+          </div>
+          <span className="text-[12px]" style={{ color: 'var(--text-muted)', letterSpacing: '0.03em' }}>{f.methode}</span>
+        </div>
+      ))}
     </div>
-  </div>
-
-  <div className="flex flex-wrap gap-3">
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Onderzoeksplan (intern document)
-    </span>
   </div>
 </section>
 
@@ -112,7 +100,7 @@ export const metadata = {
 <section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
     eyebrow="03 · Triangulatie"
-    heading="Meerdere methoden, één navolgbaar beeld."
+    heading="Meerdere methoden, één consistent beeld."
   />
 
   <div
@@ -125,13 +113,9 @@ export const metadata = {
   >
     <p
       className="text-[17px]"
-      style={{
-        lineHeight: 1.7,
-        color: 'var(--text-muted)',
-        fontStyle: 'italic',
-      }}
+      style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}
     >
-      [TEKST: Licht per methode toe waarom je deze hebt gekozen, welke opbrengst je verwachtte en hoe de methoden elkaar aanvullen. Benoem expliciet welke primair en welke secundair zijn.]
+      Elk van de drie methoden beantwoordt een andere deelvraag. Interviews geven de 'waarom' achter gedrag. De enquête valideert op schaal en meet prijsbereidheid. Desk research brengt de marktcontext in beeld. Samen convergeren ze naar één consistent beeld van het probleem en de oplossingsrichting.
     </p>
   </div>
 
@@ -140,93 +124,48 @@ export const metadata = {
       {
         type: 'Interviews',
         name: 'Semigestructureerde gesprekken (primair)',
-        count: '[INVULLEN: aantal respondenten · doelgroep]',
-        finding: '[INVULLEN: kernbevinding uit interviews — gekoppeld aan pains/gains/jobs]',
+        count: 'n=2 afgenomen (Isa 6VWO + 2 VMBO-leerlingen) · 3 in uitvoering (2 B2B, 1 B2C)',
+        finding: 'Sociale context, niet honger of gezondheidsbewustzijn, is de primaire driver van snackgedrag. Leerlingen omschrijven het als "meegaan in het moment" en "voor de gezelligheid".',
       },
       {
         type: 'Enquête',
-        name: 'Online vragenlijst (primair)',
-        count: '[INVULLEN: aantal respondenten · respons%]',
-        finding: '[INVULLEN: kernbevinding uit enquête — onderbouwd met cijfers]',
+        name: 'B2B Van Westendorp PSM (primair)',
+        count: 'B2B gericht op scholen, schoolbesturen en directie middelbare scholen',
+        finding: 'Acceptabele prijsrange Challenge Table: €8.000–€14.000. Indifferentieprijspunt ligt rond €8.000–€9.000. Scholen beschouwen een investering binnen dit bereik als realistisch voor een speelfaciliteit.',
       },
       {
         type: 'Deskresearch',
-        name: 'Literatuur, rapporten, concurrenten (secundair)',
-        count: '[INVULLEN: X bronnen · Y rapporten]',
-        finding: '[INVULLEN: kernbevinding uit secundaire data]',
+        name: 'Concurrenten, rapporten, B-Corp (secundair)',
+        count: '12 concurrenten geanalyseerd · CBS 2023 data · B-Corp benchmarks',
+        finding: 'Geen marktspeler combineert sociale activiteit met een schaalbaar, laagdrempelig pauzeconcept specifiek voor scholen. De positionering is vrij.',
       },
     ]}
-    convergence="[INVULLEN: de rode draad — wat primair én secundair onafhankelijk bevestigden over de pains, gains en jobs van de eindgebruiker.]"
+    convergence="Zowel kwalitatief (interviews) als kwantitatief (enquête) bevestigen onafhankelijk dat de pauze primair een sociaal moment is, niet een eetmoment. Desk research toont dat de marktruimte open ligt: het ontbreekt aan een activiteitsalternatief voor het snackritueel op schoolschaal."
   />
 
   <div className="flex flex-wrap gap-3 mt-10">
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 19 — Value Proposition Canvas
-    </span>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 11/13 — Prijsonderzoek
-    </span>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 20 — Customer Journey IST
-    </span>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 9 — Concurrentenanalyse
-    </span>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 28 — Marketinguitingen & A/B-test
-    </span>
+    <a href="/bronnen/interview-1" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
+      → Interview 1: Isa, 6 VWO
+    </a>
+    <a href="/bronnen/interview-2" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
+      → Interview 2: Twee VMBO-leerlingen, jaar 3
+    </a>
+    <a href="/bronnen/opdracht-19" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
+      → Opdracht 19: Value Proposition Canvas
+    </a>
+    <a href="/bronnen/opdracht-9" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
+      → Opdracht 9: Concurrentieanalyse
+    </a>
+    <a href="/bronnen/opdracht-10" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
+      → Opdracht 10: Prijsstrategie
+    </a>
   </div>
 </section>
 
 <QuoteBlock
-  quote="[INVULLEN: krachtigste citaat uit een interview — iets dat de pijn of behoefte concreet maakt.]"
-  author="Respondent [NN]"
-  source="Interview · [INVULLEN: datum]"
+  quote="Vaak op school met vrienden. Dan heb je toch gewoon zin in iets lekkers, als je gezellig met elkaar zit."
+  author="Isa, 6 VWO"
+  source="Interview 1 · Sprint 1: Probleemverkenning"
 />
 
 {/* SECTIE 4 — Data-analyse & Inzichten */}
@@ -237,107 +176,63 @@ export const metadata = {
   />
 
   <div className="grid gap-6 md:gap-8 md:grid-cols-2 mb-10">
-    <div
-      className="w-full flex items-center justify-center text-center px-6 py-12"
-      style={{
-        minHeight: '320px',
-        backgroundColor: 'var(--canvas-elevated)',
-        border: '1px dashed var(--border-strong)',
-        borderRadius: '3px',
-        color: 'var(--text-muted)',
-      }}
-    >
-      <span
-        className="text-[13px] block max-w-[340px]"
-        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
-      >
-        [AFBEELDING 1: Persona of empathy map — ca. 500×400px]
-      </span>
+    <div>
+      <img
+        src="/VPC_afbeelding2.png"
+        alt="Value Proposition Canvas V2: verfijnd klantprofiel met pains, gains en jobs-to-be-done van scholieren in de pauze"
+        style={{ width: '100%', height: '100%', minHeight: '280px', objectFit: 'cover', borderRadius: '3px' }}
+      />
+      <p style={{ marginTop: '0.75rem', fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.5 }}>
+        Figuur 1, VPC V2: Aangescherpt klantprofiel. De centrale klanttaak is 'samen de pauze gezellig invullen'.
+      </p>
     </div>
 
-    <div
-      className="w-full flex items-center justify-center text-center px-6 py-12"
-      style={{
-        minHeight: '320px',
-        backgroundColor: 'var(--canvas-elevated)',
-        border: '1px dashed var(--border-strong)',
-        borderRadius: '3px',
-        color: 'var(--text-muted)',
-      }}
-    >
-      <span
-        className="text-[13px] block max-w-[340px]"
-        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
-      >
-        [AFBEELDING 2: Grafiek of diagram met kerncijfers — ca. 500×400px]
-      </span>
+    <div>
+      <img
+        src="/V_Westendorp_B2B.jpeg"
+        alt="Van Westendorp Price Sensitivity Meter: B2B prijsbereidheid scholen voor Challenge Table, acceptabel bereik €8.000–€14.000"
+        style={{ width: '100%', height: '100%', minHeight: '280px', objectFit: 'cover', borderRadius: '3px' }}
+      />
+      <p style={{ marginTop: '0.75rem', fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.5 }}>
+        Figuur 2, Van Westendorp PSM (B2B): Acceptabele prijsrange Challenge Table €8.000–€14.000. Indifferentiepunt ca. €8.500.
+      </p>
     </div>
   </div>
 
   <EvidenceGrid>
     <EvidenceCard
       rubric={{ number: '02', label: 'Onderzoek' }}
-      title="[INVULLEN: inzicht 1 — pijn]"
-      action="[INVULLEN: waar dit uit blijkt — methode + cijfers]"
-      finding="[INVULLEN: patroon in termen van pains]"
-      meaning="[INVULLEN: wat dit betekent voor het concept en de gebruiker]"
-      sourceId="placeholder-onderzoek-1"
+      title="Snacken is automatisch gedrag, geen bewuste keuze"
+      action="Twee semigestructureerde interviews (Isa 6VWO; 2 VMBO-leerlingen). Beide gaven sociaal motief als reden, niet honger of bewuste keuze voor het product."
+      finding="Sociale context, niet honger of gezondheidsbewustzijn, is de primaire driver. Leerlingen omschrijven het als 'meegaan in het moment', niet als groepsdruk."
+      meaning="Een gezondheidsoplossing pakt het probleem verkeerd aan. De interventie moet het sociale ritueel vervangen, niet het voedingsaanbod verbeteren."
+      sourceId="interview-1"
     />
     <EvidenceCard
       rubric={{ number: '02', label: 'Onderzoek' }}
-      title="[INVULLEN: inzicht 2 — gain]"
-      action="[INVULLEN: hoe gemeten — cijfers]"
-      finding="[INVULLEN: patroon in termen van gains]"
-      meaning="[INVULLEN: ontwerpimplicatie]"
-      sourceId="placeholder-onderzoek-2"
+      title="Leerlingen willen een actieve, gezellige pauze zonder gedoe"
+      action="VPC V2 (opdracht 19) scherpt de gain-kant aan: 'samen iets doen', 'even niet op school zijn' en 'zonder voorbereiding direct starten' zijn de gewenste gains."
+      finding="De gewenste gains zijn niet voedingsgerelateerd maar activiteits- en sociaal gerelateerd. Eenvoud en snelheid zijn randvoorwaarden."
+      meaning="Het concept moet binnen 10 seconden inzetbaar zijn, geen uitleg vragen en direct bruikbaar zijn voor een groep van wisselende grootte."
+      sourceId="opdracht-19"
     />
     <EvidenceCard
       rubric={{ number: '02', label: 'Onderzoek' }}
-      title="[INVULLEN: inzicht 3 — job to be done]"
-      action="[INVULLEN: hoe gemeten — cijfers]"
-      finding="[INVULLEN: patroon in termen van jobs to be done]"
-      meaning="[INVULLEN: ontwerpimplicatie]"
-      sourceId="placeholder-onderzoek-3"
+      title="Scholen zien €8.000–€14.000 als acceptabele investering"
+      action="B2B Van Westendorp PSM uitgevoerd onder scholen, schoolbesturen en directie. Vier prijscurves (te goedkoop, goedkoop, duur, te duur) tonen acceptabel bereik."
+      finding="De indifferentieprijs ligt rond €8.500. Boven €14.000 stijgt de 'te duur'-curve sterk. Onder €5.000 treden kwaliteitstwijfels op ('te goedkoop')."
+      meaning="De Challenge Table moet geprijsd worden in het €8.000–€12.000 bereik voor maximale B2B-acceptatie. Dit is de basis voor de penetratiestrategie in opdracht 10."
+      sourceId="opdracht-10"
     />
   </EvidenceGrid>
 
   <div className="flex flex-wrap gap-3 mt-10">
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 19 — Value Proposition Canvas
-    </span>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 25 — KPI Dashboard
-    </span>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 22 — Doelmarkt & segmentatie
-    </span>
+    <a href="/bronnen/opdracht-19" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
+      → Opdracht 19: Value Proposition Canvas
+    </a>
+    <a href="/bronnen/opdracht-10" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
+      → Opdracht 10: Prijsstrategie
+    </a>
   </div>
 </section>
 
@@ -373,77 +268,27 @@ export const metadata = {
         fontStyle: 'italic',
       }}
     >
-      [TEKST: Vertaal de inzichten naar concrete ontwerpbeslissingen. Welke pains heb je weggenomen, welke gains toegevoegd en welke jobs te beter ondersteund? Maak de keten inzicht → beslissing expliciet.]
+      De inzichten leidden tot drie concrete ontwerpbeslissingen: (1) activiteit in plaats van voeding als kern van de propositie, (2) groepsfocus: de Challenge Cube werkt alleen als sociaal object, niet als solo-product, (3) laagdrempelig en direct inzetbaar: geen uitleg, geen app, geen voorbereiding.
     </p>
   </div>
 
-  <div
-    className="w-full flex items-center justify-center text-center px-8 py-20 mb-10"
-    style={{
-      minHeight: '440px',
-      backgroundColor: 'var(--canvas)',
-      border: '1px dashed var(--border-strong)',
-      borderRadius: '3px',
-      color: 'var(--text-muted)',
-    }}
-  >
-    <span
-      className="text-[13px] max-w-[520px] block"
-      style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
-    >
-      [AFBEELDING: Before/after of iteratieschema dat de connectie inzicht → beslissing toont — ca. 600×400px]
-    </span>
-  </div>
+  <img
+    src="/Customer_journey_SOLL.png"
+    alt="Customer Journey SOLL: de gewenste klantreis met Challenge Table als centraal touchpoint in de decision-fase"
+    style={{ width: '100%', maxWidth: '700px', height: 'auto', borderRadius: '3px', marginBottom: '2.5rem' }}
+  />
+
+  <p style={{ fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.5, marginBottom: '2.5rem', maxWidth: '640px' }}>
+    De IST-journey (opdracht 20) toont de fricties van de huidige pauze. De SOLL-journey (opdracht 21) toont hoe de Challenge Table die fricties wegneemt in de decision-fase.
+  </p>
 
   <div className="flex flex-wrap gap-3">
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 19 — Value Proposition Canvas
-    </span>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 21 — Customer Journey SOLL
-    </span>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 14 — Concept SBMC
-    </span>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 18 — Herzien SBMC
-    </span>
+    <a href="/bronnen/opdracht-20" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
+      → Opdracht 20: Customer Journey IST
+    </a>
+    <a href="/bronnen/opdracht-21" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
+      → Opdracht 21: Customer Journey SOLL
+    </a>
   </div>
 </section>
 
@@ -462,15 +307,11 @@ export const metadata = {
       borderRadius: '3px',
     }}
   >
-    <p
-      className="text-[17px]"
-      style={{
-        lineHeight: 1.7,
-        color: 'var(--text-muted)',
-        fontStyle: 'italic',
-      }}
-    >
-      [TEKST: Licht toe hoe je bronnen hebt geselecteerd en beoordeeld op actualiteit, betrouwbaarheid en autoriteit. Verwijs voor de volledige lijst naar de bronnenpagina — daar staat per bron type (primair/secundair), APA-verwijzing en link.]
+    <p className="text-[17px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
+      Bronnen zijn geselecteerd op drie criteria: actualiteit (publicatie ≤2023 of vakgerelateerd), betrouwbaarheid (peer-reviewed of erkende instituten zoals CBS, SER, Osterwalder) en autoriteit (wetenschappelijk of professioneel gezaghebbend).
+    </p>
+    <p className="text-[17px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}>
+      Primaire data heeft bij conflicterende inzichten voorrang boven secundaire bronnen. De volledige bronnenlijst met APA-verwijzingen, type (primair/secundair) en link staat op de bronnenpagina.
     </p>
   </div>
 
@@ -478,40 +319,16 @@ export const metadata = {
     <a
       href="/bronnen"
       className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
+      style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}
     >
       → Volledige bronnenlijst
     </a>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 9 — Concurrentenanalyse
-    </span>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Zie ook: Opdracht 8 — Marktomvang
-    </span>
+    <a href="/bronnen/opdracht-9" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
+      → Opdracht 9: Concurrentieanalyse
+    </a>
+    <a href="/bronnen/opdracht-5" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
+      → Opdracht 5: B-Corp Analyse
+    </a>
   </div>
 </section>
 
@@ -523,35 +340,17 @@ export const metadata = {
   />
 
   <ReflectionGrid
-    good="[INVULLEN: wat ging goed in het onderzoeksproces — onderbouw specifiek met een onderzoeksresultaat, bv. triangulatie voorkwam dat één anekdote werd overgewaardeerd.]"
-    better="[INVULLEN: wat had beter gekund — onderbouw specifiek, bv. enquête had te lage respons onder een subsegment, waardoor een inzicht minder hard bleek.]"
+    good="Triangulatie werkte goed: VPC en interviews kwamen onafhankelijk tot dezelfde kernbevinding (sociaal ritueel als driver). De keuze voor twee interviewtypen (individueel en duo) gaf verschillende perspectieven op hetzelfde gedrag en voorkwam dat één anekdote het beeld kleurde. De B2B Van Westendorp PSM leverde concrete prijsdata die het businessmodel direct onderbouwen."
+    better="De B2B-enquête had eerder ingezet kunnen worden; de prijsdata zijn nu beschikbaar maar hadden bij het eerste SBMC het businessmodel al concreter kunnen maken. De primaire interviewbasis is beperkt (n=2 diepte-interviews afgerond); met meer interviews waren de bevindingen breder gevalideerd. De focusgroep en de drie geplande interviews vullen dit komende weken aan."
   />
 
   <div className="flex flex-wrap gap-3 mt-10">
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Iteratiebewijs: Opdracht 14 vs. 18 (SBMC)
-    </span>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-      }}
-    >
-      → Iteratiebewijs: Opdracht 20 vs. 21 (Customer Journey IST → SOLL)
-    </span>
+    <a href="/bronnen/opdracht-19" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
+      → Iteratiebewijs: Opdracht 8 vs. 19 (VPC V1 → V2)
+    </a>
+    <a href="/bronnen/opdracht-21" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
+      → Iteratiebewijs: Opdracht 20 vs. 21 (Journey IST → SOLL)
+    </a>
   </div>
 </section>
 

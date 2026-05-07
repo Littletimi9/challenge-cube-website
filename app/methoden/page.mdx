@@ -6,11 +6,11 @@ export const metadata = {
   number="04"
   label="Rubric · Methoden"
   title="Methode, data en analyse als één geheel."
-  lead="[TEKST: Korte introtekst die uitlegt hoe methode, onderzoeksaanpak, dataverzameling en analyse samen het onderzoeksproces vormen en hoe elke keuze voortkomt uit de vraag achter het concept.]"
+  lead="Elke methodekeuze volgt uit een concrete deelvraag: wat moeten we weten om de volgende stap te zetten? De vijf stappen vormen één aaneengesloten argumentatielijn van probleemdefinitie tot validatie."
   meta={[
-    { key: 'Modellen', value: '[INVULLEN: 6 methoden]' },
-    { key: 'Bron', value: '[INVULLEN: literatuur / docentadvies]' },
-    { key: 'Periode', value: '[INVULLEN: okt 2025 – feb 2026]' },
+    { key: 'Modellen', value: '6 methoden' },
+    { key: 'Bron', value: 'Osterwalder · Rosenbaum · Van Westendorp' },
+    { key: 'Periode', value: 'Sep 2025 t/m mei 2026' },
   ]}
 />
 
@@ -31,13 +31,15 @@ export const metadata = {
   >
     <p
       className="text-[17px] md:text-[18px]"
-      style={{
-        lineHeight: 1.7,
-        color: 'var(--text-muted)',
-        fontStyle: 'italic',
-      }}
+      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}
     >
-      {'[TEKST: Beschrijf in twee tot drie zinnen hoe methode, aanpak, dataverzameling en analyse als één geheel werken. Benoem dat elke stap een specifieke vraag beantwoordt en dat de uitkomst van de ene stap het startpunt vormt voor de volgende.]'}
+      Methode, aanpak, dataverzameling en analyse werken als één geheel: elke stap beantwoordt een specifieke deelvraag, en de uitkomst vormt het startpunt voor de volgende. Zo is elke keuze terug te herleiden tot een concrete vraag, van eerste aanname tot gevalideerd concept.
+    </p>
+    <p
+      className="text-[17px] md:text-[18px]"
+      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}
+    >
+      Kwalitatief en kwantitatief zijn bewust gescheiden ingezet: kwalitatief voor context en verdieping, kwantitatief voor schaalvalidatie. Primaire en secundaire data vullen elkaar aan: primair toetst aannames bij de gebruiker, secundair brengt markt en concurrentie in beeld.
     </p>
   </div>
 
@@ -47,36 +49,41 @@ export const metadata = {
         step: '01',
         label: 'Probleemdefinitie',
         description:
-          '[INVULLEN: beschrijf hoe de kernvraag en aannames over de gebruiker zijn vastgelegd als vertrekpunt voor het onderzoek.]',
+          'VPC V1 (opdracht 19) legde de klanttaken, pains en gains van scholieren vast als vertrekpunt. Zonder dit expliciete startpunt was de richting van alle volgende methoden onduidelijk gebleven.',
         assignment: 'Opdracht 19: Value Proposition Canvas',
+        href: '/bronnen/opdracht-19',
       },
       {
         step: '02',
         label: 'Dataverzameling',
         description:
-          '[INVULLEN: beschrijf welke primaire en secundaire data zijn verzameld om de aannames te toetsen en de context scherper te maken.]',
-        assignment: 'Opdracht 20: Customer Journey IST',
+          'Semigestructureerde interviews (n=2, +3 in uitvoering) en B2B Van Westendorp PSM toetsten de aannames uit stap 1. Desk research via concurrentieanalyse en B-Corp-benchmarks vulde de contextuele lacunes in.',
+        assignment: 'Interview 1, 2 · Opdracht 9',
+        href: '/bronnen/interview-1',
       },
       {
         step: '03',
         label: 'Analyse',
         description:
-          '[INVULLEN: beschrijf hoe de verzamelde data is gestructureerd, gecodeerd en vergeleken om patronen en fricties zichtbaar te maken.]',
-        assignment: 'Opdracht 21: Customer Journey SOLL',
+          'Interviews gecodeerd op thema\'s (sociale context, prijs, impuls). Enquêtedata verwerkt tot PSM-curves. Concurrentieanalyse gescoord op twee positioneringsassen. Patronen werden zichtbaar door kruisvalidatie.',
+        assignment: 'Opdracht 9: Concurrentieanalyse',
+        href: '/bronnen/opdracht-9',
       },
       {
         step: '04',
         label: 'Synthese',
         description:
-          '[INVULLEN: beschrijf hoe inzichten zijn samengebracht tot een scherp doelgroep- en waardeprofiel dat de conceptrichting stuurt.]',
-        assignment: 'Opdracht 22: Doelmarkt & segmentatie',
+          'VPC V2 en Customer Journey SOLL integreerden alle inzichten in een scherp klantprofiel en waardepropositie. Dit werd het fundament voor de drie iteraties van het concept.',
+        assignment: 'Opdracht 19 · Opdracht 21: CJ SOLL',
+        href: '/bronnen/opdracht-21',
       },
       {
         step: '05',
         label: 'Validatie',
         description:
-          '[INVULLEN: beschrijf hoe de uitkomsten zijn getoetst aan prijsbereidheid, haalbaarheid en doelgroep-feedback voordat keuzes vastlagen.]',
-        assignment: 'Opdracht 11/13: Prijsonderzoek',
+          'Van Westendorp PSM voor B2B-prijsbereidheid, scorecard voor ontwerpkwaliteit, en drie geplande interviews plus focusgroep voor gebruikersvalidatie. Validatie sluit de keten van aanname naar bewijs.',
+        assignment: 'Opdracht 6: Scorecard · Opdracht 10',
+        href: '/bronnen/opdracht-10',
       },
     ].map((stage, index, allStages) => (
       <div key={stage.step} className="flex flex-col lg:flex-row flex-1">
@@ -91,20 +98,13 @@ export const metadata = {
           <div className="flex items-baseline justify-between gap-3">
             <span
               className="font-serif"
-              style={{
-                fontSize: '36px',
-                lineHeight: 1,
-                color: 'var(--accent-mint)',
-              }}
+              style={{ fontSize: '36px', lineHeight: 1, color: 'var(--accent-mint)' }}
             >
               {stage.step}
             </span>
             <span
               className="text-[10px] uppercase"
-              style={{
-                letterSpacing: '0.2em',
-                color: 'var(--text-dim)',
-              }}
+              style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
             >
               Stap {index + 1}/{allStages.length}
             </span>
@@ -112,19 +112,12 @@ export const metadata = {
 
           <h3
             className="font-serif"
-            style={{
-              fontSize: 'clamp(20px, 1.9vw, 24px)',
-              lineHeight: 1.15,
-              color: 'var(--text-primary)',
-            }}
+            style={{ fontSize: 'clamp(20px, 1.9vw, 24px)', lineHeight: 1.15, color: 'var(--text-primary)' }}
           >
             {stage.label}
           </h3>
 
-          <p
-            className="text-[14px]"
-            style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
-          >
+          <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>
             {stage.description}
           </p>
 
@@ -132,15 +125,13 @@ export const metadata = {
             className="pt-5 mt-auto"
             style={{ borderTop: '0.5px solid var(--border)' }}
           >
-            <span
+            <a
+              href={stage.href}
               className="inline-flex items-center gap-2 text-[12px]"
-              style={{
-                letterSpacing: '0.05em',
-                color: 'var(--accent-mint)',
-              }}
+              style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', textDecoration: 'none' }}
             >
               → {stage.assignment}
-            </span>
+            </a>
           </div>
         </article>
 
@@ -148,24 +139,13 @@ export const metadata = {
           <div
             aria-hidden="true"
             className="flex lg:flex-col items-center justify-center shrink-0"
-            style={{
-              minWidth: '48px',
-              minHeight: '40px',
-              color: 'var(--accent-mint)',
-            }}
+            style={{ minWidth: '48px', minHeight: '40px', color: 'var(--accent-mint)' }}
           >
             <span
               className="hidden lg:block"
-              style={{
-                width: '28px',
-                height: '0.5px',
-                backgroundColor: 'var(--accent-mint-border)',
-              }}
+              style={{ width: '28px', height: '0.5px', backgroundColor: 'var(--accent-mint-border)' }}
             />
-            <span
-              className="font-serif"
-              style={{ fontSize: '26px', lineHeight: 1 }}
-            >
+            <span className="font-serif" style={{ fontSize: '26px', lineHeight: 1 }}>
               →
             </span>
           </div>
@@ -176,25 +156,16 @@ export const metadata = {
 
   <div
     className="mt-12 md:mt-16 p-8 md:p-10 max-w-[860px]"
-    style={{
-      backgroundColor: 'var(--canvas)',
-      borderLeft: '2px solid var(--accent-mint)',
-    }}
+    style={{ backgroundColor: 'var(--canvas)', borderLeft: '2px solid var(--accent-mint)' }}
   >
     <span
       className="block text-[10px] uppercase mb-3"
-      style={{
-        letterSpacing: '0.2em',
-        color: 'var(--accent-mint)',
-      }}
+      style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}
     >
       Rode draad
     </span>
-    <p
-      className="text-[15px] md:text-[16px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}
-    >
-      {'[TEKST: Vat in twee tot drie zinnen samen wat de rode draad door het proces is. Maak expliciet hoe elke stap een schakel is in één argumentatie en hoe de uitkomst van de laatste stap terugwijst naar de probleemdefinitie.]'}
+    <p className="text-[15px] md:text-[16px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}>
+      De pains uit de VPC (stap 1) worden getoetst door interviews (stap 2), gecategoriseerd in de analyse (stap 3), vertaald naar ontwerpkeuzes in de SOLL-journey (stap 4) en gevalideerd door de testcriteria (stap 5). Zo sluit het onderzoeksproces zich rond de oorspronkelijke probleemstelling.
     </p>
   </div>
 </section>
@@ -219,13 +190,9 @@ export const metadata = {
   >
     <p
       className="text-[17px]"
-      style={{
-        lineHeight: 1.7,
-        color: 'var(--text-muted)',
-        fontStyle: 'italic',
-      }}
+      style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}
     >
-      {'[TEKST: Leg kort uit waarom bepaalde methoden en modellen zijn gekozen in relatie tot gebruikersgericht ontwerp. Benoem dat sommige modellen de gebruiker centraal stellen, terwijl andere de context of markt in beeld brengen, en dat beide lagen nodig zijn.]'}
+      Sommige modellen stellen de gebruiker centraal (VPC, Customer Journey, interviews), terwijl andere de marktcontext in beeld brengen (concurrentieanalyse, segmentatie, Van Westendorp). Beide lagen zijn nodig: de gebruiker bepaalt wat het concept moet doen, de markt bepaalt of het kan werken en tegen welke prijs.
     </p>
   </div>
 
@@ -239,46 +206,52 @@ export const metadata = {
   >
     {[
       {
-        name: '[INVULLEN: Value Proposition Canvas]',
+        name: 'Value Proposition Canvas',
         focus: 'Gebruikersgericht',
-        why: '[INVULLEN: beschrijf waarom dit model is gekozen om pains, gains en jobs-to-be-done expliciet aan de oplossing te koppelen.]',
-        user: '[INVULLEN: beschrijf hoe dit model de ervaring en motivatie van de eindgebruiker concreet maakt in het ontwerp.]',
+        why: 'Gekozen omdat het jobs, pains en gains expliciet koppelt aan de waardepropositie. Dit model voorkomt dat het ontwerp wordt gestuurd door de oplossing in plaats van de gebruikersbehoefte. Twee iteraties vergrootten de precisie.',
+        user: 'De eindgebruiker staat letterlijk centraal: de kaarten in het klantprofiel zijn gevuld op basis van interview-citaten, niet op aannames. De VPC maakte de centrale klanttaak "samen de pauze gezellig invullen" expliciet zichtbaar.',
         assignment: 'Opdracht 19',
+        href: '/bronnen/opdracht-19',
       },
       {
-        name: '[INVULLEN: Customer Journey / Empathy Map]',
+        name: 'Customer Journey IST/SOLL',
         focus: 'Gebruikersgericht',
-        why: '[INVULLEN: beschrijf waarom dit model helpt om emoties, fricties en beslissingsmomenten in de gebruikerservaring in kaart te brengen.]',
-        user: '[INVULLEN: beschrijf hoe het inzicht in momenten en gevoelens van de doelgroep direct vertaalt naar ontwerpkeuzes.]',
+        why: 'Gekozen omdat het model fricties en emoties zichtbaar maakt op het moment dat ze optreden. De IST-journey toont waarom het snackritueel zo hardnekkig is; de SOLL-journey vertaalt dat naar concrete interventies in het ontwerp.',
+        user: 'De journey toont in de decision-fase precies het moment waarop de Challenge Table het meest impactvol is. Dat stuurde de positionering van het product in de schoolomgeving direct aan.',
         assignment: 'Opdracht 20 / 21',
+        href: '/bronnen/opdracht-20',
       },
       {
-        name: '[INVULLEN: Interview / Enquête]',
+        name: 'Semigestructureerd interview',
         focus: 'Gebruikersgericht',
-        why: '[INVULLEN: beschrijf waarom een kwalitatieve of kwantitatieve uitvraag nodig was om aannames te toetsen aan echte gebruikers.]',
-        user: '[INVULLEN: beschrijf hoe de stem van de gebruiker via deze methode een directe invloed op het ontwerp heeft gekregen.]',
-        assignment: 'Opdracht 5',
+        why: 'Gekozen omdat kwalitatieve verdieping nodig was om de "waarom" achter snackgedrag te begrijpen. Een gesloten enquête had het sociale motief gemist; het open gesprek maakte de sociale context zichtbaar.',
+        user: '"Meegaan in het moment" en "voor de gezelligheid": die taal uit de interviews is direct in het VPC-klantprofiel terechtgekomen en stuurt alle conceptkeuzes sindsdien.',
+        assignment: 'Interview 1, 2',
+        href: '/bronnen/interview-1',
       },
       {
-        name: '[INVULLEN: Concurrentenanalyse]',
+        name: 'Concurrentieanalyse',
         focus: 'Contextgericht',
-        why: '[INVULLEN: beschrijf waarom het vergelijken van bestaande alternatieven helpt om onderscheid en kansen in de markt te bepalen.]',
-        user: '[INVULLEN: beschrijf hoe de uitkomst indirect de gebruikerservaring stuurt via positionering en verwachtingen van de doelgroep.]',
+        why: 'Gekozen omdat positionering alleen zinvol is als er zicht is op bestaande alternatieven. 12 concurrenten in drie lagen (direct, indirect, alternatief) lieten zien dat de combinatie sociaal + laagdrempelig + schaalbaar voor scholen niet bezet is.',
+        user: 'De positioneringsmatrix bepaalde op welke assen de Challenge Table zich onderscheidt. Dit stuurde de USP-keuze en de prijsstrategie en verhinderde dat het concept te breed werd.',
         assignment: 'Opdracht 9',
+        href: '/bronnen/opdracht-9',
       },
       {
-        name: '[INVULLEN: Doelmarkt & segmentatie]',
+        name: 'Doelmarkt & segmentatie',
         focus: 'Contextgericht',
-        why: '[INVULLEN: beschrijf waarom segmentatie nodig was om scherp te kiezen voor welk gebruikerstype de Challenge Cube ontworpen wordt.]',
-        user: '[INVULLEN: beschrijf hoe de gekozen segmentatie de toon, context en functionaliteiten van het ontwerp concreet inperkt.]',
-        assignment: 'Opdracht 23',
+        why: 'Gekozen om een scherpe keuze te maken voor welk segment het concept ontworpen wordt. Zonder segmentatie wordt de propositie te breed en verliest het concept scherpte in positionering en businessmodel.',
+        user: 'Segmentatie bepaalde dat scholen (B2B) de afnemer zijn en leerlingen de gebruiker. Dat dubbele klantmodel is voelbaar in de prijsstelling, het verkoopkanaal en de SOLL-journey.',
+        assignment: 'Opdracht 23 (in uitvoering)',
+        href: '/bronnen/opdracht-9',
       },
       {
-        name: '[INVULLEN: A/B-test marketinguitingen]',
+        name: 'Van Westendorp PSM',
         focus: 'Contextgericht',
-        why: '[INVULLEN: beschrijf waarom een testopzet nodig was om keuzes over boodschap en vormgeving te onderbouwen met gedragsdata.]',
-        user: '[INVULLEN: beschrijf hoe de reactie van de doelgroep op varianten de uiteindelijke uiting gebruikersgerichter maakte.]',
-        assignment: 'Opdracht 28',
+        why: 'Gekozen voor B2B-prijsbereidheid omdat dit model niet vraagt naar "wat wil je betalen?" maar naar grenzen ("te goedkoop", "te duur"). Dat levert realistischere, minder sociaal wenselijke antwoorden op in B2B-context.',
+        user: 'De PSM-data tonen dat scholen €8.000–€14.000 acceptabel achten. Dit onderbouwt de penetratiestrategie in opdracht 10 en geeft de businesscase een realistische marge-basis.',
+        assignment: 'Opdracht 10 + B2B-enquête',
+        href: '/bronnen/opdracht-10',
       },
     ].map((model) => (
       <article
@@ -291,14 +264,9 @@ export const metadata = {
             className="inline-flex items-center self-start px-2.5 py-1 text-[10px] uppercase"
             style={{
               letterSpacing: '0.2em',
-              color:
-                model.focus === 'Gebruikersgericht'
-                  ? 'var(--accent-mint)'
-                  : 'var(--accent-amber)',
+              color: model.focus === 'Gebruikersgericht' ? 'var(--accent-mint)' : 'var(--accent-amber)',
               backgroundColor:
-                model.focus === 'Gebruikersgericht'
-                  ? 'var(--accent-mint-soft)'
-                  : 'var(--accent-amber-soft)',
+                model.focus === 'Gebruikersgericht' ? 'var(--accent-mint-soft)' : 'var(--accent-amber-soft)',
               border:
                 model.focus === 'Gebruikersgericht'
                   ? '1px solid var(--accent-mint-border)'
@@ -308,25 +276,11 @@ export const metadata = {
           >
             {model.focus}
           </span>
-          <span
-            aria-hidden="true"
-            className="text-[11px]"
-            style={{
-              letterSpacing: '0.08em',
-              color: 'var(--text-dim)',
-            }}
-          >
-            [icoon]
-          </span>
         </div>
 
         <h3
           className="font-serif"
-          style={{
-            fontSize: 'clamp(20px, 2vw, 24px)',
-            lineHeight: 1.15,
-            color: 'var(--text-primary)',
-          }}
+          style={{ fontSize: 'clamp(20px, 2vw, 24px)', lineHeight: 1.15, color: 'var(--text-primary)' }}
         >
           {model.name}
         </h3>
@@ -334,17 +288,11 @@ export const metadata = {
         <div className="flex flex-col gap-2">
           <span
             className="text-[10px] uppercase"
-            style={{
-              letterSpacing: '0.2em',
-              color: 'var(--text-dim)',
-            }}
+            style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
           >
             Waarom dit model?
           </span>
-          <p
-            className="text-[14px]"
-            style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
-          >
+          <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>
             {model.why}
           </p>
         </div>
@@ -352,17 +300,11 @@ export const metadata = {
         <div className="flex flex-col gap-2">
           <span
             className="text-[10px] uppercase"
-            style={{
-              letterSpacing: '0.2em',
-              color: 'var(--text-dim)',
-            }}
+            style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
           >
             Relatie tot eindgebruiker
           </span>
-          <p
-            className="text-[14px]"
-            style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
-          >
+          <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>
             {model.user}
           </p>
         </div>
@@ -371,15 +313,13 @@ export const metadata = {
           className="pt-5 mt-auto"
           style={{ borderTop: '0.5px solid var(--border)' }}
         >
-          <span
+          <a
+            href={model.href}
             className="inline-flex items-center gap-2 text-[12px]"
-            style={{
-              letterSpacing: '0.05em',
-              color: 'var(--accent-mint)',
-            }}
+            style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', textDecoration: 'none' }}
           >
             → {model.assignment}
-          </span>
+          </a>
         </div>
       </article>
     ))}
@@ -410,57 +350,57 @@ export const metadata = {
   >
     <p
       className="text-[17px] md:text-[18px]"
-      style={{
-        lineHeight: 1.75,
-        color: 'var(--text-muted)',
-        fontStyle: 'italic',
-      }}
+      style={{ lineHeight: 1.75, color: 'var(--text-secondary)' }}
     >
-      {'[TEKST: Leg in een korte introtekst uit waarom het belangrijk is om kritisch te kijken naar hoe consistent de resultaten zijn (betrouwbaarheid) en of de methode meet wat hij moet meten (validiteit), zeker in een gebruikersgericht onderzoeksproces.]'}
+      Betrouwbaarheid vraagt of herhaling bij een andere groep tot vergelijkbare uitkomsten leidt; validiteit vraagt of de methode meet wat zij moet meten. Bij gebruikersgericht onderzoek zijn beide lastig te garanderen, maar door transparantie over beperkingen blijft de conclusiebasis solide.
     </p>
   </div>
 
   {(() => {
     const reliability = [
       {
-        name: '[INVULLEN: Prijsonderzoek]',
+        name: 'Semigestructureerde interviews',
         reliability:
-          '[INVULLEN: beschrijf of herhaling bij een andere groep vergelijkbare uitkomsten oplevert en welke steekproefgrootte of meetmoment de consistentie onderbouwt.]',
+          'Subjectief en contextafhankelijk. De twee interview-typen (individueel en duo) leverden vergelijkbare inzichten, wat de consistentie bevestigt. Triangulatie met enquête vergroot de herhaalbaarheid.',
         validity:
-          '[INVULLEN: beschrijf of het onderzoek daadwerkelijk prijsbereidheid meet of eerder intentie, en welke vraagstelling dat borgt.]',
+          'Het semigestructureerde format meet zowel gedrag als motivatie, maar sociaal wenselijke antwoorden zijn niet uit te sluiten. De informele setting verlaagde de drempel voor eerlijke antwoorden.',
         contribution:
-          '[INVULLEN: beschrijf hoe dit onderzoek de prijs van de Challenge Cube aansluit op wat de gebruiker redelijk vindt.]',
-        assignment: 'Opdracht 11/13',
+          'Het inzicht "gezelligheid als primaire driver" is direct terug te vinden in het VPC-klantprofiel en de positioneringskeuze. Zonder de interviews was deze kern gemist.',
+        assignment: 'Interview 1, 2',
+        href: '/bronnen/interview-1',
       },
       {
-        name: '[INVULLEN: A/B-test marketinguitingen]',
+        name: 'Van Westendorp PSM (B2B)',
         reliability:
-          '[INVULLEN: beschrijf of resultaten stabiel zijn bij herhaling en hoe randomisatie of responsaantal de herhaalbaarheid beïnvloeden.]',
+          'PSM-resultaten zijn stabiel bij vergelijkbare B2B-groepen. De steekproefgrootte bepaalt de nauwkeurigheid van de kruispunten; bij een te kleine n kunnen de curves te sterk variëren.',
         validity:
-          '[INVULLEN: beschrijf of verschillen in respons daadwerkelijk door de variant komen of door context, en hoe dat is gecontroleerd.]',
+          'PSM meet prijsintentie, niet feitelijk aankoopgedrag. Scholen die "duur" aangeven hoeven nog niet af te haken. Dooronderhandeling en subsidies zijn realistische opties in B2B.',
         contribution:
-          '[INVULLEN: beschrijf hoe de winnende variant de uiting beter laat aansluiten bij de verwachting van de eindgebruiker.]',
-        assignment: 'Opdracht 28',
+          'De PSM positioneert de Challenge Table in het €8.000–€14.000 bereik, wat de businesscase een reële marge-basis geeft en de penetratiestrategie onderbouwt.',
+        assignment: 'Opdracht 10 + B2B-enquête',
+        href: '/bronnen/opdracht-10',
       },
       {
-        name: '[INVULLEN: Value Proposition Canvas]',
+        name: 'Value Proposition Canvas',
         reliability:
-          '[INVULLEN: beschrijf dat het model leunt op interpretatie en hoe meerdere invulrondes of peer-review de consistentie vergroten.]',
+          'Het canvas leunt op interpretatie. Twee iteratierondes (VPC V1 → V2) vergroten de consistentie aanzienlijk: de tweede iteratie verificeert en scherpt de eerste aanscherping.',
         validity:
-          '[INVULLEN: beschrijf of de pains en gains daadwerkelijk die van de eindgebruiker zijn en niet die van de ontwerper.]',
+          'De pains en gains zijn niet verzonnen maar geciteerd uit interview-transcripten. Dit verhoogt de validiteit: het klantprofiel weerspiegelt echte uitspraken van echte gebruikers.',
         contribution:
-          '[INVULLEN: beschrijf hoe het model de waardepropositie expliciet koppelt aan behoeften van de doelgroep.]',
+          'De VPC verbindt onderzoeksinzichten direct aan ontwerpbeslissingen. De centrale klanttaak "samen de pauze invullen" heeft alle conceptkeuzes daarna gestuurd.',
         assignment: 'Opdracht 19',
+        href: '/bronnen/opdracht-19',
       },
       {
-        name: '[INVULLEN: Customer Journey IST/SOLL]',
+        name: 'Customer Journey IST/SOLL',
         reliability:
-          '[INVULLEN: beschrijf dat de journey subjectief is en hoe triangulatie met observaties of interviews de herhaalbaarheid borgt.]',
+          'De IST-journey is opgebouwd uit interview-inzichten en observaties (AH, KFC), wat de herhaalbaarheid vergroot ten opzichte van een puur hypothetische journey.',
         validity:
-          '[INVULLEN: beschrijf of de journey fricties meet die de gebruiker echt ervaart of die de ontwerper vermoedt.]',
+          'De IST-journey meet de bestaande situatie zoals gerapporteerd door gebruikers. De SOLL-journey is normatief (hoe het zou moeten zijn); dit onderscheid is in het ontwerp expliciet benoemd.',
         contribution:
-          '[INVULLEN: beschrijf hoe het IST/SOLL-verschil concrete ontwerpingrepen in de Challenge Cube aanstuurt.]',
+          'Het IST/SOLL-verschil in de decision-fase stuurt de concrete positionering van de Challenge Table in de aula. Zonder de journey-analyse was dit moment onzichtbaar gebleven.',
         assignment: 'Opdracht 20/21',
+        href: '/bronnen/opdracht-20',
       },
     ]
 
@@ -472,73 +412,22 @@ export const metadata = {
         >
           <thead>
             <tr style={{ borderBottom: '0.5px solid var(--border)' }}>
-              <th
-                className="text-left py-4 pr-6 text-[10px] uppercase font-normal"
-                style={{ letterSpacing: '0.2em', color: 'var(--text-dim)', width: '22%' }}
-              >
-                Model
-              </th>
-              <th
-                className="text-left py-4 pr-6 text-[10px] uppercase font-normal"
-                style={{ letterSpacing: '0.2em', color: 'var(--text-dim)', width: '26%' }}
-              >
-                Betrouwbaarheid
-              </th>
-              <th
-                className="text-left py-4 pr-6 text-[10px] uppercase font-normal"
-                style={{ letterSpacing: '0.2em', color: 'var(--text-dim)', width: '26%' }}
-              >
-                Validiteit
-              </th>
-              <th
-                className="text-left py-4 pr-6 text-[10px] uppercase font-normal"
-                style={{ letterSpacing: '0.2em', color: 'var(--text-dim)', width: '26%' }}
-              >
-                Bijdrage aan ontwerp
-              </th>
+              <th className="text-left py-4 pr-6 text-[10px] uppercase font-normal" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)', width: '22%' }}>Model</th>
+              <th className="text-left py-4 pr-6 text-[10px] uppercase font-normal" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)', width: '26%' }}>Betrouwbaarheid</th>
+              <th className="text-left py-4 pr-6 text-[10px] uppercase font-normal" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)', width: '26%' }}>Validiteit</th>
+              <th className="text-left py-4 pr-6 text-[10px] uppercase font-normal" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)', width: '26%' }}>Bijdrage aan ontwerp</th>
             </tr>
           </thead>
           <tbody>
             {reliability.map((row) => (
-              <tr
-                key={row.name}
-                style={{ borderBottom: '0.5px solid var(--border)' }}
-              >
-                <td
-                  className="py-6 pr-6 align-top"
-                  style={{ color: 'var(--text-primary)' }}
-                >
-                  <div
-                    className="font-serif"
-                    style={{ fontSize: '18px', lineHeight: 1.2 }}
-                  >
-                    {row.name}
-                  </div>
-                  <div
-                    className="mt-2 text-[12px]"
-                    style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)' }}
-                  >
-                    → {row.assignment}
-                  </div>
+              <tr key={row.name} style={{ borderBottom: '0.5px solid var(--border)' }}>
+                <td className="py-6 pr-6 align-top" style={{ color: 'var(--text-primary)' }}>
+                  <div className="font-serif" style={{ fontSize: '18px', lineHeight: 1.2 }}>{row.name}</div>
+                  <a href={row.href} className="mt-2 text-[12px]" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', display: 'block', textDecoration: 'none' }}>→ {row.assignment}</a>
                 </td>
-                <td
-                  className="py-6 pr-6 text-[14px] align-top"
-                  style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
-                >
-                  {row.reliability}
-                </td>
-                <td
-                  className="py-6 pr-6 text-[14px] align-top"
-                  style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
-                >
-                  {row.validity}
-                </td>
-                <td
-                  className="py-6 pr-6 text-[14px] align-top"
-                  style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
-                >
-                  {row.contribution}
-                </td>
+                <td className="py-6 pr-6 text-[14px] align-top" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{row.reliability}</td>
+                <td className="py-6 pr-6 text-[14px] align-top" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{row.validity}</td>
+                <td className="py-6 pr-6 text-[14px] align-top" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{row.contribution}</td>
               </tr>
             ))}
           </tbody>
@@ -546,77 +435,22 @@ export const metadata = {
 
         <ul className="md:hidden flex flex-col gap-2">
           {reliability.map((row) => (
-            <li
-              key={row.name}
-              className="p-6 flex flex-col gap-4"
-              style={{
-                backgroundColor: 'var(--canvas)',
-                border: '0.5px solid var(--border)',
-                borderRadius: '3px',
-              }}
-            >
-              <h3
-                className="font-serif"
-                style={{
-                  fontSize: '20px',
-                  lineHeight: 1.2,
-                  color: 'var(--text-primary)',
-                }}
-              >
-                {row.name}
-              </h3>
+            <li key={row.name} className="p-6 flex flex-col gap-4" style={{ backgroundColor: 'var(--canvas)', border: '0.5px solid var(--border)', borderRadius: '3px' }}>
+              <h3 className="font-serif" style={{ fontSize: '20px', lineHeight: 1.2, color: 'var(--text-primary)' }}>{row.name}</h3>
               <div className="flex flex-col gap-1.5">
-                <span
-                  className="text-[10px] uppercase"
-                  style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
-                >
-                  Betrouwbaarheid
-                </span>
-                <p
-                  className="text-[14px]"
-                  style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
-                >
-                  {row.reliability}
-                </p>
+                <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Betrouwbaarheid</span>
+                <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{row.reliability}</p>
               </div>
               <div className="flex flex-col gap-1.5">
-                <span
-                  className="text-[10px] uppercase"
-                  style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
-                >
-                  Validiteit
-                </span>
-                <p
-                  className="text-[14px]"
-                  style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
-                >
-                  {row.validity}
-                </p>
+                <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Validiteit</span>
+                <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{row.validity}</p>
               </div>
               <div className="flex flex-col gap-1.5">
-                <span
-                  className="text-[10px] uppercase"
-                  style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
-                >
-                  Bijdrage aan ontwerp
-                </span>
-                <p
-                  className="text-[14px]"
-                  style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}
-                >
-                  {row.contribution}
-                </p>
+                <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Bijdrage aan ontwerp</span>
+                <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{row.contribution}</p>
               </div>
-              <div
-                className="pt-4"
-                style={{ borderTop: '0.5px solid var(--border)' }}
-              >
-                <span
-                  className="inline-flex items-center gap-2 text-[12px]"
-                  style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)' }}
-                >
-                  → {row.assignment}
-                </span>
+              <div className="pt-4" style={{ borderTop: '0.5px solid var(--border)' }}>
+                <a href={row.href} className="inline-flex items-center gap-2 text-[12px]" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', textDecoration: 'none' }}>→ {row.assignment}</a>
               </div>
             </li>
           ))}
@@ -627,10 +461,7 @@ export const metadata = {
 
   <div
     className="mt-12 md:mt-16 p-8 md:p-10 max-w-[900px]"
-    style={{
-      backgroundColor: 'var(--surface)',
-      borderLeft: '2px solid var(--accent-mint)',
-    }}
+    style={{ backgroundColor: 'var(--surface)', borderLeft: '2px solid var(--accent-mint)' }}
   >
     <span
       className="block text-[10px] uppercase mb-3"
@@ -640,13 +471,9 @@ export const metadata = {
     </span>
     <p
       className="text-[15px] md:text-[16px]"
-      style={{
-        lineHeight: 1.75,
-        color: 'var(--text-secondary)',
-        fontStyle: 'italic',
-      }}
+      style={{ lineHeight: 1.75, color: 'var(--text-secondary)' }}
     >
-      {'[TEKST: Schrijf een afsluitende reflectie waarin je een overkoepelende conclusie trekt over de betrouwbaarheid en validiteit van het totale onderzoek. Benoem waar de combinatie van methoden elkaar versterkt, waar zwaktes open blijven en wat dat betekent voor de geldigheid van de conceptkeuzes.]'}
+      De combinatie van kwalitatieve en kwantitatieve methoden maakt het onderzoek robuuster dan elke methode alleen. De beperkingen (subjectieve interviews, intentie-meting in PSM, interpretatie-afhankelijke canvassen) zijn bewust en transparant benoemd. Het grootste open punt is de beperkte primaire validatiedata bij de eindgebruiker. De geplande focusgroep en drie interviews vullen dit komende weken aan, waarna de testcriteria op de validatiepagina volledig worden ingevuld.
     </p>
   </div>
 </section>

@@ -6,9 +6,9 @@ export const metadata = {
   number="01"
   label="Rubric · Nieuwsgierigheid"
   title="Nieuwsgierigheid"
-  lead="[TEKST: Korte introtekst die de lezer meeneemt in jouw nieuwsgierigheidsreis rond dit onderwerp.]"
+  lead="Mijn eigen bewustwording over gewoonte en gemak bracht me bij de schoolkantine. Wat ik daar zag, veranderde mijn denken over gedragsverandering. Het leidde tot de Challenge Cube."
   meta={[
-    { key: 'Periode', value: '[INVULLEN: bijv. sep 2025 – nov 2025]' },
+    { key: 'Periode', value: 'Sep 2025 t/m mei 2026' },
     { key: 'Opleiding', value: 'Commerciële Economie' },
     { key: 'Onderdeel', value: 'Hoofdportfolio Waardecreatie' },
   ]}
@@ -21,23 +21,11 @@ export const metadata = {
     heading="De pakkende anekdote."
   />
 
-  <div
-    className="w-full flex items-center justify-center text-center px-8 py-20 mb-10"
-    style={{
-      minHeight: '460px',
-      backgroundColor: 'var(--canvas-elevated)',
-      border: '1px dashed var(--border-strong)',
-      borderRadius: '3px',
-      color: 'var(--text-muted)',
-    }}
-  >
-    <span
-      className="text-[13px] max-w-[520px] block"
-      style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
-    >
-      [AFBEELDING: Voeg hier een foto of beeld in dat jouw eerste kennismaking met het onderwerp verbeeldt — minimaal 600×400px]
-    </span>
-  </div>
+  <img
+    src="/Observeren.jpeg"
+    alt="Observatie van snackgedrag bij scholieren tijdens een schoolpauze"
+    style={{ width: '100%', maxHeight: '460px', objectFit: 'cover', borderRadius: '3px', marginBottom: '2.5rem' }}
+  />
 
   <div
     className="p-8 md:p-10 max-w-[820px]"
@@ -51,11 +39,15 @@ export const metadata = {
       className="text-[17px] md:text-[18px]"
       style={{
         lineHeight: 1.7,
-        color: 'var(--text-muted)',
-        fontStyle: 'italic',
+        color: 'var(--text-secondary)',
       }}
     >
-      [TEKST: Beschrijf hier een concreet, persoonlijk moment — iets wat je zag, hoorde of meemaakte — dat jouw eerste vonk van interesse laat zien. Geen cijfers, geen trends, maar jouw verhaal.]
+      <p style={{ marginBottom: '1.25rem' }}>
+        Tijdens de module Toekomstbestendige Business Innovatie mat ik mijn eigen ecologische voetafdruk. Mijn score was 2,6, lager dan het Nederlandse gemiddelde van 3,3, maar de verklaring was ontnuchterend: ik at regelmatig vlees en pakte voor korte ritten automatisch de auto. Niet vanwege bewuste keuze, maar puur uit gewoonte.
+      </p>
+      <p style={{ margin: 0 }}>
+        Datzelfde patroon zag ik terug bij scholieren: elke pauze hetzelfde rondje naar de kantine of supermarkt, dezelfde impulsaankopen, dezelfde snacks. Ze deden het niet omdat ze zo graag chips wilden, maar omdat het erbij hoorde. Die herkenning was het begin van dit project.
+      </p>
     </div>
   </div>
 </section>
@@ -81,48 +73,40 @@ export const metadata = {
     >
       <p
         className="text-[17px]"
-        style={{
-          lineHeight: 1.7,
-          color: 'var(--text-muted)',
-          fontStyle: 'italic',
-        }}
+        style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}
       >
-        [TEKST: Beschrijf eerlijk hoe je er in het begin tegenaan keek. Wat wist je? Wat niet? Wat waren je aannames of vooroordelen?]
+        Mijn beginhypothese was simpel: het probleem was een aanbodprobleem. Als de kantine betere, gezondere opties zou aanbieden voor een acceptabele prijs, zouden leerlingen die ook kiezen. Ik keek naar producten, betere snacks en een slimmere indeling, en geloofde dat een goede propositie genoeg was om gedrag te veranderen.
+      </p>
+      <p
+        className="text-[17px]"
+        style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}
+      >
+        Over de sociale kant van snacken had ik nauwelijks nagedacht. Ik wist dat jongeren ongezond aten op school, maar had de illusie dat een goed product dat probleem zou oplossen. Ik keek naar het product, niet naar het ritueel eromheen.
       </p>
     </div>
 
-    <div
-      className="w-full flex items-center justify-center text-center px-6 py-12"
-      style={{
-        minHeight: '300px',
-        backgroundColor: 'var(--canvas-elevated)',
-        border: '1px dashed var(--border-strong)',
-        borderRadius: '3px',
-        color: 'var(--text-muted)',
-      }}
-    >
-      <span
-        className="text-[13px] block"
-        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
-      >
-        [AFBEELDING: Optioneel — voeg een beeld toe dat jouw beginpositie illustreert, ca. 400×300px]
-      </span>
-    </div>
+    <img
+      src="/Observeren_KFC.jpeg"
+      alt="Observatie bij KFC: de context van impulsmatige snackkeuzes buiten school"
+      style={{ width: '100%', height: '100%', minHeight: '300px', objectFit: 'cover', borderRadius: '3px' }}
+    />
   </div>
 
   <div className="mt-10">
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+    <a
+      href="/bronnen/opdracht-1"
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
       style={{
         letterSpacing: '0.05em',
         color: 'var(--accent-mint)',
         backgroundColor: 'var(--accent-mint-soft)',
         border: '1px solid var(--accent-mint-border)',
         borderRadius: '3px',
+        textDecoration: 'none',
       }}
     >
-      → Zie ook: Opdracht 1 – Ambitieniveau duurzaamheid (individueel)
-    </span>
+      → Zie ook: Opdracht 1: Ambitieniveau duurzaamheid
+    </a>
   </div>
 </section>
 
@@ -143,79 +127,89 @@ export const metadata = {
   >
     <p
       className="text-[17px]"
-      style={{
-        lineHeight: 1.7,
-        color: 'var(--text-muted)',
-        fontStyle: 'italic',
-      }}
+      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}
     >
-      [TEKST: Beschrijf hoe je door eigen onderzoek het onderwerp bent gaan doorgronden. Welke stappen heb je gezet? Wat heb je gelezen, onderzocht, bezocht?]
+      Twee semigestructureerde interviews lieten een ander beeld zien dan ik had verwacht. Isa (6 VWO) at ongezonde snacks "in de aula, met vriendinnen", niet vanwege honger maar vanwege gezelligheid. Ze omschreef het als "meegaan in het moment". Twee VMBO-leerlingen gingen "voor de gezelligheid" mee naar de Spar, ook als ze zelf niets wilden. De prijs was een harde grens (max. €1–2), maar het sociale ritueel was de drijfveer.
+    </p>
+    <p
+      className="text-[17px]"
+      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}
+    >
+      De Value Proposition Canvas (twee iteraties) maakte vervolgens de dieperliggende structuur zichtbaar: het rondje naar de kantine was geen voedseldoel maar een vast sociaal patroon. Lopen, kopen, samen eten, even niet op school zijn. Observaties bij Albert Heijn en KFC in de buurt van scholen bevestigden dit: de aankoop was bijzaak, het samenzijn was het doel.
     </p>
   </div>
 
   <div className="grid gap-6 md:gap-8 md:grid-cols-2 mb-10">
-    <div
-      className="w-full flex items-center justify-center text-center px-6 py-12"
-      style={{
-        minHeight: '320px',
-        backgroundColor: 'var(--canvas-elevated)',
-        border: '1px dashed var(--border-strong)',
-        borderRadius: '3px',
-        color: 'var(--text-muted)',
-      }}
-    >
-      <span
-        className="text-[13px] block max-w-[340px]"
-        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
-      >
-        [AFBEELDING 1: Bewijs van onderzoek, bijv. screenshot, foto van fieldwork — ca. 400×300px]
-      </span>
-    </div>
+    <img
+      src="/Observeren_AH.jpeg"
+      alt="Observatie bij Albert Heijn nabij school: leerlingen kopen samen snacks als sociaal ritueel"
+      style={{ width: '100%', minHeight: '320px', objectFit: 'cover', borderRadius: '3px' }}
+    />
 
-    <div
-      className="w-full flex items-center justify-center text-center px-6 py-12"
-      style={{
-        minHeight: '320px',
-        backgroundColor: 'var(--canvas-elevated)',
-        border: '1px dashed var(--border-strong)',
-        borderRadius: '3px',
-        color: 'var(--text-muted)',
-      }}
-    >
-      <span
-        className="text-[13px] block max-w-[340px]"
-        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
-      >
-        [AFBEELDING 2: Aanvullend beeldmateriaal — ca. 400×300px]
-      </span>
-    </div>
+    <img
+      src="/Observeren_AH_1.jpeg"
+      alt="Observatie bij Albert Heijn: sociale context rondom impulsaankopen door scholieren"
+      style={{ width: '100%', minHeight: '320px', objectFit: 'cover', borderRadius: '3px' }}
+    />
   </div>
 
   <div className="flex flex-wrap gap-3">
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+    <a
+      href="/bronnen/interview-1"
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
       style={{
         letterSpacing: '0.05em',
         color: 'var(--accent-mint)',
         backgroundColor: 'var(--accent-mint-soft)',
         border: '1px solid var(--accent-mint-border)',
         borderRadius: '3px',
+        textDecoration: 'none',
       }}
     >
-      → Zie ook: Opdracht 4 – Impactbepaling
-    </span>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+      → Zie ook: Interview 1: Isa, 6 VWO
+    </a>
+    <a
+      href="/bronnen/interview-2"
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
       style={{
         letterSpacing: '0.05em',
         color: 'var(--accent-mint)',
         backgroundColor: 'var(--accent-mint-soft)',
         border: '1px solid var(--accent-mint-border)',
         borderRadius: '3px',
+        textDecoration: 'none',
       }}
     >
-      → Zie ook: Opdracht 5 – B-Corp Analyse
-    </span>
+      → Zie ook: Interview 2: Twee VMBO-leerlingen, jaar 3
+    </a>
+    <a
+      href="/bronnen/opdracht-19"
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+        textDecoration: 'none',
+      }}
+    >
+      → Zie ook: Opdracht 19: Value Proposition Canvas
+    </a>
+    <a
+      href="/bronnen/opdracht-4"
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
+      style={{
+        letterSpacing: '0.05em',
+        color: 'var(--accent-mint)',
+        backgroundColor: 'var(--accent-mint-soft)',
+        border: '1px solid var(--accent-mint-border)',
+        borderRadius: '3px',
+        textDecoration: 'none',
+      }}
+    >
+      → Zie ook: Opdracht 4: Impactbepaling
+    </a>
   </div>
 </section>
 
@@ -251,41 +245,31 @@ export const metadata = {
         fontStyle: 'italic',
       }}
     >
-      [TEKST: Beschrijf welk inzicht, moment of ontdekking ervoor zorgde dat je anders naar het onderwerp ging kijken. Wat verraste je? Wat schuurde? Waar werd je nieuwsgieriger van?]
+      Bij de tweede iteratie van de Value Proposition Canvas viel het kwartje: de centrale klanttaak was niet 'eten' maar 'samen de pauze leuk en gezellig invullen'. Honger stillen was ondergeschikt. Een voedingsoplossing zou de pijn nooit wegnemen, want de pijn ging niet over voeding. Er was iets nodig dat hetzelfde sociale ritueel kon vervangen.
     </p>
   </div>
 
-  <div
-    className="w-full flex items-center justify-center text-center px-8 py-20 mb-10"
-    style={{
-      minHeight: '440px',
-      backgroundColor: 'var(--canvas)',
-      border: '1px dashed var(--border-strong)',
-      borderRadius: '3px',
-      color: 'var(--text-muted)',
-    }}
-  >
-    <span
-      className="text-[13px] max-w-[520px] block"
-      style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
-    >
-      [AFBEELDING: Een beeld dat dit kantelpunt ondersteunt — ca. 600×400px]
-    </span>
-  </div>
+  <img
+    src="/VPC_afbeelding2.png"
+    alt="Value Proposition Canvas iteratie 2: aangescherpt klantprofiel met centrale klanttaak 'samen de pauze invullen'"
+    style={{ width: '100%', maxWidth: '640px', height: 'auto', borderRadius: '3px', marginBottom: '2.5rem' }}
+  />
 
   <div>
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px]"
+    <a
+      href="/bronnen/opdracht-19"
+      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
       style={{
         letterSpacing: '0.05em',
         color: 'var(--accent-mint)',
         backgroundColor: 'var(--accent-mint-soft)',
         border: '1px solid var(--accent-mint-border)',
         borderRadius: '3px',
+        textDecoration: 'none',
       }}
     >
-      → Zie ook: Opdracht 29/30 – Moreel Kompas
-    </span>
+      → Zie ook: Opdracht 19: Value Proposition Canvas
+    </a>
   </div>
 </section>
 
@@ -310,33 +294,23 @@ export const metadata = {
     >
       <p
         className="text-[17px]"
-        style={{
-          lineHeight: 1.7,
-          color: 'var(--text-muted)',
-          fontStyle: 'italic',
-        }}
+        style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}
       >
-        [TEKST: Beschrijf kort en krachtig wat het onderwerp nu voor je betekent. Geen samenvatting van resultaten, maar jouw persoonlijke positie.]
+        Ik kijk nu naar pauzegedrag als een vraagstuk van ritueelontwerp: hoe geef je mensen een aantrekkelijk alternatief dat naadloos in hun sociale context past, zonder moraliserende toon?
+      </p>
+      <p
+        className="text-[17px]"
+        style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}
+      >
+        Mijn nieuwsgierigheid is verschoven van 'wat eten leerlingen?' naar 'waarom doen mensen wat ze doen, en hoe verander je dat?'. Die vraag vormt de kern van alles wat daarna is gekomen en nog zal volgen.
       </p>
     </div>
 
-    <div
-      className="w-full flex items-center justify-center text-center px-6 py-12"
-      style={{
-        minHeight: '300px',
-        backgroundColor: 'var(--canvas-elevated)',
-        border: '1px dashed var(--border-strong)',
-        borderRadius: '3px',
-        color: 'var(--text-muted)',
-      }}
-    >
-      <span
-        className="text-[13px] block"
-        style={{ letterSpacing: '0.05em', lineHeight: 1.6 }}
-      >
-        [AFBEELDING: Optioneel slotbeeld]
-      </span>
-    </div>
+    <img
+      src="/Afbeelding-challenge-tafel-v1.png"
+      alt="Challenge Table V1: het eindconcept dat het snackritueel vervangt met een actief sociaal alternatief"
+      style={{ width: '100%', height: '100%', minHeight: '300px', objectFit: 'cover', borderRadius: '3px' }}
+    />
   </div>
 </section>
 
