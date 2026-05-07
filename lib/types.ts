@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react'
 
 export interface RubricBadgeProps {
-  criterium: 1 | 2 | 3 | 4 | 5
-  label?: string
+  number: string
+  label: string
 }
 
 export interface SourceLinkProps {
@@ -17,14 +17,13 @@ export interface ReflectionCalloutProps {
 }
 
 export interface EvidenceCardProps {
+  rubric: { number: string; label: string }
   title: string
-  summary: string
   action: string
   finding: string
   meaning: string
   sourceId?: string
-  image?: { src: string; alt: string }
-  rubric?: 1 | 2 | 3 | 4 | 5
+  sourceLabel?: string
 }
 
 export interface TimelineItem {
@@ -43,8 +42,7 @@ export interface TimelineProps {
 export interface QuoteBlockProps {
   quote: string
   author: string
-  context?: string
-  sourceId?: string
+  source?: string
 }
 
 export interface PainGainMapProps {
@@ -101,14 +99,15 @@ export interface OriginStoryProps {
 }
 
 export interface TriangulationMethod {
+  type: string
   name: string
-  type: 'primair' | 'secundair'
+  count: string
   finding: string
 }
 
 export interface TriangulationDiagramProps {
-  methods: [TriangulationMethod, TriangulationMethod, TriangulationMethod]
-  convergentInsight: string
+  methods: TriangulationMethod[]
+  convergence: string
 }
 
 export interface ValuePerspectiveGridItem extends ValuePerspectiveProps {

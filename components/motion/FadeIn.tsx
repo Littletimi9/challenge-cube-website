@@ -8,15 +8,16 @@ type Props = {
   as?: 'div' | 'section' | 'article' | 'li'
   delay?: number
   className?: string
+  style?: React.CSSProperties
 }
 
-export default function FadeIn({ children, as = 'div', delay = 0, className }: Props) {
+export default function FadeIn({ children, as = 'div', delay = 0, className, style }: Props) {
   const reduce = useReducedMotion()
   const Comp = motion[as]
 
   if (reduce) {
     const Tag = as
-    return <Tag className={className}>{children}</Tag>
+    return <Tag className={className} style={style}>{children}</Tag>
   }
 
   return (
@@ -27,6 +28,7 @@ export default function FadeIn({ children, as = 'div', delay = 0, className }: P
       viewport={viewport}
       transition={{ ...transition, delay }}
       className={className}
+      style={style}
     >
       {children}
     </Comp>

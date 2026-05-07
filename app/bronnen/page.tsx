@@ -29,7 +29,7 @@ type ApaSource = {
 
 const interviews: InterviewCard[] = [
   {
-    href: '/bronnen/Interview-1',
+    href: '/bronnen/interview-1',
     title: 'Interview 1 — Isa, 6 VWO',
     description: 'Kwalitatief interview over snackgedrag op school: sociale context, prijsgevoeligheid en zelfperceptie rondom ongezonde keuzes tijdens pauzes.',
     meta: 'Sprint 1 · Probleemverkenning',

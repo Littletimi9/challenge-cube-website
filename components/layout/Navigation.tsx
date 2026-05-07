@@ -37,7 +37,8 @@ export default function Navigation() {
       <div className="flex items-center justify-between px-6 md:px-10 h-16">
         <Link
           href="/"
-          className="font-serif text-[20px] text-[var(--text-primary)] leading-none tracking-tight"
+          className="font-serif text-[20px] leading-none tracking-tight"
+          style={{ color: 'var(--text-primary)' }}
         >
           Challenge Cube
         </Link>
@@ -67,7 +68,8 @@ export default function Navigation() {
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? 'Menu sluiten' : 'Menu openen'}
           aria-expanded={open}
-          className="md:hidden text-[var(--text-primary)]"
+          className="md:hidden"
+          style={{ color: 'var(--text-primary)' }}
         >
           {open ? <X size={22} strokeWidth={1.5} /> : <Menu size={22} strokeWidth={1.5} />}
         </button>

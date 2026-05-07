@@ -10,11 +10,21 @@ export type RubricRowData = {
   evidenceCount: string
 }
 
+const rubricColors: Record<string, string> = {
+  '01': 'var(--cat-speed)',
+  '02': 'var(--cat-1v1)',
+  '03': 'var(--cat-group)',
+  '04': 'var(--cat-tiktok)',
+  '05': 'var(--cat-quiz)',
+}
+
 export default function RubricRow({ item }: { item: RubricRowData }) {
+  const color = rubricColors[item.number] ?? 'var(--accent-mint)'
+
   return (
     <Link
       href={`/${item.slug}`}
-      className="group block transition-[padding,background] duration-300 py-8 hover:pl-4"
+      className="group block transition-[padding,background] duration-300 py-8 hover:pl-2"
       style={{
         borderBottom: '0.5px solid var(--border)',
       }}
@@ -31,7 +41,7 @@ export default function RubricRow({ item }: { item: RubricRowData }) {
           style={{
             fontSize: '56px',
             lineHeight: 1,
-            color: 'var(--accent-mint)',
+            color,
           }}
         >
           {item.number}
@@ -40,7 +50,7 @@ export default function RubricRow({ item }: { item: RubricRowData }) {
         <div className="md:hidden col-span-5 flex items-baseline gap-3">
           <span
             className="font-serif"
-            style={{ fontSize: '32px', color: 'var(--accent-mint)', lineHeight: 1 }}
+            style={{ fontSize: '32px', color, lineHeight: 1 }}
           >
             {item.number}
           </span>
@@ -73,15 +83,18 @@ export default function RubricRow({ item }: { item: RubricRowData }) {
           {item.description}
         </p>
 
-        <div className="col-span-5 md:col-auto md:text-right flex md:flex-col gap-3 md:gap-1">
+        <div className="col-span-5 md:col-auto md:text-right flex md:flex-col gap-3 md:gap-2">
           <span
-            className="text-[11px] uppercase"
+            className="inline-flex items-center px-2 py-0.5 text-[10px] uppercase"
             style={{
-              letterSpacing: '0.15em',
+              letterSpacing: '0.12em',
               color: 'var(--accent-amber)',
+              backgroundColor: 'var(--accent-amber-soft)',
+              border: '1px solid rgba(232,184,79,0.25)',
+              borderRadius: '3px',
             }}
           >
-            Ambitie · {item.ambition}
+            {item.ambition}
           </span>
           <span
             className="text-[11px] uppercase"
@@ -102,7 +115,7 @@ export default function RubricRow({ item }: { item: RubricRowData }) {
           <ArrowRight
             size={20}
             strokeWidth={1.5}
-            className="group-hover:text-[var(--accent-mint)]"
+            className="rubric-row-arrow"
           />
         </span>
       </div>

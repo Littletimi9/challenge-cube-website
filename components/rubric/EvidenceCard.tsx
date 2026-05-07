@@ -24,7 +24,8 @@ export default function EvidenceCard({
   return (
     <FadeIn
       as="article"
-      className="p-8 md:p-10 flex flex-col gap-6 bg-[var(--canvas)]"
+      className="p-8 md:p-10 flex flex-col gap-6"
+      style={{ backgroundColor: 'var(--surface)' }}
     >
       <RubricBadge number={rubric.number} label={rubric.label} />
 

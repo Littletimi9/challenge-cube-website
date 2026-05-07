@@ -8,7 +8,17 @@ type Props = {
   meta?: Meta[]
 }
 
+const rubricColors: Record<string, string> = {
+  '01': 'var(--cat-speed)',
+  '02': 'var(--cat-1v1)',
+  '03': 'var(--cat-group)',
+  '04': 'var(--cat-tiktok)',
+  '05': 'var(--cat-quiz)',
+}
+
 export default function PageHead({ number, label, title, lead, meta = [] }: Props) {
+  const color = rubricColors[number] ?? 'var(--accent-mint)'
+
   return (
     <header
       className="px-6 md:px-10 py-16 md:py-20"
@@ -23,7 +33,7 @@ export default function PageHead({ number, label, title, lead, meta = [] }: Prop
             className="font-serif block leading-none"
             style={{
               fontSize: 'clamp(72px, 12vw, 120px)',
-              color: 'var(--accent-mint)',
+              color,
               letterSpacing: '-0.02em',
             }}
           >

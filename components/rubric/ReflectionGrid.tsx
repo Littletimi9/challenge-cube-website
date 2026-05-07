@@ -10,25 +10,37 @@ export default function ReflectionGrid({ good, better }: Props) {
         border: '0.5px solid var(--border)',
       }}
     >
-      <Cell dotColor="var(--accent-mint)" label="Wat ging goed" text={good} />
-      <Cell dotColor="var(--accent-amber)" label="Wat kan beter" text={better} />
+      <Cell
+        dotColor="var(--accent-mint)"
+        bgColor="rgba(94, 227, 211, 0.05)"
+        label="Wat ging goed"
+        text={good}
+      />
+      <Cell
+        dotColor="var(--accent-amber)"
+        bgColor="rgba(232, 184, 79, 0.05)"
+        label="Wat kan beter"
+        text={better}
+      />
     </div>
   )
 }
 
 function Cell({
   dotColor,
+  bgColor,
   label,
   text,
 }: {
   dotColor: string
+  bgColor: string
   label: string
   text: string
 }) {
   return (
     <div
       className="p-6 md:p-8 flex flex-col gap-4"
-      style={{ backgroundColor: 'var(--canvas)' }}
+      style={{ backgroundColor: bgColor }}
     >
       <div className="flex items-center gap-2.5">
         <span

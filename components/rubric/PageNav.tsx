@@ -1,9 +1,17 @@
 import Link from 'next/link'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 
-type Link = { number: string; name: string; href: string }
+type NavLink = { number: string; name: string; href: string }
 
-type Props = { prev?: Link; next?: Link }
+type Props = { prev?: NavLink; next?: NavLink }
+
+const rubricColors: Record<string, string> = {
+  '01': 'var(--cat-speed)',
+  '02': 'var(--cat-1v1)',
+  '03': 'var(--cat-group)',
+  '04': 'var(--cat-tiktok)',
+  '05': 'var(--cat-quiz)',
+}
 
 export default function PageNav({ prev, next }: Props) {
   return (
@@ -13,17 +21,19 @@ export default function PageNav({ prev, next }: Props) {
       aria-label="Pagina-navigatie"
     >
       <div className="flex-1">
-        {prev && <NavLink dir="prev" item={prev} />}
+        {prev && <NavLinkItem dir="prev" item={prev} />}
       </div>
       <div className="flex-1 md:text-right">
-        {next && <NavLink dir="next" item={next} />}
+        {next && <NavLinkItem dir="next" item={next} />}
       </div>
     </nav>
   )
 }
 
-function NavLink({ dir, item }: { dir: 'prev' | 'next'; item: Link }) {
+function NavLinkItem({ dir, item }: { dir: 'prev' | 'next'; item: NavLink }) {
   const isPrev = dir === 'prev'
+  const color = rubricColors[item.number] ?? 'var(--accent-mint)'
+
   return (
     <Link
       href={item.href}
@@ -48,7 +58,7 @@ function NavLink({ dir, item }: { dir: 'prev' | 'next'; item: Link }) {
           color: 'var(--text-primary)',
         }}
       >
-        <span style={{ color: 'var(--accent-mint)' }}>{item.number}</span>
+        <span style={{ color }}>{item.number}</span>
         {item.name}
       </span>
     </Link>
