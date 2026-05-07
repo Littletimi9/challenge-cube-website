@@ -79,6 +79,11 @@ const opdrachten: OpdrachtCard[] = [
     description: 'Tijdgebonden opdracht waarbij in kort bestek een financieel dashboard is ontworpen en opgeleverd.',
   },
   {
+    href: '/bronnen/opdracht-8',
+    title: 'Opdracht 8 — Value Proposition Canvas',
+    description: 'Twee iteraties van de Value Proposition Canvas: klantprofiel van scholieren in de pauze en uitwerking van de value map met voordeelverschaffers en pijnverzachters.',
+  },
+  {
     href: '/bronnen/opdracht-9',
     title: 'Opdracht 9 — Concurrentieanalyse',
     description: 'Tweede iteratie: marktanalyse met trechtermodel, systematische analyse van twaalf concurrenten in drie lagen, en positioneringsmatrix op twee strategische assen.',
@@ -87,6 +92,21 @@ const opdrachten: OpdrachtCard[] = [
     href: '/bronnen/opdracht-10',
     title: 'Opdracht 10 — Prijsstrategie',
     description: 'Waarde-gebaseerde prijsstrategie voor de Challenge Table: concurrentiepositie, penetratiestrategie, segmentdifferentiatie en vijf businesscase-scenario\'s.',
+  },
+  {
+    href: '/bronnen/opdracht-19',
+    title: 'Opdracht 19 — Value Proposition Canvas',
+    description: 'Twee iteraties van de Value Proposition Canvas: klantprofiel van scholieren in de pauze en uitwerking van de value map met voordeelverschaffers en pijnverzachters.',
+  },
+  {
+    href: '/bronnen/opdracht-20',
+    title: 'Opdracht 20 — Customer Journey IST',
+    description: 'IST Customer Journey Map van scholieren rondom eetgedrag tijdens een schooldag, uitgewerkt per fase: awareness, consideration, decision, service en loyalty.',
+  },
+  {
+    href: '/bronnen/opdracht-21',
+    title: 'Opdracht 21 — Customer Journey SOLL',
+    description: 'SOLL Customer Journey Map met de gewenste situatie: interventies via gamification, sociale invloed en keuze-architectuur om gezonder eetgedrag te stimuleren.',
   },
 ]
 
@@ -690,6 +710,46 @@ const apaSources: ApaSource[] = [
     reference:
       'Wouters, E. J. M., Larsen, J. K., Kremers, S. P. J., Dagnelie, P. C., & Geenen, R. (2010). Peer influence on snacking behavior in adolescence. Appetite, 55(1), 11–17. https://doi.org/10.1016/j.appet.2010.03.002',
     link: 'https://doi.org/10.1016/j.appet.2010.03.002',
+  },
+  {
+    id: 'opdracht-8-osterwalder-2014',
+    label: 'Opdracht 8',
+    reference:
+      'Osterwalder, A., Pigneur, Y., Bernarda, G., & Smith, A. (2014). Value proposition design: How to create products and services customers want. Wiley.',
+  },
+  {
+    id: 'opdracht-19-osterwalder-2014',
+    label: 'Opdracht 19',
+    reference:
+      'Osterwalder, A., Pigneur, Y., Bernarda, G., & Smith, A. (2014). Value proposition design: How to create products and services customers want. Wiley.',
+  },
+  {
+    id: 'opdracht-20-rosenbaum-2017',
+    label: 'Opdracht 20',
+    reference:
+      'Rosenbaum, M. S., Otalora, M. L., & Ramírez, G. C. (2017). How to create a realistic customer journey map. Business Horizons, 60(1), 143–150. https://doi.org/10.1016/j.bushor.2016.09.010',
+    link: 'https://doi.org/10.1016/j.bushor.2016.09.010',
+  },
+  {
+    id: 'opdracht-20-lemon-2016',
+    label: 'Opdracht 20',
+    reference:
+      'Lemon, K. N., & Verhoef, P. C. (2016). Understanding customer experience throughout the customer journey. Journal of Marketing, 80(6), 69–96. https://doi.org/10.1177/0022242916629048',
+    link: 'https://doi.org/10.1177/0022242916629048',
+  },
+  {
+    id: 'opdracht-21-rosenbaum-2017',
+    label: 'Opdracht 21',
+    reference:
+      'Rosenbaum, M. S., Otalora, M. L., & Ramírez, G. C. (2017). How to create a realistic customer journey map. Business Horizons, 60(1), 143–150. https://doi.org/10.1016/j.bushor.2016.09.010',
+    link: 'https://doi.org/10.1016/j.bushor.2016.09.010',
+  },
+  {
+    id: 'opdracht-21-lemon-2016',
+    label: 'Opdracht 21',
+    reference:
+      'Lemon, K. N., & Verhoef, P. C. (2016). Understanding customer experience throughout the customer journey. Journal of Marketing, 80(6), 69–96. https://doi.org/10.1177/0022242916629048',
+    link: 'https://doi.org/10.1177/0022242916629048',
   },
 ]
 

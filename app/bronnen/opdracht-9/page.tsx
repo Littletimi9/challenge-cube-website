@@ -944,24 +944,27 @@ export default function Opdracht9Page() {
           </div>
 
           {/* Matrix afbeelding */}
-          <div
-            style={{
-              position: 'relative',
-              width: '100%',
-              border: '0.5px solid var(--border)',
-              backgroundColor: 'var(--surface)',
-              padding: '4px',
-            }}
-          >
-            <Image
-              src="/Poitioineringsmatrix_challenge_table.png"
-              alt="Positioneringsmatrix Challenge Table — As X: drempel voor gebruik | As Y: sociale activatiewaarde"
-              width={1090}
-              height={888}
-              style={{ width: '100%', height: 'auto', display: 'block' }}
-              priority
-            />
-          </div>
+          <a href="/Poitioineringsmatrix_challenge_table.png" target="_blank" rel="noopener noreferrer" style={{ display: 'block', cursor: 'zoom-in' }}>
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                border: '0.5px solid var(--border)',
+                backgroundColor: 'var(--surface)',
+                padding: '4px',
+              }}
+            >
+              <Image
+                src="/Poitioineringsmatrix_challenge_table.png"
+                alt="Positioneringsmatrix Challenge Table — As X: drempel voor gebruik | As Y: sociale activatiewaarde"
+                width={1090}
+                height={888}
+                unoptimized
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+                priority
+              />
+            </div>
+          </a>
           <p style={tableCaptionStyle}>
             Tabel 7 — Positioneringsmatrix Challenge Table · As X: drempel voor gebruik | As Y: sociale activatiewaarde
           </p>

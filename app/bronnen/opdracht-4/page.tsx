@@ -824,19 +824,22 @@ export default function Opdracht4Page() {
           </p>
 
           <figure>
-            <div
-              className="rounded-lg overflow-hidden"
-              style={{ border: '0.5px solid var(--border)' }}
-            >
-              <Image
-                src="/Opdracht4_stakeholdermap.png"
-                alt="Stakeholdermap Challenge Table — invloed × belang"
-                width={1000}
-                height={700}
-                className="w-full h-auto"
-                style={{ display: 'block' }}
-              />
-            </div>
+            <a href="/Opdracht4_stakeholdermap.png" target="_blank" rel="noopener noreferrer" style={{ display: 'block', cursor: 'zoom-in' }}>
+              <div
+                className="rounded-lg overflow-hidden"
+                style={{ border: '0.5px solid var(--border)' }}
+              >
+                <Image
+                  src="/Opdracht4_stakeholdermap.png"
+                  alt="Stakeholdermap Challenge Table — invloed × belang"
+                  width={1000}
+                  height={700}
+                  unoptimized
+                  className="w-full h-auto"
+                  style={{ display: 'block' }}
+                />
+              </div>
+            </a>
             <figcaption
               className="mt-3 text-[13px]"
               style={{ color: 'var(--text-muted)', lineHeight: 1.6 }}
@@ -938,19 +941,22 @@ export default function Opdracht4Page() {
           </p>
 
           <figure>
-            <div
-              className="rounded-lg overflow-hidden"
-              style={{ border: '0.5px solid var(--border)' }}
-            >
-              <Image
-                src="/Opdracht4_impactmatrix.png"
-                alt="Impactmatrix Challenge Table — business impact × duurzaamheidsimpact"
-                width={1000}
-                height={680}
-                className="w-full h-auto"
-                style={{ display: 'block' }}
-              />
-            </div>
+            <a href="/Opdracht4_impactmatrix.png" target="_blank" rel="noopener noreferrer" style={{ display: 'block', cursor: 'zoom-in' }}>
+              <div
+                className="rounded-lg overflow-hidden"
+                style={{ border: '0.5px solid var(--border)' }}
+              >
+                <Image
+                  src="/Opdracht4_impactmatrix.png"
+                  alt="Impactmatrix Challenge Table — business impact × duurzaamheidsimpact"
+                  width={1000}
+                  height={680}
+                  unoptimized
+                  className="w-full h-auto"
+                  style={{ display: 'block' }}
+                />
+              </div>
+            </a>
             <figcaption
               className="mt-3 text-[13px]"
               style={{ color: 'var(--text-muted)', lineHeight: 1.6 }}
