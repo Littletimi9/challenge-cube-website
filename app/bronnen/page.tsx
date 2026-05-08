@@ -106,6 +106,16 @@ const opdrachten: OpdrachtCard[] = [
     description: 'Waarde-gebaseerde prijsstrategie voor de Challenge Table: concurrentiepositie, penetratiestrategie, segmentdifferentiatie en vijf businesscase-scenario\'s.',
   },
   {
+    href: '/bronnen/opdracht-11',
+    title: 'Opdracht 11 — Prijsgevoeligheidsanalyse (onderzoeksopzet)',
+    description: 'Methodekeuze Van Westendorp, iteratiemelding B2C→B2B, doelgroep en steekproefomvang, enquêtevragen per blok en planning van de afname.',
+  },
+  {
+    href: '/bronnen/opdracht-13',
+    title: 'Opdracht 13 — Prijsgevoeligheidsanalyse (resultaten)',
+    description: 'Van Westendorp-resultaten voor de Challenge Cube (B2C, 120 respondenten) en de Challenge Table (B2B, 29 respondenten): prijspunten, grafiekanalyse en vertaling naar introductieprijs.',
+  },
+  {
     href: '/bronnen/opdracht-19',
     title: 'Opdracht 19 — Value Proposition Canvas',
     description: 'Twee iteraties van de Value Proposition Canvas: klantprofiel van scholieren in de pauze en uitwerking van de value map met voordeelverschaffers en pijnverzachters.',
@@ -751,6 +761,37 @@ const apaSources: ApaSource[] = [
     reference:
       'Wouters, E. J. M., Larsen, J. K., Kremers, S. P. J., Dagnelie, P. C., & Geenen, R. (2010). Peer influence on snacking behavior in adolescence. Appetite, 55(1), 11–17. https://doi.org/10.1016/j.appet.2010.03.002',
     link: 'https://doi.org/10.1016/j.appet.2010.03.002',
+  },
+  {
+    id: 'opdracht-11-green-1978',
+    label: 'Opdracht 11',
+    reference:
+      'Green, P. E. (1978). Conjoint analysis in consumer research: Issues and outlook. Journal of Consumer Research, 5(2), 103–123.',
+    link: 'https://doi.org/10.1086/208721',
+  },
+  {
+    id: 'opdracht-11-westendorp-1976',
+    label: 'Opdracht 11',
+    reference:
+      'Van Westendorp, P. H. (1976). NSS Price Sensitivity Meter (PSM) — A new approach to study consumer perception of prices. Proceedings of the 29th ESOMAR Congress, 139–167.',
+  },
+  {
+    id: 'opdracht-13-enquete-b2c-2025',
+    label: 'Opdracht 13',
+    reference:
+      'Groep Challenge Cube. (2025). Enquêteresultaten B2C prijsgevoeligheidsonderzoek — Challenge Cube [Primaire data]. Hogeschool Windesheim.',
+  },
+  {
+    id: 'opdracht-13-enquete-b2b-2026',
+    label: 'Opdracht 13',
+    reference:
+      'Groep Challenge Cube. (2026). Enquêteresultaten B2B prijsgevoeligheidsonderzoek — Challenge Table [Primaire data]. Hogeschool Windesheim.',
+  },
+  {
+    id: 'opdracht-13-westendorp-1976',
+    label: 'Opdracht 13',
+    reference:
+      'Van Westendorp, P. H. (1976). NSS Price Sensitivity Meter (PSM) — A new approach to study consumer perception of prices. Proceedings of the 29th ESOMAR Congress, 139–167.',
   },
   {
     id: 'opdracht-8-osterwalder-2014',
