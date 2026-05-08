@@ -40,6 +40,12 @@ const interviews: InterviewCard[] = [
     description: 'Kwalitatief groepsinterview over snackgedrag op school: impulsaankopen, prijsgrenzen, groepsgezelligheid en financieel bewustzijn bij VMBO-leerlingen.',
     meta: 'Sprint 1 · Probleemverkenning',
   },
+  {
+    href: '/bronnen/observaties',
+    title: 'Observaties — Pauzegedrag op locatie',
+    description: 'Vier gestructureerde observatieformulieren op drie locaties: Spar Windesheim, Albert Heijn Forelkolk, KFC en McDonalds Zwolle. Koopgedrag en groepsdynamiek van scholieren in kaart gebracht.',
+    meta: 'Sprint 1 · Primair onderzoek',
+  },
 ]
 
 const opdrachten: OpdrachtCard[] = [
@@ -107,6 +113,16 @@ const opdrachten: OpdrachtCard[] = [
     href: '/bronnen/opdracht-21',
     title: 'Opdracht 21 — Customer Journey SOLL',
     description: 'SOLL Customer Journey Map met de gewenste situatie: interventies via gamification, sociale invloed en keuze-architectuur om gezonder eetgedrag te stimuleren.',
+  },
+  {
+    href: '/bronnen/opdracht-22',
+    title: 'Opdracht 22 — Doelmarkt en segmentatie',
+    description: 'STP-model toegepast op de Challenge Table: vier marktsegmenten, beoordeling op probleemomvang, budget en productaansluiting, en keuze voor beleidsgedreven scholen als primaire doelgroep.',
+  },
+  {
+    href: '/bronnen/opdracht-23',
+    title: 'Opdracht 23 — Brandkey',
+    description: 'Brand Key-analyse voor Picoo, BelevenisTafel en de Challenge Table: negen elementen per merk van historische kracht tot merkessentie.',
   },
 ]
 
@@ -750,6 +766,106 @@ const apaSources: ApaSource[] = [
     reference:
       'Lemon, K. N., & Verhoef, P. C. (2016). Understanding customer experience throughout the customer journey. Journal of Marketing, 80(6), 69–96. https://doi.org/10.1177/0022242916629048',
     link: 'https://doi.org/10.1177/0022242916629048',
+  },
+  {
+    id: 'opdracht-22-klooster-2024',
+    label: 'Opdracht 22',
+    reference: 'Klooster, E. (2024). Marketing: van strategie naar uitvoering. Noordhoff Uitgevers.',
+  },
+  {
+    id: 'opdracht-22-marketresponse-2024',
+    label: 'Opdracht 22',
+    reference: 'Marketresponse. (2024). STP-model toegepast in de Nederlandse markt. Marketresponse Nederland.',
+    link: 'https://www.marketresponse.nl',
+  },
+  {
+    id: 'opdracht-22-kvlo-2025',
+    label: 'Opdracht 22',
+    reference:
+      'KVLO. (2025). Bewegen en gezondheid op school: stand van zaken en aanbevelingen. Koninklijke Vereniging voor Lichamelijke Opvoeding.',
+    link: 'https://www.kvlo.nl',
+  },
+  {
+    id: 'opdracht-22-gezondeschool-2026',
+    label: 'Opdracht 22',
+    reference: 'Gezonde School. (2026, januari). Nieuwe gezonde schoolactiviteiten. Gezonde School.',
+    link: 'https://www.gezondeschool.nl',
+  },
+  {
+    id: 'opdracht-22-rivm-2020',
+    label: 'Opdracht 22',
+    reference:
+      'RIVM. (2020). Gezonder op de basisschool: schoollunches en meer bewegen. Rijksinstituut voor Volksgezondheid en Milieu.',
+    link: 'https://www.rivm.nl/nieuws/gezonde-schoollunch-en-meer-bewegen-op-basisschool-helpen-in-aanpak-van-overgewicht',
+  },
+  {
+    id: 'opdracht-22-eck-2019',
+    label: 'Opdracht 22',
+    reference:
+      'Eck, E. van. (2019). Buitensport en bewegen op school: effecten op welzijn en leerresultaten. Mulier Instituut.',
+    link: 'https://www.mulierinstituut.nl',
+  },
+  {
+    id: 'opdracht-22-arboportaal-2024',
+    label: 'Opdracht 22',
+    reference:
+      'Arboportaal. (2024). Gezond en veilig werken en leren op school. Ministerie van Sociale Zaken en Werkgelegenheid.',
+    link: 'https://www.arboportaal.nl',
+  },
+  {
+    id: 'opdracht-23-picoo-2026',
+    label: 'Opdracht 23',
+    reference: 'Picoo. (2026). Picoo: interactief bewegingssysteem voor onderwijs. Geraadpleegd op 8 mei 2026, van https://www.picoo.nl',
+    link: 'https://www.picoo.nl',
+  },
+  {
+    id: 'opdracht-23-picoo-nd',
+    label: 'Opdracht 23',
+    reference: 'Picoo. (z.d.). Over Picoo. Geraadpleegd op 8 mei 2026, van https://www.picoo.nl',
+    link: 'https://www.picoo.nl',
+  },
+  {
+    id: 'opdracht-23-derolfgroep',
+    label: 'Opdracht 23',
+    reference: 'Derolfgroep. (z.d.). Picoo bewegingsspel. Geraadpleegd op 8 mei 2026, van https://www.derolfgroep.nl',
+    link: 'https://www.derolfgroep.nl',
+  },
+  {
+    id: 'opdracht-23-heutink',
+    label: 'Opdracht 23',
+    reference: 'Heutink. (z.d.). Picoo interactief bewegingssysteem. Geraadpleegd op 8 mei 2026, van https://www.heutink.nl',
+    link: 'https://www.heutink.nl',
+  },
+  {
+    id: 'opdracht-23-primaonderwijs-2024',
+    label: 'Opdracht 23',
+    reference:
+      'Primaonderwijs. (2024). Picoo in de gymles: ervaringen en resultaten. Primaonderwijs.nl. Geraadpleegd op 8 mei 2026, van https://www.primaonderwijs.nl',
+    link: 'https://www.primaonderwijs.nl',
+  },
+  {
+    id: 'opdracht-23-belevenistafel-nd',
+    label: 'Opdracht 23',
+    reference: 'BelevenisTafel. (z.d.). BelevenisTafel: samen ontdekken. Geraadpleegd op 8 mei 2026, van https://www.belevenistafel.nl',
+    link: 'https://www.belevenistafel.nl',
+  },
+  {
+    id: 'opdracht-23-belevenistafel-2025',
+    label: 'Opdracht 23',
+    reference: 'BelevenisTafel. (2025). Impact en toepassingen van de BelevenisTafel. BelevenisTafel.',
+    link: 'https://www.belevenistafel.nl',
+  },
+  {
+    id: 'opdracht-23-visio-2024',
+    label: 'Opdracht 23',
+    reference: 'Visio. (2024). Evaluatierapport BelevenisTafel bij visueel beperkte cliënten. Koninklijke Visio.',
+    link: 'https://www.visio.org',
+  },
+  {
+    id: 'opdracht-23-linkedin-belevenistafel',
+    label: 'Opdracht 23',
+    reference: 'BelevenisTafel. (2026). BelevenisTafel — bedrijfspagina. LinkedIn.',
+    link: 'https://www.linkedin.com/company/belevenistafel',
   },
 ]
 
