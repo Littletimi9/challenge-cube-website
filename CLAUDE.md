@@ -48,7 +48,13 @@ Geen geautomatiseerde tests. Verifieer frontend-wijzigingen met `npm run dev` + 
 
 ### Routing
 
-5 rubric-pagina's + `/reflectie` als `.mdx` bestanden in `app/<route>/page.mdx`. `/bronnen` is een `page.tsx` die alle data **inline** definieert (drie arrays: `interviews`, `opdrachten`, `apaSources`) — géén import uit `content/bronnen.ts`. Daaronder hangen opdracht-detailpagina's `app/bronnen/opdracht-1/` t/m `opdracht-11/`; opdracht-8 en opdracht-11 zijn nog stubs (`return null`). Homepage (`app/page.tsx`) componeert `HeroLanding` (uit `components/hero/`) + StatsStrip + RubricIndex + Pitch.
+5 rubric-pagina's + `/reflectie` als `.mdx` bestanden in `app/<route>/page.mdx`. `/bronnen` is een `page.tsx` die alle data **inline** definieert (drie arrays: `interviews`, `opdrachten`, `apaSources`) — géén import uit `content/bronnen.ts`. De `interviews`-array bevat ook een observaties-kaart (linkt naar `/bronnen/observaties`). Daaronder hangen detailpagina's:
+- Opdrachten: `app/bronnen/opdracht-1/` t/m `opdracht-23/` — opdracht-11 is nog een stub (`return null`), de rest ingevuld
+- Interviews: `app/bronnen/interview-1/`, `interview-2/`, `interview-3/`
+- Observaties: `app/bronnen/observaties/`
+- Geneste bronpagina: `app/bronnen/opdracht-1/hekking-2025/` (downloadbaar .docx rapport)
+
+Homepage (`app/page.tsx`) componeert `HeroLanding` (uit `components/hero/`) + StatsStrip + RubricIndex + Pitch.
 
 MDX-componenten zijn globaal beschikbaar via `mdx-components.tsx` — géén import nodig in `.mdx` bestanden. **Bij elk nieuw MDX-component: toevoegen aan `components/rubric/` én registreren in `mdx-components.tsx`.**
 

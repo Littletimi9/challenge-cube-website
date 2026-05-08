@@ -130,6 +130,11 @@ const opdrachten: OpdrachtCard[] = [
     title: 'Opdracht 23 — Brandkey',
     description: 'Brand Key-analyse voor Picoo, BelevenisTafel en de Challenge Table: negen elementen per merk van historische kracht tot merkessentie.',
   },
+  {
+    href: '/bronnen/opdracht-30',
+    title: 'Opdracht 30 — Moreel vraagstuk',
+    description: 'Mondelinge presentatie en analyse van een moreel dilemma: een trainer wijkt af van teamafspraken tijdens degradatiestrijd. Ethische analyse van eerlijkheid, vertrouwen en leiderschap.',
+  },
 ]
 
 const apaSources: ApaSource[] = [
@@ -886,6 +891,13 @@ const apaSources: ApaSource[] = [
     label: 'Opdracht 23',
     reference: 'BelevenisTafel. (2026). BelevenisTafel — bedrijfspagina. LinkedIn.',
     link: 'https://www.linkedin.com/company/belevenistafel',
+  },
+  {
+    id: 'opdracht-30-hekking-2026',
+    label: 'Opdracht 30',
+    reference:
+      'Hekking, T. (2026). Moreel vraagstuk: Is het gerechtvaardig dat een trainer afwijkt van teamafspraken over de basisopstelling? [Mondelinge presentatie en analyse]. Hogeschool Windesheim.',
+    link: '/bronnen/opdracht-30',
   },
 ]
 
