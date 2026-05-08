@@ -41,6 +41,12 @@ const interviews: InterviewCard[] = [
     meta: 'Sprint 1 · Probleemverkenning',
   },
   {
+    href: '/bronnen/interview-3',
+    title: 'Interview 3 — 4 HAVO leerling, Stad & Esch',
+    description: 'Semigestructureerd interview over gebruiksintentie van de Challenge Table: sociale pauzegewoonten, drempel voor gebruik en verwacht effect op snackgedrag.',
+    meta: 'Sprint 2 · Conceptvalidatie',
+  },
+  {
     href: '/bronnen/observaties',
     title: 'Observaties — Pauzegedrag op locatie',
     description: 'Vier gestructureerde observatieformulieren op drie locaties: Spar Windesheim, Albert Heijn Forelkolk, KFC en McDonalds Zwolle. Koopgedrag en groepsdynamiek van scholieren in kaart gebracht.',
@@ -140,6 +146,20 @@ const apaSources: ApaSource[] = [
     reference:
       'Hekking, T. (2025). Groepsinterview met twee VMBO-leerlingen jaar 3 over snackgedrag op school [Audio-opname en transcript]. Challenge Cube.',
     link: '/bronnen/interview-2',
+  },
+  {
+    id: 'interview-3',
+    label: 'Interview 3',
+    reference:
+      'Hekking, T. (2026). Semigestructureerd interview met een 4-havo leerling van Stad & Esch over gebruiksintentie van de Challenge Table [Notities]. Challenge Table.',
+    link: '/bronnen/interview-3',
+  },
+  {
+    id: 'observaties-2026',
+    label: 'Observaties',
+    reference:
+      'Hekking, T. (2026). Gestructureerde observaties: koopgedrag en groepsdynamiek van jongeren tijdens pauzes op vier locaties in Zwolle en Windesheim [Observatieformulieren]. Challenge Table.',
+    link: '/bronnen/observaties',
   },
   {
     id: 'opdracht-1-duurzaam-ondernemen-2008',
