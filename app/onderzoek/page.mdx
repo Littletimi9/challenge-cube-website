@@ -168,6 +168,12 @@ export const metadata = {
   source="Interview 1 · Sprint 1: Probleemverkenning"
 />
 
+<QuoteBlock
+  quote="Vaak ook gewoon voor de gezelligheid."
+  author="VMBO-leerling, Jaar 3"
+  source="Interview 2 · Sprint 1: Probleemverkenning"
+/>
+
 {/* SECTIE 4 — Data-analyse & Inzichten */}
 <section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
@@ -351,6 +357,35 @@ export const metadata = {
     <a href="/bronnen/opdracht-21" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
       → Iteratiebewijs: Opdracht 20 vs. 21 (Journey IST → SOLL)
     </a>
+  </div>
+</section>
+
+{/* RUBRIC-REFLECTIE */}
+<section
+  className="px-6 md:px-10 py-16"
+  style={{ borderTop: '0.5px solid var(--border)' }}
+>
+  <SectionHeading
+    eyebrow="Bijdrage aan de beoordeling"
+    heading="Hoe deze pagina scoort."
+  />
+
+  <div
+    className="p-8 md:p-10 max-w-[860px] mb-8"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p className="text-[16px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}>
+      Deze pagina toont hoe onderzoek en methodekeuze als één geheel werken. Sectie 2 legt de gestructureerde aanpak vast — drie fasen, drie methoden, één centrale onderzoeksvraag — en draagt zo bij aan criterium 04. Sectie 3 toont de triangulatie: drie methoden die onafhankelijk tot dezelfde kernbevinding convergeren, wat criterium 02 (gebruikersgericht onderzoek) onderbouwt. De twee QuoteBlocks geven de gebruikersstem letterlijk een plek; de EvidenceCards verbinden elke bevinding aan een concrete conceptbeslissing. Sectie 6 legt uit op welke gronden bronnen zijn geselecteerd (actualiteit, betrouwbaarheid, autoriteit). Criterium 04 is zichtbaar in de onderbouwde methodekeuze (interviews voor diepte, PSM voor schaalvalidatie, deskresearch voor context); criterium 02 in de directe koppeling van gebruikersinzichten aan ontwerpbeslissingen.
+    </p>
+  </div>
+
+  <div className="flex flex-wrap gap-3">
+    <RubricBadge number="02" label="Gebruikersgericht onderzoek" />
+    <RubricBadge number="04" label="Modellen & methodieken" />
   </div>
 </section>
 

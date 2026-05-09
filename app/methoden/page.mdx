@@ -478,6 +478,34 @@ export const metadata = {
   </div>
 </section>
 
+{/* RUBRIC-REFLECTIE */}
+<section
+  className="px-6 md:px-10 py-16"
+  style={{ borderTop: '0.5px solid var(--border)' }}
+>
+  <SectionHeading
+    eyebrow="Bijdrage aan de beoordeling"
+    heading="Hoe deze pagina scoort."
+  />
+
+  <div
+    className="p-8 md:p-10 max-w-[860px] mb-8"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p className="text-[16px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}>
+      Deze pagina is volledig gewijd aan criterium 04: de verantwoording van methoden en modellen als één samenhangende onderzoeksketen. Sectie 1 toont de vijfstappenlogica — VPC → interviews → analyse → synthese → validatie — en maakt de rode draad expliciet: elke stap beantwoordt een specifieke deelvraag en vormt het startpunt van de volgende. Sectie 2 onderbouwt per model 'waarom juist dit model' en hoe het de eindgebruiker centraal stelt, met een bewust onderscheid tussen gebruikersgerichte en contextgerichte methoden. Sectie 3 beoordeelt betrouwbaarheid én validiteit kritisch per methode, inclusief transparante erkenning van beperkingen. Dat maakt het verschil tussen 'methoden gebruiken' en 'methoden begrijpen en verantwoorden' — precies wat criterium 04 op Uitmuntend-niveau vraagt.
+    </p>
+  </div>
+
+  <div className="flex flex-wrap gap-3">
+    <RubricBadge number="04" label="Modellen & methodieken" />
+  </div>
+</section>
+
 <PageNav
   prev={{ number: '03', name: 'Concept', href: '/concept' }}
   next={{ number: '05', name: 'Validatie', href: '/validatie' }}

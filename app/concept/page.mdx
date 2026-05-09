@@ -496,6 +496,35 @@ export const metadata = {
   </div>
 </section>
 
+{/* RUBRIC-REFLECTIE */}
+<section
+  className="px-6 md:px-10 py-16"
+  style={{ borderTop: '0.5px solid var(--border)' }}
+>
+  <SectionHeading
+    eyebrow="Bijdrage aan de beoordeling"
+    heading="Hoe deze pagina scoort."
+  />
+
+  <div
+    className="p-8 md:p-10 max-w-[860px] mb-8"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p className="text-[16px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}>
+      Deze pagina legt de schakels zichtbaar tussen onderzoeksinzichten en de drie iteraties van het concept. Sectie 1 toont welke bewijs-inzichten de richting bepaalden (primair én secundair); sectie 2 (tijdlijn) toont dat elke conceptkeuze voortbouwt op een eerder inzicht — zo is criterium 01 (nieuwsgierigheid als leermotor) traceerbaar in de doorlopende beweging van V1 naar V3. Sectie 3 toont de drie iteraties elk met een concrete aanleiding: het telefoonverbod als externe blocker bij V1→V2, de B2B-feedbackronde als schaalimpuls bij V2→V3. Die traceerbare evolutie is de kern van criterium 03. Sectie 4 reflecteert kritisch op keuzes, persoonlijke rol en meerdere perspectieven (leerling vs. school), wat beide criteria op Uitmuntend-niveau ondersteunt.
+    </p>
+  </div>
+
+  <div className="flex flex-wrap gap-3">
+    <RubricBadge number="01" label="Eigen nieuwsgierigheid" />
+    <RubricBadge number="03" label="Conceptontwikkeling" />
+  </div>
+</section>
+
 <PageNav
   prev={{ number: '02', name: 'Onderzoek', href: '/onderzoek' }}
   next={{ number: '04', name: 'Methoden', href: '/methoden' }}

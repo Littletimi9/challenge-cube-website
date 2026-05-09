@@ -1,4 +1,4 @@
-type Stat = { value: string; label: string }
+type Stat = { value: string; label: string; source?: string }
 
 const statColors = [
   'var(--accent-mint)',
@@ -39,6 +39,18 @@ export default function StatsStrip({ stats }: { stats: Stat[] }) {
           >
             {s.label}
           </span>
+          {s.source && (
+            <span
+              className="text-[10px]"
+              style={{
+                fontStyle: 'italic',
+                color: 'var(--text-dim)',
+                lineHeight: 1.4,
+              }}
+            >
+              {s.source}
+            </span>
+          )}
         </div>
       ))}
     </section>

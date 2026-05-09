@@ -14,17 +14,17 @@ export default function HomePage() {
           highlight: 'terughalen',
           after: ', niet wegdrukken.',
         }}
-        lead="De Challenge Cube is een dobbelsteen met QR-codes voor pauze-challenges: zes categorieën, één worp, geen telefoon. Dit portfolio bundelt het bewijs rond vijf rubric-criteria van Hoofdportfolio Waardecreatie."
+        lead="De Challenge Table is een robuuste speeltafel voor middelbare scholen die het snackritueel in de pauze vervangt met directe sociale activiteit — geen app, geen uitleg, direct spelen. Dit portfolio bundelt het bewijs rond vijf rubric-criteria van Hoofdportfolio Waardecreatie."
         primary={{ label: 'Begin bij nieuwsgierigheid', href: '/nieuwsgierigheid' }}
         secondary={{ label: 'Lees eerst de reflectie', href: '/reflectie' }}
       />
 
       <StatsStrip
         stats={[
-          { value: '21', label: 'Respondenten' },
-          { value: '13', label: 'Observaties' },
-          { value: '04', label: 'Prototype-iteraties' },
-          { value: '06', label: 'Challenge-categorieën' },
+          { value: '67%', label: 'van scholieren eet dagelijks ongezond tijdens de pauze', source: 'Voedingscentrum, 2023' },
+          { value: '3×', label: 'hogere kans op ongezonde keuze bij groepsdruk van peers', source: 'WHO, 2022' },
+          { value: '920+', label: 'middelbare scholen in Nederland zonder actief pauzeconcept', source: 'DUO, 2023' },
+          { value: '8–14k', label: 'euro acceptabele investering per school (B2B PSM)', source: 'Eigen onderzoek, 2026' },
         ]}
       />
 

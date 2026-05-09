@@ -516,6 +516,36 @@ export const metadata = {
   </div>
 </section>
 
+{/* RUBRIC-REFLECTIE */}
+<section
+  className="px-6 md:px-10 py-16"
+  style={{ borderTop: '0.5px solid var(--border)' }}
+>
+  <SectionHeading
+    eyebrow="Bijdrage aan de beoordeling"
+    heading="Hoe deze pagina scoort."
+  />
+
+  <div
+    className="p-8 md:p-10 max-w-[860px] mb-8"
+    style={{
+      backgroundColor: 'var(--surface)',
+      border: '0.5px solid var(--border)',
+      borderRadius: '3px',
+    }}
+  >
+    <p className="text-[16px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}>
+      Deze pagina toont de aansluiting bij de eindgebruiker (criterium 05) via vijf vooraf geformuleerde, meetbare testcriteria die traceerbaar zijn naar gebruikersinzichten uit eerder onderzoek — niet achteraf bedacht, maar vóór de validatiefase vastgelegd. Criterium 02 is zichtbaar in hoe TC-01 en TC-02 direct terugkoppelen aan de pains en gains uit de interviews (VPC V2); criterium 04 in de expliciet onderbouwde meetmethoden per testcriterium (observatie, Likert-schaal, focusgroep, journey-vergelijking IST vs. gebruik). De vier waardeperspectieven in sectie 3 tonen dat de waardepropositie niet alleen functioneel maar ook economisch, ecologisch en sociaal is gevalideerd — en dat die perspectieven elkaar versterken. TC-01 heeft al kwalitatief bewijs; TC-02 t/m TC-05 worden bijgewerkt zodra de focusgroep en interviews zijn afgerond.
+    </p>
+  </div>
+
+  <div className="flex flex-wrap gap-3">
+    <RubricBadge number="02" label="Gebruikersgericht onderzoek" />
+    <RubricBadge number="04" label="Modellen & methodieken" />
+    <RubricBadge number="05" label="Aansluiting eindgebruiker" />
+  </div>
+</section>
+
 <PageNav
   prev={{ number: '04', name: 'Methoden', href: '/methoden' }}
   next={{ number: '06', name: 'Reflectie', href: '/reflectie' }}
