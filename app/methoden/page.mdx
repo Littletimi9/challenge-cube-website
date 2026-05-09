@@ -1,508 +1,161 @@
 export const metadata = {
-  title: 'Methoden — Challenge Cube',
+  title: 'Methoden — Challenge Table',
 }
 
 <PageHead
   number="04"
-  label="Rubric · Methoden"
-  title="Methode, data en analyse als één geheel."
-  lead="Elke methodekeuze volgt uit een concrete deelvraag: wat moeten we weten om de volgende stap te zetten? De vijf stappen vormen één aaneengesloten argumentatielijn van probleemdefinitie tot validatie."
+  label="Rubric · Methoden en modellen"
+  title="De methoden vormen één onderzoeksketen."
+  lead="De modellen zijn niet los genoemd, maar ingezet als schakels: VPC om gebruikerswaarde te begrijpen, interviews en observaties om aannames te toetsen, journeys om fricties te plaatsen en PSM/scorecard om haalbaarheid te beoordelen."
   meta={[
-    { key: 'Modellen', value: '6 methoden' },
-    { key: 'Bron', value: 'Osterwalder · Rosenbaum · Van Westendorp' },
-    { key: 'Periode', value: 'Sep 2025 t/m mei 2026' },
+    { key: 'Leestijd', value: '2 minuten' },
+    { key: 'Keten', value: 'VPC → Data → Journey → Validatie' },
+    { key: 'Focus', value: 'Betrouwbaarheid en validiteit' },
   ]}
 />
 
-{/* SECTIE 1 — Samenhang onderzoeksproces */}
-<section className="px-6 md:px-10 py-20">
+<section className="px-6 md:px-10 py-16 md:py-20">
   <SectionHeading
-    eyebrow="01 · Samenhang onderzoeksproces"
-    heading="Hoe de stappen op elkaar voortbouwen."
+    eyebrow="01 · Methodeketen"
+    heading="Elke stap gaf de volgende stap richting."
   />
 
-  <div
-    className="p-8 md:p-10 max-w-[860px] mb-12 md:mb-16"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="text-[17px] md:text-[18px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}
-    >
-      Methode, aanpak, dataverzameling en analyse werken als één geheel: elke stap beantwoordt een specifieke deelvraag, en de uitkomst vormt het startpunt voor de volgende. Zo is elke keuze terug te herleiden tot een concrete vraag, van eerste aanname tot gevalideerd concept.
-    </p>
-    <p
-      className="text-[17px] md:text-[18px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}
-    >
-      Kwalitatief en kwantitatief zijn bewust gescheiden ingezet: kwalitatief voor context en verdieping, kwantitatief voor schaalvalidatie. Primaire en secundaire data vullen elkaar aan: primair toetst aannames bij de gebruiker, secundair brengt markt en concurrentie in beeld.
-    </p>
-  </div>
-
-  <div className="flex flex-col lg:flex-row items-stretch gap-6 lg:gap-0">
-    {[
+  <Timeline
+    items={[
       {
-        step: '01',
-        label: 'Probleemdefinitie',
-        description:
-          'VPC V1 (opdracht 19) legde de klanttaken, pains en gains van scholieren vast als vertrekpunt. Zonder dit expliciete startpunt was de richting van alle volgende methoden onduidelijk gebleven.',
-        assignment: 'Opdracht 19: Value Proposition Canvas',
-        href: '/bronnen/opdracht-19',
+        version: '1',
+        date: 'Probleemdefinitie',
+        title: 'Value Proposition Canvas',
+        feedback: 'Legde klanttaken, pains en gains vast. De tweede iteratie maakte de sociale pauze-invulling centraal.',
+        change: 'Startpunt voor de keuze om activiteit boven voeding te plaatsen.',
       },
       {
-        step: '02',
-        label: 'Dataverzameling',
-        description:
-          'Semigestructureerde interviews (n=2, +3 in uitvoering) en B2B Van Westendorp PSM toetsten de aannames uit stap 1. Desk research via concurrentieanalyse en B-Corp-benchmarks vulde de contextuele lacunes in.',
-        assignment: 'Interview 1, 2 · Opdracht 9',
-        href: '/bronnen/interview-1',
+        version: '2',
+        date: 'Dataverzameling',
+        title: 'Interviews en observaties',
+        feedback: 'Toetsten of leerlingen het snackmoment inderdaad sociaal ervaren en hoe het gedrag op locatie zichtbaar wordt.',
+        change: 'Bewijs voor de Table als sociaal alternatief in plaats van gezondheidsboodschap.',
       },
       {
-        step: '03',
-        label: 'Analyse',
-        description:
-          'Interviews gecodeerd op thema\'s (sociale context, prijs, impuls). Enquêtedata verwerkt tot PSM-curves. Concurrentieanalyse gescoord op twee positioneringsassen. Patronen werden zichtbaar door kruisvalidatie.',
-        assignment: 'Opdracht 9: Concurrentieanalyse',
-        href: '/bronnen/opdracht-9',
+        version: '3',
+        date: 'Synthese',
+        title: 'Customer Journey IST/SOLL',
+        feedback: 'Maakte zichtbaar waar de huidige pauze vastloopt en waar het nieuwe touchpoint moet ingrijpen.',
+        change: 'Plaatsing in de aula en direct starten worden ontwerpcriteria.',
       },
       {
-        step: '04',
-        label: 'Synthese',
-        description:
-          'VPC V2 en Customer Journey SOLL integreerden alle inzichten in een scherp klantprofiel en waardepropositie. Dit werd het fundament voor de drie iteraties van het concept.',
-        assignment: 'Opdracht 19 · Opdracht 21: CJ SOLL',
-        href: '/bronnen/opdracht-21',
+        version: '4',
+        date: 'Haalbaarheid',
+        title: 'Concurrentieanalyse, PSM en scorecard',
+        feedback: 'Onderbouwden marktpositie, prijsrange en ontwerpkwaliteit voor school als B2B-afnemer.',
+        change: 'De vaste Challenge Table wordt sterker dan een losse Cube.',
       },
-      {
-        step: '05',
-        label: 'Validatie',
-        description:
-          'Van Westendorp PSM voor B2B-prijsbereidheid, scorecard voor ontwerpkwaliteit, en drie geplande interviews plus focusgroep voor gebruikersvalidatie. Validatie sluit de keten van aanname naar bewijs.',
-        assignment: 'Opdracht 6: Scorecard · Opdracht 10',
-        href: '/bronnen/opdracht-10',
-      },
-    ].map((stage, index, allStages) => (
-      <div key={stage.step} className="flex flex-col lg:flex-row flex-1">
-        <article
-          className="flex-1 flex flex-col p-7 md:p-8 gap-5"
-          style={{
-            backgroundColor: 'var(--canvas-elevated)',
-            border: '0.5px solid var(--border)',
-            borderRadius: '3px',
-          }}
-        >
-          <div className="flex items-baseline justify-between gap-3">
-            <span
-              className="font-serif"
-              style={{ fontSize: '36px', lineHeight: 1, color: 'var(--accent-mint)' }}
-            >
-              {stage.step}
-            </span>
-            <span
-              className="text-[10px] uppercase"
-              style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
-            >
-              Stap {index + 1}/{allStages.length}
-            </span>
-          </div>
+    ]}
+  />
+</section>
 
-          <h3
-            className="font-serif"
-            style={{ fontSize: 'clamp(20px, 1.9vw, 24px)', lineHeight: 1.15, color: 'var(--text-primary)' }}
-          >
-            {stage.label}
-          </h3>
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="02 · Modelkeuzes"
+    heading="De modellen ondersteunen de gebruiker én de schoolcontext."
+  />
 
-          <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>
-            {stage.description}
-          </p>
-
-          <div
-            className="pt-5 mt-auto"
-            style={{ borderTop: '0.5px solid var(--border)' }}
-          >
-            <a
-              href={stage.href}
-              className="inline-flex items-center gap-2 text-[12px]"
-              style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', textDecoration: 'none' }}
-            >
-              → {stage.assignment}
-            </a>
-          </div>
-        </article>
-
-        {index < allStages.length - 1 && (
-          <div
-            aria-hidden="true"
-            className="flex lg:flex-col items-center justify-center shrink-0"
-            style={{ minWidth: '48px', minHeight: '40px', color: 'var(--accent-mint)' }}
-          >
-            <span
-              className="hidden lg:block"
-              style={{ width: '28px', height: '0.5px', backgroundColor: 'var(--accent-mint-border)' }}
-            />
-            <span className="font-serif" style={{ fontSize: '26px', lineHeight: 1 }}>
-              →
-            </span>
-          </div>
-        )}
-      </div>
-    ))}
-  </div>
-
-  <div
-    className="mt-12 md:mt-16 p-8 md:p-10 max-w-[860px]"
-    style={{ backgroundColor: 'var(--canvas)', borderLeft: '2px solid var(--accent-mint)' }}
-  >
-    <span
-      className="block text-[10px] uppercase mb-3"
-      style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}
-    >
-      Rode draad
-    </span>
-    <p className="text-[15px] md:text-[16px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}>
-      De pains uit de VPC (stap 1) worden getoetst door interviews (stap 2), gecategoriseerd in de analyse (stap 3), vertaald naar ontwerpkeuzes in de SOLL-journey (stap 4) en gevalideerd door de testcriteria (stap 5). Zo sluit het onderzoeksproces zich rond de oorspronkelijke probleemstelling.
-    </p>
+  <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+    <ChapterProof
+      label="VPC"
+      title="Gebruikerswaarde scherpstellen."
+      evidence="De VPC koppelde uitspraken uit interviews aan jobs, pains en gains. Daardoor werd de klanttaak 'samen pauze maken' expliciet."
+      meaning="Ontwerpkeuzes werden getoetst op sociale startkracht en niet op voedingswaarde alleen."
+      href="/bronnen/opdracht-19"
+      sourceLabel="VPC bekijken"
+    />
+    <ChapterProof
+      label="Journey"
+      title="Fricties plaatsen in de tijd."
+      evidence="IST/SOLL toonde het beslismoment waarop leerlingen nu richting snackgedrag bewegen."
+      meaning="De Table moet op dat moment zichtbaar zijn als alternatief touchpoint."
+      href="/bronnen/opdracht-20"
+      sourceLabel="Journey bekijken"
+    />
+    <ChapterProof
+      label="PSM"
+      title="Prijsbereidheid toetsen bij scholen."
+      evidence="De Van Westendorp-methode geeft grenzen voor te goedkoop, goedkoop, duur en te duur."
+      meaning="De Table wordt als schoolvoorziening gepositioneerd met een verdedigbare B2B-prijsrange."
+      href="/bronnen/opdracht-10"
+      sourceLabel="Prijsdata bekijken"
+    />
+    <ChapterProof
+      label="Scorecard"
+      title="Ontwerpkwaliteit vooraf toetsen."
+      evidence="De scorecard maakt sociale, ecologische en functionele criteria vergelijkbaar."
+      meaning="Validatie wordt minder subjectief: eenvoud, groepsgeschiktheid en robuustheid krijgen expliciete normen."
+      href="/bronnen/opdracht-6"
+      sourceLabel="Scorecard bekijken"
+    />
   </div>
 </section>
 
-{/* SECTIE 2 — Onderbouwing keuze methoden en modellen */}
-<section
-  className="px-6 md:px-10 py-20"
-  style={{ borderTop: '0.5px solid var(--border)' }}
->
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="02 · Onderbouwing"
-    heading="Waarom juist deze methoden en modellen."
+    eyebrow="03 · Betrouwbaarheid en validiteit"
+    heading="De beperkingen zijn zichtbaar en beïnvloeden de conclusie."
   />
 
   <div
-    className="p-8 md:p-10 max-w-[860px] mb-12"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="text-[17px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}
-    >
-      Sommige modellen stellen de gebruiker centraal (VPC, Customer Journey, interviews), terwijl andere de marktcontext in beeld brengen (concurrentieanalyse, segmentatie, Van Westendorp). Beide lagen zijn nodig: de gebruiker bepaalt wat het concept moet doen, de markt bepaalt of het kan werken en tegen welke prijs.
-    </p>
-  </div>
-
-  <div
-    className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
-    style={{
-      gap: '0.5px',
-      backgroundColor: 'var(--border)',
-      border: '0.5px solid var(--border)',
-    }}
+    className="grid gap-0 md:grid-cols-3"
+    style={{ backgroundColor: 'var(--border)', border: '0.5px solid var(--border)' }}
   >
     {[
       {
-        name: 'Value Proposition Canvas',
-        focus: 'Gebruikersgericht',
-        why: 'Gekozen omdat het jobs, pains en gains expliciet koppelt aan de waardepropositie. Dit model voorkomt dat het ontwerp wordt gestuurd door de oplossing in plaats van de gebruikersbehoefte. Twee iteraties vergrootten de precisie.',
-        user: 'De eindgebruiker staat letterlijk centraal: de kaarten in het klantprofiel zijn gevuld op basis van interview-citaten, niet op aannames. De VPC maakte de centrale klanttaak "samen de pauze gezellig invullen" expliciet zichtbaar.',
-        assignment: 'Opdracht 19',
-        href: '/bronnen/opdracht-19',
+        title: 'Interviews',
+        reliability: 'Beperkt in omvang, maar consistent tussen individueel interview en groepsinterview.',
+        validity: 'Meet motivatie achter gedrag beter dan een gesloten vragenlijst, maar sociaal wenselijke antwoorden blijven mogelijk.',
+        effect: 'Conclusies worden ondersteund door observaties en VPC, niet alleen door citaten.',
       },
       {
-        name: 'Customer Journey IST/SOLL',
-        focus: 'Gebruikersgericht',
-        why: 'Gekozen omdat het model fricties en emoties zichtbaar maakt op het moment dat ze optreden. De IST-journey toont waarom het snackritueel zo hardnekkig is; de SOLL-journey vertaalt dat naar concrete interventies in het ontwerp.',
-        user: 'De journey toont in de decision-fase precies het moment waarop de Challenge Table het meest impactvol is. Dat stuurde de positionering van het product in de schoolomgeving direct aan.',
-        assignment: 'Opdracht 20 / 21',
-        href: '/bronnen/opdracht-20',
+        title: 'PSM',
+        reliability: 'Afhankelijk van steekproefgrootte en B2B-context. De curves geven richting, geen harde koopgarantie.',
+        validity: 'Meet prijsperceptie, geen definitieve aankoopbeslissing van schoolbesturen.',
+        effect: 'Prijsrange wordt gebruikt als strategische bandbreedte, niet als exact verkoopbewijs.',
       },
       {
-        name: 'Semigestructureerd interview',
-        focus: 'Gebruikersgericht',
-        why: 'Gekozen omdat kwalitatieve verdieping nodig was om de "waarom" achter snackgedrag te begrijpen. Een gesloten enquête had het sociale motief gemist; het open gesprek maakte de sociale context zichtbaar.',
-        user: '"Meegaan in het moment" en "voor de gezelligheid": die taal uit de interviews is direct in het VPC-klantprofiel terechtgekomen en stuurt alle conceptkeuzes sindsdien.',
-        assignment: 'Interview 1, 2',
-        href: '/bronnen/interview-1',
+        title: 'Journeys en canvassen',
+        reliability: 'Interpretatiegevoelig, maar gebaseerd op primaire en secundaire data.',
+        validity: 'Sterk voor synthese en ontwerpkeuze, minder geschikt als losstaand bewijs.',
+        effect: 'Daarom worden journeys gekoppeld aan interviews, observaties en validatiecriteria.',
       },
-      {
-        name: 'Concurrentieanalyse',
-        focus: 'Contextgericht',
-        why: 'Gekozen omdat positionering alleen zinvol is als er zicht is op bestaande alternatieven. 12 concurrenten in drie lagen (direct, indirect, alternatief) lieten zien dat de combinatie sociaal + laagdrempelig + schaalbaar voor scholen niet bezet is.',
-        user: 'De positioneringsmatrix bepaalde op welke assen de Challenge Table zich onderscheidt. Dit stuurde de USP-keuze en de prijsstrategie en verhinderde dat het concept te breed werd.',
-        assignment: 'Opdracht 9',
-        href: '/bronnen/opdracht-9',
-      },
-      {
-        name: 'Doelmarkt & segmentatie',
-        focus: 'Contextgericht',
-        why: 'Gekozen om een scherpe keuze te maken voor welk segment het concept ontworpen wordt. Zonder segmentatie wordt de propositie te breed en verliest het concept scherpte in positionering en businessmodel.',
-        user: 'Segmentatie bepaalde dat scholen (B2B) de afnemer zijn en leerlingen de gebruiker. Dat dubbele klantmodel is voelbaar in de prijsstelling, het verkoopkanaal en de SOLL-journey.',
-        assignment: 'Opdracht 23 (in uitvoering)',
-        href: '/bronnen/opdracht-9',
-      },
-      {
-        name: 'Van Westendorp PSM',
-        focus: 'Contextgericht',
-        why: 'Gekozen voor B2B-prijsbereidheid omdat dit model niet vraagt naar "wat wil je betalen?" maar naar grenzen ("te goedkoop", "te duur"). Dat levert realistischere, minder sociaal wenselijke antwoorden op in B2B-context.',
-        user: 'De PSM-data tonen dat scholen €8.000–€14.000 acceptabel achten. Dit onderbouwt de penetratiestrategie in opdracht 10 en geeft de businesscase een realistische marge-basis.',
-        assignment: 'Opdracht 10 + B2B-enquête',
-        href: '/bronnen/opdracht-10',
-      },
-    ].map((model) => (
-      <article
-        key={model.name}
-        className="p-7 md:p-8 flex flex-col gap-5"
-        style={{ backgroundColor: 'var(--canvas)' }}
-      >
-        <div className="flex items-center justify-between gap-3">
-          <span
-            className="inline-flex items-center self-start px-2.5 py-1 text-[10px] uppercase"
-            style={{
-              letterSpacing: '0.2em',
-              color: model.focus === 'Gebruikersgericht' ? 'var(--accent-mint)' : 'var(--accent-amber)',
-              backgroundColor:
-                model.focus === 'Gebruikersgericht' ? 'var(--accent-mint-soft)' : 'var(--accent-amber-soft)',
-              border:
-                model.focus === 'Gebruikersgericht'
-                  ? '1px solid var(--accent-mint-border)'
-                  : '1px solid rgba(232, 184, 79, 0.3)',
-              borderRadius: '3px',
-            }}
-          >
-            {model.focus}
-          </span>
-        </div>
-
-        <h3
-          className="font-serif"
-          style={{ fontSize: 'clamp(20px, 2vw, 24px)', lineHeight: 1.15, color: 'var(--text-primary)' }}
-        >
-          {model.name}
+    ].map((item) => (
+      <article key={item.title} className="p-7 md:p-8" style={{ backgroundColor: 'var(--surface)' }}>
+        <h3 className="font-serif mb-5" style={{ fontSize: '24px', lineHeight: 1.15, color: 'var(--text-primary)' }}>
+          {item.title}
         </h3>
-
-        <div className="flex flex-col gap-2">
-          <span
-            className="text-[10px] uppercase"
-            style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
-          >
-            Waarom dit model?
-          </span>
-          <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>
-            {model.why}
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <span
-            className="text-[10px] uppercase"
-            style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}
-          >
-            Relatie tot eindgebruiker
-          </span>
-          <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>
-            {model.user}
-          </p>
-        </div>
-
-        <div
-          className="pt-5 mt-auto"
-          style={{ borderTop: '0.5px solid var(--border)' }}
-        >
-          <a
-            href={model.href}
-            className="inline-flex items-center gap-2 text-[12px]"
-            style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', textDecoration: 'none' }}
-          >
-            → {model.assignment}
-          </a>
+        <div className="grid gap-4">
+          <div>
+            <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Betrouwbaarheid</span>
+            <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{item.reliability}</p>
+          </div>
+          <div>
+            <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Validiteit</span>
+            <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{item.validity}</p>
+          </div>
+          <div>
+            <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}>Gevolg voor conclusie</span>
+            <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{item.effect}</p>
+          </div>
         </div>
       </article>
     ))}
   </div>
 </section>
 
-{/* SECTIE 3 — Reflectie op betrouwbaarheid en validiteit */}
-<section
-  className="px-6 md:px-10 py-20 md:py-24"
-  style={{
-    backgroundColor: 'var(--canvas-elevated)',
-    borderTop: '0.5px solid var(--border)',
-    borderBottom: '0.5px solid var(--border)',
-  }}
->
+<section className="px-6 md:px-10 py-14" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="03 · Betrouwbaarheid & validiteit"
-    heading="Kritische reflectie op de gekozen methoden."
+    eyebrow="Rubric-check"
+    heading="De methodekeuzes zijn gekoppeld aan aanpak, data en ontwerp."
   />
-
-  <div
-    className="p-8 md:p-10 max-w-[900px] mb-12"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="text-[17px] md:text-[18px]"
-      style={{ lineHeight: 1.75, color: 'var(--text-secondary)' }}
-    >
-      Betrouwbaarheid vraagt of herhaling bij een andere groep tot vergelijkbare uitkomsten leidt; validiteit vraagt of de methode meet wat zij moet meten. Bij gebruikersgericht onderzoek zijn beide lastig te garanderen, maar door transparantie over beperkingen blijft de conclusiebasis solide.
-    </p>
-  </div>
-
-  {(() => {
-    const reliability = [
-      {
-        name: 'Semigestructureerde interviews',
-        reliability:
-          'Subjectief en contextafhankelijk. De twee interview-typen (individueel en duo) leverden vergelijkbare inzichten, wat de consistentie bevestigt. Triangulatie met enquête vergroot de herhaalbaarheid.',
-        validity:
-          'Het semigestructureerde format meet zowel gedrag als motivatie, maar sociaal wenselijke antwoorden zijn niet uit te sluiten. De informele setting verlaagde de drempel voor eerlijke antwoorden.',
-        contribution:
-          'Het inzicht "gezelligheid als primaire driver" is direct terug te vinden in het VPC-klantprofiel en de positioneringskeuze. Zonder de interviews was deze kern gemist.',
-        assignment: 'Interview 1, 2',
-        href: '/bronnen/interview-1',
-      },
-      {
-        name: 'Van Westendorp PSM (B2B)',
-        reliability:
-          'PSM-resultaten zijn stabiel bij vergelijkbare B2B-groepen. De steekproefgrootte bepaalt de nauwkeurigheid van de kruispunten; bij een te kleine n kunnen de curves te sterk variëren.',
-        validity:
-          'PSM meet prijsintentie, niet feitelijk aankoopgedrag. Scholen die "duur" aangeven hoeven nog niet af te haken. Dooronderhandeling en subsidies zijn realistische opties in B2B.',
-        contribution:
-          'De PSM positioneert de Challenge Table in het €8.000–€14.000 bereik, wat de businesscase een reële marge-basis geeft en de penetratiestrategie onderbouwt.',
-        assignment: 'Opdracht 10 + B2B-enquête',
-        href: '/bronnen/opdracht-10',
-      },
-      {
-        name: 'Value Proposition Canvas',
-        reliability:
-          'Het canvas leunt op interpretatie. Twee iteratierondes (VPC V1 → V2) vergroten de consistentie aanzienlijk: de tweede iteratie verificeert en scherpt de eerste aanscherping.',
-        validity:
-          'De pains en gains zijn niet verzonnen maar geciteerd uit interview-transcripten. Dit verhoogt de validiteit: het klantprofiel weerspiegelt echte uitspraken van echte gebruikers.',
-        contribution:
-          'De VPC verbindt onderzoeksinzichten direct aan ontwerpbeslissingen. De centrale klanttaak "samen de pauze invullen" heeft alle conceptkeuzes daarna gestuurd.',
-        assignment: 'Opdracht 19',
-        href: '/bronnen/opdracht-19',
-      },
-      {
-        name: 'Customer Journey IST/SOLL',
-        reliability:
-          'De IST-journey is opgebouwd uit interview-inzichten en observaties (AH, KFC), wat de herhaalbaarheid vergroot ten opzichte van een puur hypothetische journey.',
-        validity:
-          'De IST-journey meet de bestaande situatie zoals gerapporteerd door gebruikers. De SOLL-journey is normatief (hoe het zou moeten zijn); dit onderscheid is in het ontwerp expliciet benoemd.',
-        contribution:
-          'Het IST/SOLL-verschil in de decision-fase stuurt de concrete positionering van de Challenge Table in de aula. Zonder de journey-analyse was dit moment onzichtbaar gebleven.',
-        assignment: 'Opdracht 20/21',
-        href: '/bronnen/opdracht-20',
-      },
-    ]
-
-    return (
-      <>
-        <table
-          className="hidden md:table w-full border-collapse"
-          style={{ borderTop: '0.5px solid var(--border)' }}
-        >
-          <thead>
-            <tr style={{ borderBottom: '0.5px solid var(--border)' }}>
-              <th className="text-left py-4 pr-6 text-[10px] uppercase font-normal" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)', width: '22%' }}>Model</th>
-              <th className="text-left py-4 pr-6 text-[10px] uppercase font-normal" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)', width: '26%' }}>Betrouwbaarheid</th>
-              <th className="text-left py-4 pr-6 text-[10px] uppercase font-normal" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)', width: '26%' }}>Validiteit</th>
-              <th className="text-left py-4 pr-6 text-[10px] uppercase font-normal" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)', width: '26%' }}>Bijdrage aan ontwerp</th>
-            </tr>
-          </thead>
-          <tbody>
-            {reliability.map((row) => (
-              <tr key={row.name} style={{ borderBottom: '0.5px solid var(--border)' }}>
-                <td className="py-6 pr-6 align-top" style={{ color: 'var(--text-primary)' }}>
-                  <div className="font-serif" style={{ fontSize: '18px', lineHeight: 1.2 }}>{row.name}</div>
-                  <a href={row.href} className="mt-2 text-[12px]" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', display: 'block', textDecoration: 'none' }}>→ {row.assignment}</a>
-                </td>
-                <td className="py-6 pr-6 text-[14px] align-top" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{row.reliability}</td>
-                <td className="py-6 pr-6 text-[14px] align-top" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{row.validity}</td>
-                <td className="py-6 pr-6 text-[14px] align-top" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{row.contribution}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-
-        <ul className="md:hidden flex flex-col gap-2">
-          {reliability.map((row) => (
-            <li key={row.name} className="p-6 flex flex-col gap-4" style={{ backgroundColor: 'var(--canvas)', border: '0.5px solid var(--border)', borderRadius: '3px' }}>
-              <h3 className="font-serif" style={{ fontSize: '20px', lineHeight: 1.2, color: 'var(--text-primary)' }}>{row.name}</h3>
-              <div className="flex flex-col gap-1.5">
-                <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Betrouwbaarheid</span>
-                <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{row.reliability}</p>
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Validiteit</span>
-                <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{row.validity}</p>
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Bijdrage aan ontwerp</span>
-                <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{row.contribution}</p>
-              </div>
-              <div className="pt-4" style={{ borderTop: '0.5px solid var(--border)' }}>
-                <a href={row.href} className="inline-flex items-center gap-2 text-[12px]" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', textDecoration: 'none' }}>→ {row.assignment}</a>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </>
-    )
-  })()}
-
-  <div
-    className="mt-12 md:mt-16 p-8 md:p-10 max-w-[900px]"
-    style={{ backgroundColor: 'var(--surface)', borderLeft: '2px solid var(--accent-mint)' }}
-  >
-    <span
-      className="block text-[10px] uppercase mb-3"
-      style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}
-    >
-      Afsluitende reflectie
-    </span>
-    <p
-      className="text-[15px] md:text-[16px]"
-      style={{ lineHeight: 1.75, color: 'var(--text-secondary)' }}
-    >
-      De combinatie van kwalitatieve en kwantitatieve methoden maakt het onderzoek robuuster dan elke methode alleen. De beperkingen (subjectieve interviews, intentie-meting in PSM, interpretatie-afhankelijke canvassen) zijn bewust en transparant benoemd. Het grootste open punt is de beperkte primaire validatiedata bij de eindgebruiker. De geplande focusgroep en drie interviews vullen dit komende weken aan, waarna de testcriteria op de validatiepagina volledig worden ingevuld.
-    </p>
-  </div>
-</section>
-
-{/* RUBRIC-REFLECTIE */}
-<section
-  className="px-6 md:px-10 py-16"
-  style={{ borderTop: '0.5px solid var(--border)' }}
->
-  <SectionHeading
-    eyebrow="Bijdrage aan de beoordeling"
-    heading="Hoe deze pagina scoort."
-  />
-
-  <div
-    className="p-8 md:p-10 max-w-[860px] mb-8"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p className="text-[16px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}>
-      Deze pagina is volledig gewijd aan criterium 04: de verantwoording van methoden en modellen als één samenhangende onderzoeksketen. Sectie 1 toont de vijfstappenlogica — VPC → interviews → analyse → synthese → validatie — en maakt de rode draad expliciet: elke stap beantwoordt een specifieke deelvraag en vormt het startpunt van de volgende. Sectie 2 onderbouwt per model 'waarom juist dit model' en hoe het de eindgebruiker centraal stelt, met een bewust onderscheid tussen gebruikersgerichte en contextgerichte methoden. Sectie 3 beoordeelt betrouwbaarheid én validiteit kritisch per methode, inclusief transparante erkenning van beperkingen. Dat maakt het verschil tussen 'methoden gebruiken' en 'methoden begrijpen en verantwoorden' — precies wat criterium 04 op Uitmuntend-niveau vraagt.
-    </p>
-  </div>
-
   <div className="flex flex-wrap gap-3">
-    <RubricBadge number="04" label="Modellen & methodieken" />
+    <RubricBadge number="04" label="Modellen en methodieken" />
   </div>
 </section>
 

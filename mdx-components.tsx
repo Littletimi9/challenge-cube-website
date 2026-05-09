@@ -14,6 +14,8 @@ import Timeline from '@/components/rubric/Timeline'
 import CriteriaTable from '@/components/rubric/CriteriaTable'
 import PageNav from '@/components/rubric/PageNav'
 import ValuePerspectives from '@/components/rubric/ValuePerspectives'
+import FigureBlock from '@/components/rubric/FigureBlock'
+import ChapterProof from '@/components/rubric/ChapterProof'
 
 export function useMDXComponents(): MDXComponents {
   return {
@@ -31,5 +33,7 @@ export function useMDXComponents(): MDXComponents {
     CriteriaTable,
     PageNav,
     ValuePerspectives,
+    FigureBlock,
+    ChapterProof,
   }
 }

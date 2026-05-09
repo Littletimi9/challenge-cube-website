@@ -17,23 +17,22 @@ export interface Source {
 
 export const sources: Source[] = [
   {
-    id: 'placeholder-1',
-    title: '[INVULLEN: titel]',
-    authors: '[INVULLEN: auteur(s)]',
-    year: 2025,
-    type: 'artikel',
+    id: 'osterwalder-2014',
+    title: 'Value proposition design',
+    authors: 'Osterwalder, A., Pigneur, Y., Bernarda, G., & Smith, A.',
+    year: 2014,
+    type: 'boek',
     reference:
-      '[INVULLEN: APA-referentie. Auteur, A. (2025). Titel. Tijdschrift, 1(1), 1–10.]',
-    link: 'https://example.com',
+      'Osterwalder, A., Pigneur, Y., Bernarda, G., & Smith, A. (2014). Value proposition design: How to create products and services customers want. Wiley.',
   },
   {
-    id: 'placeholder-2',
-    title: '[INVULLEN: interviewronde 1]',
+    id: 'interview-isa-2025',
+    title: 'Interview met Isa, 6 VWO over snackgedrag op school',
     authors: 'Eigen onderzoek',
     year: 2025,
     type: 'interview',
     reference:
-      '[INVULLEN: APA-referentie voor primair onderzoek. Kaat, J. (2025). Interviews pauzegedrag studenten.]',
+      'Hekking, T. (2025). Interview met Isa, 6 VWO over snackgedrag op school [Audio-opname en transcript]. Challenge Table.',
   },
 ]
 

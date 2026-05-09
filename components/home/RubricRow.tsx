@@ -18,8 +18,18 @@ const rubricColors: Record<string, string> = {
   '05': 'var(--cat-quiz)',
 }
 
-export default function RubricRow({ item }: { item: RubricRowData }) {
+type Props = {
+  item: RubricRowData
+  showNumber?: boolean
+}
+
+export default function RubricRow({ item, showNumber = true }: Props) {
   const color = rubricColors[item.number] ?? 'var(--accent-mint)'
+  const marker = showNumber ? item.number : item.name.charAt(0)
+  const gridTemplateColumns = showNumber
+    ? 'minmax(0,80px) minmax(0,220px) minmax(0,1fr) minmax(0,180px) 40px'
+    : 'minmax(0,64px) minmax(0,220px) minmax(0,1fr) minmax(0,180px) 40px'
+  const mobileSpan = 'col-span-5'
 
   return (
     <Link
@@ -32,27 +42,28 @@ export default function RubricRow({ item }: { item: RubricRowData }) {
       <div
         className="grid gap-6 md:gap-8 items-baseline"
         style={{
-          gridTemplateColumns:
-            'minmax(0,80px) minmax(0,220px) minmax(0,1fr) minmax(0,180px) 40px',
+          gridTemplateColumns,
         }}
       >
         <span
           className="font-serif hidden md:block"
           style={{
-            fontSize: '56px',
+            fontSize: showNumber ? '56px' : '44px',
             lineHeight: 1,
             color,
           }}
+          aria-hidden="true"
         >
-          {item.number}
+          {marker}
         </span>
 
-        <div className="md:hidden col-span-5 flex items-baseline gap-3">
+        <div className={`md:hidden ${mobileSpan} flex items-baseline gap-3`}>
           <span
             className="font-serif"
             style={{ fontSize: '32px', color, lineHeight: 1 }}
+            aria-hidden="true"
           >
-            {item.number}
+            {marker}
           </span>
           <h3
             className="font-serif"
@@ -74,7 +85,7 @@ export default function RubricRow({ item }: { item: RubricRowData }) {
         </h3>
 
         <p
-          className="text-[14px] col-span-5 md:col-auto"
+          className={`text-[14px] ${mobileSpan} md:col-auto`}
           style={{
             lineHeight: 1.55,
             color: 'var(--text-secondary)',
@@ -83,7 +94,7 @@ export default function RubricRow({ item }: { item: RubricRowData }) {
           {item.description}
         </p>
 
-        <div className="col-span-5 md:col-auto md:text-right flex md:flex-col gap-3 md:gap-2">
+        <div className={`${mobileSpan} md:col-auto md:text-right flex md:flex-col gap-3 md:gap-2`}>
           <span
             className="inline-flex items-center px-2 py-0.5 text-[10px] uppercase"
             style={{

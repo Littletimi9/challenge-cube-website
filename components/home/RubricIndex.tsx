@@ -4,9 +4,15 @@ type Props = {
   eyebrow: string
   heading: string
   items: RubricRowData[]
+  showNumbers?: boolean
 }
 
-export default function RubricIndex({ eyebrow, heading, items }: Props) {
+export default function RubricIndex({
+  eyebrow,
+  heading,
+  items,
+  showNumbers = true,
+}: Props) {
   return (
     <section className="px-6 md:px-10 py-20">
       <div className="mb-12 md:mb-16">
@@ -43,7 +49,7 @@ export default function RubricIndex({ eyebrow, heading, items }: Props) {
         }}
       >
         {items.map((item) => (
-          <RubricRow key={item.slug} item={item} />
+          <RubricRow key={item.slug} item={item} showNumber={showNumbers} />
         ))}
       </div>
     </section>

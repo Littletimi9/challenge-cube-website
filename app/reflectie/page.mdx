@@ -1,43 +1,76 @@
 export const metadata = {
-  title: 'Reflectie — Challenge Cube',
+  title: 'Reflectie — Challenge Table',
 }
 
 <PageHead
   number="06"
   label="Hoofdstuk · Reflectie"
-  title="Wat ik leerde, wat ik anders zou doen."
-  lead="[INVULLEN: overkoepelende reflectie — niet rubric-gebonden, maar op het project en mijn rol erin.]"
+  title="De belangrijkste stap was de Cube loslaten."
+  lead="Het proces werd sterker toen ik stopte met het verdedigen van mijn eerste oplossing. De Challenge Table is geen mooiere Cube, maar een beter antwoord op de schoolcontext, de eindgebruiker en de B2B-afnemer."
   meta={[
-    { key: 'Type', value: 'Persoonlijke reflectie' },
-    { key: 'Periode', value: '[INVULLEN: apr 2026]' },
+    { key: 'Leestijd', value: '2 minuten' },
+    { key: 'Kern', value: 'Leren door itereren' },
+    { key: 'Vervolg', value: 'Pilot en extra interviews' },
   ]}
 />
 
-<section className="px-6 md:px-10 py-20">
-  <SectionHeading eyebrow="Proces" heading="Waar het proces sterk was en waar het knarste." />
+<section className="px-6 md:px-10 py-16 md:py-20">
+  <SectionHeading
+    eyebrow="01 · Proces"
+    heading="Wat goed werkte en wat scherper moest."
+  />
 
   <ReflectionGrid
-    good="[INVULLEN: het sterkste dat ik gedaan heb in dit project.]"
-    better="[INVULLEN: het zwakste — waar ik bij een volgend project scherper wil zijn.]"
+    good="Het sterkste onderdeel was dat onderzoek mijn beginaanname echt veranderde. De interviews, observaties en VPC maakten duidelijk dat ik niet een snackprobleem, maar een ritueelprobleem onderzocht. Daardoor werd de stap naar een fysieke pauzetafel logisch."
+    better="Ik had de echte schoolcontext eerder moeten testen. Het telefoonverbod, beheerbaarheid en robuustheid kwamen relatief laat scherp in beeld. Een vroegere aula-test had de stap van Cube naar Table sneller en sterker onderbouwd."
   />
 </section>
 
-<section className="px-6 md:px-10 py-20">
-  <SectionHeading eyebrow="Vak" heading="Wat dit project leerde over waardecreatie." />
-
-  <ReflectionGrid
-    good="[INVULLEN: inhoudelijk inzicht dat ik meeneem.]"
-    better="[INVULLEN: wat nog onvolledig blijft in mijn denken.]"
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="02 · Waardecreatie"
+    heading="Waarde ontstond pas toen gebruiker en afnemer samenkwamen."
   />
+
+  <div
+    className="p-7 md:p-8 max-w-[900px]"
+    style={{ backgroundColor: 'var(--surface)', border: '0.5px solid var(--border)', borderRadius: '3px' }}
+  >
+    <div className="text-[17px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
+      Leerlingen willen geen preek over gezond eten; zij willen een gezellige pauze. Scholen kopen geen dobbelsteen; zij investeren in een veilige, zichtbare en duurzame voorziening. De Challenge Table verbindt die perspectieven beter dan de oorspronkelijke Cube.
+    </div>
+    <div className="text-[17px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', margin: 0 }}>
+      De ecologische waarde blijft het minst hard bewezen. De richting is onderbouwd via levensduur, reparatie en materiaalkeuze, maar een echte levenscyclusvergelijking zou de claim sterker maken.
+    </div>
+  </div>
 </section>
 
-<section className="px-6 md:px-10 py-20">
-  <SectionHeading eyebrow="Vervolg" heading="Wat ik zou doen met meer tijd." />
-
-  <ReflectionGrid
-    good="[INVULLEN: eerste vervolgstap die ik waardevol zou vinden.]"
-    better="[INVULLEN: tweede vervolgstap — riskanter maar mogelijk impactvoller.]"
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="03 · Vervolg"
+    heading="De volgende stap is niet meer deskresearch, maar gebruiksdata."
   />
+
+  <div className="grid gap-6 md:grid-cols-3">
+    <ChapterProof
+      label="Pilot"
+      title="Test in een aula."
+      evidence="Meet starttijd, groepsgrootte, spontaan gebruik en herhaalgedrag tijdens echte pauzes."
+      meaning="Dit maakt TC-02 t/m TC-05 sterker dan alleen beredeneerde onderbouwing."
+    />
+    <ChapterProof
+      label="Interviews"
+      title="Verdiep na gebruik."
+      evidence="Voer minimaal drie aanvullende diepte-interviews uit met leerlingen die de Table hebben gezien of gebruikt."
+      meaning="Zo wordt duidelijk welke drempels, motivaties en verbeterpunten in de echte context ontstaan."
+    />
+    <ChapterProof
+      label="B2B"
+      title="Toets bij schoolbestuur."
+      evidence="Bespreek onderhoud, plaatsing, veiligheid, budget en verantwoordelijkheid met een beslisser."
+      meaning="Dan wordt de Table niet alleen een sterk ontwerp, maar een schaalbare waardepropositie."
+    />
+  </div>
 </section>
 
 <PageNav

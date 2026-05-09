@@ -19,9 +19,9 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: 'Challenge Cube — Portfolio Waardecreatie',
+  title: 'Challenge Table — Portfolio Waardecreatie',
   description:
-    'Visueel portfolio rond de Challenge Cube: een dobbelsteen met QR-codes voor pauze-challenges. Opgebouwd rond vijf rubric-criteria.',
+    'Visueel portfolio rond de Challenge Table: van eerste Challenge Cube-prototype naar een robuuste pauzetafel voor middelbare scholen.',
 }
 
 export default function RootLayout({

@@ -6,44 +6,44 @@ export const rubrics: RubricRowData[] = [
     name: 'Nieuwsgierigheid',
     slug: 'nieuwsgierigheid',
     description:
-      'Waarom dit onderwerp? De anekdote achter het project en hoe mijn blik zich ontwikkelde.',
+      'Persoonlijke aanleiding, startaanname en kantelpunt: van snackaanbod naar pauzeritueel.',
     ambition: '8+',
-    evidenceCount: '3 bewijsstukken',
+    evidenceCount: '2 min leestijd',
   },
   {
     number: '02',
     name: 'Onderzoek',
     slug: 'onderzoek',
     description:
-      'Interviews, observaties en deskresearch. Pains, gains en wat studenten écht missen in pauzes.',
+      'Triangulatie tussen interviews, observaties, deskresearch en B2B-prijsvalidatie.',
     ambition: '8+',
-    evidenceCount: '5 bewijsstukken',
+    evidenceCount: '3 min leestijd',
   },
   {
     number: '03',
     name: 'Concept',
     slug: 'concept',
     description:
-      'Van eerste schets tot werkend prototype. De iteraties en de feedback die alles veranderden.',
+      'Drie iteraties die laten zien waarom de Cube doorgroeide naar de Table.',
     ambition: '8+',
-    evidenceCount: '4 iteraties',
+    evidenceCount: '3 min leestijd',
   },
   {
     number: '04',
     name: 'Methoden',
     slug: 'methoden',
     description:
-      "Double Diamond, Value Proposition Canvas, 5 Why's. Waarom deze modellen en wat ze opleverden.",
+      'VPC, interviews, journeys, PSM en scorecard als samenhangende onderzoeksketen.',
     ambition: '8+',
-    evidenceCount: '3 modellen',
+    evidenceCount: '2 min leestijd',
   },
   {
     number: '05',
     name: 'Validatie',
     slug: 'validatie',
     description:
-      'Testcriteria, meervoudige waardeperspectieven en het bewijs dat het concept werkt.',
+      'Vooraf vastgelegde testcriteria, huidige onderbouwing en aanvullend testplan.',
     ambition: '8+',
-    evidenceCount: '6 criteria',
+    evidenceCount: '3 min leestijd',
   },
 ]

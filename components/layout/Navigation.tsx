@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 const links = [
-  { href: '/', label: 'Portfolio' },
+  { href: '/', label: 'Start' },
   { href: '/nieuwsgierigheid', label: 'Nieuwsgierigheid' },
   { href: '/onderzoek', label: 'Onderzoek' },
   { href: '/concept', label: 'Concept' },
@@ -40,10 +40,10 @@ export default function Navigation() {
           className="font-serif text-[20px] leading-none tracking-tight"
           style={{ color: 'var(--text-primary)' }}
         >
-          Challenge Cube
+          Challenge Table
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8" aria-label="Hoofdnavigatie">
+        <nav className="hidden md:flex items-center gap-6" aria-label="Hoofdnavigatie">
           {links.map((l) => {
             const active = isActive(l.href)
             return (
@@ -51,7 +51,7 @@ export default function Navigation() {
                 key={l.href}
                 href={l.href}
                 aria-current={active ? 'page' : undefined}
-                className="text-[13px] tracking-[0.02em] transition-colors pb-1"
+                className="text-[12px] lg:text-[13px] tracking-[0.02em] transition-colors pb-1"
                 style={{
                   color: active ? 'var(--text-primary)' : 'var(--text-muted)',
                   borderBottom: active ? '1px solid var(--accent-mint)' : '1px solid transparent',

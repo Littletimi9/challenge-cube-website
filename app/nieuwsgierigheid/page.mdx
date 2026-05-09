@@ -1,354 +1,130 @@
 export const metadata = {
-  title: 'Nieuwsgierigheid — Challenge Cube',
+  title: 'Nieuwsgierigheid — Challenge Table',
 }
 
 <PageHead
   number="01"
   label="Rubric · Nieuwsgierigheid"
-  title="Nieuwsgierigheid"
-  lead="Mijn eigen bewustwording over gewoonte en gemak bracht me bij de schoolkantine. Wat ik daar zag, veranderde mijn denken over gedragsverandering. Het leidde tot de Challenge Cube."
+  title="Van eigen gewoonte naar ontwerpvraag."
+  lead="Mijn startpunt was herkenning: ook ik maakte vaak keuzes uit gemak en gewoonte. Daardoor keek ik anders naar scholieren die in de pauze automatisch naar snacks grijpen. Niet het product, maar het sociale ritueel werd de ontwerpvraag."
   meta={[
-    { key: 'Periode', value: 'Sep 2025 t/m mei 2026' },
-    { key: 'Opleiding', value: 'Commerciële Economie' },
-    { key: 'Onderdeel', value: 'Hoofdportfolio Waardecreatie' },
+    { key: 'Leestijd', value: '2 minuten' },
+    { key: 'Bewijs', value: 'Anekdote · Interviews · VPC' },
+    { key: 'Kern', value: 'Van snack naar ritueel' },
   ]}
 />
 
-{/* SECTIE 1 — Opening: De pakkende anekdote */}
-<section className="px-6 md:px-10 py-20">
+<section className="px-6 md:px-10 py-16 md:py-20">
   <SectionHeading
-    eyebrow="01 · Opening"
-    heading="De pakkende anekdote."
+    eyebrow="01 · Aanleiding"
+    heading="Mijn eigen gemak maakte snackgedrag herkenbaar."
   />
 
-  <img
-    src="/Observeren.jpeg"
-    alt="Observatie van snackgedrag bij scholieren tijdens een schoolpauze"
-    style={{ width: '100%', maxHeight: '460px', objectFit: 'cover', borderRadius: '3px', marginBottom: '2.5rem' }}
-  />
-
-  <div
-    className="p-8 md:p-10 max-w-[820px]"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
+  <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
     <div
-      className="text-[17px] md:text-[18px]"
-      style={{
-        lineHeight: 1.7,
-        color: 'var(--text-secondary)',
-      }}
+      className="p-7 md:p-8"
+      style={{ backgroundColor: 'var(--surface)', border: '0.5px solid var(--border)', borderRadius: '3px' }}
     >
-      <p style={{ marginBottom: '1.25rem' }}>
-        Tijdens de module Toekomstbestendige Business Innovatie mat ik mijn eigen ecologische voetafdruk. Mijn score was 2,6, lager dan het Nederlandse gemiddelde van 3,3, maar de verklaring was ontnuchterend: ik at regelmatig vlees en pakte voor korte ritten automatisch de auto. Niet vanwege bewuste keuze, maar puur uit gewoonte.
-      </p>
-      <p style={{ margin: 0 }}>
-        Datzelfde patroon zag ik terug bij scholieren: elke pauze hetzelfde rondje naar de kantine of supermarkt, dezelfde impulsaankopen, dezelfde snacks. Ze deden het niet omdat ze zo graag chips wilden, maar omdat het erbij hoorde. Die herkenning was het begin van dit project.
-      </p>
+      <div className="text-[17px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
+        Tijdens Toekomstbestendige Business Innovatie ontdekte ik dat mijn eigen duurzame keuzes vaak niet door kennis, maar door gemak werden bepaald. Ik wist wat beter was, maar koos geregeld automatisch voor vlees of de auto.
+      </div>
+      <div className="text-[17px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', margin: 0 }}>
+        Die herkenning zag ik terug bij scholieren. In de pauze liep een groep bijna vanzelf naar supermarkt, automaat of fastfood. Mijn nieuwsgierigheid verschoof daardoor van "wat eten leerlingen?" naar "waarom wordt snacken een vast sociaal ritueel?"
+      </div>
     </div>
+
+    <FigureBlock
+      src="/Observeren.jpeg"
+      alt="Observatie van scholieren tijdens een pauzemoment waarin snackgedrag in groepsverband zichtbaar wordt"
+      width={1536}
+      height={2048}
+      fit="cover"
+      caption="Figuur 1. Observatie van pauzegedrag: snacken gebeurt zichtbaar in groepsverband."
+      insight="De foto ondersteunt de kern van het hoofdstuk: de keuze voor snacks is ingebed in een sociaal moment. Daarom moest het concept niet alleen een gezonder alternatief bieden, maar een aantrekkelijk nieuw pauzeritueel."
+      sourceHref="/bronnen/observaties"
+      sourceLabel="Observaties bekijken"
+    />
   </div>
 </section>
 
-{/* SECTIE 2 — Eerste blik: Mijn startpositie */}
-<section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+<QuoteBlock
+  quote="Vaak op school met vrienden. Dan heb je toch gewoon zin in iets lekkers, als je gezellig met elkaar zit."
+  author="Isa, 6 VWO"
+  source="Interview 1 · Sprint 1"
+/>
+
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="02 · Eerste blik"
-    heading="Mijn startpositie."
+    eyebrow="02 · Kantelpunt"
+    heading="De startaanname bleek te smal."
   />
 
-  <div
-    className="grid gap-8 md:gap-10"
-    style={{ gridTemplateColumns: 'minmax(0, 1.3fr) minmax(0, 1fr)' }}
-  >
-    <div
-      className="p-8 md:p-10"
-      style={{
-        backgroundColor: 'var(--surface)',
-        border: '0.5px solid var(--border)',
-        borderRadius: '3px',
-      }}
-    >
-      <p
-        className="text-[17px]"
-        style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}
-      >
-        Mijn beginhypothese was simpel: het probleem was een aanbodprobleem. Als de kantine betere, gezondere opties zou aanbieden voor een acceptabele prijs, zouden leerlingen die ook kiezen. Ik keek naar producten, betere snacks en een slimmere indeling, en geloofde dat een goede propositie genoeg was om gedrag te veranderen.
-      </p>
-      <p
-        className="text-[17px]"
-        style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}
-      >
-        Over de sociale kant van snacken had ik nauwelijks nagedacht. Ik wist dat jongeren ongezond aten op school, maar had de illusie dat een goed product dat probleem zou oplossen. Ik keek naar het product, niet naar het ritueel eromheen.
-      </p>
-    </div>
-
-    <img
-      src="/Observeren_KFC.jpeg"
-      alt="Observatie bij KFC: de context van impulsmatige snackkeuzes buiten school"
-      style={{ width: '100%', height: '100%', minHeight: '300px', objectFit: 'cover', borderRadius: '3px' }}
-    />
-  </div>
-
-  <div className="mt-10">
-    <a
+  <div className="grid gap-6 md:grid-cols-3">
+    <ChapterProof
+      label="Startaanname"
+      title="Ik dacht eerst aan beter snackaanbod."
+      evidence="Mijn eerste denkrichting lag bij gezondere, betaalbare producten in de kantine. Dat paste bij het zichtbare probleem, maar niet bij de reden achter het gedrag."
+      meaning="De oplossing mocht niet blijven hangen in voeding. De interventie moest concurreren met het sociale moment dat snacken aantrekkelijk maakt."
       href="/bronnen/opdracht-1"
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-        textDecoration: 'none',
-      }}
-    >
-      → Zie ook: Opdracht 1: Ambitieniveau duurzaamheid
-    </a>
-  </div>
-</section>
-
-{/* SECTIE 3 — Verdieping: Het onderwerp leren begrijpen */}
-<section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
-  <SectionHeading
-    eyebrow="03 · Verdieping"
-    heading="Het onderwerp leren begrijpen."
-  />
-
-  <div
-    className="p-8 md:p-10 max-w-[820px] mb-10"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="text-[17px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}
-    >
-      Twee semigestructureerde interviews lieten een ander beeld zien dan ik had verwacht. Isa (6 VWO) at ongezonde snacks "in de aula, met vriendinnen", niet vanwege honger maar vanwege gezelligheid. Ze omschreef het als "meegaan in het moment". Twee VMBO-leerlingen gingen "voor de gezelligheid" mee naar de Spar, ook als ze zelf niets wilden. De prijs was een harde grens (max. €1–2), maar het sociale ritueel was de drijfveer.
-    </p>
-    <p
-      className="text-[17px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}
-    >
-      De Value Proposition Canvas (twee iteraties) maakte vervolgens de dieperliggende structuur zichtbaar: het rondje naar de kantine was geen voedseldoel maar een vast sociaal patroon. Lopen, kopen, samen eten, even niet op school zijn. Observaties bij Albert Heijn en KFC in de buurt van scholen bevestigden dit: de aankoop was bijzaak, het samenzijn was het doel.
-    </p>
-  </div>
-
-  <QuoteBlock
-    quote="Vaak op school met vrienden. Dan heb je toch gewoon zin in iets lekkers, als je gezellig met elkaar zit."
-    author="Isa, 6 VWO"
-    source="Interview 1 · Sprint 1: Probleemverkenning"
-  />
-
-  <QuoteBlock
-    quote="Vaak ook gewoon voor de gezelligheid."
-    author="VMBO-leerling, Jaar 3"
-    source="Interview 2 · Sprint 1: Probleemverkenning"
-  />
-
-  <div className="grid gap-6 md:gap-8 md:grid-cols-2 mb-10">
-    <img
-      src="/Observeren_AH.jpeg"
-      alt="Observatie bij Albert Heijn nabij school: leerlingen kopen samen snacks als sociaal ritueel"
-      style={{ width: '100%', minHeight: '320px', objectFit: 'cover', borderRadius: '3px' }}
+      sourceLabel="Aanleiding bekijken"
     />
-
-    <img
-      src="/Observeren_AH_1.jpeg"
-      alt="Observatie bij Albert Heijn: sociale context rondom impulsaankopen door scholieren"
-      style={{ width: '100%', minHeight: '320px', objectFit: 'cover', borderRadius: '3px' }}
-    />
-  </div>
-
-  <div className="flex flex-wrap gap-3">
-    <a
+    <ChapterProof
+      label="Gebruikersstem"
+      title="Leerlingen benoemden gezelligheid, niet honger."
+      evidence="Interview 1 en 2 laten dezelfde kern zien: leerlingen snacken vooral samen. Prijs en smaak spelen mee, maar het meedoen aan het moment is belangrijker."
+      meaning="De eindgebruiker vroeg impliciet om een sociale activiteit die direct start, niet om uitleg of gezondheidsvoorlichting."
       href="/bronnen/interview-1"
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-        textDecoration: 'none',
-      }}
-    >
-      → Zie ook: Interview 1: Isa, 6 VWO
-    </a>
-    <a
-      href="/bronnen/interview-2"
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-        textDecoration: 'none',
-      }}
-    >
-      → Zie ook: Interview 2: Twee VMBO-leerlingen, jaar 3
-    </a>
-    <a
+      sourceLabel="Interview bekijken"
+    />
+    <ChapterProof
+      label="Inzicht"
+      title="De centrale taak werd: samen pauze maken."
+      evidence="De tweede Value Proposition Canvas verlegde de klanttaak naar 'samen de pauze leuk invullen'. Honger stillen werd secundair."
+      meaning="Dit inzicht verklaart waarom de Challenge Cube ontstond en later doorgroeide naar de Challenge Table."
       href="/bronnen/opdracht-19"
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-        textDecoration: 'none',
-      }}
-    >
-      → Zie ook: Opdracht 19: Value Proposition Canvas
-    </a>
-    <a
-      href="/bronnen/opdracht-4"
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-        textDecoration: 'none',
-      }}
-    >
-      → Zie ook: Opdracht 4: Impactbepaling
-    </a>
-  </div>
-</section>
-
-{/* SECTIE 4 — Kantelpunt: Wat veranderde mijn blik? */}
-<section
-  className="px-6 md:px-10 py-24"
-  style={{
-    backgroundColor: 'var(--canvas-elevated)',
-    borderTop: '0.5px solid var(--border)',
-    borderBottom: '0.5px solid var(--border)',
-  }}
->
-  <SectionHeading
-    eyebrow="04 · Kantelpunt"
-    heading="Wat veranderde mijn blik?"
-  />
-
-  <div
-    className="p-10 md:p-14 max-w-[900px] mb-10"
-    style={{
-      backgroundColor: 'var(--surface)',
-      borderLeft: '2px solid var(--accent-mint)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="font-serif"
-      style={{
-        fontSize: 'clamp(22px, 2.8vw, 28px)',
-        lineHeight: 1.45,
-        letterSpacing: '-0.01em',
-        color: 'var(--text-secondary)',
-        fontStyle: 'italic',
-      }}
-    >
-      Bij de tweede iteratie van de Value Proposition Canvas viel het kwartje: de centrale klanttaak was niet 'eten' maar 'samen de pauze leuk en gezellig invullen'. Honger stillen was ondergeschikt. Een voedingsoplossing zou de pijn nooit wegnemen, want de pijn ging niet over voeding. Er was iets nodig dat hetzelfde sociale ritueel kon vervangen.
-    </p>
-  </div>
-
-  <img
-    src="/VPC_afbeelding2.png"
-    alt="Value Proposition Canvas iteratie 2: aangescherpt klantprofiel met centrale klanttaak 'samen de pauze invullen'"
-    style={{ width: '100%', maxWidth: '640px', height: 'auto', borderRadius: '3px', marginBottom: '2.5rem' }}
-  />
-
-  <div>
-    <a
-      href="/bronnen/opdracht-19"
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
-      style={{
-        letterSpacing: '0.05em',
-        color: 'var(--accent-mint)',
-        backgroundColor: 'var(--accent-mint-soft)',
-        border: '1px solid var(--accent-mint-border)',
-        borderRadius: '3px',
-        textDecoration: 'none',
-      }}
-    >
-      → Zie ook: Opdracht 19: Value Proposition Canvas
-    </a>
-  </div>
-</section>
-
-{/* SECTIE 5 — Afsluiting: Waar sta ik nu? */}
-<section className="px-6 md:px-10 py-20">
-  <SectionHeading
-    eyebrow="05 · Afsluiting"
-    heading="Waar sta ik nu?"
-  />
-
-  <div
-    className="grid gap-8 md:gap-10"
-    style={{ gridTemplateColumns: 'minmax(0, 1.3fr) minmax(0, 1fr)' }}
-  >
-    <div
-      className="p-8 md:p-10"
-      style={{
-        backgroundColor: 'var(--surface)',
-        border: '0.5px solid var(--border)',
-        borderRadius: '3px',
-      }}
-    >
-      <p
-        className="text-[17px]"
-        style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}
-      >
-        Ik kijk nu naar pauzegedrag als een vraagstuk van ritueelontwerp: hoe geef je mensen een aantrekkelijk alternatief dat naadloos in hun sociale context past, zonder moraliserende toon?
-      </p>
-      <p
-        className="text-[17px]"
-        style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}
-      >
-        Mijn nieuwsgierigheid is verschoven van 'wat eten leerlingen?' naar 'waarom doen mensen wat ze doen, en hoe verander je dat?'. Die vraag vormt de kern van alles wat daarna is gekomen en nog zal volgen.
-      </p>
-    </div>
-
-    <img
-      src="/Afbeelding-challenge-tafel-v1.png"
-      alt="Challenge Table V1: het eindconcept dat het snackritueel vervangt met een actief sociaal alternatief"
-      style={{ width: '100%', height: '100%', minHeight: '300px', objectFit: 'cover', borderRadius: '3px' }}
+      sourceLabel="VPC bekijken"
     />
   </div>
 </section>
 
-{/* RUBRIC-REFLECTIE */}
-<section
-  className="px-6 md:px-10 py-16"
-  style={{ borderTop: '0.5px solid var(--border)' }}
->
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="Bijdrage aan de beoordeling"
-    heading="Hoe deze pagina scoort."
+    eyebrow="03 · Ontwikkeling"
+    heading="Mijn nieuwsgierigheid werd een ontwerpcriterium."
   />
 
-  <div
-    className="p-8 md:p-10 max-w-[860px] mb-8"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p className="text-[16px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}>
-      Deze pagina legt de persoonlijke basis van het project bloot en toont hoe eigen nieuwsgierigheid zich ontwikkelt tot een onderbouwde probleemstelling. Sectie 1 verankert de aanleiding in een persoonlijke anekdote (ecologische voetafdruk), sectie 2 benoemt de startaanname en de breuk daarmee, en secties 3–4 tonen hoe twee interviews en twee iteraties van de Value Proposition Canvas mijn kijk fundamenteel verschoven: van product naar ritueel. Criterium 01 vraagt om aantoonbare, groeiende nieuwsgierigheid die het project stuurt — die groei is hier per sectie traceerbaar, van startaanname tot het moment waarop de centrale klanttaak 'samen de pauze invullen' zichtbaar werd.
-    </p>
-  </div>
+  <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <FigureBlock
+      src="/VPC_afbeelding2.png"
+      alt="Value Proposition Canvas iteratie 2 met pains, gains en jobs-to-be-done voor scholieren tijdens de pauze"
+      width={2454}
+      height={1378}
+      fit="contain"
+      caption="Figuur 2. VPC iteratie 2: het klantprofiel verschuift van eten naar sociale pauze-invulling."
+      insight="De VPC maakt de persoonlijke ontwikkeling toetsbaar: mijn blik verschoof van aanbod naar gedrag. Vanaf dit punt werd elk concept beoordeeld op sociale startkracht, eenvoud en geschiktheid voor groepsgebruik."
+      sourceHref="/bronnen/opdracht-19"
+      sourceLabel="VPC bekijken"
+    />
 
+    <div
+      className="p-7 md:p-8"
+      style={{ backgroundColor: 'var(--surface)', border: '0.5px solid var(--border)', borderRadius: '3px' }}
+    >
+      <div className="text-[17px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
+        Mijn nieuwsgierigheid werd concreter door onderzoek. Ik wilde niet meer alleen weten welke snack populair was, maar hoe een schoolomgeving een ander pauzegedrag kan uitlokken zonder moraliserend te worden.
+      </div>
+      <div className="text-[17px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', margin: 0 }}>
+        De Challenge Table is daarom geen los spelidee. Het is mijn antwoord op de vraag hoe je een automatisch snackritueel vervangt door een zichtbare, fysieke en sociale plek in de aula.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="px-6 md:px-10 py-14" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="Rubric-check"
+    heading="Criterium 01 is zichtbaar in de ontwikkeling van mijn blik."
+  />
   <div className="flex flex-wrap gap-3">
     <RubricBadge number="01" label="Eigen nieuwsgierigheid" />
   </div>

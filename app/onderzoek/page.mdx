@@ -1,391 +1,124 @@
 export const metadata = {
-  title: 'Onderzoek — Challenge Cube',
+  title: 'Onderzoek — Challenge Table',
 }
 
 <PageHead
   number="02"
-  label="Rubric · Gebruikersgericht Onderzoek"
-  title="Gebruikersgericht onderzoek."
-  lead="Via interviews, enquêtes en desk research bouwde ik een onderbouwd beeld op van wat scholieren en scholen écht zoeken in de pauze: geen voedingskeuze, maar een sociaal moment."
+  label="Rubric · Gebruikersgericht onderzoek"
+  title="Onderzoek maakte het pauzeritueel navolgbaar."
+  lead="Interviews, observaties, deskresearch en prijsvalidatie tonen samen hetzelfde beeld: scholieren zoeken in de pauze vooral sociale ontspanning. De Challenge Table is ontworpen als alternatief voor dat ritueel, niet als voedingscampagne."
   meta={[
-    { key: 'Periode', value: 'Sep 2025 t/m mei 2026' },
-    { key: 'Opleiding', value: 'Commerciële Economie' },
-    { key: 'Onderdeel', value: 'Hoofdportfolio Waardecreatie' },
+    { key: 'Leestijd', value: '3 minuten' },
+    { key: 'Methode', value: 'Triangulatie' },
+    { key: 'Bewijs', value: 'Primair + secundair' },
   ]}
 />
 
-{/* SECTIE 1 — Inleiding */}
-<section className="px-6 md:px-10 py-20">
+<section className="px-6 md:px-10 py-16 md:py-20">
   <SectionHeading
-    eyebrow="01 · Inleiding"
-    heading="Wat deze pagina laat zien."
+    eyebrow="01 · Onderzoeksontwerp"
+    heading="Elke methode beantwoordde een andere deelvraag."
   />
-
-  <div
-    className="p-8 md:p-10 max-w-[820px]"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="text-[17px] md:text-[18px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}
-    >
-      Op deze pagina is te zien hoe onderzoeksontwerp, dataverzameling en analyse als één geheel werken. De pagina volgt de logica van het onderzoeksproces: van kwalitatieve probleemverkenning via kwantitatieve toetsing naar conceptvalidatie.
-    </p>
-    <p
-      className="text-[17px] md:text-[18px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}
-    >
-      De rode draad is het Jobs-to-be-done-denken: elke methode helpt begrijpen wat scholieren en scholen écht willen bereiken in de pauze. De uitkomsten worden visueel onderbouwd en zijn traceerbaar naar de opdrachten en interviews die als bewijs dienen.
-    </p>
-  </div>
-</section>
-
-{/* SECTIE 2 — Onderzoeksontwerp */}
-<section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
-  <SectionHeading
-    eyebrow="02 · Onderzoeksontwerp"
-    heading="Hoofdvraag, aanpak en fasering."
-  />
-
-  <div
-    className="grid gap-8 md:gap-10 mb-10"
-    style={{ gridTemplateColumns: 'minmax(0, 1.3fr) minmax(0, 1fr)' }}
-  >
-    <div
-      className="p-8 md:p-10"
-      style={{
-        backgroundColor: 'var(--surface)',
-        border: '0.5px solid var(--border)',
-        borderRadius: '3px',
-      }}
-    >
-      <p className="text-[17px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
-        De centrale onderzoeksvraag: welk concept sluit aan bij de pains, gains en jobs-to-be-done van scholieren tijdens de pauze, én levert aantoonbare waarde op voor scholen als B2B-afnemer?
-      </p>
-      <p className="text-[17px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}>
-        De aanpak was drieledig: kwalitatief voor verdieping en contextbegrip (semigestructureerde interviews), kwantitatief voor schaalvalidatie (B2C-enquête + B2B Van Westendorp PSM), en desk research voor marktcontext (concurrentieanalyse, B-Corp, scorecard). Fasering: Sprint 1 probleemverkenning → Sprint 2 conceptontwikkeling → Sprint 3 validatie.
-      </p>
-    </div>
-
-    <div
-      className="p-6 flex flex-col gap-3"
-      style={{
-        backgroundColor: 'var(--canvas-elevated)',
-        border: '0.5px solid var(--border)',
-        borderRadius: '3px',
-      }}
-    >
-      {[
-        { fase: 'Sprint 1', label: 'Probleemverkenning', methode: 'Interviews · Observaties · VPC V1' },
-        { fase: 'Sprint 2', label: 'Conceptontwikkeling', methode: 'VPC V2 · CJ IST/SOLL · Concurrentieanalyse' },
-        { fase: 'Sprint 3', label: 'Validatie', methode: 'B2B PSM-enquête · Prijsstrategie · Scorecard' },
-      ].map((f) => (
-        <div key={f.fase} className="flex flex-col gap-1 py-3" style={{ borderBottom: '0.5px solid var(--border)' }}>
-          <div className="flex items-center gap-3">
-            <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}>{f.fase}</span>
-            <span className="text-[13px]" style={{ color: 'var(--text-primary)' }}>{f.label}</span>
-          </div>
-          <span className="text-[12px]" style={{ color: 'var(--text-muted)', letterSpacing: '0.03em' }}>{f.methode}</span>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-{/* SECTIE 3 — Dataverzamelingsmethoden (Triangulatie) */}
-<section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
-  <SectionHeading
-    eyebrow="03 · Triangulatie"
-    heading="Meerdere methoden, één consistent beeld."
-  />
-
-  <div
-    className="p-8 md:p-10 max-w-[820px] mb-10"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="text-[17px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}
-    >
-      Elk van de drie methoden beantwoordt een andere deelvraag. Interviews geven de 'waarom' achter gedrag. De enquête valideert op schaal en meet prijsbereidheid. Desk research brengt de marktcontext in beeld. Samen convergeren ze naar één consistent beeld van het probleem en de oplossingsrichting.
-    </p>
-  </div>
 
   <Triangulation
     methods={[
       {
         type: 'Interviews',
-        name: 'Semigestructureerde gesprekken (primair)',
-        count: 'n=2 afgenomen (Isa 6VWO + 2 VMBO-leerlingen) · 3 in uitvoering (2 B2B, 1 B2C)',
-        finding: 'Sociale context, niet honger of gezondheidsbewustzijn, is de primaire driver van snackgedrag. Leerlingen omschrijven het als "meegaan in het moment" en "voor de gezelligheid".',
+        name: 'Waarom snacken leerlingen?',
+        count: '3 gesprekken: Isa 6 VWO, twee VMBO-leerlingen, 4 HAVO leerling',
+        finding: 'Leerlingen koppelen snacken vooral aan gezelligheid, meedoen en samen pauze houden. Honger of gezondheid is zelden de primaire reden.',
       },
       {
-        type: 'Enquête',
-        name: 'B2B Van Westendorp PSM (primair)',
-        count: 'B2B gericht op scholen, schoolbesturen en directie middelbare scholen',
-        finding: 'Acceptabele prijsrange Challenge Table: €8.000–€14.000. Indifferentieprijspunt ligt rond €8.000–€9.000. Scholen beschouwen een investering binnen dit bereik als realistisch voor een speelfaciliteit.',
+        type: 'Observaties',
+        name: 'Hoe ziet het gedrag eruit?',
+        count: '4 observaties op 3 locaties',
+        finding: 'Leerlingen bewegen in groepjes naar snacklocaties. De aankoop is kort; de sociale beweging ernaartoe is het opvallende patroon.',
       },
       {
-        type: 'Deskresearch',
-        name: 'Concurrenten, rapporten, B-Corp (secundair)',
-        count: '12 concurrenten geanalyseerd · CBS 2023 data · B-Corp benchmarks',
-        finding: 'Geen marktspeler combineert sociale activiteit met een schaalbaar, laagdrempelig pauzeconcept specifiek voor scholen. De positionering is vrij.',
+        type: 'Deskresearch + PSM',
+        name: 'Kan de Table werken voor scholen?',
+        count: 'Concurrentieanalyse, B Corp, scorecard en B2B-prijsdata',
+        finding: 'De marktpositie is vrij en scholen zien een investering van ongeveer €8.000-€14.000 als realistische bandbreedte.',
       },
     ]}
-    convergence="Zowel kwalitatief (interviews) als kwantitatief (enquête) bevestigen onafhankelijk dat de pauze primair een sociaal moment is, niet een eetmoment. Desk research toont dat de marktruimte open ligt: het ontbreekt aan een activiteitsalternatief voor het snackritueel op schoolschaal."
+    convergence="Alle methoden wijzen naar dezelfde ontwerpconclusie: de pauze is primair een sociaal moment. Daarom moet het concept een directe, zichtbare en groepsgeschikte activiteit bieden op school."
   />
-
-  <div className="flex flex-wrap gap-3 mt-10">
-    <a href="/bronnen/interview-1" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
-      → Interview 1: Isa, 6 VWO
-    </a>
-    <a href="/bronnen/interview-2" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
-      → Interview 2: Twee VMBO-leerlingen, jaar 3
-    </a>
-    <a href="/bronnen/opdracht-19" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
-      → Opdracht 19: Value Proposition Canvas
-    </a>
-    <a href="/bronnen/opdracht-9" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
-      → Opdracht 9: Concurrentieanalyse
-    </a>
-    <a href="/bronnen/opdracht-10" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
-      → Opdracht 10: Prijsstrategie
-    </a>
-  </div>
 </section>
 
-<QuoteBlock
-  quote="Vaak op school met vrienden. Dan heb je toch gewoon zin in iets lekkers, als je gezellig met elkaar zit."
-  author="Isa, 6 VWO"
-  source="Interview 1 · Sprint 1: Probleemverkenning"
-/>
-
-<QuoteBlock
-  quote="Vaak ook gewoon voor de gezelligheid."
-  author="VMBO-leerling, Jaar 3"
-  source="Interview 2 · Sprint 1: Probleemverkenning"
-/>
-
-{/* SECTIE 4 — Data-analyse & Inzichten */}
-<section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="04 · Inzichten"
-    heading="Pains, gains en jobs to be done."
+    eyebrow="02 · Kerninzichten"
+    heading="Pains, gains en jobs-to-be-done werden ontwerpbeslissingen."
   />
 
-  <div className="grid gap-6 md:gap-8 md:grid-cols-2 mb-10">
-    <div>
-      <img
-        src="/VPC_afbeelding2.png"
-        alt="Value Proposition Canvas V2: verfijnd klantprofiel met pains, gains en jobs-to-be-done van scholieren in de pauze"
-        style={{ width: '100%', height: '100%', minHeight: '280px', objectFit: 'cover', borderRadius: '3px' }}
-      />
-      <p style={{ marginTop: '0.75rem', fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.5 }}>
-        Figuur 1, VPC V2: Aangescherpt klantprofiel. De centrale klanttaak is 'samen de pauze gezellig invullen'.
-      </p>
-    </div>
-
-    <div>
-      <img
-        src="/V_Westendorp_B2B.jpeg"
-        alt="Van Westendorp Price Sensitivity Meter: B2B prijsbereidheid scholen voor Challenge Table, acceptabel bereik €8.000–€14.000"
-        style={{ width: '100%', height: '100%', minHeight: '280px', objectFit: 'cover', borderRadius: '3px' }}
-      />
-      <p style={{ marginTop: '0.75rem', fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.5 }}>
-        Figuur 2, Van Westendorp PSM (B2B): Acceptabele prijsrange Challenge Table €8.000–€14.000. Indifferentiepunt ca. €8.500.
-      </p>
-    </div>
-  </div>
-
-  <EvidenceGrid>
-    <EvidenceCard
-      rubric={{ number: '02', label: 'Onderzoek' }}
-      title="Snacken is automatisch gedrag, geen bewuste keuze"
-      action="Twee semigestructureerde interviews (Isa 6VWO; 2 VMBO-leerlingen). Beide gaven sociaal motief als reden, niet honger of bewuste keuze voor het product."
-      finding="Sociale context, niet honger of gezondheidsbewustzijn, is de primaire driver. Leerlingen omschrijven het als 'meegaan in het moment', niet als groepsdruk."
-      meaning="Een gezondheidsoplossing pakt het probleem verkeerd aan. De interventie moet het sociale ritueel vervangen, niet het voedingsaanbod verbeteren."
-      sourceId="interview-1"
+  <div className="grid gap-6 md:grid-cols-3">
+    <ChapterProof
+      label="Pain"
+      title="De pauze is vaak passief en automatisch."
+      evidence="Interviews en observaties laten zien dat leerlingen meegaan in een vast patroon richting snacklocaties."
+      meaning="De Table moet precies op dat keuzemoment zichtbaar zijn, zodat het automatische loopje een alternatief krijgt."
+      href="/bronnen/observaties"
+      sourceLabel="Observaties bekijken"
     />
-    <EvidenceCard
-      rubric={{ number: '02', label: 'Onderzoek' }}
-      title="Leerlingen willen een actieve, gezellige pauze zonder gedoe"
-      action="VPC V2 (opdracht 19) scherpt de gain-kant aan: 'samen iets doen', 'even niet op school zijn' en 'zonder voorbereiding direct starten' zijn de gewenste gains."
-      finding="De gewenste gains zijn niet voedingsgerelateerd maar activiteits- en sociaal gerelateerd. Eenvoud en snelheid zijn randvoorwaarden."
-      meaning="Het concept moet binnen 10 seconden inzetbaar zijn, geen uitleg vragen en direct bruikbaar zijn voor een groep van wisselende grootte."
-      sourceId="opdracht-19"
+    <ChapterProof
+      label="Gain"
+      title="Leerlingen willen direct iets samen doen."
+      evidence="De VPC V2 benoemt 'samen iets doen', 'gezelligheid' en 'zonder voorbereiding starten' als gewenste opbrengsten."
+      meaning="Het concept krijgt geen app-afhankelijkheid of lange uitleg. De drempel moet laag genoeg zijn voor spontaan gebruik."
+      href="/bronnen/opdracht-19"
+      sourceLabel="VPC bekijken"
     />
-    <EvidenceCard
-      rubric={{ number: '02', label: 'Onderzoek' }}
-      title="Scholen zien €8.000–€14.000 als acceptabele investering"
-      action="B2B Van Westendorp PSM uitgevoerd onder scholen, schoolbesturen en directie. Vier prijscurves (te goedkoop, goedkoop, duur, te duur) tonen acceptabel bereik."
-      finding="De indifferentieprijs ligt rond €8.500. Boven €14.000 stijgt de 'te duur'-curve sterk. Onder €5.000 treden kwaliteitstwijfels op ('te goedkoop')."
-      meaning="De Challenge Table moet geprijsd worden in het €8.000–€12.000 bereik voor maximale B2B-acceptatie. Dit is de basis voor de penetratiestrategie in opdracht 10."
-      sourceId="opdracht-10"
+    <ChapterProof
+      label="B2B"
+      title="Scholen zijn de betalende klant."
+      evidence="De B2B Van Westendorp PSM onderbouwt een realistische prijsrange en maakt schoolwaarde onderdeel van het ontwerp."
+      meaning="De Table moet robuust, onderhoudbaar en zichtbaar waardevol zijn voor schoolleiding, niet alleen leuk voor leerlingen."
+      href="/bronnen/opdracht-10"
+      sourceLabel="Prijsstrategie bekijken"
     />
-  </EvidenceGrid>
-
-  <div className="flex flex-wrap gap-3 mt-10">
-    <a href="/bronnen/opdracht-19" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
-      → Opdracht 19: Value Proposition Canvas
-    </a>
-    <a href="/bronnen/opdracht-10" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
-      → Opdracht 10: Prijsstrategie
-    </a>
   </div>
 </section>
 
-{/* SECTIE 5 — Betekenis voor het Concept */}
-<section
-  className="px-6 md:px-10 py-24"
-  style={{
-    backgroundColor: 'var(--canvas-elevated)',
-    borderTop: '0.5px solid var(--border)',
-    borderBottom: '0.5px solid var(--border)',
-  }}
->
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="05 · Betekenis"
-    heading="Van inzicht naar ontwerpbeslissing."
+    eyebrow="03 · Visueel bewijs"
+    heading="De figuren tonen hoe data naar conceptkeuzes leiden."
   />
 
-  <div
-    className="p-10 md:p-14 max-w-[900px] mb-10"
-    style={{
-      backgroundColor: 'var(--surface)',
-      borderLeft: '2px solid var(--accent-mint)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="font-serif"
-      style={{
-        fontSize: 'clamp(22px, 2.8vw, 28px)',
-        lineHeight: 1.45,
-        letterSpacing: '-0.01em',
-        color: 'var(--text-secondary)',
-        fontStyle: 'italic',
-      }}
-    >
-      De inzichten leidden tot drie concrete ontwerpbeslissingen: (1) activiteit in plaats van voeding als kern van de propositie, (2) groepsfocus: de Challenge Cube werkt alleen als sociaal object, niet als solo-product, (3) laagdrempelig en direct inzetbaar: geen uitleg, geen app, geen voorbereiding.
-    </p>
-  </div>
-
-  <img
-    src="/Customer_journey_SOLL.png"
-    alt="Customer Journey SOLL: de gewenste klantreis met Challenge Table als centraal touchpoint in de decision-fase"
-    style={{ width: '100%', maxWidth: '700px', height: 'auto', borderRadius: '3px', marginBottom: '2.5rem' }}
-  />
-
-  <p style={{ fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.5, marginBottom: '2.5rem', maxWidth: '640px' }}>
-    De IST-journey (opdracht 20) toont de fricties van de huidige pauze. De SOLL-journey (opdracht 21) toont hoe de Challenge Table die fricties wegneemt in de decision-fase.
-  </p>
-
-  <div className="flex flex-wrap gap-3">
-    <a href="/bronnen/opdracht-20" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
-      → Opdracht 20: Customer Journey IST
-    </a>
-    <a href="/bronnen/opdracht-21" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
-      → Opdracht 21: Customer Journey SOLL
-    </a>
+  <div className="grid gap-8 lg:grid-cols-2">
+    <FigureBlock
+      src="/VPC_afbeelding2.png"
+      alt="Value Proposition Canvas V2 met klanttaken, pains en gains van scholieren in de pauze"
+      width={2454}
+      height={1378}
+      fit="contain"
+      caption="Figuur 1. VPC V2: de centrale klanttaak is samen de pauze gezellig invullen."
+      insight="Deze figuur ondersteunt de verschuiving van voedingsoplossing naar sociale activiteit. De Table moet de gain 'samen iets doen' leveren en de pain 'automatisch snackgedrag' doorbreken."
+      sourceHref="/bronnen/opdracht-19"
+      sourceLabel="VPC bekijken"
+    />
+    <FigureBlock
+      src="/V_Westendorp_B2B.jpeg"
+      alt="Van Westendorp Price Sensitivity Meter voor B2B-prijsbereidheid van scholen"
+      width={1482}
+      height={930}
+      fit="contain"
+      caption="Figuur 2. B2B Van Westendorp PSM: indicatieve acceptatiebandbreedte voor de Challenge Table."
+      insight="De prijsdata verbinden gebruikerswaarde aan businesshaalbaarheid. Daardoor werd de vaste Challenge Table logischer dan een losse Cube: scholen kopen een voorziening, leerlingen gebruiken de sociale plek."
+      sourceHref="/bronnen/opdracht-10"
+      sourceLabel="Prijsstrategie bekijken"
+    />
   </div>
 </section>
 
-{/* SECTIE 6 — Bronverantwoording */}
-<section className="px-6 md:px-10 py-20">
+<section className="px-6 md:px-10 py-14" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="06 · Bronverantwoording"
-    heading="Actualiteit, betrouwbaarheid, autoriteit."
+    eyebrow="Rubric-check"
+    heading="Het onderzoek is navolgbaar van methode naar inzicht naar ontwerpbeslissing."
   />
-
-  <div
-    className="p-8 md:p-10 max-w-[820px] mb-10"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p className="text-[17px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
-      Bronnen zijn geselecteerd op drie criteria: actualiteit (publicatie ≤2023 of vakgerelateerd), betrouwbaarheid (peer-reviewed of erkende instituten zoals CBS, SER, Osterwalder) en autoriteit (wetenschappelijk of professioneel gezaghebbend).
-    </p>
-    <p className="text-[17px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}>
-      Primaire data heeft bij conflicterende inzichten voorrang boven secundaire bronnen. De volledige bronnenlijst met APA-verwijzingen, type (primair/secundair) en link staat op de bronnenpagina.
-    </p>
-  </div>
-
-  <div className="flex flex-wrap gap-3">
-    <a
-      href="/bronnen"
-      className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors"
-      style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}
-    >
-      → Volledige bronnenlijst
-    </a>
-    <a href="/bronnen/opdracht-9" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
-      → Opdracht 9: Concurrentieanalyse
-    </a>
-    <a href="/bronnen/opdracht-5" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
-      → Opdracht 5: B-Corp Analyse
-    </a>
-  </div>
-</section>
-
-{/* SECTIE 7 — Reflectie */}
-<section className="px-6 md:px-10 py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
-  <SectionHeading
-    eyebrow="07 · Reflectie"
-    heading="Wat goed ging en wat scherper kan."
-  />
-
-  <ReflectionGrid
-    good="Triangulatie werkte goed: VPC en interviews kwamen onafhankelijk tot dezelfde kernbevinding (sociaal ritueel als driver). De keuze voor twee interviewtypen (individueel en duo) gaf verschillende perspectieven op hetzelfde gedrag en voorkwam dat één anekdote het beeld kleurde. De B2B Van Westendorp PSM leverde concrete prijsdata die het businessmodel direct onderbouwen."
-    better="De B2B-enquête had eerder ingezet kunnen worden; de prijsdata zijn nu beschikbaar maar hadden bij het eerste SBMC het businessmodel al concreter kunnen maken. De primaire interviewbasis is beperkt (n=2 diepte-interviews afgerond); met meer interviews waren de bevindingen breder gevalideerd. De focusgroep en de drie geplande interviews vullen dit komende weken aan."
-  />
-
-  <div className="flex flex-wrap gap-3 mt-10">
-    <a href="/bronnen/opdracht-19" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
-      → Iteratiebewijs: Opdracht 8 vs. 19 (VPC V1 → V2)
-    </a>
-    <a href="/bronnen/opdracht-21" className="inline-flex items-center gap-2 px-3.5 py-2 text-[12px] transition-colors" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px', textDecoration: 'none' }}>
-      → Iteratiebewijs: Opdracht 20 vs. 21 (Journey IST → SOLL)
-    </a>
-  </div>
-</section>
-
-{/* RUBRIC-REFLECTIE */}
-<section
-  className="px-6 md:px-10 py-16"
-  style={{ borderTop: '0.5px solid var(--border)' }}
->
-  <SectionHeading
-    eyebrow="Bijdrage aan de beoordeling"
-    heading="Hoe deze pagina scoort."
-  />
-
-  <div
-    className="p-8 md:p-10 max-w-[860px] mb-8"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p className="text-[16px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}>
-      Deze pagina toont hoe onderzoek en methodekeuze als één geheel werken. Sectie 2 legt de gestructureerde aanpak vast — drie fasen, drie methoden, één centrale onderzoeksvraag — en draagt zo bij aan criterium 04. Sectie 3 toont de triangulatie: drie methoden die onafhankelijk tot dezelfde kernbevinding convergeren, wat criterium 02 (gebruikersgericht onderzoek) onderbouwt. De twee QuoteBlocks geven de gebruikersstem letterlijk een plek; de EvidenceCards verbinden elke bevinding aan een concrete conceptbeslissing. Sectie 6 legt uit op welke gronden bronnen zijn geselecteerd (actualiteit, betrouwbaarheid, autoriteit). Criterium 04 is zichtbaar in de onderbouwde methodekeuze (interviews voor diepte, PSM voor schaalvalidatie, deskresearch voor context); criterium 02 in de directe koppeling van gebruikersinzichten aan ontwerpbeslissingen.
-    </p>
-  </div>
-
   <div className="flex flex-wrap gap-3">
     <RubricBadge number="02" label="Gebruikersgericht onderzoek" />
-    <RubricBadge number="04" label="Modellen & methodieken" />
+    <RubricBadge number="04" label="Onderzoeksaanpak" />
   </div>
 </section>
 

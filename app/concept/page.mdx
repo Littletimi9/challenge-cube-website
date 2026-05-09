@@ -1,527 +1,135 @@
 export const metadata = {
-  title: 'Concept — Challenge Cube',
+  title: 'Concept — Challenge Table',
 }
 
 <PageHead
   number="03"
-  label="Rubric · Concept"
-  title="Van inzicht naar werkend concept."
-  lead="Van de observatie dat pauzes sociaal zijn in plaats van culinair, via twee iteraties van de Challenge Cube, naar een schaalbare speeltafel voor middelbare scholen."
+  label="Rubric · Conceptontwikkeling"
+  title="De Cube werd een Table door bewijs en beperkingen."
+  lead="Het concept ontwikkelde zich in drie stappen: een losse Challenge Cube, een schermoplossing zonder telefoon en uiteindelijk een vaste Challenge Table voor de aula. Elke stap volgt uit onderzoek, feedback of een schoolcontext-beperking."
   meta={[
+    { key: 'Leestijd', value: '3 minuten' },
     { key: 'Iteraties', value: '3 versies' },
-    { key: 'Bewijs', value: 'Onderzoek · Feedback · Prototype' },
-    { key: 'Periode', value: 'Sep 2025 t/m mei 2026' },
+    { key: 'Eindconcept', value: 'Challenge Table' },
   ]}
 />
 
-{/* SECTIE 1 — Inzichten uit onderzoek */}
-<section className="px-6 md:px-10 py-20">
+<section className="px-6 md:px-10 py-16 md:py-20">
   <SectionHeading
-    eyebrow="01 · Inzichten uit onderzoek"
-    heading="De input achter het concept."
+    eyebrow="01 · Ontwerplogica"
+    heading="Het concept veranderde omdat het gebruikscontext scherper werd."
   />
 
-  <div
-    className="p-8 md:p-10 max-w-[860px] mb-10 md:mb-14"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="text-[17px] md:text-[18px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}
-    >
-      Semigestructureerde interviews met leerlingen en een B2B Van Westendorp PSM legden de gebruikersbehoefte bloot. Concurrentieanalyse van 12 spelers, B-Corp benchmarks en CBS-rapporten brachten de marktcontext in beeld.
-    </p>
-    <p
-      className="text-[17px] md:text-[18px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}
-    >
-      De combinatie van beide lagen was noodzakelijk: de interviews zeiden wat leerlingen wilden, de concurrentieanalyse toonde dat niemand het bood, en de PSM bepaalde wat scholen wilden betalen. Zo werd het concept niet gebouwd op aannames, maar op aangetoonde behoefte én marktruimte.
-    </p>
-  </div>
-
-  <div
-    className="grid grid-cols-1 md:grid-cols-2"
-    style={{
-      gap: '0.5px',
-      backgroundColor: 'var(--border)',
-      border: '0.5px solid var(--border)',
-    }}
-  >
-    {[
-      {
-        tag: 'Primair',
-        title: 'De pauze is een sociaal ritueel, geen eetmoment',
-        summary:
-          'Twee interviews (Isa 6VWO; 2 VMBO-leerlingen) tonen dat leerlingen snacken om erbij te horen, niet vanwege honger. Centrale klanttaak: samen de pauze gezellig invullen. Een voedingsinterventie pakt het probleem verkeerd aan.',
-        assignment: 'Opdracht 19: Value Proposition Canvas',
-        href: '/bronnen/opdracht-19',
-      },
-      {
-        tag: 'Secundair',
-        title: 'Geen concurrent bezet de positie "laagdrempelig sociaal pauzeconcept"',
-        summary:
-          'Analyse van 12 concurrenten in drie lagen (direct, indirect, alternatief) toont dat de combinatie van sociale activiteit + schaalbaar + specifiek voor schoolpauzes nergens bestaat. De positionering is vrij.',
-        assignment: 'Opdracht 9: Concurrentieanalyse',
-        href: '/bronnen/opdracht-9',
-      },
-      {
-        tag: 'Primair',
-        title: 'Scholen zijn de B2B-afnemer, leerlingen de eindgebruiker',
-        summary:
-          'De B2B Van Westendorp PSM (scholen, schoolbesturen, directie) bevestigt bereidheid om te investeren in sociale pauzefaciliteiten. Scholen zijn de betalende partij; leerlingen zijn de gebruikers. Dit dubbele klantmodel stuurt het businessmodel.',
-        assignment: 'B2B-enquête + Interview 1, 2',
-        href: '/bronnen/interview-1',
-      },
-      {
-        tag: 'Secundair',
-        title: 'Acceptabele B2B-prijsrange: €8.000–€14.000',
-        summary:
-          'Van Westendorp PSM toont dat schoolbesturen een investering in dit bereik als redelijk beschouwen voor een robuuste speeltafel met een lange afschrijvingstermijn. Indifferentiepunt ca. €8.500. Basis voor de penetratiestrategie.',
-        assignment: 'Opdracht 10: Prijsstrategie',
-        href: '/bronnen/opdracht-10',
-      },
-    ].map((insight, index) => (
-      <article
-        key={insight.assignment}
-        className="p-7 md:p-10 flex flex-col gap-6"
-        style={{ backgroundColor: 'var(--canvas)' }}
-      >
-        <div className="flex items-center justify-between gap-4">
-          <span
-            className="inline-flex items-center self-start px-2.5 py-1 text-[10px] uppercase"
-            style={{
-              letterSpacing: '0.2em',
-              color: insight.tag === 'Primair' ? 'var(--accent-mint)' : 'var(--accent-amber)',
-              backgroundColor:
-                insight.tag === 'Primair' ? 'var(--accent-mint-soft)' : 'var(--accent-amber-soft)',
-              border:
-                insight.tag === 'Primair'
-                  ? '1px solid var(--accent-mint-border)'
-                  : '1px solid rgba(232, 184, 79, 0.3)',
-              borderRadius: '3px',
-            }}
-          >
-            {insight.tag}
-          </span>
-          <span
-            className="font-serif"
-            aria-hidden="true"
-            style={{ fontSize: '34px', lineHeight: 1, color: 'var(--text-dim)' }}
-          >
-            0{index + 1}
-          </span>
-        </div>
-
-        <h3
-          className="font-serif"
-          style={{
-            fontSize: 'clamp(22px, 2.2vw, 30px)',
-            lineHeight: 1.12,
-            color: 'var(--text-primary)',
-          }}
-        >
-          {insight.title}
-        </h3>
-
-        <p
-          className="text-[14px] md:text-[15px]"
-          style={{ lineHeight: 1.65, color: 'var(--text-secondary)' }}
-        >
-          {insight.summary}
-        </p>
-
-        <div
-          className="pt-5 mt-auto"
-          style={{ borderTop: '0.5px solid var(--border)' }}
-        >
-          <a
-            href={insight.href}
-            className="inline-flex items-center gap-2 text-[12px]"
-            style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', textDecoration: 'none' }}
-          >
-            → {insight.assignment}
-          </a>
-        </div>
-      </article>
-    ))}
+  <div className="grid gap-6 md:grid-cols-3">
+    <ChapterProof
+      label="V1 · Cube"
+      title="Een losse kubus maakte het speelidee tastbaar."
+      evidence="De eerste Cube vertaalde het VPC-inzicht naar een object met snelle challenges. Het idee was sociaal, compact en direct testbaar."
+      meaning="V1 bewees de richting: activiteit kan het snackmoment vervangen. De vorm was alleen nog niet schoolgeschikt genoeg."
+      href="/bronnen/opdracht-19"
+      sourceLabel="VPC bekijken"
+    />
+    <ChapterProof
+      label="V2 · Scherm"
+      title="Het telefoonverbod maakte QR-gebruik kwetsbaar."
+      evidence="De schoolcontext liet zien dat smartphone-afhankelijkheid niet past bij een middelbare school. Een extern scherm loste dat deels op."
+      meaning="Het concept moest zelfstandig werken zonder telefoon. Dat werd een harde randvoorwaarde voor het eindontwerp."
+      href="/bronnen/opdracht-9"
+      sourceLabel="Context bekijken"
+    />
+    <ChapterProof
+      label="V3 · Table"
+      title="Een vaste tafel past beter bij B2B en groepsgebruik."
+      evidence="Prijsstrategie, scorecard en schoolwaarde vroegen om robuustheid, zichtbaarheid en beheerbaarheid."
+      meaning="De Table werd het eindconcept: vast in de aula, direct bruikbaar, geen losse onderdelen en herkenbaar als schoolvoorziening."
+      href="/bronnen/opdracht-10"
+      sourceLabel="Prijsstrategie bekijken"
+    />
   </div>
 </section>
 
-{/* SECTIE 2 — Tijdlijn van het ontwikkelproces */}
-<section
-  className="px-6 md:px-10 py-20"
-  style={{ borderTop: '0.5px solid var(--border)' }}
->
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="02 · Tijdlijn"
-    heading="Keuzes in chronologische volgorde."
+    eyebrow="02 · Visuele iteraties"
+    heading="Elke afbeelding toont een ontwerpbeslissing."
   />
 
-  <div
-    className="p-8 md:p-10 max-w-[860px] mb-12"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="text-[17px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}
-    >
-      Elke fase bouwt voort op een eerder inzicht of aangescherpte aanname. De tijdlijn toont dat conceptkeuzes niet willekeurig zijn gemaakt, maar worden aangestuurd door data: van de eerste probleemverkenning tot de B2B-validatie.
-    </p>
+  <div className="grid gap-8 lg:grid-cols-3">
+    <FigureBlock
+      src="/Iteratie1_ChallengeCube.jpeg"
+      alt="Eerste prototype van de Challenge Cube met QR-codes voor challengecategorieen"
+      width={1024}
+      height={1024}
+      caption="Figuur 1. V1: losse Challenge Cube met QR-codes per challengecategorie."
+      insight="De Cube maakte het idee concreet, maar bleef afhankelijk van telefoons en losse interactie. Dat botste met de schoolcontext."
+      sourceHref="/bronnen/opdracht-19"
+      sourceLabel="Iteratiebron bekijken"
+    />
+    <FigureBlock
+      src="/Iteratie2_challenge_cube met extern scherm.png"
+      alt="Tweede prototype van de Challenge Cube met extern scherm als oplossing voor smartphone-afhankelijkheid"
+      width={638}
+      height={339}
+      fit="contain"
+      caption="Figuur 2. V2: Cube met extern scherm om smartphonegebruik te vermijden."
+      insight="Het scherm loste een gebruiksprobleem op, maar verhoogde complexiteit. De vraag verschoof naar een zelfstandige, robuuste schooloplossing."
+      sourceHref="/bronnen/opdracht-9"
+      sourceLabel="Context bekijken"
+    />
+    <FigureBlock
+      src="/Afbeelding-challenge-tafel-v1.png"
+      alt="Challenge Table als robuuste speeltafel voor middelbare scholen"
+      width={1024}
+      height={1024}
+      caption="Figuur 3. V3: Challenge Table als vaste pauzetafel voor scholen."
+      insight="De Table bundelt de lessen: zichtbaar in de aula, groepsgericht, zonder telefoon en beter verkoopbaar als B2B-investering."
+      sourceHref="/bronnen/opdracht-6"
+      sourceLabel="Scorecard bekijken"
+    />
   </div>
+</section>
+
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="03 · Chronologie"
+    heading="De keuzes volgen de sprints."
+  />
 
   <Timeline
     items={[
       {
-        version: 'Fase 01',
-        date: 'Sprint 1 · Sep/okt 2025',
-        title: 'Probleemverkenning: snackgedrag is sociaal gedrag',
-        feedback:
-          'Interviews en observaties (AH, KFC) maakten duidelijk dat ongezonde keuzes worden gestuurd door sociale context, niet door honger of smaakvoorkeur. Dit weerlegde de startaanname dat een betere snack het probleem zou oplossen.',
-        change: 'Interview 1, 2 · Opdracht 1, 2',
+        version: 'Sprint 1',
+        date: 'Probleemverkenning',
+        title: 'Snackgedrag werd sociaal gedrag',
+        feedback: 'Interviews en observaties weerlegden de aanname dat het vooral om voedsel ging.',
+        change: 'Ontwerprichting verschuift van gezondere snack naar sociale pauzeactiviteit.',
       },
       {
-        version: 'Fase 02',
-        date: 'Sprint 2 · Nov/dec 2025',
-        title: 'VPC V2: Centrale klanttaak verschuift naar activiteit',
-        feedback:
-          'De tweede iteratie van de Value Proposition Canvas scherpte het klantprofiel aan tot één kernbehoefte: samen de pauze leuk invullen. Honger stillen bleek secundair. Dit stuurde de conceptrichting van voeding naar activiteit.',
-        change: 'Opdracht 19: Value Proposition Canvas',
+        version: 'Sprint 2',
+        date: 'Conceptontwikkeling',
+        title: 'De Cube testte de activiteit',
+        feedback: 'De VPC en eerste iteratie maakten duidelijk dat direct starten en groepsplezier cruciaal zijn.',
+        change: 'De Cube krijgt challengecategorieen en wordt getest als sociaal object.',
       },
       {
-        version: 'Fase 03',
-        date: 'Sprint 2 · Jan 2026',
-        title: 'Concurrentieanalyse: positioneringsruimte is vrij',
-        feedback:
-          'Analyse van 12 concurrenten bevestigde dat niemand de combinatie "laagdrempelig sociaal + schaalbaar voor scholen" bezet. De positioneringsmatrix gaf richting aan de USP en onderscheidende kenmerken van de Challenge Cube.',
-        change: 'Opdracht 9: Concurrentieanalyse',
-      },
-      {
-        version: 'Fase 04',
-        date: 'Sprint 3 · Feb 2026',
-        title: 'Customer Journey IST: fricties in de huidige pauze',
-        feedback:
-          'De IST-journey bracht de concrete fricties in beeld: verveling, automatische impulsaankoop, passieve pauze. Dit leverde de testcriteria voor validatie op en bevestigde welke problemen het concept moet oplossen.',
-        change: 'Opdracht 20: Customer Journey IST',
-      },
-      {
-        version: 'Fase 05',
-        date: 'Sprint 3 · Mrt 2026',
-        title: 'Customer Journey SOLL: Challenge Table als centraal touchpoint',
-        feedback:
-          'De SOLL-journey werkte de gewenste situatie uit. De Challenge Table staat centraal in de decision-fase: het moment waarop leerlingen nu automatisch naar de snackautomaat gaan, verschuift naar de speeltafel in de aula.',
-        change: 'Opdracht 21: Customer Journey SOLL',
+        version: 'Sprint 3',
+        date: 'Validatie en schaalbaarheid',
+        title: 'De Table maakt het schoolgeschikt',
+        feedback: 'Telefoonverbod, B2B-prijsbereidheid en robuustheid sturen de stap naar een vaste tafel.',
+        change: 'Eindconcept wordt Challenge Table: beheersbaar voor school, bruikbaar voor leerlingen.',
       },
     ]}
   />
 </section>
 
-{/* SECTIE 3 — Evolutie en iteraties */}
-<section
-  className="px-6 md:px-10 py-20"
-  style={{ borderTop: '0.5px solid var(--border)' }}
->
+<section className="px-6 md:px-10 py-14" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="03 · Evolutie en iteraties"
-    heading="Van eerste richting naar aangescherpt prototype."
+    eyebrow="Rubric-check"
+    heading="De iteraties zijn chronologisch, visueel en onderbouwd."
   />
-
-  <div
-    className="p-8 md:p-10 max-w-[860px] mb-12"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="text-[17px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}
-    >
-      Elke iteratie had een concrete aanleiding: een inzicht uit onderzoek, een externe beperking of feedback uit een testmoment. V1 toetste het basisidee, V2 loste een kritische blocker op, V3 schaalt het concept naar schoolomgeving.
-    </p>
-  </div>
-
-  <div className="flex flex-col lg:flex-row items-stretch gap-6 lg:gap-0">
-    {[
-      {
-        version: 'V1',
-        title: 'Losse Challenge Cube met QR-codes',
-        image: '/Iteratie1_ChallengeCube.jpeg',
-        imageAlt: 'Iteratie 1: Challenge Cube prototype, losse kubus met QR-codes per categorie',
-        feedback:
-          'Aanleiding: VPC-inzicht dat een activiteitsobject het snackritueel kan vervangen. QR-codes leiden naar video-challenges per categorie (Speed, 1v1, Group, TikTok, Quiz, Random). Snel in gebruik, sociaal, geen voorbereiding.',
-        change:
-          'Blocker ontdekt: het telefoonverbod op middelbare scholen maakt een QR-afhankelijk concept onbruikbaar in de schoolomgeving.',
-        assignment: 'Interview 1, 2 · Opdracht 19: VPC',
-        href: '/bronnen/opdracht-19',
-      },
-      {
-        version: 'V2',
-        title: 'Challenge Cube met geïntegreerd extern scherm',
-        image: '/Iteratie2_challenge_cube met extern scherm.png',
-        imageAlt: 'Iteratie 2: Challenge Cube met extern scherm als oplossing voor telefoonverbod op middelbare scholen',
-        feedback:
-          'Aanleiding: het telefoonverbod. Oplossing: een scherm wordt geïntegreerd in of naast de kubus, zodat leerlingen geen smartphone nodig hebben. De QR-logica blijft, maar de telefoon verdwijnt uit het gebruikspad.',
-        change:
-          'Schermintegratie verhoogde de complexiteit en kostprijs, maar maakte het concept schoolgeschikt. Dit stuurde de overgang naar de Challenge Table als schaalbare B2B-oplossing.',
-        assignment: 'Opdracht 9: Concurrentieanalyse · B2B PSM',
-        href: '/bronnen/opdracht-9',
-      },
-      {
-        version: 'V3',
-        title: 'Challenge Table: robuuste speeltafel voor scholen',
-        image: '/Afbeelding-challenge-tafel-v1.png',
-        imageAlt: 'Challenge Table V1: robuuste speeltafel als definitief concept voor de schoolomgeving',
-        feedback:
-          'Aanleiding: de V2-inzichten en B2B-feedbackronde toonden dat portabiliteit, duurzaamheid en schaalbaarheid essentieel zijn voor de schoolomgeving. Een vaste tafel is robuuster, makkelijker te beheren en beter te positioneren als B2B-investering.',
-        change:
-          'De cube wordt geïntegreerd in een vaste, robuuste speeltafel voor de aula of gang. Geen losse onderdelen, geen app, geen oplader. Directe sociale interactie als kern.',
-        assignment: 'Opdracht 6: Scorecard · Opdracht 10: Prijsstrategie',
-        href: '/bronnen/opdracht-6',
-      },
-    ].map((iteration, index, allIterations) => (
-      <div key={iteration.version} className="flex flex-col lg:flex-row flex-1">
-        <article
-          className="flex-1 flex flex-col"
-          style={{
-            backgroundColor: 'var(--canvas-elevated)',
-            border: '0.5px solid var(--border)',
-            borderRadius: '3px',
-          }}
-        >
-          <div className="px-7 md:px-8 pt-7 md:pt-8 flex items-start justify-between gap-4">
-            <div className="flex items-baseline gap-3">
-              <span
-                className="font-serif"
-                style={{ fontSize: '42px', lineHeight: 1, color: 'var(--accent-mint)' }}
-              >
-                {iteration.version}
-              </span>
-              <span
-                className="text-[11px] uppercase"
-                style={{ letterSpacing: '0.2em', color: 'var(--text-muted)' }}
-              >
-                Iteratie
-              </span>
-            </div>
-            <span
-              className="text-[11px]"
-              style={{ letterSpacing: '0.08em', color: 'var(--text-dim)' }}
-            >
-              Stap {index + 1}/3
-            </span>
-          </div>
-
-          <div className="mx-7 md:mx-8 mt-6">
-            <img
-              src={iteration.image}
-              alt={iteration.imageAlt}
-              style={{ width: '100%', height: '220px', objectFit: 'cover', borderRadius: '3px' }}
-            />
-          </div>
-
-          <div className="p-7 md:p-8 flex flex-col gap-6 flex-1">
-            <h3
-              className="font-serif"
-              style={{ fontSize: 'clamp(22px, 2vw, 26px)', lineHeight: 1.15, color: 'var(--text-primary)' }}
-            >
-              {iteration.title}
-            </h3>
-
-            <div
-              className="grid gap-4"
-              style={{ borderTop: '0.5px solid var(--border)', paddingTop: '20px' }}
-            >
-              <div className="flex flex-col gap-2">
-                <span
-                  className="text-[10px] uppercase"
-                  style={{ letterSpacing: '0.2em', color: 'var(--accent-amber)' }}
-                >
-                  Feedback/inzicht
-                </span>
-                <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>
-                  {iteration.feedback}
-                </p>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <span
-                  className="text-[10px] uppercase"
-                  style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}
-                >
-                  Wijziging
-                </span>
-                <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>
-                  {iteration.change}
-                </p>
-              </div>
-            </div>
-
-            <div
-              className="pt-5 mt-auto"
-              style={{ borderTop: '0.5px solid var(--border)' }}
-            >
-              <a
-                href={iteration.href}
-                className="inline-flex items-center gap-2 text-[12px]"
-                style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', textDecoration: 'none' }}
-              >
-                → {iteration.assignment}
-              </a>
-            </div>
-          </div>
-        </article>
-
-        {index < allIterations.length - 1 && (
-          <div
-            aria-hidden="true"
-            className="flex lg:flex-col items-center justify-center shrink-0"
-            style={{ minWidth: '58px', minHeight: '48px', color: 'var(--accent-mint)' }}
-          >
-            <span
-              className="hidden lg:block"
-              style={{ width: '38px', height: '0.5px', backgroundColor: 'var(--accent-mint-border)' }}
-            />
-            <span className="font-serif" style={{ fontSize: '30px', lineHeight: 1 }}>
-              →
-            </span>
-          </div>
-        )}
-      </div>
-    ))}
-  </div>
-</section>
-
-{/* SECTIE 4 — Kritische reflectie */}
-<section
-  className="px-6 md:px-10 py-20 md:py-24"
-  style={{
-    backgroundColor: 'var(--canvas-elevated)',
-    borderTop: '0.5px solid var(--border)',
-    borderBottom: '0.5px solid var(--border)',
-  }}
->
-  <SectionHeading
-    eyebrow="04 · Kritische reflectie"
-    heading="Terugkijken op keuzes, rol en perspectieven."
-  />
-
-  <div
-    className="p-8 md:p-10 max-w-[900px] mb-10"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="text-[17px] md:text-[18px]"
-      style={{ lineHeight: 1.75, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}
-    >
-      Het conceptproces leerde mij dat onderzoek en design in een continue wisselwerking staan. Mijn grootste leermoment was het loslaten van de beginaanname: ik dacht dat de oplossing over eten moest gaan. Pas halverwege Sprint 2 werd duidelijk dat activiteit de echte kern was.
-    </p>
-    <p
-      className="text-[17px] md:text-[18px]"
-      style={{ lineHeight: 1.75, color: 'var(--text-secondary)', margin: 0 }}
-    >
-      Die verschuiving kostte tijd maar maakte het concept sterker. De keuze voor een speeltafel (Challenge Table) was een risicovol besluit: hogere ontwikkelkosten, complexer businessmodel. Maar het is de enige oplossing die schaalbaar is voor de B2B-schoolmarkt én het telefoonverbod omzeilt.
-    </p>
-  </div>
-
-  <div className="grid grid-cols-1 lg:grid-cols-3" style={{ gap: '0.5px', backgroundColor: 'var(--border)', border: '0.5px solid var(--border)' }}>
-    {[
-      {
-        title: 'Reflectie op keuzes',
-        body: 'De keuze voor activiteit boven voeding was onderbouwd door onderzoek, maar het telefoonverbod was een externe beperking die ik niet had voorzien. V2 lost dit op, maar had ik eerder een prototyperonde bij de doelgroep gedaan, was dit sneller zichtbaar geworden. Achteraf: eerder en radicaler testen is de les.',
-        assignment: 'Opdracht 6: Scorecard',
-        href: '/bronnen/opdracht-6',
-      },
-      {
-        title: 'Mijn rol in het proces',
-        body: 'Ik had de lead op conceptontwikkeling en de iteraties van de cube. In groepsopdrachten (VPC, journeys) stuurde ik de synthesefase aan: van losse data naar scherpe keuze. Individueel werkte ik de B2B-prijsstrategie en de positionering uit op basis van de PSM-data.',
-        assignment: 'Opdracht 1: Ambitieniveau',
-        href: '/bronnen/opdracht-1',
-      },
-      {
-        title: 'Meerdere perspectieven',
-        body: 'Leerlingen (interviews) prioriteerden toegankelijkheid en groepsplezier. Scholen (B2B PSM) prioriteerden duurzaamheid, robuustheid en aantoonbare meerwaarde. Die spanning heeft het concept gescherpt: V3 is het product van beide perspectieven, niet van één.',
-        assignment: 'Opdracht 2: Groepsreflectie',
-        href: '/bronnen/opdracht-2',
-      },
-    ].map((reflection) => (
-      <article
-        key={reflection.title}
-        className="p-8 md:p-10 flex flex-col gap-6"
-        style={{
-          backgroundColor: 'var(--surface)',
-          borderLeft: '2px solid var(--accent-mint)',
-        }}
-      >
-        <h3
-          className="font-serif"
-          style={{ fontSize: 'clamp(24px, 2.4vw, 30px)', lineHeight: 1.15, color: 'var(--text-primary)' }}
-        >
-          {reflection.title}
-        </h3>
-
-        <p
-          className="text-[15px] md:text-[16px]"
-          style={{ lineHeight: 1.75, color: 'var(--text-secondary)' }}
-        >
-          {reflection.body}
-        </p>
-
-        <div
-          className="pt-5 mt-auto"
-          style={{ borderTop: '0.5px solid var(--border)' }}
-        >
-          <a
-            href={reflection.href}
-            className="inline-flex items-center gap-2 text-[12px]"
-            style={{ letterSpacing: '0.05em', color: 'var(--text-muted)', textDecoration: 'none' }}
-          >
-            → {reflection.assignment}
-          </a>
-        </div>
-      </article>
-    ))}
-  </div>
-</section>
-
-{/* RUBRIC-REFLECTIE */}
-<section
-  className="px-6 md:px-10 py-16"
-  style={{ borderTop: '0.5px solid var(--border)' }}
->
-  <SectionHeading
-    eyebrow="Bijdrage aan de beoordeling"
-    heading="Hoe deze pagina scoort."
-  />
-
-  <div
-    className="p-8 md:p-10 max-w-[860px] mb-8"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p className="text-[16px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}>
-      Deze pagina legt de schakels zichtbaar tussen onderzoeksinzichten en de drie iteraties van het concept. Sectie 1 toont welke bewijs-inzichten de richting bepaalden (primair én secundair); sectie 2 (tijdlijn) toont dat elke conceptkeuze voortbouwt op een eerder inzicht — zo is criterium 01 (nieuwsgierigheid als leermotor) traceerbaar in de doorlopende beweging van V1 naar V3. Sectie 3 toont de drie iteraties elk met een concrete aanleiding: het telefoonverbod als externe blocker bij V1→V2, de B2B-feedbackronde als schaalimpuls bij V2→V3. Die traceerbare evolutie is de kern van criterium 03. Sectie 4 reflecteert kritisch op keuzes, persoonlijke rol en meerdere perspectieven (leerling vs. school), wat beide criteria op Uitmuntend-niveau ondersteunt.
-    </p>
-  </div>
-
   <div className="flex flex-wrap gap-3">
-    <RubricBadge number="01" label="Eigen nieuwsgierigheid" />
     <RubricBadge number="03" label="Conceptontwikkeling" />
+    <RubricBadge number="02" label="Feedback en data" />
   </div>
 </section>
 

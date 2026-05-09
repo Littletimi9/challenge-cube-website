@@ -1,548 +1,176 @@
 export const metadata = {
-  title: 'Validatie — Challenge Cube',
+  title: 'Validatie — Challenge Table',
 }
 
 <PageHead
   number="05"
-  label="Rubric · Validatie"
-  title="Het bewijs dat het concept werkt."
-  lead="Vijf vooraf geformuleerde testcriteria, vier samenhangende waardeperspectieven. En de eerlijkheid dat de formele gebruikersvalidatie nog loopt. De richting is duidelijk; de finale cijfers volgen na de focusgroep en geplande interviews."
+  label="Rubric · Aansluiting eindgebruiker"
+  title="Validatie maakt zichtbaar wat al bewezen is en wat nog getest moet worden."
+  lead="De Challenge Table is getoetst met vooraf geformuleerde criteria. Bestaande interviews, observaties, VPC, journeys, scorecard en B2B-prijsdata geven onderbouwing; aanvullende praktijkdata zijn nodig voor het sterkste gebruikersbewijs."
   meta={[
+    { key: 'Leestijd', value: '3 minuten' },
     { key: 'Criteria', value: '5 vooraf vastgelegd' },
-    { key: 'Perspectieven', value: '4 waardeperspectieven' },
-    { key: 'Periode', value: 'Mrt t/m mei 2026' },
+    { key: 'Status', value: 'Bewijs + aanvullend plan' },
   ]}
 />
 
-{/* SECTIE 1 — Testcriteria vooraf geformuleerd */}
-<section className="px-6 md:px-10 py-20">
+<section className="px-6 md:px-10 py-16 md:py-20">
   <SectionHeading
     eyebrow="01 · Testcriteria"
-    heading="Vooraf vastgelegd waar de Cube op moet slagen."
+    heading="De criteria zijn afgeleid uit eerder onderzoek."
   />
 
-  <div
-    className="p-8 md:p-10 max-w-[860px] mb-12 md:mb-16"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="text-[17px] md:text-[18px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}
-    >
-      Vóór de validatiefase zijn vijf meetbare criteria opgesteld, elk terug te voeren op een pain, gain of frictie uit eerder onderzoek. Zo is de cirkel gesloten: elke keuze in het onderzoeksproces leidt tot een toetsbaar criterium.
-    </p>
-    <p
-      className="text-[17px] md:text-[18px]"
-      style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}
-    >
-      De criteria zijn bewust concreet en meetbaar geformuleerd: niet 'de Cube moet leuk zijn' maar 'leerlingen starten een challenge binnen 10 seconden zonder uitleg'. Dat maakt het verschil tussen een beoordeling en een bewijs.
-    </p>
-  </div>
-
-  <ol
-    className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 list-none pl-0"
-    style={{
-      gap: '0.5px',
-      backgroundColor: 'var(--border)',
-      border: '0.5px solid var(--border)',
-    }}
-  >
-    {[
+  <CriteriaTable
+    criteria={[
       {
-        id: 'TC-01',
-        description:
-          'Het concept lost de hoofdpain op: de pauze voelt passief en snackgedrag is automatisch gedrag zonder bewuste keuze.',
-        source: 'Pain #1 Value Proposition Canvas V2',
-        method: 'Semigestructureerd interview + observatie',
-        assignment: 'Opdracht 19: Value Proposition Canvas',
-        href: '/bronnen/opdracht-19',
+        criterion: 'TC-01 · Doorbreekt passieve snackpauze',
+        target: 'Leerlingen herkennen de Table als alternatief voor het snackmoment.',
+        result: 'Onderbouwd met interviews, observaties en VPC.',
+        met: true,
+        evidence: 'Interview 1/2, observaties, opdracht 19',
       },
       {
-        id: 'TC-02',
-        description:
-          'De Challenge Table levert de beoogde gain: leerlingen hebben direct een actieve, sociale invulling voor de pauze zonder voorbereiding of uitleg.',
-        source: 'Gain #1 Value Proposition Canvas V2',
-        method: 'Observatie + starttijtijdmeting (≤10 sec)',
-        assignment: 'Opdracht 19: Value Proposition Canvas',
-        href: '/bronnen/opdracht-19',
+        criterion: 'TC-02 · Start zonder uitleg',
+        target: 'Eerste interactie binnen 10 seconden.',
+        result: 'Ontwerpcriterium staat vast; harde aula-meting ontbreekt nog.',
+        met: false,
+        evidence: 'Aanvullende gebruikstest nodig',
       },
       {
-        id: 'TC-03',
-        description:
-          'De Challenge Table scoort voldoende op de scorecard-dimensies: eenvoud ≥4/5, groepsgeschiktheid ≥4/5, variatie ≥3,5/5.',
-        source: 'Scorecard Challenge Table: minimumscores',
-        method: 'Gestructureerde beoordeling (5-punts Likert)',
-        assignment: 'Opdracht 6: Scorecard Challenge Table',
-        href: '/bronnen/opdracht-6',
+        criterion: 'TC-03 · Groepsgeschikt en robuust',
+        target: 'Minimaal 4/5 op eenvoud en groepsgeschiktheid.',
+        result: 'Scorecard-opzet beschikbaar; extra beoordeling nodig.',
+        met: false,
+        evidence: 'Opdracht 6 + aanvullende test',
       },
       {
-        id: 'TC-04',
-        description:
-          'De kernfricties uit de IST-journey (verveling, automatische impulsaankoop, passieve pauze) zijn aantoonbaar opgelost in het gebruik van de Challenge Table.',
-        source: 'Fricties Customer Journey IST',
-        method: 'Journey-vergelijking IST vs. gebruik',
-        assignment: 'Opdracht 20: Customer Journey IST',
-        href: '/bronnen/opdracht-20',
+        criterion: 'TC-04 · Lost IST-fricties op',
+        target: 'Verveling, passiviteit en automatische aankoop worden verminderd.',
+        result: 'Journey-bewijs beschikbaar; praktijkvergelijking ontbreekt.',
+        met: false,
+        evidence: 'Opdracht 20/21 + focusgroep',
       },
       {
-        id: 'TC-05',
-        description:
-          'De gewenste ervaring uit de SOLL-journey (flow, plezier en sociale interactie) wordt herkend en bevestigd door de doelgroep na gebruik.',
-        source: 'Gewenste ervaring Customer Journey SOLL',
-        method: 'Korte enquête of focusgroep na gebruik',
-        assignment: 'Opdracht 21: Customer Journey SOLL',
-        href: '/bronnen/opdracht-21',
+        criterion: 'TC-05 · Levert sociale waarde',
+        target: 'Leerlingen benoemen plezier, flow en interactie na gebruik.',
+        result: 'Onderbouwd als verwachting; gebruiksdata nog nodig.',
+        met: false,
+        evidence: 'Aanvullende pilot nodig',
       },
-    ].map((criterion, index) => (
-      <li
-        key={criterion.id}
-        className="p-7 md:p-8 flex flex-col gap-5"
-        style={{ backgroundColor: 'var(--canvas)' }}
-      >
-        <div className="flex items-center justify-between gap-3">
-          <span
-            className="inline-flex items-center self-start px-2.5 py-1 text-[11px] uppercase"
-            style={{
-              letterSpacing: '0.2em',
-              color: 'var(--accent-mint)',
-              backgroundColor: 'var(--accent-mint-soft)',
-              border: '1px solid var(--accent-mint-border)',
-              borderRadius: '3px',
-              fontFeatureSettings: '"tnum"',
-            }}
-          >
-            {criterion.id}
-          </span>
-          <span
-            aria-hidden="true"
-            className="font-serif"
-            style={{ fontSize: '34px', lineHeight: 1, color: 'var(--text-dim)' }}
-          >
-            0{index + 1}
-          </span>
-        </div>
+    ]}
+  />
+</section>
 
-        <h3
-          className="font-serif"
-          style={{ fontSize: 'clamp(18px, 1.8vw, 22px)', lineHeight: 1.2, color: 'var(--text-primary)' }}
-        >
-          {criterion.description}
-        </h3>
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="02 · Huidig bewijs"
+    heading="De bestaande bewijslast ondersteunt de richting van het concept."
+  />
 
-        <div className="flex flex-col gap-2">
-          <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Herkomst</span>
-          <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{criterion.source}</p>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Meetmethode</span>
-          <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{criterion.method}</p>
-        </div>
-
-        <div
-          className="pt-5 mt-auto"
-          style={{ borderTop: '0.5px solid var(--border)' }}
-        >
-          <a
-            href={criterion.href}
-            className="inline-flex items-center gap-2 text-[12px]"
-            style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', textDecoration: 'none' }}
-          >
-            → {criterion.assignment}
-          </a>
-        </div>
-      </li>
-    ))}
-  </ol>
-
-  <div
-    className="mt-12 md:mt-16 p-8 md:p-10 max-w-[900px]"
-    style={{ backgroundColor: 'var(--canvas-elevated)', borderLeft: '2px solid var(--accent-mint)' }}
-  >
-    <span className="block text-[10px] uppercase mb-3" style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}>
-      Samenhang
-    </span>
-    <p className="text-[15px] md:text-[16px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}>
-      TC-01 en TC-02 toetsen de kern van de waardepropositie: is de pain weggenomen en de gain geleverd? TC-03 borgt de ontwerpkwaliteit via vooraf gedefinieerde minimumeisen uit de scorecard. TC-04 en TC-05 koppelen de uitkomsten terug aan de oorspronkelijke fricties: ze vergelijken de huidige situatie (IST) en de gewenste situatie (SOLL) direct met de gebruikservaring.
-    </p>
+  <div className="grid gap-6 md:grid-cols-3">
+    <ChapterProof
+      label="Gebruikersbewijs"
+      title="Leerlingen zoeken sociale pauze-invulling."
+      evidence="Interviews en observaties tonen dat snacken vooral verbonden is aan samen zijn en gewoonte."
+      meaning="TC-01 is inhoudelijk onderbouwd: het probleem waar de Table op inspeelt is aantoonbaar aanwezig."
+      href="/bronnen/interview-1"
+      sourceLabel="Interview bekijken"
+    />
+    <ChapterProof
+      label="Ontwerpbewijs"
+      title="De Table sluit aan op pains en gains."
+      evidence="VPC en SOLL-journey koppelen de Table aan direct starten, groepsplezier en zichtbaarheid."
+      meaning="TC-02, TC-04 en TC-05 hebben een logisch ontwerpcriterium, maar vragen nog praktijkmeting."
+      href="/bronnen/opdracht-21"
+      sourceLabel="SOLL bekijken"
+    />
+    <ChapterProof
+      label="Schoolwaarde"
+      title="B2B-haalbaarheid is onderbouwd."
+      evidence="PSM, scorecard en prijsstrategie geven richting aan prijs, robuustheid en economische waarde."
+      meaning="De Table is verdedigbaar als schoolinvestering, niet alleen als leuk prototype."
+      href="/bronnen/opdracht-10"
+      sourceLabel="Prijsstrategie bekijken"
+    />
   </div>
 </section>
 
-{/* SECTIE 2 — Bewijs en testresultaten */}
-<section
-  className="px-6 md:px-10 py-20"
-  style={{ borderTop: '0.5px solid var(--border)' }}
->
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="02 · Bewijs & resultaten"
-    heading="Wat de test bij de eindgebruiker opleverde."
+    eyebrow="03 · Aanvullend bewijsplan"
+    heading="Voor een hogere beoordeling moet gebruik in context worden toegevoegd."
   />
 
-  <div
-    className="p-8 md:p-10 max-w-[860px] mb-12 md:mb-16"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p className="text-[17px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
-      De formele gebruikersvalidatie is op het moment van schrijven in uitvoering: drie interviews (2 B2B, 1 B2C) en een focusgroep worden de komende weken afgerond. Hieronder staat de huidige stand: bestaand bewijs aangevuld met de testopzet voor openstaande criteria.
-    </p>
-    <p className="text-[17px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)', margin: 0 }}>
-      De B2B-data (Van Westendorp PSM) zijn al beschikbaar en onderbouwen de economische validatie. De gebruikersvalidatie volgt na de focusgroep en interviews.
-    </p>
-  </div>
+  <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <FigureBlock
+      src="/Customer_journey_SOLL.png"
+      alt="Customer Journey SOLL met Challenge Table als gewenst touchpoint in de pauze"
+      width={1862}
+      height={1052}
+      fit="contain"
+      caption="Figuur 1. SOLL-journey: de Challenge Table staat in de gewenste situatie centraal als pauze-touchpoint."
+      insight="Deze figuur laat zien welke ervaring nog hard getest moet worden: spontane start, sociale interactie en minder automatische snackroute."
+      sourceHref="/bronnen/opdracht-21"
+      sourceLabel="SOLL bekijken"
+    />
 
-  <ul className="flex flex-col list-none pl-0" style={{ gap: '0.5px', backgroundColor: 'var(--border)', border: '0.5px solid var(--border)' }}>
-    {[
-      {
-        id: 'TC-01',
-        method: 'Semigestructureerde interviews (n=2 afgerond, n=3 gepland)',
-        outcome:
-          'Interviews 1 en 2 tonen al sterk kwalitatief bewijs: beide leerlingen benoemen spontaan de sociale context als reden voor snacken, niet honger. De pauze voelt passief zonder actief aanbod. Finale cijfers volgen na de drie geplande interviews.',
-        verdict: 'in uitvoering',
-        conclusion:
-          'Verwachting: TC-01 voldoet. De kwalitatieve basis is robuust; de drie aanvullende interviews moeten de omvang en de consistentie van het inzicht bevestigen.',
-        image: '/Observeren.jpeg',
-        imageAlt: 'Observatie van snackgedrag bij scholieren: bewijs voor de passieve pauze als pain',
-        assignment: 'Interview 1, 2 + geplande interviews',
-        href: '/bronnen/interview-1',
-      },
-      {
-        id: 'TC-02',
-        method: 'Observatie bij prototypedemo (gepland)',
-        outcome:
-          '[Volgt na prototypedemo met doelgroep] Testopzet: leerlingen krijgen de Challenge Table zonder uitleg aangeboden. Gemeten wordt de tijd tot eerste interactie en of de groep zelfstandig een challenge start.',
-        verdict: 'gepland',
-        conclusion:
-          'Verwachting: TC-02 voldoet. VPC V2 en de SOLL-journey tonen dat eenvoud en directe inzetbaarheid de kern zijn van het ontwerp; deze zijn ingebakken in V3.',
-        image: '/Afbeelding-challenge-tafel-v1.png',
-        imageAlt: 'Challenge Table V1: het testobject voor TC-02',
-        assignment: 'Opdracht 21: Customer Journey SOLL',
-        href: '/bronnen/opdracht-21',
-      },
-      {
-        id: 'TC-03',
-        method: 'Scorecard-beoordeling (n=... peers + docent, gepland)',
-        outcome:
-          '[Volgt na scorecardmeting] Testopzet: gestructureerde beoordeling op drie dimensies (eenvoud, variatie, groepsgeschiktheid) via 5-punts Likert. Minimumscore per dimensie vastgelegd in opdracht 6.',
-        verdict: 'gepland',
-        conclusion:
-          'Verwachting: eenvoud en groepsgeschiktheid halen de norm; variatie is het meest kwetsbare criterium gezien het beperkte aantal challenge-categorieën in V1.',
-        image: '/Ontwerpproces_Cube.jpeg',
-        imageAlt: 'Ontwerpproces Challenge Cube: basisontwerp dat wordt beoordeeld via de scorecard',
-        assignment: 'Opdracht 6: Scorecard Challenge Table',
-        href: '/bronnen/opdracht-6',
-      },
-      {
-        id: 'TC-04',
-        method: 'Journey-vergelijking IST vs. gebruik (via focusgroep)',
-        outcome:
-          '[Volgt na focusgroep] Testopzet: deelnemers beschrijven hun pauze vóór en na gebruik van de Challenge Table. Fricties uit de IST-journey (verveling, automaat, passief) worden als referentiepunten gebruikt.',
-        verdict: 'gepland',
-        conclusion:
-          'Verwachting: TC-04 voldoet deels. Kernfricties (passief, geen aantrekkelijk alternatief) worden opgelost; bij grote groepen (>10) kan de tafel mogelijk te klein zijn.',
-        image: '/Customer_journey_13.png',
-        imageAlt: 'Customer Journey IST deel 1: de fricties die TC-04 moet aantonen opgelost te zijn',
-        assignment: 'Opdracht 20: Customer Journey IST',
-        href: '/bronnen/opdracht-20',
-      },
-      {
-        id: 'TC-05',
-        method: 'Korte enquête of focusgroep na gebruik (gepland)',
-        outcome:
-          '[Volgt na focusgroep] Testopzet: na gebruik wordt gevraagd in hoeverre de SOLL-dimensies (flow, plezier, sociale interactie) worden herkend via een korte Likert-vragenlijst.',
-        verdict: 'gepland',
-        conclusion:
-          'Verwachting: plezier en flow halen de norm; sociale interactie bij onbekende klasgenoten verdient mogelijk verdere aanscherping via facilitering of challengeontwerp.',
-        image: '/Customer_journey_SOLL.png',
-        imageAlt: 'Customer Journey SOLL: de gewenste dimensies die TC-05 bij gebruikers moet laten herkennen',
-        assignment: 'Opdracht 21: Customer Journey SOLL',
-        href: '/bronnen/opdracht-21',
-      },
-    ].map((result) => {
-      const verdictStyle =
-        result.verdict === 'voldoet'
-          ? { color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)' }
-          : result.verdict === 'deels'
-            ? { color: 'var(--accent-amber)', backgroundColor: 'var(--accent-amber-soft)', border: '1px solid rgba(232, 184, 79, 0.3)' }
-            : { color: 'var(--text-muted)', backgroundColor: 'var(--surface)', border: '1px solid var(--border)' }
-
-      return (
-        <li
-          key={result.id}
-          className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] gap-0"
-          style={{ backgroundColor: 'var(--canvas)' }}
-        >
-          <div className="p-7 md:p-9 flex flex-col gap-5">
-            <div className="flex flex-wrap items-center gap-3">
-              <span
-                className="inline-flex items-center px-2.5 py-1 text-[11px] uppercase"
-                style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)', backgroundColor: 'var(--accent-mint-soft)', border: '1px solid var(--accent-mint-border)', borderRadius: '3px' }}
-              >
-                {result.id}
-              </span>
-              <span
-                className="inline-flex items-center px-2.5 py-1 text-[10px] uppercase"
-                style={{ letterSpacing: '0.2em', borderRadius: '3px', ...verdictStyle }}
-              >
-                {result.verdict}
-              </span>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Testmethode</span>
-              <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{result.method}</p>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Uitkomst</span>
-              <p className="font-serif" style={{ fontSize: 'clamp(16px, 1.8vw, 20px)', lineHeight: 1.3, color: 'var(--text-primary)' }}>{result.outcome}</p>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}>Conclusie</span>
-              <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{result.conclusion}</p>
-            </div>
-
-            <div className="pt-5 mt-auto" style={{ borderTop: '0.5px solid var(--border)' }}>
-              <a href={result.href} className="inline-flex items-center gap-2 text-[12px]" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', textDecoration: 'none' }}>
-                → {result.assignment}
-              </a>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center p-6 md:p-8" style={{ minHeight: '220px', backgroundColor: 'var(--canvas-elevated)', borderLeft: '0.5px solid var(--border)' }}>
-            <img
-              src={result.image}
-              alt={result.imageAlt}
-              style={{ width: '100%', maxHeight: '260px', objectFit: 'cover', borderRadius: '3px' }}
-            />
-          </div>
-        </li>
-      )
-    })}
-  </ul>
-
-  <div
-    className="mt-12 md:mt-16 p-8 md:p-10 max-w-[900px]"
-    style={{ backgroundColor: 'var(--canvas-elevated)', borderLeft: '2px solid var(--accent-mint)' }}
-  >
-    <span className="block text-[10px] uppercase mb-3" style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}>
-      Overkoepelende conclusie
-    </span>
-    <p className="text-[15px] md:text-[16px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)' }}>
-      De B2B-validatie is afgerond via de Van Westendorp PSM: scholen zijn bereid te investeren in de gekozen prijsrange. De gebruikersvalidatie (TC-01 t/m TC-05) loopt nog. Het kwalitatieve bewijs uit de twee afgeronde interviews geeft al een sterk signaal dat TC-01 en TC-02 voldoen. De focusgroep en drie interviews leveren de finale cijfers voor TC-03 t/m TC-05. Deze pagina wordt daarna bijgewerkt.
-    </p>
+    <div
+      className="p-7 md:p-8"
+      style={{ backgroundColor: 'var(--surface)', border: '0.5px solid var(--border)', borderRadius: '3px' }}
+    >
+      <h3 className="font-serif mb-5" style={{ fontSize: '28px', lineHeight: 1.15, color: 'var(--text-primary)' }}>
+        Uit te voeren vóór definitieve beoordeling
+      </h3>
+      <ol className="grid gap-4 list-decimal pl-5" style={{ color: 'var(--text-secondary)' }}>
+        <li className="text-[15px]" style={{ lineHeight: 1.65 }}>Minimaal drie aanvullende diepte-interviews in Sprint 2/3 over gebruiksintentie en drempels.</li>
+        <li className="text-[15px]" style={{ lineHeight: 1.65 }}>Minimaal één focusgroep met leerlingen na conceptpresentatie of prototypegebruik.</li>
+        <li className="text-[15px]" style={{ lineHeight: 1.65 }}>Aula-pilot of simulatie: meet starttijd, groepsgrootte, herhaalgebruik en snackalternatief.</li>
+        <li className="text-[15px]" style={{ lineHeight: 1.65 }}>Resultaten verwerken op deze pagina per testcriterium: gehaald, deels gehaald of niet gehaald.</li>
+      </ol>
+    </div>
   </div>
 </section>
 
-{/* SECTIE 3 — Meervoudige waardeperspectieven */}
-<section
-  className="px-6 md:px-10 py-20 md:py-24"
-  style={{
-    backgroundColor: 'var(--canvas-elevated)',
-    borderTop: '0.5px solid var(--border)',
-    borderBottom: '0.5px solid var(--border)',
-  }}
->
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="03 · Waardeperspectieven"
-    heading="Vier kaders, één samenhangende toets."
+    eyebrow="04 · Waardeperspectieven"
+    heading="De Table levert waarde voor leerling, school, samenleving en omgeving."
   />
 
-  <div
-    className="p-8 md:p-10 max-w-[900px] mb-12"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p
-      className="text-[17px] md:text-[18px]"
-      style={{ lineHeight: 1.75, color: 'var(--text-secondary)' }}
-    >
-      De aansluiting op de eindgebruiker is niet alleen functioneel beoordeeld. Vier samenhangende perspectieven tonen dat de Challenge Table waarde levert op alle lagen: voor de leerling, voor de school, voor de samenleving en voor de omgeving. Een concept overleeft alleen als het vanuit meerdere kaders waarde oplevert.
-    </p>
-  </div>
-
-  <div
-    className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4"
-    style={{
-      gap: '0.5px',
-      backgroundColor: 'var(--border)',
-      border: '0.5px solid var(--border)',
-    }}
-  >
-    {[
+  <ValuePerspectives
+    perspectives={[
       {
-        label: 'Gebruikerswaarde',
-        description:
-          'De Challenge Table maakt de pauze actiever, socialer en leuker zonder kosten voor de leerling. Het vervangt het snackritueel zonder te moraliseren.',
-        evidence:
-          'Interviews tonen dat "samen iets doen" de kern is van wat leerlingen willen in de pauze. De SOLL-journey bevestigt dat de Challenge Table de decision-fase als sociaal ankerpunt vervangt. Kwalitatief bewijs TC-01: beide leerlingen benoemen activiteit als alternatief.',
-        assignment: 'Opdracht 4: Impactbepaling',
-        href: '/bronnen/opdracht-4',
+        label: 'Gebruiker',
+        value: 'Actieve sociale pauze',
+        evidence: 'Leerlingen krijgen een laagdrempelig alternatief zonder kosten, telefoon of voorbereiding.',
       },
       {
-        label: 'Economische waarde',
-        description:
-          'De Challenge Table is een éénmalige B2B-investering met een lange afschrijvingstermijn en aantoonbare prijsbereidheid bij schoolbesturen.',
-        evidence:
-          'Van Westendorp PSM toont acceptabele prijsrange €8.000–€14.000 bij B2B-afnemers. Opdracht 10 (prijsstrategie) onderbouwt penetratiestrategie en vijf businesscase-scenario\'s met marges boven break-even.',
-        assignment: 'Opdracht 10: Prijsstrategie',
-        href: '/bronnen/opdracht-10',
+        label: 'School',
+        value: 'Zichtbare pauzevoorziening',
+        evidence: 'De Table ondersteunt welzijn, sociale interactie en positief schoolklimaat.',
       },
       {
-        label: 'Ecologische waarde',
-        description:
-          'Een robuuste, langlevende speeltafel van duurzame materialen heeft een lagere ecologische footprint per gebruiksmoment dan dagelijkse impulsaankopen en wegwerpverpakkingen.',
-        evidence:
-          'Opdracht 6 (scorecard) onderbouwt de ecologische dimensie: lange levensduur, reparatiegeschiktheid en materiaalverantwoording. Opdracht 5 (B-Corp) benchmarkt de aanpak op inclusiviteit en ecologisch beleid.',
-        assignment: 'Opdracht 6: Scorecard · Opdracht 5: B-Corp',
-        href: '/bronnen/opdracht-6',
+        label: 'Economisch',
+        value: 'B2B-investering',
+        evidence: 'PSM en prijsstrategie onderbouwen een realistische prijsrange en businesscase.',
       },
       {
-        label: 'Sociale waarde',
-        description:
-          'De Challenge Table verlaagt de drempel voor sociale interactie in de pauze en vermindert ongezond snackgedrag als sociaal ritueel, zonder verbod of moraliserende interventie.',
-        evidence:
-          'Opdracht 4 (impactbepaling) toont de sociale impact via stakeholdermap en impactmatrix. De Challenge Table adresseert drie stakeholderniveaus: leerling (plezier), school (positief imago) en samenleving (minder ongezond snacken op schaal).',
-        assignment: 'Opdracht 4: Impactbepaling',
-        href: '/bronnen/opdracht-4',
+        label: 'Ecologisch',
+        value: 'Langlevend fysiek product',
+        evidence: 'Scorecard en B Corp-bronnen sturen op robuustheid, reparatie en materiaalkeuze.',
       },
-    ].map((p) => (
-      <article
-        key={p.label}
-        className="p-8 md:p-10 flex flex-col gap-5"
-        style={{ backgroundColor: 'var(--canvas)' }}
-      >
-        <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}>
-          {p.label}
-        </span>
-
-        <h3
-          className="font-serif"
-          style={{ fontSize: 'clamp(20px, 2vw, 24px)', lineHeight: 1.2, color: 'var(--text-primary)' }}
-        >
-          {p.description}
-        </h3>
-
-        <div className="flex flex-col gap-2">
-          <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>
-            Onderbouwing
-          </span>
-          <p className="text-[14px]" style={{ lineHeight: 1.65, color: 'var(--text-secondary)' }}>
-            {p.evidence}
-          </p>
-        </div>
-
-        <div
-          className="pt-5 mt-auto"
-          style={{ borderTop: '0.5px solid var(--border)' }}
-        >
-          <a
-            href={p.href}
-            className="inline-flex items-center gap-2 text-[12px]"
-            style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)', textDecoration: 'none' }}
-          >
-            → {p.assignment}
-          </a>
-        </div>
-      </article>
-    ))}
-  </div>
-
-  <div
-    className="mt-12 md:mt-16 p-8 md:p-10 max-w-[960px]"
-    style={{ backgroundColor: 'var(--surface)', borderLeft: '2px solid var(--accent-mint)' }}
-  >
-    <span className="block text-[10px] uppercase mb-3" style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}>
-      Samenhang tussen perspectieven
-    </span>
-    <p
-      className="text-[15px] md:text-[16px] mb-6"
-      style={{ lineHeight: 1.75, color: 'var(--text-secondary)' }}
-    >
-      De vier perspectieven versterken elkaar: gebruikerswaarde maakt scholen bereid te betalen (economisch), de marge laat ruimte voor circulaire materiaalkeuze (ecologisch), en die keuze positioneert de school als verantwoorde organisatie (sociaal). Op zijn beurt verhoogt dat het gebruiksplezier, doordat leerlingen trots zijn op hun school. Het is een zichzelf versterkend geheel.
-    </p>
-
-    <ol
-      className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 list-none pl-0"
-      aria-label="Versterkende relaties tussen perspectieven"
-    >
-      {[
-        {
-          from: 'Gebruikerswaarde',
-          to: 'Economische waarde',
-          link: 'Hogere ervaren waarde bij leerlingen → hogere prijsbereidheid bij schoolbesturen.',
-        },
-        {
-          from: 'Economische waarde',
-          to: 'Ecologische waarde',
-          link: 'Voldoende marge laat ruimte voor robuuste, circulaire materiaalkeuze zonder inleveren op functie.',
-        },
-        {
-          from: 'Ecologische waarde',
-          to: 'Sociale waarde',
-          link: 'Bewuste materiaalkeuze versterkt de positionering van de school als verantwoorde en moderne organisatie.',
-        },
-        {
-          from: 'Sociale waarde',
-          to: 'Gebruikerswaarde',
-          link: 'Meer sociale interactie in de pauze verhoogt direct het gebruiksplezier en de herhalingsfrequentie van de Challenge Table.',
-        },
-      ].map((link) => (
-        <li
-          key={`${link.from}-${link.to}`}
-          className="p-5 flex flex-col gap-2"
-          style={{ backgroundColor: 'var(--canvas)', border: '0.5px solid var(--border)', borderRadius: '3px' }}
-        >
-          <span className="text-[11px]" style={{ letterSpacing: '0.05em', color: 'var(--accent-mint)' }}>
-            {link.from} → {link.to}
-          </span>
-          <p className="text-[13px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>
-            {link.link}
-          </p>
-        </li>
-      ))}
-    </ol>
-  </div>
+    ]}
+  />
 </section>
 
-{/* RUBRIC-REFLECTIE */}
-<section
-  className="px-6 md:px-10 py-16"
-  style={{ borderTop: '0.5px solid var(--border)' }}
->
+<section className="px-6 md:px-10 py-14" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="Bijdrage aan de beoordeling"
-    heading="Hoe deze pagina scoort."
+    eyebrow="Rubric-check"
+    heading="De validatie is eerlijk: bestaande onderbouwing plus concreet aanvullend testplan."
   />
-
-  <div
-    className="p-8 md:p-10 max-w-[860px] mb-8"
-    style={{
-      backgroundColor: 'var(--surface)',
-      border: '0.5px solid var(--border)',
-      borderRadius: '3px',
-    }}
-  >
-    <p className="text-[16px]" style={{ lineHeight: 1.7, color: 'var(--text-secondary)' }}>
-      Deze pagina toont de aansluiting bij de eindgebruiker (criterium 05) via vijf vooraf geformuleerde, meetbare testcriteria die traceerbaar zijn naar gebruikersinzichten uit eerder onderzoek — niet achteraf bedacht, maar vóór de validatiefase vastgelegd. Criterium 02 is zichtbaar in hoe TC-01 en TC-02 direct terugkoppelen aan de pains en gains uit de interviews (VPC V2); criterium 04 in de expliciet onderbouwde meetmethoden per testcriterium (observatie, Likert-schaal, focusgroep, journey-vergelijking IST vs. gebruik). De vier waardeperspectieven in sectie 3 tonen dat de waardepropositie niet alleen functioneel maar ook economisch, ecologisch en sociaal is gevalideerd — en dat die perspectieven elkaar versterken. TC-01 heeft al kwalitatief bewijs; TC-02 t/m TC-05 worden bijgewerkt zodra de focusgroep en interviews zijn afgerond.
-    </p>
-  </div>
-
   <div className="flex flex-wrap gap-3">
-    <RubricBadge number="02" label="Gebruikersgericht onderzoek" />
-    <RubricBadge number="04" label="Modellen & methodieken" />
     <RubricBadge number="05" label="Aansluiting eindgebruiker" />
+    <RubricBadge number="02" label="Gebruikersbewijs" />
   </div>
 </section>
 

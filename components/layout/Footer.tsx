@@ -16,7 +16,7 @@ export default function Footer() {
             style={{ backgroundColor: 'var(--accent-mint)' }}
             aria-hidden="true"
           />
-          In ontwikkeling · v2 · 2026
+          Challenge Table · eindconcept · 2026
         </p>
 
         <nav
