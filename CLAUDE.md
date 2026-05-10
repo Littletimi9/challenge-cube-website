@@ -49,7 +49,7 @@ Geen geautomatiseerde tests. Verifieer frontend-wijzigingen met `npm run dev` + 
 ### Routing
 
 5 rubric-pagina's + `/reflectie` als `.mdx` bestanden in `app/<route>/page.mdx`. `/bronnen` is een `page.tsx` die alle data **inline** definieert (drie arrays: `interviews`, `opdrachten`, `apaSources`) — géén import uit `content/bronnen.ts`. De `interviews`-array bevat ook een observaties-kaart (linkt naar `/bronnen/observaties`). Daaronder hangen detailpagina's:
-- Opdrachten: `app/bronnen/opdracht-1/` t/m `opdracht-23/` — opdracht-11 is nog een stub (`return null`), de rest ingevuld
+- Opdrachten: `app/bronnen/opdracht-N/` — aanwezige nummers: 1–15, 19–23, 30; alle ingevuld (geen stubs meer)
 - Interviews: `app/bronnen/interview-1/`, `interview-2/`, `interview-3/`
 - Observaties: `app/bronnen/observaties/`
 - Geneste bronpagina: `app/bronnen/opdracht-1/hekking-2025/` (downloadbaar .docx rapport)
