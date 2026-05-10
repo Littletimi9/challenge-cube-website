@@ -255,6 +255,12 @@ const apaSources: ApaSource[] = [
     link: 'https://doi.org/10.1186/1748-5908-6-42',
   },
   {
+    id: 'thaler-sunstein-2008',
+    label: 'Onderzoek / Methoden',
+    reference:
+      'Thaler, R. H., & Sunstein, C. R. (2008). Nudge: Improving decisions about health, wealth, and happiness. Yale University Press.',
+  },
+  {
     id: 'opdracht-2-mvo-2008',
     label: 'Opdracht 2',
     reference: 'MVO Nederland. (2008). MVO omdat het hoort, moet of loont.',

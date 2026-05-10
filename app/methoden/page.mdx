@@ -4,51 +4,51 @@ export const metadata = {
 
 <PageHead
   number="04"
-  label="Rubric · Methoden en modellen"
-  title="De methoden vormen één onderzoeksketen."
-  lead="De modellen zijn niet los genoemd, maar ingezet als schakels: VPC om gebruikerswaarde te begrijpen, interviews en observaties om aannames te toetsen, journeys om fricties te plaatsen en PSM/scorecard om haalbaarheid te beoordelen."
+  label="04 · Methoden en modellen"
+  title="Van pauzegedrag naar ontwerpkeuze."
+  lead="De methoden vormen één route: gedrag begrijpen, gebruikerswaarde ordenen, fricties plaatsen en haalbaarheid toetsen. Zo blijft zichtbaar waarom de Challenge Table een sociaal pauze-alternatief werd."
   meta={[
     { key: 'Leestijd', value: '2 minuten' },
-    { key: 'Keten', value: 'VPC → Data → Journey → Validatie' },
-    { key: 'Focus', value: 'Betrouwbaarheid en validiteit' },
+    { key: 'Route', value: 'Data → Model → Ontwerp' },
+    { key: 'Focus', value: 'Gebruiker + school' },
   ]}
 />
 
 <section className="px-6 md:px-10 py-16 md:py-20">
   <SectionHeading
     eyebrow="01 · Methodeketen"
-    heading="Elke stap gaf de volgende stap richting."
+    heading="Vier stappen, één ontwerpconclusie."
   />
 
   <Timeline
     items={[
       {
         version: '1',
-        date: 'Probleemdefinitie',
-        title: 'Value Proposition Canvas',
-        feedback: 'Legde klanttaken, pains en gains vast. De tweede iteratie maakte de sociale pauze-invulling centraal.',
-        change: 'Startpunt voor de keuze om activiteit boven voeding te plaatsen.',
+        date: 'Begrijpen',
+        title: 'Interviews en observaties',
+        feedback: '3 scholieren en 4 observaties lieten zien dat snackgedrag vooral sociaal en automatisch ontstaat.',
+        change: 'De vraag verschoof van gezonder eten naar een alternatief voor samen iets halen.',
       },
       {
         version: '2',
-        date: 'Dataverzameling',
-        title: 'Interviews en observaties',
-        feedback: 'Toetsten of leerlingen het snackmoment inderdaad sociaal ervaren en hoe het gedrag op locatie zichtbaar wordt.',
-        change: 'Bewijs voor de Table als sociaal alternatief in plaats van gezondheidsboodschap.',
+        date: 'Ordenen',
+        title: 'Value Proposition Canvas',
+        feedback: 'Jobs, pains en gains maakten de centrale klanttaak scherp: samen de pauze leuk invullen.',
+        change: 'De Table moest direct startbaar, sociaal en laagdrempelig worden.',
       },
       {
         version: '3',
-        date: 'Synthese',
-        title: 'Customer Journey IST/SOLL',
-        feedback: 'Maakte zichtbaar waar de huidige pauze vastloopt en waar het nieuwe touchpoint moet ingrijpen.',
-        change: 'Plaatsing in de aula en direct starten worden ontwerpcriteria.',
+        date: 'Plaatsen',
+        title: 'Customer Journey',
+        feedback: 'De journey maakte zichtbaar waar leerlingen nu richting supermarkt, kantine of passief hangen bewegen.',
+        change: 'Het nieuwe touchpoint moest juist op dat moment zichtbaar zijn in de aula.',
       },
       {
         version: '4',
-        date: 'Haalbaarheid',
-        title: 'Concurrentieanalyse, PSM en scorecard',
-        feedback: 'Onderbouwden marktpositie, prijsrange en ontwerpkwaliteit voor school als B2B-afnemer.',
-        change: 'De vaste Challenge Table wordt sterker dan een losse Cube.',
+        date: 'Toetsen',
+        title: 'Focusgroep, PSM en scorecard',
+        feedback: 'Leerlingen toetsten de vorm; scholen werden meegenomen via prijsperceptie en ontwerpkwaliteit.',
+        change: 'De losse Cube werd een vaste, stevige en schoolwaardige Challenge Table.',
       },
     ]}
   />
@@ -56,74 +56,127 @@ export const metadata = {
 
 <section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="02 · Modelkeuzes"
-    heading="De modellen ondersteunen de gebruiker én de schoolcontext."
+    eyebrow="02 · Modellen in beeld"
+    heading="Vier modellen die het pauzeritueel zichtbaar maakten."
   />
 
-  <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-    <ChapterProof
-      label="VPC"
-      title="Gebruikerswaarde scherpstellen."
-      evidence="De VPC koppelde uitspraken uit interviews aan jobs, pains en gains. Daardoor werd de klanttaak 'samen pauze maken' expliciet."
-      meaning="Ontwerpkeuzes werden getoetst op sociale startkracht en niet op voedingswaarde alleen."
-      href="/bronnen/opdracht-19"
+  <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-4">
+    <FigureBlock
+      src="/Customer_journey_13.png"
+      alt="Customer Journey IST deel 1 — huidig pauzegedrag van scholieren in awareness en consideration"
+      width={1008}
+      height={565}
+      fit="contain"
+      caption="Customer Journey IST (1/3): huidig pauzegedrag in awareness en consideration."
+      insight="De IST maakt het keuzemoment vóór de Challenge Table zichtbaar: leerlingen bewegen automatisch richting supermarkt, kantine of passief hangen. De SOLL-journey plaatst de Table precies op dit moment als alternatief touchpoint."
+      sourceHref="/bronnen/opdracht-20"
+      sourceLabel="IST bekijken"
+    />
+    <FigureBlock
+      src="/VPC_afbeelding2.png"
+      alt="Value Proposition Canvas V2 met klanttaken, pains en gains van scholieren in de pauze"
+      width={2454}
+      height={1378}
+      fit="contain"
+      caption="VPC V2: de klanttaak werd teruggebracht naar samen de pauze leuk en gezellig invullen."
+      insight="Hierdoor kwam de nadruk op sociale startkracht te liggen, niet op een losse gezondheidsboodschap."
+      sourceHref="/bronnen/opdracht-19"
       sourceLabel="VPC bekijken"
     />
-    <ChapterProof
-      label="Journey"
-      title="Fricties plaatsen in de tijd."
-      evidence="IST/SOLL toonde het beslismoment waarop leerlingen nu richting snackgedrag bewegen."
-      meaning="De Table moet op dat moment zichtbaar zijn als alternatief touchpoint."
-      href="/bronnen/opdracht-20"
+    <FigureBlock
+      src="/Customer_journey_SOLL.png"
+      alt="Customer Journey SOLL voor de gewenste pauzeroute met Challenge Table als touchpoint"
+      width={1862}
+      height={1052}
+      fit="contain"
+      caption="Customer Journey SOLL: de Challenge Table wordt geplaatst op het beslismoment in de pauze."
+      insight="De plaatsing in de aula en het directe gebruik komen voort uit het moment waarop leerlingen normaal richting snackgedrag bewegen."
+      sourceHref="/bronnen/opdracht-21"
       sourceLabel="Journey bekijken"
     />
-    <ChapterProof
-      label="PSM"
-      title="Prijsbereidheid toetsen bij scholen."
-      evidence="PSM staat voor Price Sensitivity Meter. Met de Van Westendorp-methode is onderzocht welke prijs scholen te goedkoop, goedkoop, duur of te duur vinden."
-      meaning="De Table wordt als schoolvoorziening gepositioneerd met een verdedigbare B2B-prijsrange."
-      href="/bronnen/opdracht-10"
+    <FigureBlock
+      src="/V_Westendorp_B2B.jpeg"
+      alt="Van Westendorp Price Sensitivity Meter voor B2B-prijsbereidheid van scholen"
+      width={1482}
+      height={930}
+      fit="contain"
+      caption="B2B PSM: prijsperceptie bij 29 respondenten voor de school als betalende klant."
+      insight="De prijsdata ondersteunen de keuze voor een robuuste schoolvoorziening in plaats van alleen een losse Cube."
+      sourceHref="/bronnen/opdracht-13"
       sourceLabel="Prijsdata bekijken"
-    />
-    <ChapterProof
-      label="Scorecard"
-      title="Ontwerpkwaliteit vooraf toetsen."
-      evidence="De scorecard maakt sociale, ecologische en functionele criteria vergelijkbaar."
-      meaning="Validatie wordt minder subjectief: eenvoud, groepsgeschiktheid en robuustheid krijgen expliciete normen."
-      href="/bronnen/opdracht-6"
-      sourceLabel="Scorecard bekijken"
     />
   </div>
 </section>
 
 <section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="03 · Betrouwbaarheid en validiteit"
-    heading="De beperkingen zijn zichtbaar en beïnvloeden de conclusie."
+    eyebrow="03 · Waarom deze methoden"
+    heading="Waarom kijken, ordenen, plaatsen en toetsen in die volgorde?"
+  />
+
+  <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+    <ChapterProof
+      label="Gedrag"
+      title="Eerst kijken en luisteren."
+      evidence="Interviews verklaarden motivatie; observaties lieten groepsgedrag op locatie zien."
+      meaning="Het ontwerp sluit aan op zichtbaar pauzegedrag, niet alleen op meningen. Michie et al. (2011) bevestigen dat zichtbaar gedrag in context betrouwbaarder is als designinput dan zelfgerapporteerde meningen."
+      sources={[
+        { href: '/bronnen/interview-1', label: 'Interview 1' },
+        { href: '/bronnen/interview-2', label: 'Interview 2' },
+        { href: '/bronnen/observaties', label: 'Observaties' },
+      ]}
+    />
+    <ChapterProof
+      label="Gebruiker"
+      title="Waarde scherpstellen."
+      evidence="De VPC maakte de job-to-be-done expliciet: samen pauze maken."
+      meaning="Ontwerpcriteria werden sociaal, snel, zichtbaar en laagdrempelig."
+      href="/bronnen/opdracht-19"
+      sourceLabel="VPC bekijken"
+    />
+    <ChapterProof
+      label="Context"
+      title="Fricties plaatsen."
+      evidence="De IST-SOLL journey liet zien wanneer het huidige pauzeritueel automatisch wordt. Michie et al. (2011) beschrijven in het Behaviour Change Wheel hoe omgeving en gelegenheid (opportunity) automatisch gedrag uitlokken — de IST-journey maakt die trigger zichtbaar."
+      meaning="De Table moet precies op dat moment als alternatief touchpoint verschijnen. De IST-SOLL vergelijking is theoretisch verankerd: de Table herschikt de gelegenheidsstructuur op het pauzetouchpoint."
+      href="/bronnen/opdracht-20"
+      sourceLabel="IST bekijken"
+    />
+    <ChapterProof
+      label="School"
+      title="Haalbaarheid toetsen."
+      evidence="PSM en scorecard koppelden prijs, robuustheid en ontwerpkwaliteit aan de schoolcontext."
+      meaning="Het concept werd een verdedigbare B2B-voorziening voor schoolleiding."
+      sources={[
+        { href: '/bronnen/opdracht-13', label: 'PSM' },
+        { href: '/bronnen/opdracht-6', label: 'Scorecard' },
+      ]}
+    />
+  </div>
+</section>
+
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="04 · Betrouwbaarheid en validiteit"
+    heading="De conclusie is bruikbaar, maar begrensd."
   />
 
   <div
-    className="grid gap-0 md:grid-cols-3"
+    className="grid gap-0 md:grid-cols-2"
     style={{ backgroundColor: 'var(--border)', border: '0.5px solid var(--border)' }}
   >
     {[
       {
-        title: 'Interviews',
-        reliability: 'Beperkt in omvang, maar consistent tussen individueel interview en groepsinterview.',
-        validity: 'Meet motivatie achter gedrag beter dan een gesloten vragenlijst, maar sociaal wenselijke antwoorden blijven mogelijk.',
-        effect: 'Conclusies worden ondersteund door observaties en VPC, niet alleen door citaten.',
+        title: 'Interviews + observaties',
+        limit: 'Kleine basis en beperkte observatiemomenten.',
+        value: 'Motivatie en zichtbaar gedrag wijzen dezelfde kant op.',
+        effect: 'Sterk genoeg voor conceptkeuze, nog niet voor effectclaim.',
       },
       {
-        title: 'PSM',
-        reliability: 'Afhankelijk van steekproefgrootte en B2B-context. De curves geven richting, geen harde koopgarantie.',
-        validity: 'Meet prijsperceptie, geen definitieve aankoopbeslissing van schoolbesturen.',
-        effect: 'Prijsrange wordt gebruikt als strategische bandbreedte, niet als exact verkoopbewijs.',
-      },
-      {
-        title: 'Journeys en canvassen',
-        reliability: 'Interpretatiegevoelig, maar gebaseerd op primaire en secundaire data.',
-        validity: 'Sterk voor synthese en ontwerpkeuze, minder geschikt als losstaand bewijs.',
-        effect: 'Daarom worden journeys gekoppeld aan interviews, observaties en validatiecriteria.',
+        title: 'Focusgroep',
+        limit: '6 leerlingen, dus niet representatief.',
+        value: 'Wel bruikbaar voor eerste gebruikerseisen: simpel, stevig en niet kinderachtig.',
+        effect: 'Verrijkt het ontwerp met taal en eisen van leerlingen.',
       },
     ].map((item) => (
       <article key={item.title} className="p-7 md:p-8" style={{ backgroundColor: 'var(--surface)' }}>
@@ -132,30 +185,20 @@ export const metadata = {
         </h3>
         <div className="grid gap-4">
           <div>
-            <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Betrouwbaarheid</span>
-            <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{item.reliability}</p>
+            <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Beperking</span>
+            <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{item.limit}</p>
           </div>
           <div>
-            <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Validiteit</span>
-            <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{item.validity}</p>
+            <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--text-dim)' }}>Waarde</span>
+            <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{item.value}</p>
           </div>
           <div>
-            <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}>Gevolg voor conclusie</span>
+            <span className="text-[10px] uppercase" style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}>Gevolg</span>
             <p className="text-[14px]" style={{ lineHeight: 1.6, color: 'var(--text-secondary)' }}>{item.effect}</p>
           </div>
         </div>
       </article>
     ))}
-  </div>
-</section>
-
-<section className="px-6 md:px-10 py-14" style={{ borderTop: '0.5px solid var(--border)' }}>
-  <SectionHeading
-    eyebrow="Rubric-check"
-    heading="De methodekeuzes zijn gekoppeld aan aanpak, data en ontwerp."
-  />
-  <div className="flex flex-wrap gap-3">
-    <RubricBadge number="04" label="Modellen en methodieken" />
   </div>
 </section>
 

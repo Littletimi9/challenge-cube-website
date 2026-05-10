@@ -4,174 +4,122 @@ export const metadata = {
 
 <PageHead
   number="05"
-  label="Rubric · Aansluiting eindgebruiker"
-  title="Validatie laat zien wat bewezen is en wat nog getest moet worden."
-  lead="De huidige validatie is sterk in probleem- en conceptonderbouwing: 2 interviewpagina's met in totaal 3 middelbare scholieren, observaties, focusgroep, VPC, customer journeys en PSM/scorecard wijzen dezelfde richting op. De praktijkvalidatie van gebruik in een aula is nog beperkt."
+  label="05 · Aansluiting eindgebruiker"
+  title="Zes criteria tonen waar het concept staat en wat nog getest moet worden."
+  lead="Zes vooraf geformuleerde testcriteria tonen waar de Challenge Table onderbouwd is. Vijf van de zes criteria zijn volledig of deels onderbouwd door interviews, observaties, focusgroep en prijsvalidatie. TC-03 (laagdrempeligheid) wordt deels onderbouwd door focusgroepdata; echte starttijdmeting in de aula volgt nog."
   meta={[
-    { key: 'Leestijd', value: '3 minuten' },
-    { key: 'Criteria', value: '5 vooraf vastgelegd' },
-    { key: 'Status', value: 'Onderbouwd + vervolgtest' },
+    { key: 'Criteria', value: '6 vooraf vastgelegd' },
+    { key: 'Status', value: 'Onderbouwd / deels / nog te testen' },
   ]}
 />
-
-<section className="px-6 md:px-10 py-16 md:py-20">
-  <SectionHeading
-    eyebrow="Validatievraag"
-    heading="Is de Challenge Table een geloofwaardig alternatief voor het bestaande pauzeritueel?"
-  />
-
-  <div
-    className="p-7 md:p-8 max-w-[960px]"
-    style={{ backgroundColor: 'var(--surface)', border: '0.5px solid var(--border)', borderRadius: '3px' }}
-  >
-    <p className="text-[17px] md:text-[18px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', margin: 0 }}>
-      De validatievraag is of de Table aansluit op wat leerlingen werkelijk doen en nodig hebben in de pauze. De bestaande bronnen onderbouwen vooral het probleem, de gewenste sociale waarde en de ontwerpkeuze voor een vaste tafel. Wat nog ontbreekt is harde gebruiksdata: starten leerlingen spontaan, blijven ze spelen en vervangt de tafel in de praktijk een deel van het snackritueel?
-    </p>
-  </div>
-</section>
 
 <section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
     eyebrow="01 · Testcriteria"
-    heading="Elk criterium krijgt een eerlijke status."
-  />
-
-  <CriteriaTable
-    criteria={[
-      {
-        criterion: 'TC-01 · Probleemherkenning',
-        target: 'Leerlingen herkennen dat snackgedrag samenhangt met gezelligheid, gewoonte en samen pauze houden.',
-        result: "Onderbouwd door interview 1 en 2, samen 3 middelbare scholieren, plus observaties op snackroutes.",
-        met: true,
-        status: 'Onderbouwd',
-        evidence: 'Interview 1/2, observaties',
-      },
-      {
-        criterion: 'TC-02 · Conceptrelevantie',
-        target: 'De Table past bij de behoefte aan direct samen iets doen zonder telefoon of lange uitleg.',
-        result: 'Deels onderbouwd door VPC, customer journey en focusgroepreacties; nog niet gemeten met een werkend prototype in pauzecontext.',
-        met: false,
-        status: 'Deels onderbouwd',
-        evidence: 'Focusgroep, opdracht 19, opdracht 20/21',
-      },
-      {
-        criterion: 'TC-03 · Start zonder uitleg',
-        target: 'Eerste interactie binnen 10 seconden na zien of benaderen van de Table.',
-        result: 'Nog te testen; dit vraagt een aula-simulatie of pilot met observatiemeting.',
-        met: false,
-        status: 'Nog te testen',
-        evidence: 'Aula-simulatie nodig',
-      },
-      {
-        criterion: 'TC-04 · Groepsgeschikt en robuust',
-        target: 'Leerlingen kunnen in kleine groepen meedoen en de school kan de tafel beheren.',
-        result: 'Deels onderbouwd door scorecard en ontwerpkeuzes; robuustheid en groepsgebruik moeten nog in context worden beoordeeld.',
-        met: false,
-        status: 'Deels onderbouwd',
-        evidence: 'Opdracht 6, opdracht 4, aanvullende test',
-      },
-      {
-        criterion: 'TC-05 · Gedragsalternatief',
-        target: 'Leerlingen benoemen na gebruik plezier, interactie en minder neiging tot automatische snackroute.',
-        result: 'Nog te testen; de bestaande data onderbouwen de verwachting, maar niet het effect na gebruik.',
-        met: false,
-        status: 'Nog te testen',
-        evidence: 'Pilot en interviews 3, 4 en 5 nodig',
-      },
-    ]}
-  />
-</section>
-
-<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
-  <SectionHeading
-    eyebrow="02 · Bewijsmatrix"
-    heading="De huidige bewijslast is vooral sterk vóór het gebruiksmoment."
-  />
-
-  <div className="grid gap-6 md:grid-cols-3">
-    <ChapterProof
-      label="Probleem"
-      title="Snacken is sociaal gedrag."
-      evidence="Interview 1 en 2 vormen samen 2 interviewpagina's met 3 middelbare scholieren. Observaties bevestigen dat leerlingen in groepjes naar snacklocaties bewegen."
-      meaning="TC-01 is onderbouwd: de Table richt zich op een echt pauzeritueel, niet op een losse aanname."
-      href="/bronnen/interview-1"
-      sourceLabel="Interview 1 bekijken"
-    />
-    <ChapterProof
-      label="Concept"
-      title="De Table past bij de gewenste pauze."
-      evidence="VPC, customer journey SOLL en focusgroep koppelen de oplossing aan direct starten, samendoen en zichtbaarheid in de schoolomgeving."
-      meaning="TC-02 en TC-04 zijn deels onderbouwd, maar vragen nog meting met leerlingen rond een prototype of simulatie."
-      href="/bronnen/opdracht-19"
-      sourceLabel="VPC bekijken"
-    />
-    <ChapterProof
-      label="Haalbaarheid"
-      title="De schoolwaarde is beredeneerd."
-      evidence="PSM, scorecard, impactbepaling en prijsstrategie onderbouwen prijsrange, robuustheid en meervoudige waardecreatie."
-      meaning="Het concept is verdedigbaar als schoolinvestering, maar B2B-validatie met beslissers blijft een vervolgstap."
-      href="/bronnen/opdracht-10"
-      sourceLabel="Prijsstrategie bekijken"
-    />
-  </div>
-</section>
-
-<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
-  <SectionHeading
-    eyebrow="03 · Beperking"
-    heading="De gebruiksvalidatie is nog niet af."
+    heading="Zes testcriteria, van tevoren vastgelegd."
   />
 
   <div
-    className="p-7 md:p-8 max-w-[900px]"
-    style={{ backgroundColor: 'var(--canvas-elevated)', border: '0.5px solid var(--border)', borderRadius: '3px' }}
+    className="grid gap-px md:grid-cols-2 xl:grid-cols-3"
+    style={{ backgroundColor: 'var(--border)' }}
   >
-    <p className="text-[16px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', margin: 0 }}>
-      De huidige interviewbasis bestaat uit interview 1 en 2. Samen vormen die 2 interviewpagina's met in totaal 3 middelbare scholieren. Aanvullende interviews 3, 4 en 5 zijn vervolgwerk en worden pas als bron opgenomen wanneer ze volledig zijn uitgevoerd, uitgewerkt en verwerkt in de bewijsmatrix.
-    </p>
+    {[
+      {
+        code: 'TC-01',
+        name: 'Probleemherkenning',
+        perspective: 'Gebruiker',
+        norm: 'Leerlingen herkennen snackgedrag als sociaal, automatisch en verbonden aan samen pauze houden.',
+        status: 'Onderbouwd',
+      },
+      {
+        code: 'TC-02',
+        name: 'Behoeftefit',
+        perspective: 'Gebruiker',
+        norm: 'De oplossing past bij de behoefte om direct samen iets te doen tijdens een korte pauze.',
+        status: 'Deels onderbouwd',
+      },
+      {
+        code: 'TC-03',
+        name: 'Laagdrempeligheid',
+        perspective: 'Gebruiker + school',
+        norm: 'Leerlingen kunnen binnen 10 seconden starten zonder telefoon, account of lange uitleg.',
+        status: 'Deels onderbouwd',
+      },
+      {
+        code: 'TC-04',
+        name: 'Groepswaarde',
+        perspective: 'Gebruiker + school',
+        norm: 'De Table nodigt spontaan groepsgebruik uit en werkt voor kleine groepjes in pauzetijd.',
+        status: 'Deels onderbouwd',
+      },
+      {
+        code: 'TC-05',
+        name: 'Schoolwaarde',
+        perspective: 'School + economisch',
+        norm: 'De tafel is robuust, beheerbaar, veilig en herkenbaar als schoolwaardige aula-voorziening.',
+        status: 'Deels onderbouwd',
+      },
+      {
+        code: 'TC-06',
+        name: 'Meervoudige waarde',
+        perspective: 'Gebruiker + school + economisch + ecologisch',
+        norm: 'Sociale, economische en ecologische waarde zijn samen verdedigbaar, zonder dat een claim los staat van bewijs.',
+        status: 'Deels onderbouwd',
+      },
+    ].map(({ code, name, perspective, norm, status }) => {
+      const statusColor =
+        status === 'Onderbouwd'
+          ? 'var(--accent-mint)'
+          : status === 'Deels onderbouwd'
+          ? 'var(--accent-amber)'
+          : 'var(--text-dim)'
+      return (
+        <div
+          key={code}
+          className="p-6 md:p-8 flex flex-col gap-4"
+          style={{ backgroundColor: 'var(--canvas)' }}
+        >
+          <div className="flex items-center justify-between gap-3">
+            <span
+              className="text-[10px] uppercase"
+              style={{ letterSpacing: '0.2em', color: 'var(--accent-mint)' }}
+            >
+              {code}
+            </span>
+            <span
+              className="text-[11px]"
+              style={{ color: statusColor, whiteSpace: 'nowrap' }}
+            >
+              {status}
+            </span>
+          </div>
+          <div>
+            <h3
+              className="font-serif mb-2"
+              style={{ fontSize: '20px', lineHeight: 1.2, color: 'var(--text-primary)' }}
+            >
+              {name}
+            </h3>
+            <p className="text-[13px]" style={{ lineHeight: 1.65, color: 'var(--text-secondary)' }}>
+              {norm}
+            </p>
+          </div>
+          <p
+            className="text-[11px] uppercase mt-auto"
+            style={{ letterSpacing: '0.12em', color: 'var(--text-dim)' }}
+          >
+            {perspective}
+          </p>
+        </div>
+      )
+    })}
   </div>
 </section>
 
 <section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="04 · Vervolgtestplan"
-    heading="De volgende test moet gedrag in context meten."
-  />
-
-  <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-    <FigureBlock
-      src="/Customer_journey_SOLL.png"
-      alt="Customer Journey SOLL met Challenge Table als gewenst touchpoint in de pauze"
-      width={1862}
-      height={1052}
-      fit="contain"
-      caption="Figuur 1. SOLL-journey: de Challenge Table staat in de gewenste situatie centraal als pauze-touchpoint."
-      insight="Deze figuur laat zien welke ervaring nog hard getest moet worden: spontane start, sociale interactie en minder automatische snackroute."
-      sourceHref="/bronnen/opdracht-21"
-      sourceLabel="SOLL bekijken"
-    />
-
-    <div
-      className="p-7 md:p-8"
-      style={{ backgroundColor: 'var(--surface)', border: '0.5px solid var(--border)', borderRadius: '3px' }}
-    >
-      <h3 className="font-serif mb-5" style={{ fontSize: '28px', lineHeight: 1.15, color: 'var(--text-primary)' }}>
-        Nog uit te voeren
-      </h3>
-      <ol className="grid gap-4 list-decimal pl-5" style={{ color: 'var(--text-secondary)' }}>
-        <li className="text-[15px]" style={{ lineHeight: 1.65 }}>Interviews 3, 4 en 5 opnieuw plannen met echte leerlingen die de Table hebben gezien of gebruikt.</li>
-        <li className="text-[15px]" style={{ lineHeight: 1.65 }}>Aula-simulatie of pilot uitvoeren: starttijd, groepsgrootte, spontaan gebruik, herhaalgebruik en snackalternatief meten.</li>
-        <li className="text-[15px]" style={{ lineHeight: 1.65 }}>Eventuele extra focusgroep alleen toevoegen wanneer er nieuw, echt transcript- of notitiemateriaal beschikbaar is.</li>
-        <li className="text-[15px]" style={{ lineHeight: 1.65 }}>Resultaten per testcriterium verwerken als onderbouwd, deels onderbouwd of nog te testen.</li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
-  <SectionHeading
-    eyebrow="05 · Waardeperspectieven"
-    heading="De Table levert waarde voor leerling, school, samenleving en omgeving."
+    eyebrow="02 · Waardeperspectieven"
+    heading="Waarde is onderdeel van de test, niet een losse belofte."
   />
 
   <ValuePerspectives
@@ -179,39 +127,90 @@ export const metadata = {
       {
         label: 'Gebruiker',
         value: 'Actieve sociale pauze',
-        evidence: 'Interviews 1 en 2, observaties en VPC onderbouwen dat leerlingen vooral samen iets willen doen.',
+        evidence: 'Gekoppeld aan TC-01 t/m TC-04: probleemherkenning, behoeftefit, laagdrempelig starten en spontaan groepsgebruik.',
       },
       {
         label: 'School',
-        value: 'Zichtbare pauzevoorziening',
-        evidence: 'Customer journey, scorecard en conceptkeuzes ondersteunen welzijn, sociale interactie en positief schoolklimaat.',
+        value: 'Veilige aula-voorziening',
+        evidence: 'Gekoppeld aan TC-03 t/m TC-05: telefoonvrij starten, groepswaarde, robuustheid, beheerbaarheid en veiligheid.',
       },
       {
         label: 'Economisch',
-        value: 'B2B-investering',
-        evidence: 'PSM en prijsstrategie onderbouwen een realistische prijsrange en businesscase.',
+        value: 'Verdedigbare B2B-investering',
+        evidence: 'Gekoppeld aan TC-05 en TC-06: prijsrange, beheer, levensduur en de vraag of de waarde als schoolinvestering klopt.',
       },
       {
         label: 'Ecologisch',
         value: 'Langlevend fysiek product',
-        evidence: 'Scorecard en B Corp-bronnen sturen op robuustheid, reparatie en materiaalkeuze.',
+        evidence: 'Gekoppeld aan TC-06: materiaalkeuze, reparatie en levensduur moeten aantonen dat de tafel geen kortlevende gadget wordt.',
       },
     ]}
   />
 </section>
 
-<section className="px-6 md:px-10 py-14" style={{ borderTop: '0.5px solid var(--border)' }}>
+<QuoteBlock
+  quote="Ja gewoon duidelijk. Dat je meteen snapt wat je ermee moet."
+  author="Leerling 6"
+  source="Focusgroep · Sprint 2 — TC-03 Laagdrempeligheid"
+/>
+
+<QuoteBlock
+  quote="Ja dan wil je automatisch weten wat daar gebeurt."
+  author="Leerling 5"
+  source="Focusgroep · Sprint 2 — TC-03 Laagdrempeligheid"
+/>
+
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="Rubric-check"
-    heading="De validatie gebruikt alleen echte bewijslast en benoemt de resterende testkloof."
+    eyebrow="03 · Bewijsmatrix"
+    heading="Wat het huidige bewijs al aantoont — en wat niet."
   />
-  <div className="flex flex-wrap gap-3">
-    <RubricBadge number="05" label="Aansluiting eindgebruiker" />
-    <RubricBadge number="02" label="Gebruikersbewijs" />
+
+  <div className="grid gap-6 md:grid-cols-3">
+    <ChapterProof
+      label="Probleem"
+      title="Snacken is sociaal gedrag."
+      evidence="Interview 1 en 2 vormen samen 2 interviewpagina's met 3 middelbare scholieren. Observaties op 4 locaties bevestigen dat leerlingen in groepjes naar snacklocaties bewegen."
+      meaning="Onderbouwt TC-01 en geeft richting aan TC-02: de Table richt zich op een echt pauzeritueel, niet op een losse aanname."
+      sources={[
+        { href: '/bronnen/interview-1', label: 'Interview 1' },
+        { href: '/bronnen/interview-2', label: 'Interview 2' },
+        { href: '/bronnen/observaties', label: 'Observaties' },
+      ]}
+    />
+    <ChapterProof
+      label="Behoefte"
+      title="Leerlingen zoeken direct sociaal gebruik."
+      evidence="VPC, customer journey SOLL en focusgroep koppelen de oplossing aan direct starten, samendoen en zichtbaarheid in de schoolomgeving."
+      meaning="Onderbouwt TC-02. TC-03 wordt deels onderbouwd door focusgroepuitspraken: leerlingen beschrijven de tafel als meteen begrijpelijk en als iets waarnaar je automatisch toe wordt getrokken. Echte starttijdmeting in de aula volgt nog."
+      sources={[
+        { href: '/bronnen/opdracht-19', label: 'VPC bekijken' },
+        { href: '/bronnen/opdracht-21', label: 'SOLL-journey' },
+        { href: '/bronnen/focusgroep', label: 'Focusgroep' },
+      ]}
+    />
+    <ChapterProof
+      label="Haalbaarheid"
+      title="De schoolwaarde is beredeneerd."
+      evidence="PSM, scorecard, impactbepaling en prijsstrategie onderbouwen prijsrange, robuustheid en meervoudige waardecreatie."
+      meaning="Onderbouwt deels TC-05 en TC-06: het concept is verdedigbaar als schoolinvestering, maar B2B-validatie en ecologische onderbouwing blijven vervolgstappen."
+      sources={[
+        { href: '/bronnen/opdracht-10', label: 'Prijsstrategie' },
+        { href: '/bronnen/opdracht-6', label: 'Scorecard' },
+      ]}
+    />
+  </div>
+
+  <div
+    className="mt-8 p-6 max-w-[900px]"
+    style={{ backgroundColor: 'var(--canvas-elevated)', border: '0.5px solid var(--border)', borderRadius: '3px' }}
+  >
+    <p className="text-[15px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', margin: 0 }}>
+      De interviewbasis bestaat uit 2 pagina's met in totaal 3 leerlingen. Aanvullende interviews en een pilot worden pas als bewijs verwerkt wanneer ze volledig zijn uitgevoerd en uitgewerkt per testcriterium. TC-03 krijgt deels onderbouwing via de focusgroep: zes leerlingen beschrijven de tafel als direct begrijpelijk en spontaan aantrekkelijk.
+    </p>
   </div>
 </section>
 
 <PageNav
   prev={{ number: '04', name: 'Methoden', href: '/methoden' }}
-  next={{ number: '06', name: 'Reflectie', href: '/reflectie' }}
 />

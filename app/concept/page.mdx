@@ -4,9 +4,9 @@ export const metadata = {
 
 <PageHead
   number="03"
-  label="Rubric · Conceptontwikkeling"
+  label="03 · Conceptontwikkeling"
   title="De Cube werd een Table door bewijs en beperkingen."
-  lead="Het concept ontwikkelde zich in drie stappen: een losse Challenge Cube, een schermoplossing zonder telefoon en uiteindelijk een vaste Challenge Table voor de aula. Elke stap volgt uit onderzoek, feedback of een schoolcontext-beperking."
+  lead="Het concept ontwikkelde zich in drie stappen: een losse Challenge Cube, een schermoplossing zonder telefoon en uiteindelijk een vaste Challenge Table voor de aula. Interviews, observaties, VPC, focusgroep, deskresearch en prijsvalidatie laten zien wanneer keuzes zijn gemaakt en hoe elke iteratie het eindconcept veranderde."
   meta={[
     { key: 'Leestijd', value: '3 minuten' },
     { key: 'Iteraties', value: '3 versies' },
@@ -17,33 +17,44 @@ export const metadata = {
 <section className="px-6 md:px-10 py-16 md:py-20">
   <SectionHeading
     eyebrow="01 · Ontwerplogica"
-    heading="Het concept veranderde omdat het gebruikscontext scherper werd."
+    heading="Elke versie leerde iets nieuws over gebruik en schoolcontext."
   />
 
   <div className="grid gap-6 md:grid-cols-3">
     <ChapterProof
       label="V1 · Cube"
       title="Een losse kubus maakte het speelidee tastbaar."
-      evidence="De eerste Cube vertaalde het VPC-inzicht naar een object met snelle challenges. Het idee was sociaal, compact en direct testbaar."
-      meaning="V1 bewees de richting: activiteit kan het snackmoment vervangen. De vorm was alleen nog niet schoolgeschikt genoeg."
-      href="/bronnen/opdracht-19"
-      sourceLabel="VPC bekijken"
+      evidence="Interviews en observaties lieten zien dat snacken vooral samen gebeurt. De VPC vertaalde dat naar de job-to-be-done: samen de pauze gezellig en laagdrempelig invullen."
+      meaning="De eerste Cube werd gekozen als compact sociaal object met korte challengecategorieen. Daarmee verschoof het concept van gezonde snack naar alternatief pauzeritueel."
+      sources={[
+        { href: '/bronnen/interview-1', label: 'Interview 1' },
+        { href: '/bronnen/interview-2', label: 'Interview 2' },
+        { href: '/bronnen/observaties', label: 'Observaties' },
+        { href: '/bronnen/opdracht-19', label: 'VPC' },
+      ]}
     />
     <ChapterProof
       label="V2 · Scherm"
       title="Het telefoonverbod maakte QR-gebruik kwetsbaar."
-      evidence="De schoolcontext liet zien dat smartphone-afhankelijkheid niet past bij een middelbare school. Een extern scherm loste dat deels op."
-      meaning="Het concept moest zelfstandig werken zonder telefoon. Dat werd een harde randvoorwaarde voor het eindontwerp."
-      href="/bronnen/opdracht-9"
-      sourceLabel="Context bekijken"
+      evidence="De eerste Cube gebruikte QR-codes, maar de schoolcontext en concurrentieanalyse maakten duidelijk dat smartphone-afhankelijkheid niet betrouwbaar is in een middelbare schoolpauze."
+      meaning="De tweede iteratie kreeg een extern scherm. Dat maakte het concept telefoonvrijer, maar liet ook zien dat losse onderdelen en techniek de oplossing complexer maakten."
+      sources={[
+        { href: '/bronnen/opdracht-9', label: 'Context en concurrentie' },
+        { href: '/nieuwsgierigheid', label: 'Telefooncontext' },
+        { href: '/bronnen/opdracht-19', label: 'VPC' },
+      ]}
     />
     <ChapterProof
       label="V3 · Table"
       title="Een vaste tafel past beter bij B2B en groepsgebruik."
-      evidence="Prijsstrategie, scorecard en schoolwaarde vroegen om robuustheid, zichtbaarheid en beheerbaarheid."
-      meaning="De Table werd het eindconcept: vast in de aula, direct bruikbaar, geen losse onderdelen en herkenbaar als schoolvoorziening."
-      href="/bronnen/opdracht-10"
-      sourceLabel="Prijsstrategie bekijken"
+      evidence="Focusgroep, scorecard, prijsstrategie en B2B-prijsvalidatie vroegen om een oplossing die simpel, stevig, zichtbaar, beheerbaar en schoolwaardig is."
+      meaning="De Table werd het eindconcept: een vaste voorziening in de aula, direct bruikbaar voor leerlingen en verdedigbaar als investering voor school."
+      sources={[
+        { href: '/bronnen/focusgroep', label: 'Focusgroep' },
+        { href: '/bronnen/opdracht-6', label: 'Scorecard' },
+        { href: '/bronnen/opdracht-13', label: 'Prijsvalidatie' },
+        { href: '/bronnen/opdracht-10', label: 'Prijsstrategie' },
+      ]}
     />
   </div>
 </section>
@@ -61,7 +72,7 @@ export const metadata = {
       width={1024}
       height={1024}
       caption="Figuur 1. V1: losse Challenge Cube met QR-codes per challengecategorie."
-      insight="De Cube maakte het idee concreet, maar bleef afhankelijk van telefoons en losse interactie. Dat botste met de schoolcontext."
+      insight="Deze versie bewees dat een fysieke trigger het sociale pauzemoment concreet kan maken. De beperking zat in de QR-interactie: starten bleef afhankelijk van telefoons, terwijl juist snelheid en laagdrempeligheid uit de VPC kwamen."
       sourceHref="/bronnen/opdracht-19"
       sourceLabel="Iteratiebron bekijken"
     />
@@ -72,7 +83,7 @@ export const metadata = {
       height={339}
       fit="contain"
       caption="Figuur 2. V2: Cube met extern scherm om smartphonegebruik te vermijden."
-      insight="Het scherm loste een gebruiksprobleem op, maar verhoogde complexiteit. De vraag verschoof naar een zelfstandige, robuuste schooloplossing."
+      insight="Het externe scherm was een directe reactie op de telefoonbeperking. Tegelijk ontstond een nieuwe ontwerpvraag: hoe blijft de oplossing stevig, beheersbaar en zichtbaar zonder losse techniek rond een kubus?"
       sourceHref="/bronnen/opdracht-9"
       sourceLabel="Context bekijken"
     />
@@ -82,7 +93,7 @@ export const metadata = {
       width={1024}
       height={1024}
       caption="Figuur 3. V3: Challenge Table als vaste pauzetafel voor scholen."
-      insight="De Table bundelt de lessen: zichtbaar in de aula, groepsgericht, zonder telefoon en beter verkoopbaar als B2B-investering."
+      insight="De Table bundelt de lessen uit de eerdere versies: vaste plaatsing, groepsgebruik, geen telefoon als startpunt en een vorm die scholen herkennen als robuuste pauzevoorziening in plaats van losse gadget."
       sourceHref="/bronnen/opdracht-6"
       sourceLabel="Scorecard bekijken"
     />
@@ -92,7 +103,7 @@ export const metadata = {
 <section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
     eyebrow="03 · Chronologie"
-    heading="De keuzes volgen de sprints."
+    heading="De keuzes volgen de sprints en feedbackmomenten."
   />
 
   <Timeline
@@ -101,35 +112,64 @@ export const metadata = {
         version: 'Sprint 1',
         date: 'Probleemverkenning',
         title: 'Snackgedrag werd sociaal gedrag',
-        feedback: 'Interviews en observaties weerlegden de aanname dat het vooral om voedsel ging.',
-        change: 'Ontwerprichting verschuift van gezondere snack naar sociale pauzeactiviteit.',
+        feedback: 'Interviews en observaties weerlegden de aanname dat het vooral om voedsel ging. Gezelligheid, gewoonte en meedoen bleken sterker dan honger.',
+        change: 'De ontwerprichting verschoof van gezondere snack naar sociale pauzeactiviteit.',
       },
       {
         version: 'Sprint 2',
-        date: 'Conceptontwikkeling',
+        date: 'VPC en eerste prototype',
         title: 'De Cube testte de activiteit',
-        feedback: 'De VPC en eerste iteratie maakten duidelijk dat direct starten en groepsplezier cruciaal zijn.',
-        change: 'De Cube krijgt challengecategorieen en wordt getest als sociaal object.',
+        feedback: 'De VPC maakte direct starten, weinig uitleg en groepsplezier cruciaal. De eerste Cube vertaalde dat naar challengecategorieen.',
+        change: 'Het prototype werd een sociaal object, maar de QR-codes maakten de telefoonafhankelijkheid zichtbaar.',
+      },
+      {
+        version: 'Sprint 2b',
+        date: 'Schoolcontext',
+        title: 'Het scherm loste niet alles op',
+        feedback: 'Het telefoonverbod en de schoolcontext maakten duidelijk dat een mobiele interactie kwetsbaar is. Een extern scherm verminderde dat probleem.',
+        change: 'Telefoonvrij gebruik werd een harde eis, maar losse techniek maakte robuustheid en beheerbaarheid belangrijker.',
       },
       {
         version: 'Sprint 3',
-        date: 'Validatie en schaalbaarheid',
+        date: 'Validatie en B2B',
         title: 'De Table maakt het schoolgeschikt',
-        feedback: 'Telefoonverbod, B2B-prijsbereidheid en robuustheid sturen de stap naar een vaste tafel.',
-        change: 'Eindconcept wordt Challenge Table: beheersbaar voor school, bruikbaar voor leerlingen.',
+        feedback: 'Focusgroep, scorecard, prijsstrategie en B2B-prijsvalidatie stuurden op simpel, stevig, zichtbaar en beheerbaar.',
+        change: 'Het eindconcept werd de Challenge Table: bruikbaar voor leerlingen en verdedigbaar als schoolinvestering.',
       },
     ]}
   />
 </section>
 
-<section className="px-6 md:px-10 py-14" style={{ borderTop: '0.5px solid var(--border)' }}>
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="Rubric-check"
-    heading="De iteraties zijn chronologisch, visueel en onderbouwd."
+    eyebrow="04 · Kritische reflectie"
+    heading="De belangrijkste keuze was de Cube loslaten."
   />
-  <div className="flex flex-wrap gap-3">
-    <RubricBadge number="03" label="Conceptontwikkeling" />
-    <RubricBadge number="02" label="Feedback en data" />
+
+  <ReflectionGrid
+    good="Het sterkste onderdeel van mijn proces was dat ik mijn eerste oplossing niet ben blijven verdedigen. De interviews, observaties en VPC lieten zien dat ik niet alleen een snackprobleem onderzocht, maar vooral een sociaal pauzeritueel. Daardoor werd de Cube waardevol als eerste test, maar niet heilig als eindvorm."
+    better="Ik had mijn eigen aannames eerder moeten bevragen. Ik dacht in het begin te veel vanuit mijn eigen middelbareschooltijd, waarin telefoongebruik vanzelfsprekend was. Daardoor kwam de spanning tussen QR-codes, telefoonverbod, beheerbaarheid en robuustheid later scherp in beeld dan wenselijk was."
+  />
+
+  <div className="mt-8 grid gap-6 md:grid-cols-3">
+    <ChapterProof
+      label="Keuze"
+      title="Van leuk object naar schoolvoorziening."
+      evidence="De Cube paste bij het idee van korte sociale challenges, maar minder bij een schoolomgeving waarin telefoonvrij, stevig en beheerbaar gebruik belangrijk is."
+      meaning="Ik koos daarom niet voor een mooiere Cube, maar voor een andere vorm: een vaste Table die beter past bij aula, groepsgebruik en schoolwaarde."
+    />
+    <ChapterProof
+      label="Inhoud"
+      title="Geen gezondheidsles, maar gedragsalternatief."
+      evidence="Leerlingen wilden geen preek over gezond eten; de data wezen juist naar gezelligheid, meedoen, gewoonte en snel samen iets doen."
+      meaning="De inhoud van het concept werd speels en sociaal. De challenges moeten het bestaande pauzeritueel vervangen zonder moraliserende toon."
+    />
+    <ChapterProof
+      label="Rol"
+      title="Mijn blinde vlek werd een ontwerpcriterium."
+      evidence="Mijn eigen ervaring met telefoongebruik paste niet goed bij de huidige schoolcontext. Dat inzicht kwam door onderzoek en feedback alsnog op tafel."
+      meaning="Vanaf dat moment beoordeelde ik elke iteratie op zelfstandig starten, weinig uitleg, robuustheid en bruikbaarheid zonder telefoon."
+    />
   </div>
 </section>
 

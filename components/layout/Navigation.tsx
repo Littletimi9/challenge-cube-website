@@ -12,7 +12,6 @@ const links = [
   { href: '/concept', label: 'Concept' },
   { href: '/methoden', label: 'Methoden' },
   { href: '/validatie', label: 'Validatie' },
-  { href: '/reflectie', label: 'Reflectie' },
   { href: '/bronnen', label: 'Bronnen' },
 ]
 

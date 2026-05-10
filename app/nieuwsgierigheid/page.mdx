@@ -4,20 +4,20 @@ export const metadata = {
 
 <PageHead
   number="01"
-  label="Rubric · Nieuwsgierigheid"
-  title="Van eigen gewoonte naar ontwerpvraag."
-  lead="Mijn startpunt was herkenning: ook ik maakte vaak keuzes uit gemak en gewoonte. Daardoor keek ik anders naar scholieren die in de pauze automatisch naar snacks grijpen. Niet het product, maar het sociale ritueel werd de ontwerpvraag."
+  label="01 · Eigen nieuwsgierigheid"
+  title="Mijn eigen gedrag gaf me de eerste vraag."
+  lead="Mijn startpunt was herkenning: ook ik maakte keuzes uit gemak en gewoonte. Maar tijdens het onderzoek merkte ik dat ik de doelgroep eerst te veel vanuit mijn eigen schooltijd bekeek. Ik mocht mijn telefoon nog gebruiken; veel huidige middelbare scholieren mogen dat niet meer. Daardoor verschoof mijn nieuwsgierigheid van snackgedrag naar een fysieke, sociale pauze zonder telefoon."
   meta={[
-    { key: 'Leestijd', value: '2 minuten' },
-    { key: 'Bewijs', value: 'Anekdote · Interviews · VPC' },
-    { key: 'Kern', value: 'Van snack naar ritueel' },
+    { key: 'Leestijd', value: '3 minuten' },
+    { key: 'Bewijs', value: 'Anekdote · Telefooncontext · VPC' },
+    { key: 'Kern', value: 'Van mobiel naar fysieke plek' },
   ]}
 />
 
 <section className="px-6 md:px-10 py-16 md:py-20">
   <SectionHeading
     eyebrow="01 · Aanleiding"
-    heading="Mijn eigen gemak maakte snackgedrag herkenbaar."
+    heading="Gemak stuurt gedrag — bij mij én bij hen."
   />
 
   <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
@@ -29,7 +29,7 @@ export const metadata = {
         Tijdens Toekomstbestendige Business Innovatie ontdekte ik dat mijn eigen duurzame keuzes vaak niet door kennis, maar door gemak werden bepaald. Ik wist wat beter was, maar koos geregeld automatisch voor vlees of de auto.
       </div>
       <div className="text-[17px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', margin: 0 }}>
-        Die herkenning zag ik terug bij scholieren. In de pauze liep een groep bijna vanzelf naar supermarkt, automaat of fastfood. Mijn nieuwsgierigheid verschoof daardoor van "wat eten leerlingen?" naar "waarom wordt snacken een vast sociaal ritueel?"
+        Die herkenning zag ik terug bij scholieren. In de pauze liep een groep bijna vanzelf naar supermarkt, automaat of fastfood. Tegelijk keek ik nog vanuit mijn eigen middelbareschoolervaring: als iets snel moest, pakte ik gewoon mijn telefoon erbij. Daardoor dacht ik te snel aan een mobiele of QR-achtige oplossing.
       </div>
     </div>
 
@@ -40,7 +40,7 @@ export const metadata = {
       height={2048}
       fit="cover"
       caption="Figuur 1. Observatie van pauzegedrag: snacken gebeurt zichtbaar in groepsverband."
-      insight="De foto ondersteunt de kern van het hoofdstuk: de keuze voor snacks is ingebed in een sociaal moment. Daarom moest het concept niet alleen een gezonder alternatief bieden, maar een aantrekkelijk nieuw pauzeritueel."
+      insight="De foto ondersteunt de eerste ontdekking: de keuze voor snacks is ingebed in een sociaal moment. De vraag werd daardoor niet alleen wat leerlingen eten, maar wat zij samen doen als hun pauze kort, druk en grotendeels telefoonvrij is."
       sourceHref="/bronnen/observaties"
       sourceLabel="Observaties bekijken"
     />
@@ -56,15 +56,51 @@ export const metadata = {
 <section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
     eyebrow="02 · Kantelpunt"
-    heading="De startaanname bleek te smal."
+    heading="Ik besefte dat hun pauze niet meer leek op mijn pauze."
+  />
+
+  <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
+    <div
+      className="p-7 md:p-8"
+      style={{ backgroundColor: 'var(--surface)', border: '0.5px solid var(--border)', borderRadius: '3px' }}
+    >
+      <div className="text-[17px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
+        Het persoonlijke kantelpunt kwam toen ik doorhad dat ik mijn eigen schooltijd op de doelgroep projecteerde. Ik mocht mijn telefoon nog gebruiken op school. Voor mij was een telefoon in de pauze vanzelfsprekend: even iets opzoeken, iets scannen, iets laten zien of snel aansluiten bij wat vrienden deden.
+      </div>
+      <div className="text-[17px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
+        Bij huidige middelbare scholieren ligt dat anders. Door het telefoonverbod en schoolafspraken is de mobiel geen betrouwbare ingang meer. Daardoor keek ik ineens anders naar dezelfde groep: niet als jongeren die je via hun scherm activeert, maar als leerlingen die in een korte pauze een fysieke aanleiding nodig hebben om samen iets te doen.
+      </div>
+      <div className="text-[17px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', margin: 0 }}>
+        Dat inzicht maakte mijn nieuwsgierigheid scherper. Ik wilde niet meer alleen weten hoe je snackgedrag kunt vervangen, maar hoe je een telefoonvrij sociaal moment aantrekkelijk genoeg maakt om vanzelf te starten.
+      </div>
+    </div>
+
+    <FigureBlock
+      src="/Iteratie1_ChallengeCube.jpeg"
+      alt="Eerste prototype van de Challenge Cube met QR-codes voor challengecategorieen"
+      width={1024}
+      height={1024}
+      fit="cover"
+      caption="Figuur 2. De eerste Cube met QR-codes laat achteraf mijn blinde vlek zien: ik dacht nog vanuit beschikbaar telefoongebruik."
+      insight="Deze iteratie werd waardevol als reflectiebewijs. Het ontwerpidee was sociaal, maar de interactie paste nog niet goed bij een doelgroep die op school vaak geen telefoon mag gebruiken."
+      sourceHref="/bronnen/opdracht-9"
+      sourceLabel="Telefooncontext bekijken"
+    />
+  </div>
+</section>
+
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="03 · Bewijs"
+    heading="Drie inzichten die mijn aanname corrigeerden."
   />
 
   <div className="grid gap-6 md:grid-cols-3">
     <ChapterProof
-      label="Startaanname"
-      title="Ik dacht eerst aan beter snackaanbod."
-      evidence="Mijn eerste denkrichting lag bij gezondere, betaalbare producten in de kantine. Dat paste bij het zichtbare probleem, maar niet bij de reden achter het gedrag."
-      meaning="De oplossing mocht niet blijven hangen in voeding. De interventie moest concurreren met het sociale moment dat snacken aantrekkelijk maakt."
+      label="Eigen bril"
+      title="Ik keek eerst vanuit mijn eigen schooltijd."
+      evidence="Mijn eerste denkrichting combineerde gezonder snackaanbod met een snelle mobiele of QR-logica. Dat paste bij hoe ik zelf schoolpauzes kende, maar niet automatisch bij de huidige schoolcontext."
+      meaning="Ik moest mijn eigen ervaring loslaten en de doelgroep beoordelen op hun werkelijke pauzeruimte, regels en gedrag."
       href="/bronnen/opdracht-1"
       sourceLabel="Aanleiding bekijken"
     />
@@ -72,25 +108,25 @@ export const metadata = {
       label="Gebruikersstem"
       title="Leerlingen benoemden gezelligheid, niet honger."
       evidence="Interview 1 en 2 laten dezelfde kern zien: leerlingen snacken vooral samen. Prijs en smaak spelen mee, maar het meedoen aan het moment is belangrijker."
-      meaning="De eindgebruiker vroeg impliciet om een sociale activiteit die direct start, niet om uitleg of gezondheidsvoorlichting."
+      meaning="De eindgebruiker vroeg impliciet om een sociale activiteit die direct start, niet om uitleg, gezondheidsvoorlichting of een individuele telefoonhandeling."
       href="/bronnen/interview-1"
       sourceLabel="Interview bekijken"
     />
     <ChapterProof
-      label="Inzicht"
-      title="De centrale taak werd: samen pauze maken."
-      evidence="De tweede Value Proposition Canvas verlegde de klanttaak naar 'samen de pauze leuk invullen'. Honger stillen werd secundair."
-      meaning="Dit inzicht verklaart waarom de Challenge Cube ontstond en later doorgroeide naar de Challenge Table."
-      href="/bronnen/opdracht-19"
-      sourceLabel="VPC bekijken"
+      label="Schoolcontext"
+      title="Het telefoonverbod maakte fysiek ontwerp noodzakelijk."
+      evidence="Markt- en contextonderzoek liet zien dat mobiele telefoons in de klas niet meer zijn toegestaan en dat een deel van de scholen het gebruik gedurende de hele schooldag beperkt."
+      meaning="De oplossing moest zelfstandig werken zonder mobiel: zichtbaar, fysiek, snel begrijpelijk en geschikt voor groepsgebruik in aula of kantine."
+      href="/bronnen/opdracht-9"
+      sourceLabel="Context bekijken"
     />
   </div>
 </section>
 
 <section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="03 · Ontwikkeling"
-    heading="Mijn nieuwsgierigheid werd een ontwerpcriterium."
+    eyebrow="04 · Ontwikkeling"
+    heading="Van snackkeuze naar pauzeplek: zo verschoof mijn vraag."
   />
 
   <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
@@ -100,8 +136,8 @@ export const metadata = {
       width={2454}
       height={1378}
       fit="contain"
-      caption="Figuur 2. VPC iteratie 2: het klantprofiel verschuift van eten naar sociale pauze-invulling."
-      insight="De VPC maakt de persoonlijke ontwikkeling toetsbaar: mijn blik verschoof van aanbod naar gedrag. Vanaf dit punt werd elk concept beoordeeld op sociale startkracht, eenvoud en geschiktheid voor groepsgebruik."
+      caption="Figuur 3. VPC iteratie 2: het klantprofiel verschuift van eten naar sociale pauze-invulling."
+      insight="De VPC maakt de persoonlijke ontwikkeling toetsbaar: mijn blik verschoof van aanbod naar gedrag en daarna naar context. Vanaf dit punt beoordeelde ik elk concept op sociale startkracht, eenvoud, groepsgebruik en bruikbaarheid zonder telefoon."
       sourceHref="/bronnen/opdracht-19"
       sourceLabel="VPC bekijken"
     />
@@ -111,23 +147,28 @@ export const metadata = {
       style={{ backgroundColor: 'var(--surface)', border: '0.5px solid var(--border)', borderRadius: '3px' }}
     >
       <div className="text-[17px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
-        Mijn nieuwsgierigheid werd concreter door onderzoek. Ik wilde niet meer alleen weten welke snack populair was, maar hoe een schoolomgeving een ander pauzegedrag kan uitlokken zonder moraliserend te worden.
+        Mijn nieuwsgierigheid werd concreter door onderzoek. Eerst zag ik vooral scholieren die uit gemak snackten. Daarna zag ik dat snacken een sociaal ritueel was. Het telefooninzicht maakte de derde laag zichtbaar: deze doelgroep leeft in een andere schoolcontext dan ik toen ik op de middelbare school zat.
+      </div>
+      <div className="text-[17px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
+        Daardoor werd mijn onderzoeksvraag minder oppervlakkig. Niet: hoe maak ik gezonde keuzes leuker via een scherm? Maar: hoe kan de schoolomgeving zelf een aanleiding geven om samen iets te doen, zonder dat het voelt als lesstof of als een verbod?
       </div>
       <div className="text-[17px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)', margin: 0 }}>
-        De Challenge Table is daarom geen los spelidee. Het is mijn antwoord op de vraag hoe je een automatisch snackritueel vervangt door een zichtbare, fysieke en sociale plek in de aula.
+        De Challenge Table is daarom geen los spelidee. Het is mijn antwoord op de vraag hoe je een automatisch snackritueel vervangt door een zichtbare, fysieke en sociale plek in de aula die werkt voor leerlingen die je niet via hun telefoon moet activeren.
       </div>
     </div>
   </div>
 </section>
 
-<section className="px-6 md:px-10 py-14" style={{ borderTop: '0.5px solid var(--border)' }}>
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="Rubric-check"
-    heading="Criterium 01 is zichtbaar in de ontwikkeling van mijn blik."
+    eyebrow="05 · Kritische reflectie"
+    heading="Mijn nieuwsgierigheid werd sterker toen mijn eerste aanname niet klopte."
   />
-  <div className="flex flex-wrap gap-3">
-    <RubricBadge number="01" label="Eigen nieuwsgierigheid" />
-  </div>
+
+  <ReflectionGrid
+    good="Het waardevolle aan mijn nieuwsgierigheid was dat die begon bij echte herkenning. Ik wist uit mijn eigen gedrag hoe sterk gemak en gewoonte keuzes kunnen sturen. Daardoor kon ik snackgedrag bij scholieren niet alleen als rationele voedingskeuze bekijken, maar als iets dat in een dagelijks ritueel gebeurt."
+    better="Mijn valkuil was dat ik mijn eigen schoolervaring te lang als uitgangspunt nam. Omdat ik zelf gewend was aan telefoongebruik in pauzes, dacht ik te snel aan een mobiele of QR-oplossing. Pas door observaties, interviews en contextonderzoek werd duidelijk dat de huidige doelgroep een fysieke, telefoonvrije aanleiding nodig heeft."
+  />
 </section>
 
 <PageNav

@@ -27,15 +27,6 @@ export default function Footer() {
           <Link href="/bronnen" className="hover:text-[var(--text-primary)] transition-colors">
             Bronnen
           </Link>
-          <Link href="/reflectie" className="hover:text-[var(--text-primary)] transition-colors">
-            Reflectie
-          </Link>
-          <a
-            href="mailto:jarnokaat@gmail.com"
-            className="hover:text-[var(--text-primary)] transition-colors"
-          >
-            Contact
-          </a>
         </nav>
       </div>
     </footer>
