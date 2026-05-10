@@ -47,6 +47,12 @@ const interviews: InterviewCard[] = [
     meta: 'Sprint 2 · Conceptvalidatie',
   },
   {
+    href: '/bronnen/Focusgroep',
+    title: 'Focusgroep — Challenge Table',
+    description: 'Kwalitatieve focusgroep met zes leerlingen over de Challenge Table als alternatieve pauzeplek: eerste reacties op het concept, ontwerpvereisten en de rol van de tafel als gewoonte-onderbreker.',
+    meta: 'Sprint 2 · Conceptvalidatie',
+  },
+  {
     href: '/bronnen/observaties',
     title: 'Observaties — Pauzegedrag op locatie',
     description: 'Vier gestructureerde observatieformulieren op drie locaties: Spar Windesheim, Albert Heijn Forelkolk, KFC en McDonalds Zwolle. Koopgedrag en groepsdynamiek van scholieren in kaart gebracht.',
@@ -168,6 +174,13 @@ const apaSources: ApaSource[] = [
     reference:
       'Hekking, T. (2026). Semigestructureerd interview met een 4-havo leerling van Stad & Esch over gebruiksintentie van de Challenge Table [Notities]. Challenge Table.',
     link: '/bronnen/interview-3',
+  },
+  {
+    id: 'focusgroep-2026',
+    label: 'Focusgroep',
+    reference:
+      'Hekking, T., & Kaat, J. (2026). Focusgroep: Kwalitatieve sessie met zes leerlingen over de Challenge Table als alternatieve pauzeplek [Transcript en analyse]. Challenge Table.',
+    link: '/bronnen/Focusgroep',
   },
   {
     id: 'observaties-2026',
