@@ -1032,6 +1032,15 @@ const apaSources: ApaSource[] = [
   },
 ]
 
+const apaCollator = new Intl.Collator('nl', {
+  numeric: true,
+  sensitivity: 'base',
+})
+
+const sortedApaSources = [...apaSources].sort((a, b) =>
+  apaCollator.compare(a.reference, b.reference)
+)
+
 export default function BronnenPage() {
   return (
     <>
@@ -1149,7 +1158,7 @@ export default function BronnenPage() {
       >
         <SectionHeading eyebrow={`${apaSources.length} · APA 7`} heading="Totale APA-lijst." />
         <ol className="flex flex-col list-none p-0 m-0" style={{ borderTop: '0.5px solid var(--border)' }}>
-          {apaSources.map((source, index) => (
+          {sortedApaSources.map((source, index) => (
             <ApaSourceItem key={source.id} source={source} index={index} />
           ))}
         </ol>
