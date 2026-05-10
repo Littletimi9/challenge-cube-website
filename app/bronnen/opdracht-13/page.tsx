@@ -115,7 +115,7 @@ export default function Opdracht13Page() {
         meta={[
           { key: 'Type', value: 'Groepsopdracht' },
           { key: 'Module', value: 'Waardecreatie' },
-          { key: 'Respondenten', value: 'B2C: 120 · B2B: 29' },
+          { key: 'Respondenten', value: 'B2C aantal respondenten: 120 · B2B aantal respondenten: 29' },
         ]}
       />
 
@@ -445,7 +445,7 @@ export default function Opdracht13Page() {
                   ['OPS (introductieprijs)', '~€15,00', '€8.000 – €8.500'],
                   ['IDP (normaalprijs)', '~€15,50', '€8.500 – €9.000'],
                   ['MDP (bovengrens)', '~€17,50', '€13.500 – €14.000'],
-                  ['n', '120 respondenten', '29 respondenten'],
+                  ['Aantal respondenten', '120 respondenten', '29 respondenten'],
                 ].map(([prijspunt, b2c, b2b], i) => (
                   <tr key={i}>
                     <td style={{ ...tdStyle(), color: 'var(--text-primary)', fontWeight: 500 }}>

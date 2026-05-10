@@ -6,9 +6,9 @@ export const metadata = {
   number="02"
   label="Rubric · Gebruikersgericht onderzoek"
   title="Onderzoek maakte het pauzeritueel navolgbaar."
-  lead="2 interviewpagina's met in totaal 3 middelbare scholieren, observaties, deskresearch en prijsvalidatie tonen samen hetzelfde beeld: scholieren zoeken in de pauze vooral sociale ontspanning. De Challenge Table is ontworpen als alternatief voor dat ritueel, niet als voedingscampagne."
+  lead="Interviews met 3 middelbare scholieren, 4 observaties, een focusgroep met 6 leerlingen, deskresearch en B2B-prijsvalidatie met 29 respondenten tonen samen hetzelfde beeld: scholieren zoeken in de pauze vooral sociale ontspanning. De Challenge Table is ontworpen als alternatief voor dat ritueel, niet als voedingscampagne."
   meta={[
-    { key: 'Leestijd', value: '3 minuten' },
+    { key: 'Leestijd', value: '5 minuten' },
     { key: 'Methode', value: 'Triangulatie' },
     { key: 'Bewijs', value: 'Primair + secundair' },
   ]}
@@ -25,20 +25,39 @@ export const metadata = {
       {
         type: 'Interviews',
         name: 'Waarom snacken leerlingen?',
-        count: "2 interviewpagina's met in totaal 3 middelbare scholieren: Isa 6 VWO en twee VMBO-leerlingen jaar 3",
+        count: "2 interviewpagina's met 3 middelbare scholieren: Isa 6 VWO en twee VMBO-leerlingen jaar 3",
         finding: 'Leerlingen koppelen snacken vooral aan gezelligheid, meedoen en samen pauze houden. Honger of gezondheid is zelden de primaire reden.',
+        sources: [
+          { href: '/bronnen/interview-1', label: 'Interview 1' },
+          { href: '/bronnen/interview-2', label: 'Interview 2' },
+        ],
       },
       {
         type: 'Observaties',
         name: 'Hoe ziet het gedrag eruit?',
         count: '4 observaties op 3 locaties',
         finding: 'Leerlingen bewegen in groepjes naar snacklocaties. De aankoop is kort; de sociale beweging ernaartoe is het opvallende patroon.',
+        sources: [{ href: '/bronnen/observaties', label: 'Observaties' }],
       },
       {
-        type: 'Deskresearch + PSM',
-        name: 'Kan de Table werken voor scholen?',
-        count: 'Concurrentieanalyse, B Corp, scorecard en B2B-prijsdata',
-        finding: 'De marktpositie is vrij en scholen zien een investering van ongeveer €8.000-€14.000 als realistische bandbreedte.',
+        type: 'VPC + deskresearch',
+        name: 'Wat betekent dit voor het ontwerp?',
+        count: 'Value Proposition Canvas, concurrentieanalyse, B Corp en scorecard',
+        finding: 'De analyse vertaalt het gedrag naar een duidelijke job-to-be-done: samen de pauze leuk en laagdrempelig invullen.',
+        sources: [
+          { href: '/bronnen/opdracht-19', label: 'VPC' },
+          { href: '/bronnen/opdracht-10', label: 'Prijsstrategie' },
+        ],
+      },
+      {
+        type: 'Focusgroep + PSM',
+        name: 'Is het concept geloofwaardig?',
+        count: 'Focusgroep met 6 leerlingen en B2B-prijsvalidatie met 29 respondenten',
+        finding: 'Leerlingen vragen om een simpele, stevige en niet-kinderachtige tafel. Voor scholen ligt de optimale B2B-prijszone op €8.000-€9.000.',
+        sources: [
+          { href: '/bronnen/focusgroep', label: 'Focusgroep' },
+          { href: '/bronnen/opdracht-13', label: 'Prijsvalidatie' },
+        ],
       },
     ]}
     convergence="Alle methoden wijzen naar dezelfde ontwerpconclusie: de pauze is primair een sociaal moment. Daarom moet het concept een directe, zichtbare en groepsgeschikte activiteit bieden op school."
@@ -47,7 +66,62 @@ export const metadata = {
 
 <section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="02 · Kerninzichten"
+    eyebrow="02 · Onderzoeksproces en analyse"
+    heading="De route liep van probleemverkenning naar ontwerpkeuze."
+  />
+
+  <div className="grid gap-8 max-w-[1040px]">
+    <p className="text-[17px] md:text-[18px]" style={{ lineHeight: 1.75, color: 'var(--text-secondary)' }}>
+      Eerst is het huidige pauzegedrag onderzocht met interviews en observaties. Daarna zijn de pains, gains en jobs-to-be-done samengebracht in de Value Proposition Canvas. De focusgroep toetste vervolgens of de Challenge Table als sociaal alternatief geloofwaardig voelde. Tot slot maakte het B2B-prijsonderzoek duidelijk dat scholen als betalende klant een robuuste voorziening moeten herkennen, met een optimale prijszone van €8.000-€9.000 en een acceptabele prijsrange van €4.500-€11.500.
+    </p>
+
+    <div style={{ overflowX: 'auto' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse', border: '0.5px solid var(--border)' }}>
+        <thead>
+          <tr style={{ backgroundColor: 'var(--surface)' }}>
+            {['Stap', 'Dataverzameling', 'Inzicht', 'Betekenis voor ontwerp'].map((label) => (
+              <th
+                key={label}
+                style={{
+                  padding: '12px 16px',
+                  textAlign: 'left',
+                  fontSize: '11px',
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  color: 'var(--text-muted)',
+                  borderBottom: '0.5px solid var(--border)',
+                  fontWeight: 400,
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {label}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ['Probleemverkenning', '3 geïnterviewde scholieren en 4 observaties', 'Snacken ontstaat vaak in sociale context.', 'De tafel moet concurreren met het sociale loopje, niet alleen met de snack.'],
+            ['Analyse', 'VPC V2 en deskresearch', 'De centrale job-to-be-done is samen de pauze gezellig invullen.', 'Het concept moet snel starten, zichtbaar zijn en weinig uitleg vragen.'],
+            ['Conceptvalidatie', 'Focusgroep met 6 leerlingen', 'Simpel, stevig, opvallend en niet kinderachtig zijn harde eisen.', 'De Challenge Table wordt een fysieke, schoolwaardige pauzeplek.'],
+            ['Haalbaarheid', 'B2B-prijsvalidatie met 29 respondenten', 'De optimale prijszone ligt op €8.000-€9.000.', 'Scholen moeten de waarde zien als voorziening en interventie.'],
+          ].map(([stap, data, inzicht, betekenis]) => (
+            <tr key={stap}>
+              <td style={{ padding: '14px 16px', color: 'var(--text-primary)', borderBottom: '0.5px solid var(--border)', lineHeight: 1.6, verticalAlign: 'top', fontWeight: 500 }}>{stap}</td>
+              <td style={{ padding: '14px 16px', color: 'var(--text-secondary)', borderBottom: '0.5px solid var(--border)', lineHeight: 1.6, verticalAlign: 'top' }}>{data}</td>
+              <td style={{ padding: '14px 16px', color: 'var(--text-secondary)', borderBottom: '0.5px solid var(--border)', lineHeight: 1.6, verticalAlign: 'top' }}>{inzicht}</td>
+              <td style={{ padding: '14px 16px', color: 'var(--text-secondary)', borderBottom: '0.5px solid var(--border)', lineHeight: 1.6, verticalAlign: 'top' }}>{betekenis}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="03 · Kerninzichten"
     heading="Pains, gains en jobs-to-be-done werden ontwerpbeslissingen."
   />
 
@@ -55,33 +129,40 @@ export const metadata = {
     <ChapterProof
       label="Pain"
       title="De pauze is vaak passief en automatisch."
-      evidence="Interviews en observaties laten zien dat leerlingen meegaan in een vast patroon richting snacklocaties."
+      evidence="Interviews en 4 observaties laten zien dat leerlingen meegaan in een vast patroon richting snacklocaties, vaak vanwege gezelligheid en niet alleen vanwege honger."
       meaning="De Table moet precies op dat keuzemoment zichtbaar zijn, zodat het automatische loopje een alternatief krijgt."
-      href="/bronnen/observaties"
-      sourceLabel="Observaties bekijken"
+      sources={[
+        { href: '/bronnen/interview-1', label: 'Interview 1' },
+        { href: '/bronnen/interview-2', label: 'Interview 2' },
+        { href: '/bronnen/observaties', label: 'Observaties' },
+      ]}
     />
     <ChapterProof
       label="Gain"
       title="Leerlingen willen direct iets samen doen."
-      evidence="De VPC V2 benoemt 'samen iets doen', 'gezelligheid' en 'zonder voorbereiding starten' als gewenste opbrengsten."
-      meaning="Het concept krijgt geen app-afhankelijkheid of lange uitleg. De drempel moet laag genoeg zijn voor spontaan gebruik."
-      href="/bronnen/opdracht-19"
-      sourceLabel="VPC bekijken"
+      evidence="De VPC V2 en focusgroep benoemen 'samen iets doen', 'gezelligheid', simpele uitleg en een niet-kinderachtige uitstraling als gewenste opbrengsten."
+      meaning="Het concept krijgt geen app-afhankelijkheid of lange uitleg. De drempel moet laag genoeg zijn voor spontaan gebruik door een groep."
+      sources={[
+        { href: '/bronnen/opdracht-19', label: 'VPC' },
+        { href: '/bronnen/focusgroep', label: 'Focusgroep' },
+      ]}
     />
     <ChapterProof
-      label="B2B"
+      label="JTBD + B2B"
       title="Scholen zijn de betalende klant."
-      evidence="De B2B Van Westendorp PSM onderbouwt een realistische prijsrange en maakt schoolwaarde onderdeel van het ontwerp."
+      evidence="De B2B Van Westendorp PSM met 29 respondenten onderbouwt een optimale prijszone van €8.000-€9.000 en maakt schoolwaarde onderdeel van het ontwerp."
       meaning="De Table moet robuust, onderhoudbaar en zichtbaar waardevol zijn voor schoolleiding, niet alleen leuk voor leerlingen."
-      href="/bronnen/opdracht-10"
-      sourceLabel="Prijsstrategie bekijken"
+      sources={[
+        { href: '/bronnen/opdracht-13', label: 'Prijsvalidatie' },
+        { href: '/bronnen/opdracht-10', label: 'Prijsstrategie' },
+      ]}
     />
   </div>
 </section>
 
 <section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
-    eyebrow="03 · Visueel bewijs"
+    eyebrow="04 · Visueel bewijs"
     heading="De figuren tonen hoe data naar conceptkeuzes leiden."
   />
 
@@ -93,7 +174,7 @@ export const metadata = {
       height={1378}
       fit="contain"
       caption="Figuur 1. VPC V2: de centrale klanttaak is samen de pauze gezellig invullen."
-      insight="Deze figuur ondersteunt de verschuiving van voedingsoplossing naar sociale activiteit. De Table moet de gain 'samen iets doen' leveren en de pain 'automatisch snackgedrag' doorbreken."
+      insight="Deze figuur ondersteunt de verschuiving van voedingsoplossing naar sociale activiteit. De Table moet de job-to-be-done 'samen de pauze gezellig invullen' ondersteunen, de gain 'samen iets doen' leveren en de pain 'automatisch snackgedrag' doorbreken."
       sourceHref="/bronnen/opdracht-19"
       sourceLabel="VPC bekijken"
     />
@@ -103,18 +184,30 @@ export const metadata = {
       width={1482}
       height={930}
       fit="contain"
-      caption="Figuur 2. B2B Van Westendorp PSM: indicatieve acceptatiebandbreedte voor de Challenge Table."
-      insight="De prijsdata verbinden gebruikerswaarde aan businesshaalbaarheid. Daardoor werd de vaste Challenge Table logischer dan een losse Cube: scholen kopen een voorziening, leerlingen gebruiken de sociale plek."
-      sourceHref="/bronnen/opdracht-10"
-      sourceLabel="Prijsstrategie bekijken"
+      caption="Figuur 2. B2B Van Westendorp PSM: prijsonderzoek met 29 respondenten voor de Challenge Table."
+      insight="De prijsdata verbinden gebruikerswaarde aan businesshaalbaarheid. De optimale prijszone van €8.000-€9.000 maakt de vaste Challenge Table logischer dan een losse Cube: scholen kopen een voorziening, leerlingen gebruiken de sociale plek."
+      sourceHref="/bronnen/opdracht-13"
+      sourceLabel="Prijsvalidatie bekijken"
     />
   </div>
+</section>
+
+<section className="px-6 md:px-10 py-16 md:py-20" style={{ borderTop: '0.5px solid var(--border)' }}>
+  <SectionHeading
+    eyebrow="05 · Kritische reflectie"
+    heading="De aanpak gaf richting, maar vraagt om vervolgvalidatie."
+  />
+
+  <ReflectionGrid
+    good="De triangulatie werkte goed: interviews, observaties, VPC, focusgroep en prijsvalidatie wezen naar dezelfde kern. Daardoor werd duidelijk dat de Challenge Table geen voedingscampagne moet zijn, maar een sociaal pauzealternatief dat leerlingen spontaan kunnen gebruiken."
+    better="De betrouwbaarheid kan sterker. De interviewgroep was klein, de observaties vonden op één datum plaats, de focusgroep had 6 leerlingen en de B2B-prijsvalidatie bevatte ook leraren naast beslissers. Een volgende stap is een pilot op één school met observatie voor en na plaatsing, aangevuld met een korte leerlingenenquête."
+  />
 </section>
 
 <section className="px-6 md:px-10 py-14" style={{ borderTop: '0.5px solid var(--border)' }}>
   <SectionHeading
     eyebrow="Rubric-check"
-    heading="Het onderzoek is navolgbaar van methode naar inzicht naar ontwerpbeslissing."
+    heading="Het onderzoek is navolgbaar van methode naar inzicht, ontwerpbeslissing en reflectie."
   />
   <div className="flex flex-wrap gap-3">
     <RubricBadge number="02" label="Gebruikersgericht onderzoek" />

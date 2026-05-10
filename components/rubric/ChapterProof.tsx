@@ -5,6 +5,7 @@ type Props = {
   meaning: string
   href?: string
   sourceLabel?: string
+  sources?: { href: string; label: string }[]
 }
 
 export default function ChapterProof({
@@ -14,7 +15,10 @@ export default function ChapterProof({
   meaning,
   href,
   sourceLabel = 'Bewijs bekijken',
+  sources,
 }: Props) {
+  const sourceLinks = sources ?? (href ? [{ href, label: sourceLabel }] : [])
+
   return (
     <article
       className="flex flex-col gap-5 p-6 md:p-7"
@@ -44,22 +48,25 @@ export default function ChapterProof({
         <TextBlock label="Bewijs" text={evidence} />
         <TextBlock label="Ontwerpbeslissing" text={meaning} />
       </div>
-      {href && (
+      {sourceLinks.length > 0 && (
         <div
-          className="pt-4"
+          className="pt-4 flex flex-wrap gap-x-4 gap-y-2"
           style={{ borderTop: '0.5px solid var(--border)' }}
         >
-          <a
-            href={href}
-            className="inline-flex text-[12px] uppercase hover:opacity-80"
-            style={{
-              letterSpacing: '0.15em',
-              color: 'var(--accent-mint)',
-              textDecoration: 'none',
-            }}
-          >
-            {sourceLabel}
-          </a>
+          {sourceLinks.map((source) => (
+            <a
+              key={`${label}-${source.href}`}
+              href={source.href}
+              className="inline-flex text-[12px] uppercase hover:opacity-80"
+              style={{
+                letterSpacing: '0.15em',
+                color: 'var(--accent-mint)',
+                textDecoration: 'none',
+              }}
+            >
+              {source.label}
+            </a>
+          ))}
         </div>
       )}
     </article>

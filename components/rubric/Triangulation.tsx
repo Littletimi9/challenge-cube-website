@@ -3,6 +3,7 @@ type Method = {
   name: string
   count: string
   finding: string
+  sources?: { href: string; label: string }[]
 }
 
 type Props = {
@@ -14,7 +15,7 @@ export default function Triangulation({ methods, convergence }: Props) {
   return (
     <div className="flex flex-col gap-6">
       <div
-        className="grid grid-cols-1 md:grid-cols-3"
+        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4"
         style={{
           gap: '0.5px',
           backgroundColor: 'var(--border)',
@@ -61,6 +62,27 @@ export default function Triangulation({ methods, convergence }: Props) {
             >
               {m.finding}
             </p>
+            {m.sources && m.sources.length > 0 && (
+              <div
+                className="flex flex-wrap gap-x-4 gap-y-2 pt-3 mt-auto"
+                style={{ borderTop: '0.5px solid var(--border)' }}
+              >
+                {m.sources.map((source) => (
+                  <a
+                    key={`${m.name}-${source.href}`}
+                    href={source.href}
+                    className="text-[11px] uppercase hover:opacity-80 transition-opacity"
+                    style={{
+                      letterSpacing: '0.15em',
+                      color: 'var(--accent-mint)',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {source.label}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
