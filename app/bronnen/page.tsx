@@ -122,6 +122,16 @@ const opdrachten: OpdrachtCard[] = [
     description: 'Van Westendorp-resultaten voor de Challenge Cube (B2C, 120 respondenten) en de Challenge Table (B2B, 29 respondenten): prijspunten, grafiekanalyse en vertaling naar introductieprijs.',
   },
   {
+    href: '/bronnen/opdracht-16',
+    title: 'Opdracht 16 — Schaalbaarheid',
+    description: 'Analyse van groeifasen, strategische alliantiepartners en de impact van schaalgrootte op prototype, businessmodel en businesscase.',
+  },
+  {
+    href: '/bronnen/opdracht-17',
+    title: 'Opdracht 17 — Circulaire economie',
+    description: 'Uitwerking van producentenverantwoordelijkheid, lineaire keten, recyclingmogelijkheden en circulaire verbeteringen via prijs, product, plaats en promotie.',
+  },
+  {
     href: '/bronnen/opdracht-19',
     title: 'Opdracht 19 — Value Proposition Canvas',
     description: 'Twee iteraties van de Value Proposition Canvas: klantprofiel van scholieren in de pauze en uitwerking van de value map met voordeelverschaffers en pijnverzachters.',
@@ -805,6 +815,86 @@ const apaSources: ApaSource[] = [
     label: 'Opdracht 13',
     reference:
       'Van Westendorp, P. H. (1976). NSS Price Sensitivity Meter (PSM) — A new approach to study consumer perception of prices. Proceedings of the 29th ESOMAR Congress, 139–167.',
+  },
+  {
+    id: 'opdracht-16-abn-amro-2021',
+    label: 'Opdracht 16',
+    reference: 'ABN AMRO. (2021). Groeifasen van ondernemingen en scale-ups.',
+  },
+  {
+    id: 'opdracht-16-ahrend-2025',
+    label: 'Opdracht 16',
+    reference: 'Ahrend, K. (2025). Integrated report en duurzaamheidsstrategie. Koninklijke Ahrend.',
+  },
+  {
+    id: 'opdracht-16-ahrend-onderwijs-2026',
+    label: 'Opdracht 16',
+    reference: 'Ahrend. (2026). Onderwijs: inrichting van gezonde en vitale leeromgevingen. Koninklijke Ahrend.',
+  },
+  {
+    id: 'opdracht-16-ahrend-over',
+    label: 'Opdracht 16',
+    reference: 'Ahrend. (z.d.). Over Ahrend. Koninklijke Ahrend.',
+  },
+  {
+    id: 'opdracht-16-bermejo-2026',
+    label: 'Opdracht 16',
+    reference: 'Bermejo. (2026). Scale-up groeifasen en strategische allianties.',
+  },
+  {
+    id: 'opdracht-16-earthgames',
+    label: 'Opdracht 16',
+    reference: 'Earthgames. (z.d.). Spelmaterialen voor sociaal-emotionele ontwikkeling.',
+  },
+  {
+    id: 'opdracht-16-erasmus-2026',
+    label: 'Opdracht 16',
+    reference: 'Erasmus+. (2026). Alliances for Innovation. Europese Commissie.',
+  },
+  {
+    id: 'opdracht-16-gezondeschool-2026',
+    label: 'Opdracht 16',
+    reference: 'Gezonde School. (2026). Jaarrapport Gezonde School 2025.',
+  },
+  {
+    id: 'opdracht-16-growsupport-2025',
+    label: 'Opdracht 16',
+    reference: 'Growsupport. (2025). Groeimodel en pioniersfase van ondernemingen.',
+  },
+  {
+    id: 'opdracht-16-liebertz-2020',
+    label: 'Opdracht 16',
+    reference: 'Liebertz. (2020). De 50 beste spelletjes voor sociaal emotionele vorming.',
+  },
+  {
+    id: 'opdracht-16-oecd-2025',
+    label: 'Opdracht 16',
+    reference: "OECD. (2025). Students' well-being and school climate. OECD Publishing.",
+  },
+  {
+    id: 'opdracht-16-rivm-2023',
+    label: 'Opdracht 16',
+    reference: 'RIVM. (2023). Evaluatie ondersteuningsaanbod programma Gezonde School. Rijksinstituut voor Volksgezondheid en Milieu.',
+  },
+  {
+    id: 'opdracht-16-sfaa',
+    label: 'Opdracht 16',
+    reference: 'SFAA. (z.d.). Life-cycle costing bij publieke inkoop.',
+  },
+  {
+    id: 'opdracht-17-business-2025',
+    label: 'Opdracht 17',
+    reference: 'Business.gov.nl. (2025). Extended producer responsibility and circular product chains.',
+  },
+  {
+    id: 'opdracht-17-nederland-2026',
+    label: 'Opdracht 17',
+    reference: 'Nederland. (2026). Uitgebreide producentenverantwoordelijkheid voor elektrische en elektronische apparatuur.',
+  },
+  {
+    id: 'opdracht-17-verpact-2026',
+    label: 'Opdracht 17',
+    reference: 'Verpact. (2026). Producentenverantwoordelijkheid voor verpakkingen.',
   },
   {
     id: 'opdracht-8-osterwalder-2014',
