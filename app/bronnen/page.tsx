@@ -41,13 +41,7 @@ const interviews: InterviewCard[] = [
     meta: 'Sprint 1 · Probleemverkenning',
   },
   {
-    href: '/bronnen/interview-3',
-    title: 'Interview 3 — 4 HAVO leerling, Stad & Esch',
-    description: 'Semigestructureerd interview over gebruiksintentie van de Challenge Table: sociale pauzegewoonten, drempel voor gebruik en verwacht effect op snackgedrag.',
-    meta: 'Sprint 2 · Conceptvalidatie',
-  },
-  {
-    href: '/bronnen/Focusgroep',
+    href: '/bronnen/focusgroep',
     title: 'Focusgroep — Challenge Table',
     description: 'Kwalitatieve focusgroep met zes leerlingen over de Challenge Table als alternatieve pauzeplek: eerste reacties op het concept, ontwerpvereisten en de rol van de tafel als gewoonte-onderbreker.',
     meta: 'Sprint 2 · Conceptvalidatie',
@@ -179,18 +173,11 @@ const apaSources: ApaSource[] = [
     link: '/bronnen/interview-2',
   },
   {
-    id: 'interview-3',
-    label: 'Interview 3',
-    reference:
-      'Hekking, T. (2026). Semigestructureerd interview met een 4-havo leerling van Stad & Esch over gebruiksintentie van de Challenge Table [Notities]. Challenge Table.',
-    link: '/bronnen/interview-3',
-  },
-  {
     id: 'focusgroep-2026',
     label: 'Focusgroep',
     reference:
       'Hekking, T., & Kaat, J. (2026). Focusgroep: Kwalitatieve sessie met zes leerlingen over de Challenge Table als alternatieve pauzeplek [Transcript en analyse]. Challenge Table.',
-    link: '/bronnen/Focusgroep',
+    link: '/bronnen/focusgroep',
   },
   {
     id: 'observaties-2026',
@@ -1052,7 +1039,7 @@ export default function BronnenPage() {
         number="07"
         label="Portfolio · Bronnen"
         title="Alle bronnen, in één overzicht."
-        lead="Interviews, opdrachtpagina's en de volledige APA-lijst op één plek."
+        lead="Archief met 2 interviewpagina's over in totaal 3 middelbare scholieren, aangevuld met observaties, focusgroep, opdrachtpagina's en de volledige APA-lijst."
         meta={[
           { key: 'Totaal', value: `${apaSources.length} bronnen` },
           { key: 'Stijl', value: 'APA 7' },
@@ -1060,7 +1047,7 @@ export default function BronnenPage() {
       />
 
       <section className="px-6 md:px-10 py-16 md:py-20">
-        <SectionHeading eyebrow="Interviews" heading="Interviews." />
+        <SectionHeading eyebrow="Primair onderzoek" heading="Interviews, focusgroep en observaties." />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-[1280px]">
           {interviews.map((iv) => (
             <Link

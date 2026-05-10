@@ -6,6 +6,7 @@ export type Criterion = {
   result: string
   met: boolean
   evidence?: string
+  status?: 'Onderbouwd' | 'Deels onderbouwd' | 'Nog te testen'
 }
 
 type Props = { criteria: Criterion[] }
@@ -47,7 +48,7 @@ export default function CriteriaTable({ criteria }: Props) {
               <Td>{c.target}</Td>
               <Td>{c.result}</Td>
               <Td>
-                <StatusIcon met={c.met} />
+                <StatusIcon met={c.met} status={c.status} />
               </Td>
             </tr>
           ))}
@@ -71,7 +72,7 @@ export default function CriteriaTable({ criteria }: Props) {
               >
                 {c.criterion}
               </span>
-              <StatusIcon met={c.met} />
+              <StatusIcon met={c.met} status={c.status} />
             </div>
             <div className="grid grid-cols-2 gap-3 text-[13px]">
               <Cell label="Doel" text={c.target} />
@@ -131,20 +132,23 @@ function Cell({ label, text }: { label: string; text: string }) {
   )
 }
 
-function StatusIcon({ met }: { met: boolean }) {
-  return met ? (
-    <CheckCircle2
-      size={18}
-      strokeWidth={1.5}
-      className="text-[var(--accent-mint)]"
-      aria-label="Behaald"
-    />
-  ) : (
-    <AlertCircle
-      size={18}
-      strokeWidth={1.5}
-      className="text-[var(--accent-amber)]"
-      aria-label="Aandachtspunt"
-    />
+function StatusIcon({
+  met,
+  status,
+}: {
+  met: boolean
+  status?: Criterion['status']
+}) {
+  const Icon = met ? CheckCircle2 : AlertCircle
+  const label = status ?? (met ? 'Behaald' : 'Aandachtspunt')
+
+  return (
+    <span
+      className="inline-flex items-center gap-2 text-[12px]"
+      style={{ color: met ? 'var(--accent-mint)' : 'var(--accent-amber)' }}
+    >
+      <Icon size={18} strokeWidth={1.5} aria-hidden="true" />
+      <span>{label}</span>
+    </span>
   )
 }

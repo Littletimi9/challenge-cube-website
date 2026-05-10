@@ -1,35 +1,42 @@
 # To-do Challenge Table portfolio
 
-Laatst geinventariseerd: 9 mei 2026.
+Laatst bijgewerkt: 10 mei 2026.
 
-Deze lijst benoemt wat nog mist of nog afgerond moet worden om de site sterker op de beoordeling aan te laten sluiten.
+Deze lijst bewaakt de resterende acties voor de portfolio-site. De huidige inleverversie gebruikt alleen Interview 1 en Interview 2 als interviewbewijs: 2 interviewpagina's met in totaal 3 middelbare scholieren.
+
+## Huidige status
+
+- [x] Interview 3 verwijderd omdat de inhoud niet op echte data was gebaseerd.
+- [x] Interview 4 en 5 ontkoppeld zolang daar nog geen echte data in staat.
+- [x] Lege opdracht-routes `/bronnen/opdracht-12`, `/bronnen/opdracht-14` en `/bronnen/opdracht-15` verwijderd zodat beoordelaars geen lege pagina's tegenkomen.
+- [x] Bronoverzicht, APA-lijst, onderzoekspagina en validatiepagina opgeschoond naar echte bewijslast.
+- [x] `npm run lint` afgerond zonder errors op 10 mei 2026.
+- [x] `npm run build` afgerond zonder errors op 10 mei 2026.
 
 ## Hoogste prioriteit
 
 - [ ] Aanvullende gebruiksvalidatie uitvoeren.
-  - Minimaal drie aanvullende diepte-interviews met leerlingen die de Challenge Table hebben gezien of gebruikt.
-  - Minimaal een focusgroep met leerlingen na conceptpresentatie of prototypegebruik.
+  - Interview 3, 4 en 5 later met echte leerlingen uitvoeren en verwerken.
+  - Leerlingen spreken die de Challenge Table hebben gezien of gebruikt.
   - Een aula-pilot of simulatie uitvoeren waarin starttijd, groepsgrootte, spontaan gebruik, herhaalgebruik en snackalternatief worden gemeten.
-  - Resultaten verwerken op `/validatie` per testcriterium: gehaald, deels gehaald of niet gehaald.
+  - Resultaten verwerken op `/validatie` per testcriterium: onderbouwd, deels onderbouwd of nog te testen.
 
 - [ ] Nieuwe bewijslast toevoegen aan de bronnen.
   - Nieuwe interviewnotities, transcripties of audiobestanden toevoegen als bronpagina.
-  - Focusgroepresultaten toevoegen als aparte bronpagina.
+  - Eventuele extra focusgroepresultaten alleen toevoegen als er echt transcript- of notitiemateriaal is.
   - Pilot- of simulatie-uitkomsten toevoegen als aparte bronpagina met methode, observaties, conclusies en beperkingen.
   - APA-verwijzingen voor deze nieuwe bronnen opnemen op `/bronnen`.
 
-- [ ] Lege bronroutes opruimen of vullen.
-  - `/bronnen/opdracht-12` is nu leeg.
-  - `/bronnen/opdracht-14` is nu leeg.
-  - `/bronnen/opdracht-15` is nu leeg.
-  - Beslissen: routes vullen met echte opdrachtinhoud of verwijderen/uitsluiten zodat beoordelaars geen lege pagina kunnen tegenkomen.
+- [ ] B2B-validatie aanvullen.
+  - Naast PSM en prijsstrategie nog een gesprek of toets met schoolleiding, facilitair medewerker of docent toevoegen.
+  - Vragen richten op budget, plaatsing, onderhoud, veiligheid, verantwoordelijkheid en verwachte schoolwaarde.
 
 ## Inhoudelijk versterken
 
 - [ ] Conceptontwikkeling sterker koppelen aan feedback.
   - Per iteratie expliciet maken welke feedback of data leidde tot de volgende versie.
   - Bij de stap Cube -> scherm -> Table duidelijker benoemen welke keuze is gemaakt, waarom, en welk bewijs daarbij hoort.
-  - Waar mogelijk korte quotes of concrete feedback uit interviews/focusgroep toevoegen.
+  - Waar mogelijk korte quotes of concrete feedback uit echte interviews, focusgroep of pilot toevoegen.
 
 - [ ] Meervoudige waardecreatie verder onderbouwen.
   - De hoofdpagina benoemt dit nu kort; de onderbouwing moet sterker terugkomen in `/validatie` en eventueel `/reflectie`.
@@ -38,11 +45,7 @@ Deze lijst benoemt wat nog mist of nog afgerond moet worden om de site sterker o
 
 - [ ] Ecologische claim concreter maken.
   - Nu is ecologische waarde vooral beredeneerd via robuustheid, reparatie en materiaalkeuze.
-  - Sterker maken met een korte materiaal-/levensduuronderbouwing of een eenvoudige vergelijking met een minder duurzame alternatiefoplossing.
-
-- [ ] B2B-validatie aanvullen.
-  - Naast PSM en prijsstrategie nog een gesprek of toets met schoolleiding, facilitair medewerker of docent toevoegen.
-  - Vragen richten op budget, plaatsing, onderhoud, veiligheid, verantwoordelijkheid en verwachte schoolwaarde.
+  - Sterker maken met een korte materiaal-/levensduuronderbouwing of een eenvoudige vergelijking met een minder duurzaam alternatief.
 
 ## Structuur en leesbaarheid
 
